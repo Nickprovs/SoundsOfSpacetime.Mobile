@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!--#region Foreground Colors-->
+    <Color x:Key="F1">#006fb8</Color>
+    <Color x:Key="F2">#4a8fbc</Color>
+    <Color x:Key="F3">#c9cad1</Color>
+    <Color x:Key="F4">#edeef3</Color>
+    <Color x:Key="F5">#b11826</Color>
+    <Color x:Key="F6">#1a8c2d</Color>
+    <!--#endregion-->
+    
+    <!--#region Background Colors-->
+    <Color x:Key="B1">#050a11</Color>
+    <Color x:Key="B2">#0d1520</Color>
+    <Color x:Key="B3">#282c31</Color>
+    <Color x:Key="B4">#0f1e33</Color>
+    <Color x:Key="B5">#182d4a</Color>
+    <Color x:Key="B6">#303e52</Color>
+    <!--#endregion-->
+    
+</ResourceDictionary>

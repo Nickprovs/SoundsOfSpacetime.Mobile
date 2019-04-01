@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace Nickprovs.Albatross
+namespace Nickprovs.Albatross.Views
 {
-    public partial class MainPage : ContentPage
+    public partial class Simulator : ContentPage
     {
-        public MainPage()
+        public Simulator()
         {
             InitializeComponent();
         }

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Nickprovs.Albatross.Controls"
+             x:Class="Nickprovs.Albatross.Views.Simulator"
+             Title="{Binding Title}"
+             BackgroundColor="{DynamicResource B2}">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="90*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="50*"/>
+            </Grid.RowDefinitions>
+
+            <controls:Icon 
+                Margin="0,10"
+                Grid.Row="0"
+                Grid.Column="1"
+                ResourceId= "{DynamicResource i0_director_main}"
+                Stroke="{DynamicResource F1}"/>
+
+            <StackLayout 
+                Grid.Column="1" 
+                Grid.Row="2">
+
+                <Label  
+                Margin="0,5"
+                TextColor="{DynamicResource F1}"
+                Text="Welcome to the Exodus Prototype Mobile App!"/>
+
+                <Label  
+                Margin="0,5"
+                TextColor="{DynamicResource F1}"
+                Text="Select Sessions, then click one from the list to see a real-time version of the data."/>
+            </StackLayout>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

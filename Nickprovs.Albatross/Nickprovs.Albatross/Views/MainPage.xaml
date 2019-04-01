@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Nickprovs.Albatross.Views"
+             x:Name="mainPage"
+             x:Class="Nickprovs.Albatross.Views.MainPage"
+             Title="{Binding Title}">
+    <MasterDetailPage.Master>
+        <!-- Hamburger Menu Secret Sauce... Add an Icon!!!! Make sure it's in your resources for your Platform Project -->
+        <NavigationPage Title="Required Foo" Icon="hamburger.png">
+            <x:Arguments>
+                <ContentPage Title="Menu" BackgroundColor="{DynamicResource B2}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="90*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="90*"/>
+                            <RowDefinition Height="5*"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Row="1" Grid.Column="1">
+                            <Button 
+                                    Text="Sources"                    
+                                    Command="{Binding NavigateCommand}" 
+                                    CommandParameter="Navigation/Sources"
+                                    BackgroundColor="{DynamicResource B5}"
+                                    BorderColor="{DynamicResource B6}"
+                                    TextColor="{DynamicResource F1}"/>
+                            <Button 
+                                    Text="Sessions" 
+                                    Command="{Binding NavigateCommand}" 
+                                    CommandParameter="Navigation/Sessions" 
+                                    BackgroundColor="{DynamicResource B5}"
+                                    BorderColor="{DynamicResource B6}"
+                                    TextColor="{DynamicResource F1}"/>
+                            <Button 
+                                    Text="About" 
+                                    Command="{Binding NavigateCommand}" 
+                                    CommandParameter="Navigation/About" 
+                                    BackgroundColor="{DynamicResource B5}"
+                                    BorderColor="{DynamicResource B6}"
+                                    TextColor="{DynamicResource F1}"/>
+                        </StackLayout>
+                    </Grid>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <local:Simulator/>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>
+
+
