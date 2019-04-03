@@ -75,6 +75,7 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2.1" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SplashActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,7 +103,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splash_screen.xml" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Nickprovs.Albatross\Nickprovs.Albatross.csproj">
       <Project>{E6924FE8-207F-431A-B8A2-A5F2AF6BEA2E}</Project>

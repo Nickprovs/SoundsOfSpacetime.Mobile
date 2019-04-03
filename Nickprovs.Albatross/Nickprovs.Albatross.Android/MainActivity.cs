@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace Nickprovs.Albatross.Droid
 {
-    [Activity(Label = "Nickprovs.Albatross", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Nickprovs.Albatross", Icon = "@mipmap/icon", Theme = "@style/MainTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
