@@ -9,7 +9,8 @@ using Android.OS;
 
 namespace Nickprovs.Albatross.Droid
 {
-    [Activity(Label = "Nickprovs.Albatross", Icon = "@mipmap/icon", Theme = "@style/MainTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    //We'll set the main style to the splash here, and once we've created... we'll set it back to the MainTheme
+    [Activity(Label = "Nickprovs.Albatross", Icon = "@mipmap/icon", Theme = "@style/MainTheme.Splash", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -20,6 +21,16 @@ namespace Nickprovs.Albatross.Droid
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+        }
+
+        
+        public override void OnCreate(Bundle savedInstanceState, PersistableBundle persistentState)
+        {
+            //Once we've loaded in... let's set our theme back to the main theme.
+            base.Window.RequestFeature(WindowFeatures.ActionBar);
+            base.SetTheme(Resource.Style.MainTheme);
+
+            base.OnCreate(savedInstanceState, persistentState);
         }
     }
 }
