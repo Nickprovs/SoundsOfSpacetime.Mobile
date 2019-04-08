@@ -5,8 +5,9 @@ using System.Text;
 
 namespace Nickprovs.Albatross.ViewModels
 {
-    public class SimulatorPageViewModel : BaseViewModel
+    public class CreditsPageViewModel : BaseViewModel
     {
+
         #region Fields
 
 
@@ -19,9 +20,9 @@ namespace Nickprovs.Albatross.ViewModels
 
         #region Constructors and Destructors
 
-        public SimulatorPageViewModel(INavigationService navigationService) : base(navigationService)
+        public CreditsPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            this.Title = "Simulator";
+            this.Title = "Credits";
         }
 
         #endregion
@@ -30,6 +31,6 @@ namespace Nickprovs.Albatross.ViewModels
 
 
         #endregion
+
     }
-    
 }

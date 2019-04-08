@@ -43,6 +43,7 @@ namespace Nickprovs.Albatross
             containerRegistry.RegisterForNavigation<NavigationPage>("Navigation");
             containerRegistry.RegisterForNavigation<MasterPage>("Index");
             containerRegistry.RegisterForNavigation<AboutPage>("About");
+            containerRegistry.RegisterForNavigation<CreditsPage>("Credits");
             containerRegistry.RegisterForNavigation<SimulatorPage>("Simulator");
 
             containerRegistry.RegisterSingleton<IDeviceContext, DeviceContext>();

@@ -23,16 +23,9 @@
                         </Grid.RowDefinitions>
                         <StackLayout Grid.Row="1" Grid.Column="1">
                             <Button 
-                                    Text="Sources"                    
+                                    Text="Simulator"                    
                                     Command="{Binding NavigateCommand}" 
-                                    CommandParameter="Navigation/Sources"
-                                    BackgroundColor="{DynamicResource B5}"
-                                    BorderColor="{DynamicResource B6}"
-                                    TextColor="{DynamicResource F1}"/>
-                            <Button 
-                                    Text="Sessions" 
-                                    Command="{Binding NavigateCommand}" 
-                                    CommandParameter="Navigation/Sessions" 
+                                    CommandParameter="Navigation/Simulator"
                                     BackgroundColor="{DynamicResource B5}"
                                     BorderColor="{DynamicResource B6}"
                                     TextColor="{DynamicResource F1}"/>
@@ -40,6 +33,13 @@
                                     Text="About" 
                                     Command="{Binding NavigateCommand}" 
                                     CommandParameter="Navigation/About" 
+                                    BackgroundColor="{DynamicResource B5}"
+                                    BorderColor="{DynamicResource B6}"
+                                    TextColor="{DynamicResource F1}"/>
+                            <Button 
+                                    Text="Credits" 
+                                    Command="{Binding NavigateCommand}" 
+                                    CommandParameter="Navigation/Credits" 
                                     BackgroundColor="{DynamicResource B5}"
                                     BorderColor="{DynamicResource B6}"
                                     TextColor="{DynamicResource F1}"/>
