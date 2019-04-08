@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Nickprovs.Albatross.ViewModels
 {
-    public class SimulatorViewModel
+    public class SimulatorPageViewModel
     {
     }
 }

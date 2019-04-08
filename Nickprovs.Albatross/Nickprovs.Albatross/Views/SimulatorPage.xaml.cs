@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Nickprovs.Albatross.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class About : ContentPage
+    public partial class SimulatorPage : ContentPage
     {
-        public About()
+        public SimulatorPage()
         {
             InitializeComponent();
         }

@@ -4,7 +4,7 @@ using Prism.Navigation;
 
 namespace Nickprovs.Albatross.ViewModels
 {
-    public class MainPageViewModel : BaseViewModel
+    public class MasterPageViewModel : BaseViewModel
     {
         #region Fields
 
@@ -19,7 +19,7 @@ namespace Nickprovs.Albatross.ViewModels
 
         #region Constructors and Destructors
 
-        public MainPageViewModel(INavigationService navigationService) : base(navigationService)
+        public MasterPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             this.Title = "Welcome";
 

@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace Nickprovs.Albatross.ViewModels
 {
-    public class AboutViewModel : BaseViewModel
+    public class AboutPageViewModel : BaseViewModel
     {
         #region Fields
 
@@ -21,7 +21,7 @@ namespace Nickprovs.Albatross.ViewModels
 
         #region Constructors and Destructors
 
-        public AboutViewModel(INavigationService navigationService) : base(navigationService)
+        public AboutPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             this.Title = "About";
             this.LearnMoreCommand = new DelegateCommand(this.OnLearnMore);

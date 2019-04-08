@@ -41,9 +41,9 @@ namespace Nickprovs.Albatross
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>("Navigation");
-            containerRegistry.RegisterForNavigation<MainPage>("Index");
-            containerRegistry.RegisterForNavigation<About>("About");
-            containerRegistry.RegisterForNavigation<Simulator>("Simulator");
+            containerRegistry.RegisterForNavigation<MasterPage>("Index");
+            containerRegistry.RegisterForNavigation<AboutPage>("About");
+            containerRegistry.RegisterForNavigation<SimulatorPage>("Simulator");
 
             containerRegistry.RegisterSingleton<IDeviceContext, DeviceContext>();
 
