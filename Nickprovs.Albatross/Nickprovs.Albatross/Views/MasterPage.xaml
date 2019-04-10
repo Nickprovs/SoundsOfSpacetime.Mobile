@@ -50,13 +50,13 @@
         </NavigationPage>
     </MasterDetailPage.Master>
 
-    <MasterDetailPage.Detail>
+    <!--<MasterDetailPage.Detail>
         <NavigationPage>
             <x:Arguments>
                 <local:SimulatorPage/>
             </x:Arguments>
         </NavigationPage>
-    </MasterDetailPage.Detail>
+    </MasterDetailPage.Detail>-->
 
 </MasterDetailPage>
 

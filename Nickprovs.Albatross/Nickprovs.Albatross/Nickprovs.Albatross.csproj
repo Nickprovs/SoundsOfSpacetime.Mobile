@@ -10,11 +10,27 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\Icons\i0_director_main.svg" />
+    <None Remove="Resources\Icons\director_closed.svg" />
+    <None Remove="Resources\Icons\director_closing1.svg" />
+    <None Remove="Resources\Icons\director_closing2.svg" />
+    <None Remove="Resources\Icons\director_closing3.svg" />
+    <None Remove="Resources\Icons\director_main.svg" />
+    <None Remove="Resources\Icons\director_winked.svg" />
+    <None Remove="Resources\Icons\director_winking1.svg" />
+    <None Remove="Resources\Icons\director_winking2.svg" />
+    <None Remove="Resources\Icons\director_winking3.svg" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Icons\i0_director_main.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_closed.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_closing1.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_closing2.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_closing3.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_main.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_winked.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_winking1.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_winking2.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_winking3.svg" />
   </ItemGroup>
 
   <ItemGroup>

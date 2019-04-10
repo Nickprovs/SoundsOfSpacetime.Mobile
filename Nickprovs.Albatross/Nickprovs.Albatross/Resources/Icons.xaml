@@ -4,6 +4,16 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <x:String x:Key="i0_director_main">Nickprovs.Albatross.Resources.Icons.i0_director_main.svg</x:String>
+    <x:String x:Key="director_main">Nickprovs.Albatross.Resources.Icons.director_main.svg</x:String>
+
+    <x:String x:Key="director_closing1">Nickprovs.Albatross.Resources.Icons.director_closing1.svg</x:String>
+    <x:String x:Key="director_closing2">Nickprovs.Albatross.Resources.Icons.director_closing2.svg</x:String>
+    <x:String x:Key="director_closing3">Nickprovs.Albatross.Resources.Icons.director_closing3.svg</x:String>
+    <x:String x:Key="director_closed">Nickprovs.Albatross.Resources.Icons.director_closed.svg</x:String>
+
+    <x:String x:Key="director_winking1">Nickprovs.Albatross.Resources.Icons.director_winking1.svg</x:String>
+    <x:String x:Key="director_winking2">Nickprovs.Albatross.Resources.Icons.director_winking2.svg</x:String>
+    <x:String x:Key="director_winking3">Nickprovs.Albatross.Resources.Icons.director_winking3.svg</x:String>
+    <x:String x:Key="director_winked">Nickprovs.Albatross.Resources.Icons.director_winked.svg</x:String>
 
 </ResourceDictionary>

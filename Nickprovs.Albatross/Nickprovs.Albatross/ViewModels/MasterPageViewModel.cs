@@ -22,8 +22,8 @@ namespace Nickprovs.Albatross.ViewModels
         public MasterPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             this.Title = "Welcome";
-
             this.NavigateCommand = new DelegateCommand<string>(this.OnNavigateCommandExecuted);
+            this._navigationService.NavigateAsync("Navigation/Simulator");
         }
 
         #endregion
@@ -32,7 +32,7 @@ namespace Nickprovs.Albatross.ViewModels
 
         private async void OnNavigateCommandExecuted(string path)
         {
-            await _navigationService.NavigateAsync(path);
+            var status = await _navigationService.NavigateAsync(path);
         }
 
         #endregion
