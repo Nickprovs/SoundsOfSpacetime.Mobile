@@ -4,10 +4,101 @@
              x:Class="Nickprovs.Albatross.Views.CreditsPage"
              Title="{Binding Title}">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Credits!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Orientation="Vertical">
+                
+                <!--Credits Image-->
+                <Image Source="handforddetector.png" Aspect="AspectFill"/>
+
+                <!--First Section... Technical Credits-->
+                <StackLayout Orientation="Vertical">
+                    <Label 
+                       Text="Technical Credits"
+                       Margin="0,15,0,0"
+                       LineBreakMode="WordWrap"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"/>
+
+                    <Label 
+                       Text="Developer: Nicholas Provost"
+                       HorizontalTextAlignment="Center"
+                       Margin="15,15,15,0"
+                       LineBreakMode="WordWrap"/>
+
+                    <Label 
+                       Text="Contact Developer"
+                       HorizontalTextAlignment="Center"
+                       Margin="15,15,15,0"
+                       LineBreakMode="WordWrap"                       
+                       TextColor="Blue">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ContactDeveloperCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Label 
+                       Text="Physics Adviser: Dr. Marc Favata"
+                       HorizontalTextAlignment="Center"
+                       Margin="15,15,15,0"
+                       LineBreakMode="WordWrap"/>
+
+                    <Label 
+                       Text="ODE Library: Microsoft OSLO"
+                       HorizontalTextAlignment="Center"
+                       Margin="15,15,15,0"
+                       LineBreakMode="WordWrap"/>
+
+                    <Label 
+                       Text="Graph Display: SciChart"
+                       HorizontalTextAlignment="Center"
+                       Margin="15,15,15,0"
+                       LineBreakMode="WordWrap"/>
+
+                </StackLayout>
+
+                <!--Second Section... Artistic Credits-->
+                <StackLayout Orientation="Vertical" Margin="0,20,0,0">
+                    <Label 
+                       Text="Artistic Credits"
+                       LineBreakMode="WordWrap"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"/>
+
+                    <Label 
+                       Text="Icon/Splash Screen: Jin Lim"
+                       HorizontalTextAlignment="Center"
+                       Margin="15,15,15,0"
+                       LineBreakMode="WordWrap"/>
+
+                    <Label 
+                       Text="Scientific Images: LIGO Caltech"
+                       HorizontalTextAlignment="Center"
+                       Margin="15,15,15,0"
+                       LineBreakMode="WordWrap"/>
+                </StackLayout>
+
+                <!--Third Section... Auxiliary Support-->
+                <StackLayout Orientation="Vertical" Margin="0,20,0,20">
+                    <Label 
+                       Text="Auxiliary Support"
+                       LineBreakMode="WordWrap"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"/>
+
+                    <Label 
+                       Text="Montclair State University"
+                       HorizontalTextAlignment="Center"
+                       Margin="15,15,15,0"
+                       LineBreakMode="WordWrap"/>
+                </StackLayout>
+
+            </StackLayout>
+
+
+
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
