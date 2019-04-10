@@ -59,9 +59,7 @@ namespace Nickprovs.Albatross.ViewModels
 
         private async void OnIconTapped()
         {
-            await this.Blink();
-            await Task.Delay(100);
-            await this.Blink();
+            await this.BlinkTwice();
         }
 
         private async Task Wink()
@@ -134,6 +132,13 @@ namespace Nickprovs.Albatross.ViewModels
 
             Application.Current.Resources.TryGetValue("director_main", out iconPath);
             this.IconPath = iconPath as string;
+        }
+
+        private async Task BlinkTwice()
+        {
+            await this.Blink();
+            await Task.Delay(100);
+            await this.Blink();
         }
 
 
