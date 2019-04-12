@@ -2,12 +2,21 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Nickprovs.Albatross.Views"
-             x:Name="mainPage"
-             x:Class="Nickprovs.Albatross.Views.MasterPage"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:prismBehaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             xmlns:controls="clr-namespace:Nickprovs.Albatross.Controls"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Name="mainPage"             
+             x:Class="Nickprovs.Albatross.Views.MasterPage" 
+             IsPresented="{Binding IsMenuVisible, Mode=TwoWay}"
              Title="{Binding Title}">
+    <MasterDetailPage.Behaviors>
+        <prismBehaviors:EventToCommandBehavior EventName="IsPresentedChanged" 
+                                      Command="{Binding MenuPresentationChangedCommand}"/>
+    </MasterDetailPage.Behaviors>
     <MasterDetailPage.Master>
         <!-- Hamburger Menu Secret Sauce... Add an Icon!!!! Make sure it's in your resources for your Platform Project -->
-        <NavigationPage Title="Required Foo" Icon="hamburger.png">
+        <NavigationPage  Title="Required Foo" Icon="hamburger.png">
             <x:Arguments>
                 <ContentPage Title="Menu" BackgroundColor="{DynamicResource B2}">
                     <Grid>
@@ -18,45 +27,65 @@
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="5*"/>
-                            <RowDefinition Height="90*"/>
+                            <RowDefinition Height="45*"/>
+                            <RowDefinition Height="45*"/>
                             <RowDefinition Height="5*"/>
                         </Grid.RowDefinitions>
                         <StackLayout Grid.Row="1" Grid.Column="1">
                             <Button 
-                                    Text="Simulator"                    
-                                    Command="{Binding NavigateCommand}" 
-                                    CommandParameter="Navigation/Simulator"
-                                    BackgroundColor="{DynamicResource B5}"
-                                    BorderColor="{DynamicResource B6}"
-                                    TextColor="{DynamicResource F1}"/>
+                                Text="Simulator"                    
+                                Command="{Binding NavigateCommand}" 
+                                CommandParameter="Navigation/Simulator"
+                                BackgroundColor="{DynamicResource B5}"
+                                BorderColor="{DynamicResource B6}"
+                                TextColor="{DynamicResource F1}"/>
                             <Button 
-                                    Text="About" 
-                                    Command="{Binding NavigateCommand}" 
-                                    CommandParameter="Navigation/About" 
-                                    BackgroundColor="{DynamicResource B5}"
-                                    BorderColor="{DynamicResource B6}"
-                                    TextColor="{DynamicResource F1}"/>
+                                Text="About" 
+                                Command="{Binding NavigateCommand}" 
+                                CommandParameter="Navigation/About" 
+                                BackgroundColor="{DynamicResource B5}"
+                                BorderColor="{DynamicResource B6}"
+                                TextColor="{DynamicResource F1}"/>
                             <Button 
-                                    Text="Credits" 
-                                    Command="{Binding NavigateCommand}" 
-                                    CommandParameter="Navigation/Credits" 
-                                    BackgroundColor="{DynamicResource B5}"
-                                    BorderColor="{DynamicResource B6}"
-                                    TextColor="{DynamicResource F1}"/>
+                                Text="Credits" 
+                                Command="{Binding NavigateCommand}" 
+                                CommandParameter="Navigation/Credits" 
+                                BackgroundColor="{DynamicResource B5}"
+                                BorderColor="{DynamicResource B6}"
+                                TextColor="{DynamicResource F1}"/>
                         </StackLayout>
+
+                        <!--Icon-->
+                        <Grid
+                            Grid.Column="1"
+                            Grid.Row="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="6*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions> 
+                            <controls:Icon    
+                                Grid.Column="1"
+                                ResourceId= "{Binding BindingContext.IconPath, Source={x:Reference mainPage}}"
+                                Stroke="{DynamicResource F1}">
+                                <controls:Icon.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding IconTappedCommand}"/>
+                                </controls:Icon.GestureRecognizers>
+                            </controls:Icon>
+                        </Grid>
                     </Grid>
                 </ContentPage>
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Master>
 
-    <!--<MasterDetailPage.Detail>
+    <MasterDetailPage.Detail>
         <NavigationPage>
             <x:Arguments>
                 <local:SimulatorPage/>
             </x:Arguments>
         </NavigationPage>
-    </MasterDetailPage.Detail>-->
+    </MasterDetailPage.Detail>
 
 </MasterDetailPage>
 
