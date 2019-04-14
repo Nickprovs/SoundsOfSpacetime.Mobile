@@ -11,44 +11,33 @@
     <ContentPage.Content>
 
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="5*"/>
-                <ColumnDefinition Width="90*"/>
-                <ColumnDefinition Width="5*"/>
-            </Grid.ColumnDefinitions>
-
+            
             <Grid.RowDefinitions>
-                <RowDefinition Height="40*"/>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="50*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <controls:Icon                 
-                    Margin="0,10"
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    ResourceId= "{Binding BindingContext.IconPath, Source={x:Reference simulatorPage}}"
-                    Stroke="{DynamicResource F1}">
-                <controls:Icon.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding IconTappedCommand}"/>
-                </controls:Icon.GestureRecognizers>
-            </controls:Icon>
+            <ScrollView Grid.Row="0" BackgroundColor="Green">
+                <StackLayout Orientation="Vertical">
+                    <Label>jsfsfs</Label>
+                    <Label>jsfsfs</Label>
+                    <Label>jsfsfs</Label>
+                    <Label>jsfsfs</Label>
+                    <Label>jsfsfs</Label>
+                    <Label>jsfsfs</Label>
+                    <Label>jsfsfs</Label>
+                    <Label>jsfsfs</Label>
+                    <Label>jsfsfs</Label>
+                    <Label>jsfsfs</Label>
+                    <Label>jsfsfs</Label>
+                    <Label>jsfsfs</Label>
+                    <Label>jsfsfs</Label>
+                    <Label>jsfsfs</Label>
+                </StackLayout>
+            </ScrollView>
 
-
-            <StackLayout 
-                Grid.Column="1" 
-                Grid.Row="2">
-
-                <Label  
-                Margin="0,5"
-                TextColor="{DynamicResource F1}"
-                Text="Welcome to the Exodus Prototype Mobile App!"/>
-
-                <Label  
-                Margin="0,5"
-                TextColor="{DynamicResource F1}"
-                Text="Select Sessions, then click one from the list to see a real-time version of the data."/>
-            </StackLayout>
+            <Grid BackgroundColor="Red" Grid.Row="1"/>
+            
         </Grid>
 
     </ContentPage.Content>

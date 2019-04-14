@@ -72,4 +72,8 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="OSLO\ODE\" />
+  </ItemGroup>
 </Project>
