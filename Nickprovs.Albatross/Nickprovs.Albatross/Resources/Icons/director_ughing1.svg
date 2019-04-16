@@ -5,11 +5,13 @@
 	 height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
 <g id="Layer_1">
 	<circle fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" cx="49.999" cy="50.688" r="42.667"/>
-	<ellipse fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" cx="65.725" cy="40.236" rx="8.75" ry="17.235"/>
-	<ellipse fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" cx="34.494" cy="40.235" rx="8.75" ry="17.235"/>
-	<path stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M65.725,23.125c-4.181,0-7.671,5.779-8.538,13.5
-		c5.691,0,11.385,0,17.076,0C73.396,28.904,69.905,23.125,65.725,23.125z"/>
 </g>
 <g id="Layer_2">
+	<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M40.713,29.5c-4.559,0-9.118,0-13.677,0
+		c-1.193,2.946-1.912,6.673-1.912,10.735c0,9.521,3.918,17.235,8.75,17.235s8.75-7.715,8.75-17.235
+		C42.625,36.173,41.907,32.446,40.713,29.5z"/>
+	<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M72.563,29.5c-4.559,0-9.117,0-13.676,0
+		c-1.193,2.946-1.912,6.674-1.912,10.735c0,9.521,3.918,17.235,8.75,17.235s8.75-7.715,8.75-17.235
+		C74.475,36.174,73.756,32.446,72.563,29.5z"/>
 </g>
 </svg>

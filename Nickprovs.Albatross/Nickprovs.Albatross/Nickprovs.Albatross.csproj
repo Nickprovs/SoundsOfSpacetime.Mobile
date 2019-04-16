@@ -10,27 +10,97 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Icons\director_angered.svg" />
+    <None Remove="Resources\Icons\director_angering1.svg" />
+    <None Remove="Resources\Icons\director_angering2.svg" />
+    <None Remove="Resources\Icons\director_angering3.svg" />
+    <None Remove="Resources\Icons\director_angering4.svg" />
+    <None Remove="Resources\Icons\director_blinked.svg" />
+    <None Remove="Resources\Icons\director_blinking1.svg" />
+    <None Remove="Resources\Icons\director_blinking2.svg" />
+    <None Remove="Resources\Icons\director_blinking3.svg" />
+    <None Remove="Resources\Icons\director_blinking4.svg" />
+    <None Remove="Resources\Icons\director_blinking5.svg" />
+    <None Remove="Resources\Icons\director_blinking6.svg" />
+    <None Remove="Resources\Icons\director_blinking7.svg" />
     <None Remove="Resources\Icons\director_closed.svg" />
     <None Remove="Resources\Icons\director_closing1.svg" />
     <None Remove="Resources\Icons\director_closing2.svg" />
     <None Remove="Resources\Icons\director_closing3.svg" />
+    <None Remove="Resources\Icons\director_halfed.svg" />
+    <None Remove="Resources\Icons\director_halfing1.svg" />
+    <None Remove="Resources\Icons\director_halfing2.svg" />
+    <None Remove="Resources\Icons\director_halfing3.svg" />
+    <None Remove="Resources\Icons\director_happy.svg" />
+    <None Remove="Resources\Icons\director_happying1.svg" />
+    <None Remove="Resources\Icons\director_happying2.svg" />
+    <None Remove="Resources\Icons\director_happying3.svg" />
+    <None Remove="Resources\Icons\director_happying4.svg" />
     <None Remove="Resources\Icons\director_main.svg" />
+    <None Remove="Resources\Icons\director_squinted.svg" />
+    <None Remove="Resources\Icons\director_squinting1.svg" />
+    <None Remove="Resources\Icons\director_squinting2.svg" />
+    <None Remove="Resources\Icons\director_squinting3.svg" />
+    <None Remove="Resources\Icons\director_ughed.svg" />
+    <None Remove="Resources\Icons\director_ughing1.svg" />
+    <None Remove="Resources\Icons\director_ughing2.svg" />
+    <None Remove="Resources\Icons\director_ughing3.svg" />
     <None Remove="Resources\Icons\director_winked.svg" />
     <None Remove="Resources\Icons\director_winking1.svg" />
     <None Remove="Resources\Icons\director_winking2.svg" />
     <None Remove="Resources\Icons\director_winking3.svg" />
+    <None Remove="Resources\Icons\director_winking4.svg" />
+    <None Remove="Resources\Icons\director_winking5.svg" />
+    <None Remove="Resources\Icons\director_winking6.svg" />
+    <None Remove="Resources\Icons\director_winking7.svg" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Icons\director_closed.svg" />
-    <EmbeddedResource Include="Resources\Icons\director_closing1.svg" />
-    <EmbeddedResource Include="Resources\Icons\director_closing2.svg" />
-    <EmbeddedResource Include="Resources\Icons\director_closing3.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_happying4.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Icons\director_angering2.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Icons\director_angered.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_angering1.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_angering3.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_angering4.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_blinked.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_blinking1.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_blinking2.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_blinking3.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_blinking4.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_blinking5.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_blinking6.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_blinking7.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_halfed.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_halfing1.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_halfing2.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_halfing3.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_happy.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_happying1.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_happying2.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_happying3.svg" />
     <EmbeddedResource Include="Resources\Icons\director_main.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_squinted.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_squinting1.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_squinting2.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_squinting3.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_ughed.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_ughing1.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_ughing2.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_ughing3.svg" />
     <EmbeddedResource Include="Resources\Icons\director_winked.svg" />
     <EmbeddedResource Include="Resources\Icons\director_winking1.svg" />
     <EmbeddedResource Include="Resources\Icons\director_winking2.svg" />
     <EmbeddedResource Include="Resources\Icons\director_winking3.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_winking4.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_winking5.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_winking6.svg" />
+    <EmbeddedResource Include="Resources\Icons\director_winking7.svg" />
   </ItemGroup>
 
   <ItemGroup>

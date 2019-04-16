@@ -94,8 +94,16 @@ namespace Nickprovs.Albatross.ViewModels
         #region Menu Icon Animation
 
         private async void OnIconTapped()
+
         {
-            await this.BlinkTwice();
+            await this.BlinkSlow();
+            await this.Half();
+            await this.BlinkTwiceFast();
+            await this.Happy();
+            await this.Squint();
+            await this.Wink();
+            await this.Ugh();
+            await this.Anger();
         }
 
         private async Task Wink()
@@ -104,77 +112,397 @@ namespace Nickprovs.Albatross.ViewModels
 
             Application.Current.Resources.TryGetValue("director_winking1", out iconPath);
             this.IconPath = iconPath as string;
-            await Task.Delay(25);
+            await Task.Delay(15);
 
             Application.Current.Resources.TryGetValue("director_winking2", out iconPath);
             this.IconPath = iconPath as string;
-            await Task.Delay(25);
+            await Task.Delay(15);
 
             Application.Current.Resources.TryGetValue("director_winking3", out iconPath);
             this.IconPath = iconPath as string;
-            await Task.Delay(25);
+            await Task.Delay(15);
+
+            Application.Current.Resources.TryGetValue("director_winking4", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(15);
+
+            Application.Current.Resources.TryGetValue("director_winking5", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(15);
+
+            Application.Current.Resources.TryGetValue("director_winking6", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(15);
+
+            Application.Current.Resources.TryGetValue("director_winking7", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(15);
 
             Application.Current.Resources.TryGetValue("director_winked", out iconPath);
             this.IconPath = iconPath as string;
-            await Task.Delay(100);
+            await Task.Delay(300);
+
+            Application.Current.Resources.TryGetValue("director_winking7", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(15);
+
+            Application.Current.Resources.TryGetValue("director_winking6", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(15);
+
+            Application.Current.Resources.TryGetValue("director_winking5", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(15);
+
+            Application.Current.Resources.TryGetValue("director_winking4", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(15);
 
             Application.Current.Resources.TryGetValue("director_winking3", out iconPath);
             this.IconPath = iconPath as string;
-            await Task.Delay(25);
+            await Task.Delay(15);
 
             Application.Current.Resources.TryGetValue("director_winking2", out iconPath);
             this.IconPath = iconPath as string;
-            await Task.Delay(25);
+            await Task.Delay(15);
 
             Application.Current.Resources.TryGetValue("director_winking1", out iconPath);
             this.IconPath = iconPath as string;
-            await Task.Delay(25);
+            await Task.Delay(15);
 
             Application.Current.Resources.TryGetValue("director_main", out iconPath);
             this.IconPath = iconPath as string;
         }
 
-        private async Task Blink()
+        private async Task BlinkSlow()
         {
             object iconPath;
 
-            Application.Current.Resources.TryGetValue("director_closing1", out iconPath);
+            Application.Current.Resources.TryGetValue("director_blinking1", out iconPath);
             this.IconPath = iconPath as string;
-            await Task.Delay(25);
+            await Task.Delay(20);
 
-            Application.Current.Resources.TryGetValue("director_closing2", out iconPath);
+            Application.Current.Resources.TryGetValue("director_blinking2", out iconPath);
             this.IconPath = iconPath as string;
-            await Task.Delay(25);
+            await Task.Delay(20);
 
-            Application.Current.Resources.TryGetValue("director_closing3", out iconPath);
+            Application.Current.Resources.TryGetValue("director_blinking3", out iconPath);
             this.IconPath = iconPath as string;
-            await Task.Delay(25);
+            await Task.Delay(20);
 
-            Application.Current.Resources.TryGetValue("director_closed", out iconPath);
+            Application.Current.Resources.TryGetValue("director_blinking4", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(20);
+
+            Application.Current.Resources.TryGetValue("director_blinking5", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(20);
+
+            Application.Current.Resources.TryGetValue("director_blinking6", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(20);
+
+            Application.Current.Resources.TryGetValue("director_blinking7", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(20);
+
+            Application.Current.Resources.TryGetValue("director_blinked", out iconPath);
             this.IconPath = iconPath as string;
             await Task.Delay(100);
 
-            Application.Current.Resources.TryGetValue("director_closing3", out iconPath);
+            Application.Current.Resources.TryGetValue("director_blinking7", out iconPath);
             this.IconPath = iconPath as string;
-            await Task.Delay(25);
+            await Task.Delay(20);
 
-            Application.Current.Resources.TryGetValue("director_closing2", out iconPath);
+            Application.Current.Resources.TryGetValue("director_blinking6", out iconPath);
             this.IconPath = iconPath as string;
-            await Task.Delay(25);
+            await Task.Delay(20);
 
-            Application.Current.Resources.TryGetValue("director_closing1", out iconPath);
+            Application.Current.Resources.TryGetValue("director_blinking5", out iconPath);
             this.IconPath = iconPath as string;
-            await Task.Delay(25);
+            await Task.Delay(20);
+
+            Application.Current.Resources.TryGetValue("director_blinking4", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(20);
+
+            Application.Current.Resources.TryGetValue("director_blinking3", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(20);
+
+            Application.Current.Resources.TryGetValue("director_blinking2", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(20);
+
+            Application.Current.Resources.TryGetValue("director_blinking1", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(20);
 
             Application.Current.Resources.TryGetValue("director_main", out iconPath);
             this.IconPath = iconPath as string;
         }
 
-        private async Task BlinkTwice()
+        private async Task BlinkFast()
         {
-            await this.Blink();
-            await Task.Delay(100);
-            await this.Blink();
+            object iconPath;
+
+            Application.Current.Resources.TryGetValue("director_blinking1", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(12);
+
+            Application.Current.Resources.TryGetValue("director_blinking2", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(12);
+
+            Application.Current.Resources.TryGetValue("director_blinking3", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(12);
+
+            Application.Current.Resources.TryGetValue("director_blinking4", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(12);
+
+            Application.Current.Resources.TryGetValue("director_blinking5", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(12);
+
+            Application.Current.Resources.TryGetValue("director_blinking6", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(12);
+
+            Application.Current.Resources.TryGetValue("director_blinking7", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(12);
+
+            Application.Current.Resources.TryGetValue("director_blinked", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(120);
+
+            Application.Current.Resources.TryGetValue("director_blinking7", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(12);
+
+            Application.Current.Resources.TryGetValue("director_blinking6", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(12);
+
+            Application.Current.Resources.TryGetValue("director_blinking5", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(12);
+
+            Application.Current.Resources.TryGetValue("director_blinking4", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(12);
+
+            Application.Current.Resources.TryGetValue("director_blinking3", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(12);
+
+            Application.Current.Resources.TryGetValue("director_blinking2", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(12);
+
+            Application.Current.Resources.TryGetValue("director_blinking1", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(12);
+
+            Application.Current.Resources.TryGetValue("director_main", out iconPath);
+            this.IconPath = iconPath as string;
+        }
+
+        private async Task BlinkTwiceFast()
+        {
+            await this.BlinkFast();
+            await Task.Delay(50);
+            await this.BlinkFast();
+        }
+
+        private async Task Squint()
+        {
+            object iconPath;
+
+            Application.Current.Resources.TryGetValue("director_squinting1", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(30);
+
+            Application.Current.Resources.TryGetValue("director_squinting2", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(40);
+
+            Application.Current.Resources.TryGetValue("director_squinting3", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(50);
+
+            Application.Current.Resources.TryGetValue("director_squinted", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(500);
+
+            Application.Current.Resources.TryGetValue("director_squinting3", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(50);
+
+            Application.Current.Resources.TryGetValue("director_squinting2", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(40);
+
+            Application.Current.Resources.TryGetValue("director_squinting1", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(30);
+
+            Application.Current.Resources.TryGetValue("director_main", out iconPath);
+            this.IconPath = iconPath as string;
+        }
+
+        private async Task Happy()
+        {
+            object iconPath;
+
+            Application.Current.Resources.TryGetValue("director_happying1", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(30);
+
+            Application.Current.Resources.TryGetValue("director_happying2", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(40);
+
+            Application.Current.Resources.TryGetValue("director_happying3", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(50);
+
+            Application.Current.Resources.TryGetValue("director_happying4", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(50);
+
+            Application.Current.Resources.TryGetValue("director_happy", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(500);
+
+            Application.Current.Resources.TryGetValue("director_happying4", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(50);
+
+            Application.Current.Resources.TryGetValue("director_happying3", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(50);
+
+            Application.Current.Resources.TryGetValue("director_happying2", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(40);
+
+            Application.Current.Resources.TryGetValue("director_happying1", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(30);
+
+            Application.Current.Resources.TryGetValue("director_main", out iconPath);
+            this.IconPath = iconPath as string;
+        }
+
+        private async Task Ugh()
+        {
+            object iconPath;
+
+            Application.Current.Resources.TryGetValue("director_ughing1", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(30);
+
+            Application.Current.Resources.TryGetValue("director_ughing2", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(40);
+
+            Application.Current.Resources.TryGetValue("director_ughing3", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(50);
+
+            Application.Current.Resources.TryGetValue("director_ughed", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(500);
+
+            Application.Current.Resources.TryGetValue("director_ughing3", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(50);
+
+            Application.Current.Resources.TryGetValue("director_ughing2", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(40);
+
+            Application.Current.Resources.TryGetValue("director_ughing1", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(30);
+
+            Application.Current.Resources.TryGetValue("director_main", out iconPath);
+            this.IconPath = iconPath as string;
+        }
+
+        private async Task Half()
+        {
+            object iconPath;
+
+            Application.Current.Resources.TryGetValue("director_halfing1", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(30);
+
+            Application.Current.Resources.TryGetValue("director_halfing2", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(40);
+
+            Application.Current.Resources.TryGetValue("director_halfing3", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(50);
+
+            Application.Current.Resources.TryGetValue("director_halfed", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(500);
+
+            Application.Current.Resources.TryGetValue("director_halfing3", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(50);
+
+            Application.Current.Resources.TryGetValue("director_halfing2", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(40);
+
+            Application.Current.Resources.TryGetValue("director_halfing1", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(30);
+
+            Application.Current.Resources.TryGetValue("director_main", out iconPath);
+            this.IconPath = iconPath as string;
+        }
+
+        private async Task Anger()
+        {
+            object iconPath;
+
+            Application.Current.Resources.TryGetValue("director_angering1", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(30);
+
+            Application.Current.Resources.TryGetValue("director_angering2", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(40);
+
+            Application.Current.Resources.TryGetValue("director_angering3", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(50);
+
+            Application.Current.Resources.TryGetValue("director_angered", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(500);
+
+            Application.Current.Resources.TryGetValue("director_angering3", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(50);
+
+            Application.Current.Resources.TryGetValue("director_angering2", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(40);
+
+            Application.Current.Resources.TryGetValue("director_angering1", out iconPath);
+            this.IconPath = iconPath as string;
+            await Task.Delay(30);
+
+            Application.Current.Resources.TryGetValue("director_main", out iconPath);
+            this.IconPath = iconPath as string;
         }
 
         #endregion
