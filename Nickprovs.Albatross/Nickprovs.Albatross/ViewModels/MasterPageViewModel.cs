@@ -1,7 +1,10 @@
 ﻿using Nickprovs.Albatross;
+using Nickprovs.Albatross.Types;
 using Prism.Commands;
 using Prism.Navigation;
+using System;
 using System.Threading.Tasks;
+using System.Timers;
 using Xamarin.Forms;
 
 namespace Nickprovs.Albatross.ViewModels
@@ -19,6 +22,11 @@ namespace Nickprovs.Albatross.ViewModels
         /// Describes whether or not the menu is visible.
         /// </summary>
         private bool _isMenuVisible;
+
+        /// <summary>
+        /// The timer
+        /// </summary>
+        Timer _directorAnimationTimer = new Timer {  Interval = 7000, };
 
         #endregion
 
@@ -67,10 +75,20 @@ namespace Nickprovs.Albatross.ViewModels
             Application.Current.Resources.TryGetValue("director_main", out iconPath);
             this.IconPath = iconPath as string;
 
+            //Commmands
             this.MenuPresentationChangedCommand = new DelegateCommand(this.OnMenuPresentationStatusChanged);
             this.NavigateCommand = new DelegateCommand<string>(this.OnNavigateCommandExecuted);
             this.IconTappedCommand = new DelegateCommand(this.OnIconTapped);
+
+            //Timer
+            Random random = new Random();
+            int maxMilli = 7000;
+            double rDub = random.NextDouble() * maxMilli;
+            this._directorAnimationTimer.Interval = rDub;
+            this._directorAnimationTimer.Elapsed += this.DirectorAnimationTimerElapsed;
+            this._directorAnimationTimer.Start();
         }
+
 
         #endregion
 
@@ -93,8 +111,55 @@ namespace Nickprovs.Albatross.ViewModels
 
         #region Menu Icon Animation
 
-        private async void OnIconTapped()
+        private async void DirectorAnimationTimerElapsed(object sender, ElapsedEventArgs e)
+        {
+            this._directorAnimationTimer.Stop();
 
+            var animationValues = Enum.GetValues(typeof(DirectorAnimationType));
+            var animation = (DirectorAnimationType) animationValues.GetValue(new Random().Next(animationValues.Length));
+            await this.PerformAnimationFromEnum(animation);
+
+            Random random = new Random();
+            int maxMilli = 7000;
+            double rDub = random.NextDouble() * maxMilli;
+            this._directorAnimationTimer.Interval = rDub;
+
+            this._directorAnimationTimer.Start();
+
+        }
+
+        private async Task PerformAnimationFromEnum(DirectorAnimationType animationType)
+        {
+            switch(animationType)
+            {
+                case DirectorAnimationType.Happy:
+                    await this.Happy();
+                    break;
+                case DirectorAnimationType.Angry:
+                    await this.Anger();
+                    break;
+                case DirectorAnimationType.Half:
+                    await this.Half();
+                    break;
+                case DirectorAnimationType.Ugh:
+                    await this.Ugh();
+                    break;
+                case DirectorAnimationType.Squint:
+                    await this.Squint();
+                    break;
+                case DirectorAnimationType.BlinkOnce:
+                    await this.BlinkSlow();
+                    break;
+                case DirectorAnimationType.BlinkTwice:
+                    await this.BlinkTwiceFast();
+                    break;
+                case DirectorAnimationType.Wink:
+                    await this.Wink();
+                    break;
+            }
+        }
+
+        private async void OnIconTapped()
         {
             await this.BlinkSlow();
             await this.Half();
@@ -105,6 +170,8 @@ namespace Nickprovs.Albatross.ViewModels
             await this.Ugh();
             await this.Anger();
         }
+
+        #region Animations
 
         private async Task Wink()
         {
@@ -504,6 +571,8 @@ namespace Nickprovs.Albatross.ViewModels
             Application.Current.Resources.TryGetValue("director_main", out iconPath);
             this.IconPath = iconPath as string;
         }
+
+        #endregion
 
         #endregion
 
