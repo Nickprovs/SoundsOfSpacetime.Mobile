@@ -161,14 +161,14 @@ namespace Nickprovs.Albatross.ViewModels
 
         private async void OnIconTapped()
         {
-            await this.BlinkSlow();
-            await this.Half();
-            await this.BlinkTwiceFast();
-            await this.Happy();
-            await this.Squint();
-            await this.Wink();
-            await this.Ugh();
-            await this.Anger();
+            //await this.BlinkSlow();
+            //await this.Half();
+            //await this.BlinkTwiceFast();
+            //await this.Happy();
+            //await this.Squint();
+            //await this.Wink();
+            //await this.Ugh();
+            //await this.Anger();
         }
 
         #region Animations

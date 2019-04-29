@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using Nickprovs.Albatross.Interfaces;
+using Prism.Commands;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,11 @@ namespace Nickprovs.Albatross.ViewModels
         #region Fields
 
         /// <summary>
+        /// General information about the device we're running on.
+        /// </summary>
+        private IBindableDeviceInfo _bindableDeviceInfo;
+
+        /// <summary>
         /// The path to the icon we want to be displayed on the view.
         /// </summary>
         private string _iconPath;
@@ -20,6 +26,15 @@ namespace Nickprovs.Albatross.ViewModels
         #endregion
 
         #region Properties
+
+        /// <summary>
+        /// General information about the device we're running on.
+        /// </summary>
+        public IBindableDeviceInfo BindableDeviceInfo
+        {
+            get { return this._bindableDeviceInfo; }
+            set { SetProperty(ref _bindableDeviceInfo, value); }
+        }
 
         /// <summary>
         /// The path to the icon we want to be displayed on the view.
@@ -39,10 +54,11 @@ namespace Nickprovs.Albatross.ViewModels
 
         #region Constructors and Destructors
 
-        public SimulatorPageViewModel(INavigationService navigationService) : base(navigationService)
+        public SimulatorPageViewModel(INavigationService navigationService, IBindableDeviceInfo bindableDeviceInfo) : base(navigationService)
         {
             //Set the title for the page.
             this.Title = "Simulator";
+            this.BindableDeviceInfo = bindableDeviceInfo;
 
             //Get the default icon resource from the resource dictionary. Note... only TryGetValue works in Xamarin Forms
             object iconPath;

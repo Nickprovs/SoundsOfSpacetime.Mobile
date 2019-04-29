@@ -47,7 +47,7 @@ namespace Nickprovs.Albatross
             containerRegistry.RegisterForNavigation<SimulatorPage>("Simulator");
 
             containerRegistry.RegisterSingleton<IDeviceContext, DeviceContext>();
-
+            containerRegistry.RegisterSingleton<IBindableDeviceInfo, BindableDeviceInfo>();
         }
 
         protected override async void OnInitialized()
