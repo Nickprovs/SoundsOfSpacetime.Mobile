@@ -10,6 +10,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Icons\chevron_down.svg" />
+    <None Remove="Resources\Icons\chevron_left.svg" />
+    <None Remove="Resources\Icons\chevron_right.svg" />
+    <None Remove="Resources\Icons\chevron_up.svg" />
     <None Remove="Resources\Icons\director_angered.svg" />
     <None Remove="Resources\Icons\director_angering1.svg" />
     <None Remove="Resources\Icons\director_angering2.svg" />
@@ -53,6 +57,21 @@
     <None Remove="Resources\Icons\director_winking5.svg" />
     <None Remove="Resources\Icons\director_winking6.svg" />
     <None Remove="Resources\Icons\director_winking7.svg" />
+    <None Remove="Resources\Icons\lowercase_phi.svg" />
+    <None Remove="Resources\Icons\lowercase_theta.svg" />
+    <None Remove="Resources\Icons\psi.svg" />
+    <None Remove="Resources\Icons\solar_mass.svg" />
+    <None Remove="Resources\Icons\uppercase_phi.svg" />
+    <None Remove="Resources\Icons\uppercase_theta.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Icons\chevron_down.svg" />
+    <EmbeddedResource Include="Resources\Icons\chevron_left.svg" />
+    <EmbeddedResource Include="Resources\Icons\chevron_up.svg" />
+    <EmbeddedResource Include="Resources\Icons\psi.svg" />
+    <EmbeddedResource Include="Resources\Icons\uppercase_phi.svg" />
+    <EmbeddedResource Include="Resources\Icons\uppercase_theta.svg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -101,6 +120,9 @@
     <EmbeddedResource Include="Resources\Icons\director_winking5.svg" />
     <EmbeddedResource Include="Resources\Icons\director_winking6.svg" />
     <EmbeddedResource Include="Resources\Icons\director_winking7.svg" />
+    <EmbeddedResource Include="Resources\Icons\lowercase_phi.svg" />
+    <EmbeddedResource Include="Resources\Icons\lowercase_theta.svg" />
+    <EmbeddedResource Include="Resources\Icons\solar_mass.svg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -146,5 +168,9 @@
 
   <ItemGroup>
     <Folder Include="OSLO\ODE\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Icons\chevron_right.svg" />
   </ItemGroup>
 </Project>

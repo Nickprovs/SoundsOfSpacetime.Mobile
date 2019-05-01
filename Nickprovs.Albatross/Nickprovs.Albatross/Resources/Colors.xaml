@@ -11,6 +11,7 @@
     <Color x:Key="F4">#edeef3</Color>
     <Color x:Key="F5">#b11826</Color>
     <Color x:Key="F6">#1a8c2d</Color>
+    <Color x:Key="F7">#ff1980</Color>
     <!--#endregion-->
     
     <!--#region Background Colors-->

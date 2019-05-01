@@ -4,8 +4,26 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
+    <!--Units of Measurement-->
+    <x:String x:Key="solar_mass">Nickprovs.Albatross.Resources.Icons.solar_mass.svg</x:String>
+    
+    <!--Mathematical Symbols-->
+    <x:String x:Key="lowercase_theta">Nickprovs.Albatross.Resources.Icons.lowercase_theta.svg</x:String>
+    <x:String x:Key="uppercase_theta">Nickprovs.Albatross.Resources.Icons.uppercase_theta.svg</x:String>
+    <x:String x:Key="lowercase_phi">Nickprovs.Albatross.Resources.Icons.lowercase_phi.svg</x:String>
+    <x:String x:Key="uppercase_phi">Nickprovs.Albatross.Resources.Icons.uppercase_phi.svg</x:String>
+    <x:String x:Key="psi">Nickprovs.Albatross.Resources.Icons.psi.svg</x:String>
+
     <!--Main Icon-->
     <x:String x:Key="director_main">Nickprovs.Albatross.Resources.Icons.director_main.svg</x:String>
+
+    <!--Common UI Symbols-->
+    <x:String x:Key="chevron_left">Nickprovs.Albatross.Resources.Icons.chevron_left.svg</x:String>
+    <x:String x:Key="chevron_up">Nickprovs.Albatross.Resources.Icons.chevron_up.svg</x:String>
+    <x:String x:Key="chevron_right">Nickprovs.Albatross.Resources.Icons.chevron_right.svg</x:String>
+    <x:String x:Key="chevron_down">Nickprovs.Albatross.Resources.Icons.chevron_down.svg</x:String>
+
+    <!--Animation Start-->
 
     <!--Winking-->
     <x:String x:Key="director_winking1">Nickprovs.Albatross.Resources.Icons.director_winking1.svg</x:String>
@@ -58,4 +76,6 @@
     <x:String x:Key="director_happying4">Nickprovs.Albatross.Resources.Icons.director_happying4.svg</x:String>
     <x:String x:Key="director_happy">Nickprovs.Albatross.Resources.Icons.director_happy.svg</x:String>
 
+    <!--Animation End-->
+    
 </ResourceDictionary>
