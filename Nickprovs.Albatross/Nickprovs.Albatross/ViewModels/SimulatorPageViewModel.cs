@@ -1,4 +1,5 @@
-﻿using Nickprovs.Albatross.Interfaces;
+﻿using Nickprovs.Albatross.Controls;
+using Nickprovs.Albatross.Interfaces;
 using Prism.Commands;
 using Prism.Navigation;
 using System;
@@ -19,9 +20,9 @@ namespace Nickprovs.Albatross.ViewModels
         private IBindableDeviceInfo _bindableDeviceInfo;
 
         /// <summary>
-        /// The path to the icon we want to be displayed on the view.
+        /// The path to the more options icon we want to be displayed on the view.
         /// </summary>
-        private string _iconPath;
+        private string _moreOptionsIconPath;
 
         #endregion
 
@@ -33,22 +34,22 @@ namespace Nickprovs.Albatross.ViewModels
         public IBindableDeviceInfo BindableDeviceInfo
         {
             get { return this._bindableDeviceInfo; }
-            set { SetProperty(ref _bindableDeviceInfo, value); }
+            set { this.SetProperty(ref _bindableDeviceInfo, value); }
         }
 
         /// <summary>
         /// The path to the icon we want to be displayed on the view.
         /// </summary>
-        public string IconPath
+        public string MoreOptionsIconPath
         {
-            get { return this._iconPath; }
-            set { SetProperty(ref _iconPath, value); }
+            get { return this._moreOptionsIconPath; }
+            set { this.SetProperty(ref _moreOptionsIconPath, value); }
         }
 
         /// <summary>
-        /// The command we fire when the icon is tapped.
+        /// The command that should execute when the user affects the expansion status of the more simulator options.
         /// </summary>
-        public DelegateCommand IconTappedCommand { get; }
+        public DelegateCommand<object> MoreOptionsExpansionStatusChangedCommand { get; }
 
         #endregion
 
@@ -62,101 +63,40 @@ namespace Nickprovs.Albatross.ViewModels
 
             //Get the default icon resource from the resource dictionary. Note... only TryGetValue works in Xamarin Forms
             object iconPath;
-            Application.Current.Resources.TryGetValue("director_main", out iconPath);
-            this.IconPath = iconPath as string;
+            Application.Current.Resources.TryGetValue("chevron_right", out iconPath);
+            this.MoreOptionsIconPath = iconPath as string;
 
             //Load the command with a handler
-            this.IconTappedCommand = new DelegateCommand(this.OnIconTapped);
+            this.MoreOptionsExpansionStatusChangedCommand = new DelegateCommand<object>(this.OnMoreOptionsExpansionStatusChanged);
         }
 
         #endregion
 
         #region Private Methods
 
-        private async void OnIconTapped()
+        private void OnMoreOptionsExpansionStatusChanged(object newStatus)
         {
-            await this.BlinkTwice();
+            var newStatusEnum = (ExpandStatus)newStatus;
+            //If more options are not currently visible
+            if(newStatusEnum == ExpandStatus.Expanding)
+            {
+                //Get and Set the chevron_down icon to show that we're going to have the more options view expanded.
+                object iconPath;
+                Application.Current.Resources.TryGetValue("chevron_down", out iconPath);
+                this.MoreOptionsIconPath = iconPath as string;
+                return;
+            }
+
+            //If more options are currently visible.
+            else if(newStatusEnum == ExpandStatus.Collapsing)
+            {
+                //Get and Set the chevron_right icon to show that we're going to have the more options view hidden.
+                object iconPath;
+                Application.Current.Resources.TryGetValue("chevron_right", out iconPath);
+                this.MoreOptionsIconPath = iconPath as string;
+                return;
+            }
         }
-
-        private async Task Wink()
-        {
-            object iconPath;
-
-            Application.Current.Resources.TryGetValue("director_winking1", out iconPath);
-            this.IconPath = iconPath as string;
-            await Task.Delay(25);
-
-            Application.Current.Resources.TryGetValue("director_winking2", out iconPath);
-            this.IconPath = iconPath as string;
-            await Task.Delay(25);
-
-            Application.Current.Resources.TryGetValue("director_winking3", out iconPath);
-            this.IconPath = iconPath as string;
-            await Task.Delay(25);
-
-            Application.Current.Resources.TryGetValue("director_winked", out iconPath);
-            this.IconPath = iconPath as string;
-            await Task.Delay(100);
-
-            Application.Current.Resources.TryGetValue("director_winking3", out iconPath);
-            this.IconPath = iconPath as string;
-            await Task.Delay(25);
-
-            Application.Current.Resources.TryGetValue("director_winking2", out iconPath);
-            this.IconPath = iconPath as string;
-            await Task.Delay(25);
-
-            Application.Current.Resources.TryGetValue("director_winking1", out iconPath);
-            this.IconPath = iconPath as string;
-            await Task.Delay(25);
-
-            Application.Current.Resources.TryGetValue("director_main", out iconPath);
-            this.IconPath = iconPath as string;
-        }
-
-        private async Task Blink()
-        {
-            object iconPath;
-
-            Application.Current.Resources.TryGetValue("director_closing1", out iconPath);
-            this.IconPath = iconPath as string;
-            await Task.Delay(25);
-
-            Application.Current.Resources.TryGetValue("director_closing2", out iconPath);
-            this.IconPath = iconPath as string;
-            await Task.Delay(25);
-
-            Application.Current.Resources.TryGetValue("director_closing3", out iconPath);
-            this.IconPath = iconPath as string;
-            await Task.Delay(25);
-
-            Application.Current.Resources.TryGetValue("director_closed", out iconPath);
-            this.IconPath = iconPath as string;
-            await Task.Delay(100);
-
-            Application.Current.Resources.TryGetValue("director_closing3", out iconPath);
-            this.IconPath = iconPath as string;
-            await Task.Delay(25);
-
-            Application.Current.Resources.TryGetValue("director_closing2", out iconPath);
-            this.IconPath = iconPath as string;
-            await Task.Delay(25);
-
-            Application.Current.Resources.TryGetValue("director_closing1", out iconPath);
-            this.IconPath = iconPath as string;
-            await Task.Delay(25);
-
-            Application.Current.Resources.TryGetValue("director_main", out iconPath);
-            this.IconPath = iconPath as string;
-        }
-
-        private async Task BlinkTwice()
-        {
-            await this.Blink();
-            await Task.Delay(100);
-            await this.Blink();
-        }
-
 
         #endregion
     }

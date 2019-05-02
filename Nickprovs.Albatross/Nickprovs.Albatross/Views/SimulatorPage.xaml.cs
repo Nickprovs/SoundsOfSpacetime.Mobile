@@ -13,20 +13,5 @@ namespace Nickprovs.Albatross.Views
         {
             InitializeComponent();
         }
-
-        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
-            if (!ExpandableOptions.IsVisible)
-            {
-                ExpandableOptions.IsVisible = true;
-                await Task.Delay(25);
-                await this.TopHalfScrollViewer.ScrollToAsync(0, TopHalf.Height, false);
-            }
-            else
-            {
-                await this.TopHalfScrollViewer.ScrollToAsync(0, AdditionalOptions.Y, false);
-                ExpandableOptions.IsVisible = false;
-            }
-        }
     }
 }
