@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="ExpandableView">
+      <Version>1.0.6</Version>
+    </PackageReference>
     <PackageReference Include="Prism.Core">
       <Version>7.1.0.431</Version>
     </PackageReference>

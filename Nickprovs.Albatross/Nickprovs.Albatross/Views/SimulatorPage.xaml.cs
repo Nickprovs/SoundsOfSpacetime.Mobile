@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Expandable;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,18 @@ namespace Nickprovs.Albatross.Views
         public SimulatorPage()
         {
             InitializeComponent();
+        }
+
+        private async void ExpandableView_StatusChanged(object sender, Expandable.StatusChangedEventArgs e)
+        {
+            switch (e.Status)
+            {
+                case ExpandStatus.Expanding:
+                    await this.TopHalfScrollViewer?.ScrollToAsync(this.AdditionalOptions, ScrollToPosition.Start, true);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

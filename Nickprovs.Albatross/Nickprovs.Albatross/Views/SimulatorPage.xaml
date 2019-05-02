@@ -122,17 +122,17 @@
                             </Grid.ColumnDefinitions>
 
 
-                            <controls:ExpandableView Grid.Row="0" Grid.Column="1" TouchHandlerView="{x:Reference Expander}" IsTouchToExpandEnabled="True" ContainingScrollViewer="{x:Reference TopHalfScrollViewer}">
-                                <controls:ExpandableView.Behaviors>
+                            <expandable:ExpandableView StatusChanged="ExpandableView_StatusChanged" Grid.Row="0" Grid.Column="1" TouchHandlerView="{x:Reference Expander}" IsTouchToExpandEnabled="True">
+                                <expandable:ExpandableView.Behaviors>
                                     <behaviors:EventToCommandBehavior EventName="StatusChanged" Command="{Binding MoreOptionsExpansionStatusChangedCommand}" EventArgsParameterPath="Status"/>
-                                </controls:ExpandableView.Behaviors>
-                                <controls:ExpandableView.PrimaryView>
+                                </expandable:ExpandableView.Behaviors>
+                                <expandable:ExpandableView.PrimaryView>
                                     <StackLayout x:Name="Expander" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                                         <Label x:Name="MoreOptionsLabel" FontSize="Medium" Text="More Options" Margin="0,0,0,15" TextColor="{DynamicResource F1}"/>
                                         <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference MoreOptionsLabel}" HeightRequest="{Binding Path=FontSize}" Margin="{Binding Margin}" ResourceId= "{Binding BindingContext.MoreOptionsIconPath}" Stroke="{DynamicResource F1}"/>
                                     </StackLayout>
-                                </controls:ExpandableView.PrimaryView>
-                                <controls:ExpandableView.SecondaryViewTemplate>
+                                </expandable:ExpandableView.PrimaryView>
+                                <expandable:ExpandableView.SecondaryViewTemplate>
                                     <DataTemplate>
                                         <Grid x:Name="ExpandableOptions">
                                             <Grid.RowDefinitions>
@@ -184,8 +184,8 @@
                                             </StackLayout>
                                         </Grid>
                                     </DataTemplate>
-                                </controls:ExpandableView.SecondaryViewTemplate>
-                            </controls:ExpandableView>
+                                </expandable:ExpandableView.SecondaryViewTemplate>
+                            </expandable:ExpandableView>
                         </Grid>
                     </StackLayout>
 

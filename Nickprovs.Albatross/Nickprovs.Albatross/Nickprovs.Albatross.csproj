@@ -126,6 +126,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="ExpandableView" Version="1.0.6" />
     <PackageReference Include="Prism.Core" Version="7.1.0.431" />
     <PackageReference Include="Prism.Forms" Version="7.1.0.431" />
     <PackageReference Include="Prism.Unity.Forms" Version="7.1.0.431" />
@@ -145,9 +146,6 @@
     </Compile>
     <Compile Update="Views\MasterPage.xaml.cs">
       <DependentUpon>MasterPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\SimulatorPage.xaml.cs">
-      <DependentUpon>SimulatorPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
