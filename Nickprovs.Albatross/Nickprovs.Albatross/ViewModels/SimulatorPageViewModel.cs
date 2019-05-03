@@ -98,7 +98,7 @@ namespace Nickprovs.Albatross.ViewModels
             this.Title = "Simulator";
 
             //Configure the default simulator input values
-            this.CurrentSimulatorInput = new SimulatorInput(true, true, 4, 3, 0, 0, 0, 0, 0, 0);
+            this.CurrentSimulatorInput = new SimulatorInput(true, true, 3, 3, 0, 0, 0, 0, 0, 0);
 
             //Get the default icon resource from the resource dictionary. Note... only TryGetValue works in Xamarin Forms
             object iconPath;
