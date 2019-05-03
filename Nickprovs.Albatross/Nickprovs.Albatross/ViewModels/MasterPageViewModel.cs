@@ -1,4 +1,5 @@
 ﻿using Nickprovs.Albatross;
+using Nickprovs.Albatross.Interfaces;
 using Nickprovs.Albatross.Types;
 using Prism.Commands;
 using Prism.Navigation;
@@ -41,11 +42,19 @@ namespace Nickprovs.Albatross.ViewModels
             set { SetProperty(ref _iconPath, value); }
         }
 
+        /// <summary>
+        /// Exposes whether or not the menu is visible.
+        /// </summary>
         public bool IsMenuVisible
         {
             get { return this._isMenuVisible; }
             set { SetProperty(ref _isMenuVisible, value); }
         }
+
+        /// <summary>
+        /// Exposes app version information
+        /// </summary>
+        public IBindableVersionInfo VersionInfo { get; private set; }
 
         /// <summary>
         /// An event to command scenario so we know when the menu status changes.
@@ -66,8 +75,12 @@ namespace Nickprovs.Albatross.ViewModels
 
         #region Constructors and Destructors
 
-        public MasterPageViewModel(INavigationService navigationService) : base(navigationService)
+        public MasterPageViewModel(INavigationService navigationService, IBindableVersionInfo versionInfo) : base(navigationService)
         {
+            //Dependency Injection
+            this.VersionInfo = versionInfo;
+
+            //Set the title for the view
             this.Title = "Welcome";
 
             //Get the default icon resource from the resource dictionary. Note... only TryGetValue works in Xamarin Forms
@@ -75,18 +88,18 @@ namespace Nickprovs.Albatross.ViewModels
             Application.Current.Resources.TryGetValue("director_main", out iconPath);
             this.IconPath = iconPath as string;
 
-            //Commmands
-            this.MenuPresentationChangedCommand = new DelegateCommand(this.OnMenuPresentationStatusChanged);
-            this.NavigateCommand = new DelegateCommand<string>(this.OnNavigateCommandExecuted);
-            this.IconTappedCommand = new DelegateCommand(this.OnIconTapped);
-
-            //Timer
+            //Animation Timer
             Random random = new Random();
             int maxMilli = 7000;
             double rDub = random.NextDouble() * maxMilli;
             this._directorAnimationTimer.Interval = rDub;
             this._directorAnimationTimer.Elapsed += this.DirectorAnimationTimerElapsed;
             this._directorAnimationTimer.Start();
+
+            //Commmand Wiring
+            this.MenuPresentationChangedCommand = new DelegateCommand(this.OnMenuPresentationStatusChanged);
+            this.NavigateCommand = new DelegateCommand<string>(this.OnNavigateCommandExecuted);
+            this.IconTappedCommand = new DelegateCommand(this.OnIconTapped);
         }
 
 

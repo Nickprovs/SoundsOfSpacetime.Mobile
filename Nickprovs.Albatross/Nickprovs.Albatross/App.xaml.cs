@@ -48,6 +48,7 @@ namespace Nickprovs.Albatross
 
             containerRegistry.RegisterSingleton<IDeviceContext, DeviceContext>();
             containerRegistry.RegisterSingleton<IBindableDeviceInfo, BindableDeviceInfo>();
+            containerRegistry.RegisterSingleton<IBindableVersionInfo, BindableVersionInfo>();
         }
 
         protected override async void OnInitialized()

@@ -6,7 +6,7 @@
              xmlns:prismBehaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
              xmlns:controls="clr-namespace:Nickprovs.Albatross.Controls"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Name="mainPage"             
+             x:Name="masterPage"             
              x:Class="Nickprovs.Albatross.Views.MasterPage" 
              IsPresented="{Binding IsMenuVisible, Mode=TwoWay}"
              Title="{Binding Title}">
@@ -27,51 +27,58 @@
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="5*"/>
-                            <RowDefinition Height="45*"/>
-                            <RowDefinition Height="45*"/>
+                            <RowDefinition Height="70*"/>
+                            <RowDefinition Height="20*"/>
                             <RowDefinition Height="5*"/>
                         </Grid.RowDefinitions>
-                        <StackLayout Grid.Row="1" Grid.Column="1">
-                            <Button 
-                                Text="Simulator"                    
-                                Command="{Binding NavigateCommand}" 
-                                CommandParameter="Navigation/Simulator"
-                                BackgroundColor="{DynamicResource B5}"
-                                BorderColor="{DynamicResource B6}"
-                                TextColor="{DynamicResource F1}"/>
-                            <Button 
-                                Text="About" 
-                                Command="{Binding NavigateCommand}" 
-                                CommandParameter="Navigation/About" 
-                                BackgroundColor="{DynamicResource B5}"
-                                BorderColor="{DynamicResource B6}"
-                                TextColor="{DynamicResource F1}"/>
-                            <Button 
-                                Text="Credits" 
-                                Command="{Binding NavigateCommand}" 
-                                CommandParameter="Navigation/Credits" 
-                                BackgroundColor="{DynamicResource B5}"
-                                BorderColor="{DynamicResource B6}"
-                                TextColor="{DynamicResource F1}"/>
-                        </StackLayout>
+                        <ScrollView Grid.Row="1" Grid.Column="1">
+                            <StackLayout>
+                                <Button 
+                                    Text="Simulator"                    
+                                    Command="{Binding NavigateCommand}" 
+                                    CommandParameter="Navigation/Simulator"
+                                    BackgroundColor="{DynamicResource B5}"
+                                    BorderColor="{DynamicResource B6}"
+                                    TextColor="{DynamicResource F1}"/>
+                                <Button 
+                                    Text="About" 
+                                    Command="{Binding NavigateCommand}" 
+                                    CommandParameter="Navigation/About" 
+                                    BackgroundColor="{DynamicResource B5}"
+                                    BorderColor="{DynamicResource B6}"
+                                    TextColor="{DynamicResource F1}"/>
+                                <Button 
+                                    Text="Credits" 
+                                    Command="{Binding NavigateCommand}" 
+                                    CommandParameter="Navigation/Credits" 
+                                    BackgroundColor="{DynamicResource B5}"
+                                    BorderColor="{DynamicResource B6}"
+                                    TextColor="{DynamicResource F1}"/>
+                            </StackLayout>
+                        </ScrollView>
 
-                        <!--Icon-->
-                        <Grid
-                            Grid.Column="1"
-                            Grid.Row="2">
+
+                        <!--Icon and Additional Info-->
+                        <Grid Grid.Column="1" Grid.Row="2">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="6*"/>
-                                <ColumnDefinition Width="2*"/>
-                            </Grid.ColumnDefinitions> 
-                            <controls:Icon    
-                                Grid.Column="1"
-                                ResourceId= "{Binding BindingContext.IconPath, Source={x:Reference mainPage}}"
-                                Stroke="{DynamicResource F1}">
-                                <controls:Icon.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding IconTappedCommand}"/>
-                                </controls:Icon.GestureRecognizers>
-                            </controls:Icon>
+                                <ColumnDefinition Width="50*"/>
+                                <ColumnDefinition Width="50*"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <!--Icon-->
+                            <Grid Grid.Column="0">
+                                <controls:Icon ResourceId="{Binding BindingContext.IconPath, Source={x:Reference masterPage}}" Stroke="{DynamicResource F1}">
+                                    <controls:Icon.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding IconTappedCommand}"/>
+                                    </controls:Icon.GestureRecognizers>
+                                </controls:Icon>
+                            </Grid>
+                  
+                            <!--Additional Info-->
+                            <StackLayout Grid.Column="1" Orientation="Vertical" HorizontalOptions="Start" VerticalOptions="Center">
+                                <Label Text="{Binding BindingContext.VersionInfo.CurrentVersion, Source={x:Reference masterPage}, StringFormat='Version: {0}'}" TextColor="{DynamicResource F1}"/>
+                                <Label Text="Ad Astra" TextColor="{DynamicResource F1}"/>
+                            </StackLayout>
                         </Grid>
                     </Grid>
                 </ContentPage>
