@@ -59,6 +59,7 @@
     <None Remove="Resources\Icons\director_winking7.svg" />
     <None Remove="Resources\Icons\lowercase_phi.svg" />
     <None Remove="Resources\Icons\lowercase_theta.svg" />
+    <None Remove="Resources\Icons\pi.svg" />
     <None Remove="Resources\Icons\psi.svg" />
     <None Remove="Resources\Icons\solar_mass.svg" />
     <None Remove="Resources\Icons\uppercase_phi.svg" />
@@ -69,6 +70,7 @@
     <EmbeddedResource Include="Resources\Icons\chevron_down.svg" />
     <EmbeddedResource Include="Resources\Icons\chevron_left.svg" />
     <EmbeddedResource Include="Resources\Icons\chevron_up.svg" />
+    <EmbeddedResource Include="Resources\Icons\pi.svg" />
     <EmbeddedResource Include="Resources\Icons\psi.svg" />
     <EmbeddedResource Include="Resources\Icons\uppercase_phi.svg" />
     <EmbeddedResource Include="Resources\Icons\uppercase_theta.svg" />

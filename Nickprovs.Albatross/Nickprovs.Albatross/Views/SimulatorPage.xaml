@@ -147,40 +147,50 @@
                                                 <StackLayout Orientation="Horizontal"  HorizontalOptions="Center">
                                                     <Label x:Name="LittleThetaLabel" Text="Detector Angle" TextColor="{DynamicResource F1}"/>
                                                     <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference LittleThetaLabel}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource lowercase_theta}" Stroke="{DynamicResource F1}"/>
+                                                    <Label x:Name="LittleThetaValueLabel" BindingContext="{x:Reference LittleThetaSlider}" Text="{Binding Value}" TextColor="{DynamicResource F1}"/>
+                                                    <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference LittleThetaValueLabel}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource pi}" Stroke="{DynamicResource F1}"/>
                                                 </StackLayout>
-                                                <Slider Value="{Binding CurrentSimulatorInput.DetectorAngleLittleTheta}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
+                                                <Slider Minimum="0" Maximum="2" x:Name="LittleThetaSlider" Value="{Binding CurrentSimulatorInput.DetectorAngleLittleTheta}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                             </StackLayout>
 
                                             <StackLayout Grid.Row="1" Orientation="Vertical">
                                                 <StackLayout Orientation="Horizontal"  HorizontalOptions="Center">
                                                     <Label x:Name="BigThetaLabel" Text="Detector Angle" TextColor="{DynamicResource F1}"/>
                                                     <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference BigThetaLabel}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource uppercase_theta}" Stroke="{DynamicResource F1}"/>
+                                                    <Label x:Name="BigThetaValueLabel" BindingContext="{x:Reference BigThetaSlider}" Text="{Binding Value}" TextColor="{DynamicResource F1}"/>
+                                                    <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference BigThetaValueLabel}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource pi}" Stroke="{DynamicResource F1}"/>
                                                 </StackLayout>
-                                                <Slider Value="{Binding CurrentSimulatorInput.DetectorAngleBigTheta}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
+                                                <Slider Minimum="0" Maximum="2" x:Name="BigThetaSlider" Value="{Binding CurrentSimulatorInput.DetectorAngleBigTheta}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                             </StackLayout>
 
                                             <StackLayout Grid.Row="2" Orientation="Vertical">
                                                 <StackLayout Orientation="Horizontal"  HorizontalOptions="Center">
                                                     <Label x:Name="LittlePhiLabel" Text="Detector Angle" TextColor="{DynamicResource F1}"/>
                                                     <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference LittlePhiLabel}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource lowercase_phi}" Stroke="{DynamicResource F1}"/>
+                                                    <Label x:Name="LittlePhiValueLabel" BindingContext="{x:Reference LittlePhiSlider}" Text="{Binding Value}" TextColor="{DynamicResource F1}"/>
+                                                    <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference LittlePhiValueLabel}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource pi}" Stroke="{DynamicResource F1}"/>
                                                 </StackLayout>
-                                                <Slider Value="{Binding CurrentSimulatorInput.DetectorAngleLittlePhi}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
+                                                <Slider Minimum="0" Maximum="2" x:Name="LittlePhiSlider" Value="{Binding CurrentSimulatorInput.DetectorAngleLittlePhi}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                             </StackLayout>
 
                                             <StackLayout Grid.Row="3" Orientation="Vertical">
                                                 <StackLayout Orientation="Horizontal"  HorizontalOptions="Center">
                                                     <Label x:Name="BigPhiLabel" Text="Detector Angle" TextColor="{DynamicResource F1}"/>
                                                     <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference BigPhiLabel}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource uppercase_phi}" Stroke="{DynamicResource F1}"/>
+                                                    <Label x:Name="BigPhiValueLabel" BindingContext="{x:Reference BigPhiSlider}" Text="{Binding Value}" TextColor="{DynamicResource F1}"/>
+                                                    <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference BigPhiValueLabel}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource pi}" Stroke="{DynamicResource F1}"/>
                                                 </StackLayout>
-                                                <Slider Value="{Binding CurrentSimulatorInput.DetectorAngleBigPhi}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
+                                                <Slider Minimum="0" Maximum="2" x:Name="BigPhiSlider" Value="{Binding CurrentSimulatorInput.DetectorAngleBigPhi}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                             </StackLayout>
 
                                             <StackLayout Grid.Row="4" Orientation="Vertical">
                                                 <StackLayout Orientation="Horizontal"  HorizontalOptions="Center">
                                                     <Label x:Name="PsiLabel" Text="Detector Angle" TextColor="{DynamicResource F1}"/>
                                                     <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference PsiLabel}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource psi}" Stroke="{DynamicResource F1}"/>
+                                                    <Label x:Name="PsiValueLabel" BindingContext="{x:Reference PsiSlider}" Text="{Binding Value}" TextColor="{DynamicResource F1}"/>
+                                                    <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference PsiValueLabel}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource pi}" Stroke="{DynamicResource F1}"/>
                                                 </StackLayout>
-                                                <Slider Value="{Binding CurrentSimulatorInput.DetectorAnglePsi}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
+                                                <Slider Minimum="0" Maximum="2" x:Name="PsiSlider" Value="{Binding CurrentSimulatorInput.DetectorAnglePsi}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                             </StackLayout>
                                         </Grid>
                                     </DataTemplate>

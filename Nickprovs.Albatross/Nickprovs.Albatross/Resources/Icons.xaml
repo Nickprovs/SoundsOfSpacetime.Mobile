@@ -8,6 +8,7 @@
     <x:String x:Key="solar_mass">Nickprovs.Albatross.Resources.Icons.solar_mass.svg</x:String>
     
     <!--Mathematical Symbols-->
+    <x:String x:Key="pi">Nickprovs.Albatross.Resources.Icons.pi.svg</x:String>
     <x:String x:Key="lowercase_theta">Nickprovs.Albatross.Resources.Icons.lowercase_theta.svg</x:String>
     <x:String x:Key="uppercase_theta">Nickprovs.Albatross.Resources.Icons.uppercase_theta.svg</x:String>
     <x:String x:Key="lowercase_phi">Nickprovs.Albatross.Resources.Icons.lowercase_phi.svg</x:String>
