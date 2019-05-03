@@ -1,5 +1,6 @@
 ﻿using Expandable;
 using Nickprovs.Albatross.Interfaces;
+using Nickprovs.Albatross.Types;
 using Prism.Commands;
 using Prism.Navigation;
 using Xamarin.Forms;
@@ -20,6 +21,15 @@ namespace Nickprovs.Albatross.ViewModels
         /// </summary>
         private string _moreOptionsIconPath;
 
+        /// <summary>
+        /// The current simulator input
+        /// </summary>
+        private ISimulatorInput _currentSimulatorInput;
+
+        /// <summary>
+        /// The previous simulator input
+        /// </summary>
+        private ISimulatorInput _previousSimulatorInput;
         #endregion
 
         #region Properties
@@ -31,6 +41,24 @@ namespace Nickprovs.Albatross.ViewModels
         {
             get { return this._bindableDeviceInfo; }
             set { this.SetProperty(ref _bindableDeviceInfo, value); }
+        }
+
+        /// <summary>
+        /// The current simulator input
+        /// </summary>
+        public ISimulatorInput CurrentSimulatorInput
+        {
+            get { return this._currentSimulatorInput; }
+            set { this.SetProperty(ref _currentSimulatorInput, value); }
+        }
+
+        /// <summary>
+        /// The simulator input of the last generated event
+        /// </summary>
+        public ISimulatorInput PreviousSimulatorInput
+        {
+            get { return this._previousSimulatorInput; }
+            set { this.SetProperty(ref _previousSimulatorInput, value); }
         }
 
         /// <summary>
@@ -47,22 +75,39 @@ namespace Nickprovs.Albatross.ViewModels
         /// </summary>
         public DelegateCommand<object> MoreOptionsExpansionStatusChangedCommand { get; }
 
+        /// <summary>
+        /// Tells us to simulate a binary's gravitational wave based on input.
+        /// </summary>
+        public DelegateCommand SimulateWaveCommand { get; }
+
+        /// <summary>
+        /// Tells us to simulate a binary's orbit based on input.
+        /// </summary>
+        public DelegateCommand SimulateOrbitCommand { get; }
+
         #endregion
 
         #region Constructors and Destructors
 
         public SimulatorPageViewModel(INavigationService navigationService, IBindableDeviceInfo bindableDeviceInfo) : base(navigationService)
         {
+            //Dependency Injection
+            this.BindableDeviceInfo = bindableDeviceInfo;
+
             //Set the title for the page.
             this.Title = "Simulator";
-            this.BindableDeviceInfo = bindableDeviceInfo;
+
+            //Configure the default simulator input values
+            this.CurrentSimulatorInput = new SimulatorInput(true, true, 0, 0, 0, 0, 0, 0, 0, 0);
 
             //Get the default icon resource from the resource dictionary. Note... only TryGetValue works in Xamarin Forms
             object iconPath;
             Application.Current.Resources.TryGetValue("chevron_right", out iconPath);
             this.MoreOptionsIconPath = iconPath as string;
 
-            //Load the command with a handler
+            //Command Wiring
+            this.SimulateWaveCommand = new DelegateCommand(this.OnSimulateWave);
+            this.SimulateOrbitCommand = new DelegateCommand(this.OnSimulateOrbit);
             this.MoreOptionsExpansionStatusChangedCommand = new DelegateCommand<object>(this.OnMoreOptionsExpansionStatusChanged);
         }
 
@@ -70,6 +115,32 @@ namespace Nickprovs.Albatross.ViewModels
 
         #region Private Methods
 
+        /// <summary>
+        /// This will simulate a binary's gravitational wave based on current input
+        /// </summary>
+        private async void OnSimulateWave()
+        {
+            //TODO: Calculations
+
+            //Cache this last simulator input          
+            this.PreviousSimulatorInput = this.CurrentSimulatorInput;
+
+            //Create a copy of this last simulator input so previous / current simulator inputs are different objects.
+            this.CurrentSimulatorInput = this.CurrentSimulatorInput.DeepCopy();
+        }
+
+        /// <summary>
+        /// This will simulate a binary's orbit based on current input
+        /// </summary>
+        private async void OnSimulateOrbit()
+        {
+
+        }
+
+        /// <summary>
+        /// When the expansion status of the more options section changes, we change the expansion icon.
+        /// </summary>
+        /// <param name="newStatus"></param>
         private void OnMoreOptionsExpansionStatusChanged(object newStatus)
         {
             var newStatusEnum = (ExpandStatus)newStatus;

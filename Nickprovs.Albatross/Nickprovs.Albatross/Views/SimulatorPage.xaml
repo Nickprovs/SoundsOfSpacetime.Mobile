@@ -58,17 +58,17 @@
                                     <RowDefinition Height="2*"/>
                                 </Grid.RowDefinitions>
 
-                                <Button Grid.Row="1" Grid.Column="0" Text="Wave" BackgroundColor="{DynamicResource B5}" BorderColor="{DynamicResource B6}" TextColor="{DynamicResource F1}"/>
-                                <Button Grid.Row="1" Grid.Column="1" Text="Orbit" BackgroundColor="{DynamicResource B5}" BorderColor="{DynamicResource B6}" TextColor="{DynamicResource F1}"/>
+                                <Button Command="{Binding SimulateWaveCommand}" Grid.Row="1" Grid.Column="0" Text="Wave" BackgroundColor="{DynamicResource B5}" BorderColor="{DynamicResource B6}" TextColor="{DynamicResource F1}"/>
+                                <Button Command="{Binding SimulateOrbitCommand}" Grid.Row="1" Grid.Column="1" Text="Orbit" BackgroundColor="{DynamicResource B5}" BorderColor="{DynamicResource B6}" TextColor="{DynamicResource F1}"/>
                                 
                                 <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="2">
                                     <Label HorizontalOptions="Center" Text="Inspiral" TextColor="{DynamicResource F1}"/>
-                                    <Switch HorizontalOptions="Center" OnColor="{DynamicResource F7}"/>
+                                    <Switch IsToggled="{Binding CurrentSimulatorInput.Inspiral, Mode=TwoWay}" HorizontalOptions="Center" OnColor="{DynamicResource F7}"/>
                                 </StackLayout>
 
                                 <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="3">
                                     <Label HorizontalOptions="Center" Text="Peri. Prec." TextColor="{DynamicResource F1}"/>
-                                    <Switch OnColor="{DynamicResource F7}"/>
+                                    <Switch IsToggled="{Binding CurrentSimulatorInput.PeriastronPrecession, Mode=TwoWay}" OnColor="{DynamicResource F7}"/>
                                 </StackLayout>
                             </Grid>
 
@@ -87,7 +87,7 @@
                                         <Label x:Name="Mass1Label" Text="Mass 1" TextColor="{DynamicResource F1}"/>
                                         <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference Mass1Label}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource solar_mass}" Stroke="{DynamicResource F1}"/>
                                     </StackLayout>
-                                    <Slider ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
+                                    <Slider Value="{Binding CurrentSimulatorInput.SolarMass1}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                 </StackLayout>
 
                                 <StackLayout Grid.Row="1" Orientation="Vertical">
@@ -95,7 +95,7 @@
                                         <Label x:Name="Mass2Label" Text="Mass 2" TextColor="{DynamicResource F1}"/>
                                         <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference Mass2Label}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource solar_mass}" Stroke="{DynamicResource F1}"/>
                                     </StackLayout>
-                                    <Slider ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
+                                    <Slider Value="{Binding CurrentSimulatorInput.SolarMass2}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                 </StackLayout>
 
                                 <StackLayout Grid.Row="2" Orientation="Vertical">
@@ -103,7 +103,7 @@
                                         <Label Text="Initial Eccentricity" HorizontalOptions="Center" TextColor="{DynamicResource F1}"/>
                                         <Label VerticalOptions="Center" Text="%" TextColor="{DynamicResource F1}"/>
                                     </StackLayout>
-                                    <Slider ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
+                                    <Slider Value="{Binding CurrentSimulatorInput.InitialEccentricity}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                 </StackLayout>
 
                             </Grid>
@@ -148,7 +148,7 @@
                                                     <Label x:Name="LittleThetaLabel" Text="Detector Angle" TextColor="{DynamicResource F1}"/>
                                                     <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference LittleThetaLabel}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource lowercase_theta}" Stroke="{DynamicResource F1}"/>
                                                 </StackLayout>
-                                                <Slider ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
+                                                <Slider Value="{Binding CurrentSimulatorInput.DetectorAngleLittleTheta}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                             </StackLayout>
 
                                             <StackLayout Grid.Row="1" Orientation="Vertical">
@@ -156,7 +156,7 @@
                                                     <Label x:Name="BigThetaLabel" Text="Detector Angle" TextColor="{DynamicResource F1}"/>
                                                     <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference BigThetaLabel}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource uppercase_theta}" Stroke="{DynamicResource F1}"/>
                                                 </StackLayout>
-                                                <Slider ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
+                                                <Slider Value="{Binding CurrentSimulatorInput.DetectorAngleBigTheta}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                             </StackLayout>
 
                                             <StackLayout Grid.Row="2" Orientation="Vertical">
@@ -164,7 +164,7 @@
                                                     <Label x:Name="LittlePhiLabel" Text="Detector Angle" TextColor="{DynamicResource F1}"/>
                                                     <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference LittlePhiLabel}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource lowercase_phi}" Stroke="{DynamicResource F1}"/>
                                                 </StackLayout>
-                                                <Slider ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
+                                                <Slider Value="{Binding CurrentSimulatorInput.DetectorAngleLittlePhi}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                             </StackLayout>
 
                                             <StackLayout Grid.Row="3" Orientation="Vertical">
@@ -172,7 +172,7 @@
                                                     <Label x:Name="BigPhiLabel" Text="Detector Angle" TextColor="{DynamicResource F1}"/>
                                                     <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference BigPhiLabel}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource uppercase_phi}" Stroke="{DynamicResource F1}"/>
                                                 </StackLayout>
-                                                <Slider ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
+                                                <Slider Value="{Binding CurrentSimulatorInput.DetectorAngleBigPhi}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                             </StackLayout>
 
                                             <StackLayout Grid.Row="4" Orientation="Vertical">
@@ -180,7 +180,7 @@
                                                     <Label x:Name="PsiLabel" Text="Detector Angle" TextColor="{DynamicResource F1}"/>
                                                     <controls:Icon VerticalOptions="Center" BindingContext="{x:Reference PsiLabel}" HeightRequest="{Binding Path=FontSize}" ResourceId= "{DynamicResource psi}" Stroke="{DynamicResource F1}"/>
                                                 </StackLayout>
-                                                <Slider ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
+                                                <Slider Value="{Binding CurrentSimulatorInput.DetectorAnglePsi}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                             </StackLayout>
                                         </Grid>
                                     </DataTemplate>
