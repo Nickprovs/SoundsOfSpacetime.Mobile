@@ -51,8 +51,8 @@ namespace Nickprovs.Albatross.Types
 
         public double SolarMass2
         {
-            get { return this._solarMass1; }
-            set { this.SetProperty(ref this._solarMass1, value); }
+            get { return this._solarMass2; }
+            set { this.SetProperty(ref this._solarMass2, value); }
         }
 
         public double InitialEccentricity
