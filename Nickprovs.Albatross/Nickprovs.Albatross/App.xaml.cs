@@ -46,6 +46,7 @@ namespace Nickprovs.Albatross
             containerRegistry.RegisterForNavigation<CreditsPage>("Credits");
             containerRegistry.RegisterForNavigation<SimulatorPage>("Simulator");
 
+            containerRegistry.RegisterSingleton<IGravitationalWaveCalculator, GravitationalWaveCalculator>();
             containerRegistry.RegisterSingleton<IDeviceContext, DeviceContext>();
             containerRegistry.RegisterSingleton<IBindableDeviceInfo, BindableDeviceInfo>();
             containerRegistry.RegisterSingleton<IBindableVersionInfo, BindableVersionInfo>();

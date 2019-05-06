@@ -3,7 +3,7 @@ using Prism.Mvvm;
 
 namespace Nickprovs.Albatross.Types
 {
-    public class SimulatorInput : BindableBase, ISimulatorInput
+    public class GravitationalWaveInput : BindableBase, IGravitationalWaveInput
     {
         #region Fields
 
@@ -94,7 +94,7 @@ namespace Nickprovs.Albatross.Types
 
         #region Constructors and Destructors
 
-        public SimulatorInput(bool inspiral, bool periastronPrecession, double solarMass1, double solarMass2, double initialEccentricity,
+        public GravitationalWaveInput(bool inspiral, bool periastronPrecession, double solarMass1, double solarMass2, double initialEccentricity,
                               double detectorAngleLittleTheta, double detectorAngleBigTheta, double detectorAngleLittlePhi, double detectorAngleBigPhi, double detectorAnglePsi)
         {
             this.Inspiral = inspiral;
@@ -113,7 +113,7 @@ namespace Nickprovs.Albatross.Types
 
         #region Methods
 
-        public bool Equals(ISimulatorInput simulatorInput)
+        public bool Equals(IGravitationalWaveInput simulatorInput)
         {
             if (this.Inspiral == simulatorInput.Inspiral &&
                this.PeriastronPrecession == simulatorInput.PeriastronPrecession &&
@@ -130,9 +130,9 @@ namespace Nickprovs.Albatross.Types
                 return false;
         }
 
-        public ISimulatorInput DeepCopy()
+        public IGravitationalWaveInput DeepCopy()
         {
-            return new SimulatorInput(this.Inspiral, this.PeriastronPrecession, this.SolarMass1, this.SolarMass2, this.InitialEccentricity, 
+            return new GravitationalWaveInput(this.Inspiral, this.PeriastronPrecession, this.SolarMass1, this.SolarMass2, this.InitialEccentricity, 
                 this.DetectorAngleLittleTheta, this.DetectorAngleBigTheta, this._detectorAngleLittlePhi, this.DetectorAngleBigPhi, this.DetectorAnglePsi);
         }
 

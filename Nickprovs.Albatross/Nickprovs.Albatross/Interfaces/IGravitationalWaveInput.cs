@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Nickprovs.Albatross.Interfaces
 {
-    public interface ISimulatorInput : INotifyPropertyChanged
+    public interface IGravitationalWaveInput : INotifyPropertyChanged
     {
         bool Inspiral { get; set; }
 
@@ -27,8 +27,8 @@ namespace Nickprovs.Albatross.Interfaces
 
         double DetectorAnglePsi { get; set; }
 
-        bool Equals(ISimulatorInput simulatorInput);
+        bool Equals(IGravitationalWaveInput simulatorInput);
 
-        ISimulatorInput DeepCopy();
+        IGravitationalWaveInput DeepCopy();
     }
 }

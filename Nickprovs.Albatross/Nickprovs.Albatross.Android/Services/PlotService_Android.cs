@@ -119,9 +119,18 @@ namespace Nickprovs.Albatross.Droid.Services
             }
 
             //Setting the configured native plot as a child of our cross-platform view.
-            plotContainer.Content = this._plottingSurface.ToView();
+            plotContainer.Content = this._plottingSurface.ToView();           
         }
 
+        public void PlotNew(IEnumerable<IPoint> dataSeries)
+        {
+            this._xAxis.GrowBy = new SciChart.Data.Model.DoubleRange(0.1d, 0.1d);
+            this._yAxis.AxisTitle = "h(t)";
+            this._xAxis.AxisTitle = "time [s]";
+            this._series.Clear();
+            this._series.Append(dataSeries.Select(p => p.X), dataSeries.Select(p => p.Y));
+            this._plottingSurface.ZoomExtents();
+        }
 
     }
 }

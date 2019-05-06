@@ -8,5 +8,7 @@ namespace Nickprovs.Albatross.Interfaces
     public interface IPlotService
     {
         void Render(ContentView plotContainer);
+
+        void PlotNew(IEnumerable<IPoint> dataSeries);
     }
 }

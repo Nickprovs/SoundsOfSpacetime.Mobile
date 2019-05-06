@@ -24,17 +24,19 @@ namespace Nickprovs.Albatross.ViewModels
         /// <summary>
         /// The current simulator input
         /// </summary>
-        private ISimulatorInput _currentSimulatorInput;
+        private IGravitationalWaveInput _currentSimulatorInput;
 
         /// <summary>
         /// The previous simulator input
         /// </summary>
-        private ISimulatorInput _previousSimulatorInput;
+        private IGravitationalWaveInput _previousSimulatorInput;
 
         /// <summary>
         /// The native implementation of the plotting service.
         /// </summary>
         private IPlotService _plotService;
+
+        private IGravitationalWaveCalculator _gravitationalWaveCalculator;
 
         #endregion
 
@@ -52,7 +54,7 @@ namespace Nickprovs.Albatross.ViewModels
         /// <summary>
         /// The current simulator input
         /// </summary>
-        public ISimulatorInput CurrentSimulatorInput
+        public IGravitationalWaveInput CurrentSimulatorInput
         {
             get { return this._currentSimulatorInput; }
             set { this.SetProperty(ref _currentSimulatorInput, value); }
@@ -61,7 +63,7 @@ namespace Nickprovs.Albatross.ViewModels
         /// <summary>
         /// The simulator input of the last generated event
         /// </summary>
-        public ISimulatorInput PreviousSimulatorInput
+        public IGravitationalWaveInput PreviousSimulatorInput
         {
             get { return this._previousSimulatorInput; }
             set { this.SetProperty(ref _previousSimulatorInput, value); }
@@ -95,17 +97,18 @@ namespace Nickprovs.Albatross.ViewModels
 
         #region Constructors and Destructors
 
-        public SimulatorPageViewModel(INavigationService navigationService, IBindableDeviceInfo bindableDeviceInfo) : base(navigationService)
+        public SimulatorPageViewModel(INavigationService navigationService, IBindableDeviceInfo bindableDeviceInfo, IGravitationalWaveCalculator gravitationalWaveCalculator) : base(navigationService)
         {
             //Dependency Injection
             this.BindableDeviceInfo = bindableDeviceInfo;
+            this._gravitationalWaveCalculator = gravitationalWaveCalculator;
             this._plotService = DependencyService.Resolve<IPlotService>();
 
             //Set the title for the page.
             this.Title = "Simulator";
 
             //Configure the default simulator input values
-            this.CurrentSimulatorInput = new SimulatorInput(true, true, 3, 3, 0, 0, 0, 0, 0, 0);
+            this.CurrentSimulatorInput = new GravitationalWaveInput(true, true, 3, 3, 0, 0, 0, 0, 0, 0);
 
             //Get the default icon resource from the resource dictionary. Note... only TryGetValue works in Xamarin Forms
             object iconPath;
@@ -127,7 +130,8 @@ namespace Nickprovs.Albatross.ViewModels
         /// </summary>
         private async void OnSimulateWave()
         {
-            //TODO: Calculations
+            var data = this._gravitationalWaveCalculator.GenerateGravitationalWaveData(CurrentSimulatorInput);
+            this._plotService.PlotNew(data.Wave);
 
             //Cache this last simulator input          
             this.PreviousSimulatorInput = this.CurrentSimulatorInput;
