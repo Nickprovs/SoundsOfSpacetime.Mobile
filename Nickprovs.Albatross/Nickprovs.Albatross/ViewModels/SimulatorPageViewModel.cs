@@ -30,6 +30,12 @@ namespace Nickprovs.Albatross.ViewModels
         /// The previous simulator input
         /// </summary>
         private ISimulatorInput _previousSimulatorInput;
+
+        /// <summary>
+        /// The native implementation of the plotting service.
+        /// </summary>
+        private IPlotService _plotService;
+
         #endregion
 
         #region Properties
@@ -89,10 +95,11 @@ namespace Nickprovs.Albatross.ViewModels
 
         #region Constructors and Destructors
 
-        public SimulatorPageViewModel(INavigationService navigationService, IBindableDeviceInfo bindableDeviceInfo) : base(navigationService)
+        public SimulatorPageViewModel(INavigationService navigationService, IBindableDeviceInfo bindableDeviceInfo, IPlotService plotService) : base(navigationService)
         {
             //Dependency Injection
             this.BindableDeviceInfo = bindableDeviceInfo;
+            this._plotService = plotService;
 
             //Set the title for the page.
             this.Title = "Simulator";

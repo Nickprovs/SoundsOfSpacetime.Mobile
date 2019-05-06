@@ -1,4 +1,5 @@
 ﻿using Expandable;
+using Nickprovs.Albatross.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace Nickprovs.Albatross.Views
     {
         public SimulatorPage()
         {
+            var nativePlotService = DependencyService.Resolve<IPlotService>();
+            nativePlotService.Render(this.PlotContainer);
             InitializeComponent();
         }
 

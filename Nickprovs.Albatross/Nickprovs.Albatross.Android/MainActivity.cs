@@ -6,13 +6,23 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Prism;
+using Prism.Ioc;
+using Nickprovs.Albatross.Interfaces;
+using Nickprovs.Albatross.Droid.Services;
 
 namespace Nickprovs.Albatross.Droid
 {
     //We'll set the main style to the splash here, and once we've created... we'll set it back to the MainTheme
     [Activity(Label = "Nickprovs.Albatross", Icon = "@mipmap/icon", Theme = "@style/MainTheme.Splash", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IPlatformInitializer
     {
+
+        public void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+            containerRegistry.RegisterSingleton<IPlotService, PlotService_Android>();
+        }
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
@@ -22,7 +32,6 @@ namespace Nickprovs.Albatross.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
-
         
         public override void OnCreate(Bundle savedInstanceState, PersistableBundle persistentState)
         {

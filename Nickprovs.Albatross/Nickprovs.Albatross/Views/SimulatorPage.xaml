@@ -271,8 +271,8 @@
             </Grid>
 
 
-            <Grid BackgroundColor="Black" Grid.Row="1"/>
-            
+            <ContentView x:Name="PlotContainer"/>
+
         </Grid>
 
     </ContentPage.Content>
