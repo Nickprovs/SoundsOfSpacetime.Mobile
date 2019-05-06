@@ -3,6 +3,7 @@ using Nickprovs.Albatross.Interfaces;
 using Nickprovs.Albatross.Types;
 using Prism.Commands;
 using Prism.Navigation;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Nickprovs.Albatross.ViewModels
@@ -130,7 +131,7 @@ namespace Nickprovs.Albatross.ViewModels
         /// </summary>
         private async void OnSimulateWave()
         {
-            var data = this._gravitationalWaveCalculator.GenerateGravitationalWaveData(CurrentSimulatorInput);
+            var data = await Task.Run(() => this._gravitationalWaveCalculator.GenerateGravitationalWaveData(CurrentSimulatorInput));
             this._plotService.PlotNew(data.Wave);
 
             //Cache this last simulator input          
@@ -145,7 +146,14 @@ namespace Nickprovs.Albatross.ViewModels
         /// </summary>
         private async void OnSimulateOrbit()
         {
+            var data = await Task.Run(()=> this._gravitationalWaveCalculator.GenerateGravitationalWaveData(CurrentSimulatorInput));
+            this._plotService.PlotNew(data.Orbit);
 
+            //Cache this last simulator input          
+            this.PreviousSimulatorInput = this.CurrentSimulatorInput;
+
+            //Create a copy of this last simulator input so previous / current simulator inputs are different objects.
+            this.CurrentSimulatorInput = this.CurrentSimulatorInput.DeepCopy();
         }
 
         /// <summary>
