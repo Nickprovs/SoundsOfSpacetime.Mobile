@@ -95,11 +95,11 @@ namespace Nickprovs.Albatross.ViewModels
 
         #region Constructors and Destructors
 
-        public SimulatorPageViewModel(INavigationService navigationService, IBindableDeviceInfo bindableDeviceInfo, IPlotService plotService) : base(navigationService)
+        public SimulatorPageViewModel(INavigationService navigationService, IBindableDeviceInfo bindableDeviceInfo) : base(navigationService)
         {
             //Dependency Injection
             this.BindableDeviceInfo = bindableDeviceInfo;
-            this._plotService = plotService;
+            this._plotService = DependencyService.Resolve<IPlotService>();
 
             //Set the title for the page.
             this.Title = "Simulator";

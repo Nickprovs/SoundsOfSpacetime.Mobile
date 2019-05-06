@@ -271,7 +271,7 @@
             </Grid>
 
 
-            <ContentView x:Name="PlotContainer"/>
+            <ContentView x:Name="PlotContainer" Grid.Row="1"/>
 
         </Grid>
 
