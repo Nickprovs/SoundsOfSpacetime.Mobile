@@ -2361,6 +2361,18 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f010050
 			public const int autoSizeTextType = 2130772048;
 			
+			// aapt resource value: 0x7f010180
+			public const int axisBandsColor = 2130772352;
+			
+			// aapt resource value: 0x7f010189
+			public const int axisTooltipBackground = 2130772361;
+			
+			// aapt resource value: 0x7f010187
+			public const int axisTooltipTextColor = 2130772359;
+			
+			// aapt resource value: 0x7f010188
+			public const int axisTooltipTextSize = 2130772360;
+			
 			// aapt resource value: 0x7f01002e
 			public const int background = 2130772014;
 			
@@ -2375,6 +2387,18 @@ namespace Nickprovs.Albatross.Droid
 			
 			// aapt resource value: 0x7f010117
 			public const int backgroundTintMode = 2130772247;
+			
+			// aapt resource value: 0x7f010197
+			public const int bandFillDownColor = 2130772375;
+			
+			// aapt resource value: 0x7f010196
+			public const int bandFillUpColor = 2130772374;
+			
+			// aapt resource value: 0x7f010195
+			public const int bandStrokeDownColor = 2130772373;
+			
+			// aapt resource value: 0x7f010194
+			public const int bandStrokeUpColor = 2130772372;
 			
 			// aapt resource value: 0x7f0100d5
 			public const int barLength = 2130772181;
@@ -2438,6 +2462,18 @@ namespace Nickprovs.Albatross.Droid
 			
 			// aapt resource value: 0x7f0100ce
 			public const int buttonTintMode = 2130772174;
+			
+			// aapt resource value: 0x7f010193
+			public const int candleStickFillDownColor = 2130772371;
+			
+			// aapt resource value: 0x7f010192
+			public const int candleStickFillUpColor = 2130772370;
+			
+			// aapt resource value: 0x7f010191
+			public const int candleStickStrokeDownColor = 2130772369;
+			
+			// aapt resource value: 0x7f010190
+			public const int candleStickStrokeUpColor = 2130772368;
 			
 			// aapt resource value: 0x7f010017
 			public const int cardBackgroundColor = 2130771991;
@@ -2514,6 +2550,12 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0100af
 			public const int colorSwitchThumbNormal = 2130772143;
 			
+			// aapt resource value: 0x7f01018f
+			public const int columnFillColor = 2130772367;
+			
+			// aapt resource value: 0x7f01018e
+			public const int columnLineColor = 2130772366;
+			
 			// aapt resource value: 0x7f0100f3
 			public const int commitIcon = 2130772211;
 			
@@ -2571,11 +2613,32 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f010162
 			public const int counterTextAppearance = 2130772322;
 			
+			// aapt resource value: 0x7f010184
+			public const int cursorLineColor = 2130772356;
+			
 			// aapt resource value: 0x7f010031
 			public const int customNavigationLayout = 2130772017;
 			
+			// aapt resource value: 0x7f01019e
+			public const int defaultAnnotationGripsBackgroundColor = 2130772382;
+			
+			// aapt resource value: 0x7f01019d
+			public const int defaultAnnotationGripsStrokeColor = 2130772381;
+			
+			// aapt resource value: 0x7f0101a0
+			public const int defaultPieSegmentTitleTextColor = 2130772384;
+			
+			// aapt resource value: 0x7f01019f
+			public const int defaultPieSegmentTitleTextSize = 2130772383;
+			
 			// aapt resource value: 0x7f0100ed
 			public const int defaultQueryHint = 2130772205;
+			
+			// aapt resource value: 0x7f010179
+			public const int defaultTextColor = 2130772345;
+			
+			// aapt resource value: 0x7f010178
+			public const int defaultTextSize = 2130772344;
 			
 			// aapt resource value: 0x7f010080
 			public const int dialogPreferredPadding = 2130772096;
@@ -2784,6 +2847,9 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f010131
 			public const int keylines = 2130772273;
 			
+			// aapt resource value: 0x7f01018a
+			public const int labelBackground = 2130772362;
+			
 			// aapt resource value: 0x7f0100ea
 			public const int layout = 2130772202;
 			
@@ -2819,6 +2885,18 @@ namespace Nickprovs.Albatross.Droid
 			
 			// aapt resource value: 0x7f01011c
 			public const int layout_scrollInterpolator = 2130772252;
+			
+			// aapt resource value: 0x7f010177
+			public const int legendBackground = 2130772343;
+			
+			// aapt resource value: 0x7f010198
+			public const int lineAnnotationLineColor = 2130772376;
+			
+			// aapt resource value: 0x7f010199
+			public const int lineAnnotationLineThickness = 2130772377;
+			
+			// aapt resource value: 0x7f01018d
+			public const int lineSeriesColor = 2130772365;
 			
 			// aapt resource value: 0x7f0100a7
 			public const int listChoiceBackgroundIndicator = 2130772135;
@@ -2858,6 +2936,12 @@ namespace Nickprovs.Albatross.Droid
 			
 			// aapt resource value: 0x7f010110
 			public const int logoDescription = 2130772240;
+			
+			// aapt resource value: 0x7f01017e
+			public const int majorGridLinesColor = 2130772350;
+			
+			// aapt resource value: 0x7f010182
+			public const int majorTickLinesLength = 2130772354;
 			
 			// aapt resource value: 0x7f01014b
 			public const int maxActionInlineWidth = 2130772299;
@@ -2909,6 +2993,18 @@ namespace Nickprovs.Albatross.Droid
 			
 			// aapt resource value: 0x7f010143
 			public const int menu = 2130772291;
+			
+			// aapt resource value: 0x7f01017f
+			public const int minorGridLinesColor = 2130772351;
+			
+			// aapt resource value: 0x7f010181
+			public const int minorTickLinesLength = 2130772353;
+			
+			// aapt resource value: 0x7f01018c
+			public const int mountainAreaColor = 2130772364;
+			
+			// aapt resource value: 0x7f01018b
+			public const int mountainLineColor = 2130772363;
 			
 			// aapt resource value: 0x7f010045
 			public const int multiChoiceItemLayout = 2130772037;
@@ -3003,11 +3099,32 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0100c3
 			public const int ratingBarStyleSmall = 2130772163;
 			
+			// aapt resource value: 0x7f010175
+			public const int renderableSeriesAreaBorderColor = 2130772341;
+			
+			// aapt resource value: 0x7f010174
+			public const int renderableSeriesAreaFillColor = 2130772340;
+			
+			// aapt resource value: 0x7f010176
+			public const int renderableSeriesAreaStrokeThickness = 2130772342;
+			
 			// aapt resource value: 0x7f010002
 			public const int reverseLayout = 2130771970;
 			
 			// aapt resource value: 0x7f01013c
 			public const int rippleColor = 2130772284;
+			
+			// aapt resource value: 0x7f010183
+			public const int rolloverLineColor = 2130772355;
+			
+			// aapt resource value: 0x7f010186
+			public const int rubberBandFillColor = 2130772358;
+			
+			// aapt resource value: 0x7f010185
+			public const int rubberBandStrokeColor = 2130772357;
+			
+			// aapt resource value: 0x7f010173
+			public const int sciChartBackground = 2130772339;
 			
 			// aapt resource value: 0x7f01012b
 			public const int scrimAnimationDuration = 2130772267;
@@ -3168,6 +3285,15 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f01004f
 			public const int textAllCaps = 2130772047;
 			
+			// aapt resource value: 0x7f01019b
+			public const int textAnnotationBackgroundColor = 2130772379;
+			
+			// aapt resource value: 0x7f01019a
+			public const int textAnnotationTextColor = 2130772378;
+			
+			// aapt resource value: 0x7f01019c
+			public const int textAnnotationTextSize = 2130772380;
+			
 			// aapt resource value: 0x7f01007c
 			public const int textAppearanceLargePopupMenu = 2130772092;
 			
@@ -3225,6 +3351,15 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f01004e
 			public const int tickMarkTintMode = 2130772046;
 			
+			// aapt resource value: 0x7f01017d
+			public const int tickTextColor = 2130772349;
+			
+			// aapt resource value: 0x7f01017a
+			public const int tickTextSize = 2130772346;
+			
+			// aapt resource value: 0x7f01017c
+			public const int tickTextTypeFace = 2130772348;
+			
 			// aapt resource value: 0x7f01004a
 			public const int tint = 2130772042;
 			
@@ -3260,6 +3395,9 @@ namespace Nickprovs.Albatross.Droid
 			
 			// aapt resource value: 0x7f010111
 			public const int titleTextColor = 2130772241;
+			
+			// aapt resource value: 0x7f01017b
+			public const int titleTextSize = 2130772347;
 			
 			// aapt resource value: 0x7f010029
 			public const int titleTextStyle = 2130772009;
@@ -4098,6 +4236,30 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f090005
 			public const int item_touch_helper_swipe_escape_velocity = 2131296261;
 			
+			// aapt resource value: 0x7f0900a4
+			public const int legendItemCheckBoxNegativeMargin = 2131296420;
+			
+			// aapt resource value: 0x7f0900a5
+			public const int legendItemMargin = 2131296421;
+			
+			// aapt resource value: 0x7f0900a6
+			public const int legendItemPointMarkerMargin = 2131296422;
+			
+			// aapt resource value: 0x7f0900a7
+			public const int legendItemPointMarkerWidth = 2131296423;
+			
+			// aapt resource value: 0x7f0900a8
+			public const int legendItemSeriesNameLeftMargin = 2131296424;
+			
+			// aapt resource value: 0x7f0900a9
+			public const int legendItemSeriesNameRightMargin = 2131296425;
+			
+			// aapt resource value: 0x7f0900aa
+			public const int legendModifierPadding = 2131296426;
+			
+			// aapt resource value: 0x7f0900ab
+			public const int legendTextSize = 2131296427;
+			
 			// aapt resource value: 0x7f090006
 			public const int mr_controller_volume_group_list_item_height = 2131296262;
 			
@@ -4450,26 +4612,26 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f020140
-			public const int avd_hide_password_1 = 2130837824;
+			// aapt resource value: 0x7f020159
+			public const int avd_hide_password_1 = 2130837849;
 			
-			// aapt resource value: 0x7f020141
-			public const int avd_hide_password_2 = 2130837825;
+			// aapt resource value: 0x7f02015a
+			public const int avd_hide_password_2 = 2130837850;
 			
-			// aapt resource value: 0x7f020142
-			public const int avd_hide_password_3 = 2130837826;
+			// aapt resource value: 0x7f02015b
+			public const int avd_hide_password_3 = 2130837851;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f020143
-			public const int avd_show_password_1 = 2130837827;
+			// aapt resource value: 0x7f02015c
+			public const int avd_show_password_1 = 2130837852;
 			
-			// aapt resource value: 0x7f020144
-			public const int avd_show_password_2 = 2130837828;
+			// aapt resource value: 0x7f02015d
+			public const int avd_show_password_2 = 2130837853;
 			
-			// aapt resource value: 0x7f020145
-			public const int avd_show_password_3 = 2130837829;
+			// aapt resource value: 0x7f02015e
+			public const int avd_show_password_3 = 2130837854;
 			
 			// aapt resource value: 0x7f020055
 			public const int bluespiral = 2130837589;
@@ -5140,11 +5302,11 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f020133
 			public const int notification_icon_background = 2130837811;
 			
-			// aapt resource value: 0x7f02013e
-			public const int notification_template_icon_bg = 2130837822;
+			// aapt resource value: 0x7f020157
+			public const int notification_template_icon_bg = 2130837847;
 			
-			// aapt resource value: 0x7f02013f
-			public const int notification_template_icon_low_bg = 2130837823;
+			// aapt resource value: 0x7f020158
+			public const int notification_template_icon_low_bg = 2130837848;
 			
 			// aapt resource value: 0x7f020134
 			public const int notification_tile_bg = 2130837812;
@@ -5162,19 +5324,94 @@ namespace Nickprovs.Albatross.Droid
 			public const int reminders = 2130837816;
 			
 			// aapt resource value: 0x7f020139
-			public const int splash = 2130837817;
+			public const int sci_chart_black_steel_background = 2130837817;
 			
 			// aapt resource value: 0x7f02013a
-			public const int splash_screen = 2130837818;
+			public const int sci_chart_black_steel_label_background = 2130837818;
 			
 			// aapt resource value: 0x7f02013b
-			public const int todo = 2130837819;
+			public const int sci_chart_black_steel_legend_background = 2130837819;
 			
 			// aapt resource value: 0x7f02013c
-			public const int tooltip_frame_dark = 2130837820;
+			public const int sci_chart_bright_spark_background = 2130837820;
 			
 			// aapt resource value: 0x7f02013d
-			public const int tooltip_frame_light = 2130837821;
+			public const int sci_chart_bright_spark_label_background = 2130837821;
+			
+			// aapt resource value: 0x7f02013e
+			public const int sci_chart_bright_spark_legend_background = 2130837822;
+			
+			// aapt resource value: 0x7f02013f
+			public const int sci_chart_chrome_background = 2130837823;
+			
+			// aapt resource value: 0x7f020140
+			public const int sci_chart_chrome_label_background = 2130837824;
+			
+			// aapt resource value: 0x7f020141
+			public const int sci_chart_chrome_legend_background = 2130837825;
+			
+			// aapt resource value: 0x7f020142
+			public const int sci_chart_electric_background = 2130837826;
+			
+			// aapt resource value: 0x7f020143
+			public const int sci_chart_electric_label_background = 2130837827;
+			
+			// aapt resource value: 0x7f020144
+			public const int sci_chart_electric_legend_background = 2130837828;
+			
+			// aapt resource value: 0x7f020145
+			public const int sci_chart_expression_dark_background = 2130837829;
+			
+			// aapt resource value: 0x7f020146
+			public const int sci_chart_expression_dark_label_background = 2130837830;
+			
+			// aapt resource value: 0x7f020147
+			public const int sci_chart_expression_dark_legend_background = 2130837831;
+			
+			// aapt resource value: 0x7f020148
+			public const int sci_chart_expression_light_background = 2130837832;
+			
+			// aapt resource value: 0x7f020149
+			public const int sci_chart_expression_light_label_background = 2130837833;
+			
+			// aapt resource value: 0x7f02014a
+			public const int sci_chart_expression_light_legend_background = 2130837834;
+			
+			// aapt resource value: 0x7f02014b
+			public const int sci_chart_oscilloscope_background = 2130837835;
+			
+			// aapt resource value: 0x7f02014c
+			public const int sci_chart_oscilloscope_label_background = 2130837836;
+			
+			// aapt resource value: 0x7f02014d
+			public const int sci_chart_oscilloscope_legend_background = 2130837837;
+			
+			// aapt resource value: 0x7f02014e
+			public const int sci_chart_tooltip_background = 2130837838;
+			
+			// aapt resource value: 0x7f02014f
+			public const int sci_chart_v4_dark_background = 2130837839;
+			
+			// aapt resource value: 0x7f020150
+			public const int sci_chart_v4_dark_label_background = 2130837840;
+			
+			// aapt resource value: 0x7f020151
+			public const int sci_chart_v4_dark_legend_background = 2130837841;
+			
+			// aapt resource value: 0x7f020152
+			public const int splash = 2130837842;
+			
+			// aapt resource value: 0x7f020153
+			public const int splash_screen = 2130837843;
+			
+			// aapt resource value: 0x7f020154
+			public const int todo = 2130837844;
+			
+			// aapt resource value: 0x7f020155
+			public const int tooltip_frame_dark = 2130837845;
+			
+			// aapt resource value: 0x7f020156
+			public const int tooltip_frame_light = 2130837846;
 			
 			static Drawable()
 			{
@@ -5207,8 +5444,8 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0037
 			public const int SYM = 2131361847;
 			
-			// aapt resource value: 0x7f0a00ba
-			public const int action0 = 2131361978;
+			// aapt resource value: 0x7f0a00be
+			public const int action0 = 2131361982;
 			
 			// aapt resource value: 0x7f0a007c
 			public const int action_bar = 2131361916;
@@ -5231,17 +5468,17 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a005a
 			public const int action_bar_title = 2131361882;
 			
-			// aapt resource value: 0x7f0a00b7
-			public const int action_container = 2131361975;
+			// aapt resource value: 0x7f0a00bb
+			public const int action_container = 2131361979;
 			
 			// aapt resource value: 0x7f0a007d
 			public const int action_context_bar = 2131361917;
 			
-			// aapt resource value: 0x7f0a00be
-			public const int action_divider = 2131361982;
+			// aapt resource value: 0x7f0a00c2
+			public const int action_divider = 2131361986;
 			
-			// aapt resource value: 0x7f0a00b8
-			public const int action_image = 2131361976;
+			// aapt resource value: 0x7f0a00bc
+			public const int action_image = 2131361980;
 			
 			// aapt resource value: 0x7f0a0003
 			public const int action_menu_divider = 2131361795;
@@ -5258,17 +5495,20 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a005c
 			public const int action_mode_close_button = 2131361884;
 			
-			// aapt resource value: 0x7f0a00b9
-			public const int action_text = 2131361977;
+			// aapt resource value: 0x7f0a00bd
+			public const int action_text = 2131361981;
 			
-			// aapt resource value: 0x7f0a00c7
-			public const int actions = 2131361991;
+			// aapt resource value: 0x7f0a00cb
+			public const int actions = 2131361995;
 			
 			// aapt resource value: 0x7f0a005d
 			public const int activity_chooser_view_content = 2131361885;
 			
 			// aapt resource value: 0x7f0a0027
 			public const int add = 2131361831;
+			
+			// aapt resource value: 0x7f0a00da
+			public const int adornerLayer = 2131362010;
 			
 			// aapt resource value: 0x7f0a0070
 			public const int alertTitle = 2131361904;
@@ -5279,11 +5519,17 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0038
 			public const int always = 2131361848;
 			
+			// aapt resource value: 0x7f0a00d6
+			public const int annotationSurface = 2131362006;
+			
 			// aapt resource value: 0x7f0a0056
 			public const int async = 2131361878;
 			
 			// aapt resource value: 0x7f0a0044
 			public const int auto = 2131361860;
+			
+			// aapt resource value: 0x7f0a00d9
+			public const int axisModifierSurfaceArea = 2131362009;
 			
 			// aapt resource value: 0x7f0a002f
 			public const int beginning = 2131361839;
@@ -5294,17 +5540,17 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a003d
 			public const int bottom = 2131361853;
 			
-			// aapt resource value: 0x7f0a008b
-			public const int bottomtab_navarea = 2131361931;
-			
 			// aapt resource value: 0x7f0a008c
-			public const int bottomtab_tabbar = 2131361932;
+			public const int bottomtab_navarea = 2131361932;
+			
+			// aapt resource value: 0x7f0a008d
+			public const int bottomtab_tabbar = 2131361933;
 			
 			// aapt resource value: 0x7f0a0063
 			public const int buttonPanel = 2131361891;
 			
-			// aapt resource value: 0x7f0a00bb
-			public const int cancel_action = 2131361979;
+			// aapt resource value: 0x7f0a00bf
+			public const int cancel_action = 2131361983;
 			
 			// aapt resource value: 0x7f0a0045
 			public const int center = 2131361861;
@@ -5315,11 +5561,14 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0047
 			public const int center_vertical = 2131361863;
 			
+			// aapt resource value: 0x7f0a00d7
+			public const int chartModifierSurface = 2131362007;
+			
 			// aapt resource value: 0x7f0a0073
 			public const int checkbox = 2131361907;
 			
-			// aapt resource value: 0x7f0a00c3
-			public const int chronometer = 2131361987;
+			// aapt resource value: 0x7f0a00c7
+			public const int chronometer = 2131361991;
 			
 			// aapt resource value: 0x7f0a004e
 			public const int clip_horizontal = 2131361870;
@@ -5330,14 +5579,17 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0039
 			public const int collapseActionView = 2131361849;
 			
-			// aapt resource value: 0x7f0a008f
-			public const int container = 2131361935;
+			// aapt resource value: 0x7f0a00d2
+			public const int colorMapView = 2131362002;
+			
+			// aapt resource value: 0x7f0a0090
+			public const int container = 2131361936;
 			
 			// aapt resource value: 0x7f0a0066
 			public const int contentPanel = 2131361894;
 			
-			// aapt resource value: 0x7f0a0090
-			public const int coordinator = 2131361936;
+			// aapt resource value: 0x7f0a0091
+			public const int coordinator = 2131361937;
 			
 			// aapt resource value: 0x7f0a006d
 			public const int custom = 2131361901;
@@ -5351,20 +5603,20 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0060
 			public const int default_activity_button = 2131361888;
 			
-			// aapt resource value: 0x7f0a0092
-			public const int design_bottom_sheet = 2131361938;
+			// aapt resource value: 0x7f0a0093
+			public const int design_bottom_sheet = 2131361939;
+			
+			// aapt resource value: 0x7f0a009a
+			public const int design_menu_item_action_area = 2131361946;
 			
 			// aapt resource value: 0x7f0a0099
-			public const int design_menu_item_action_area = 2131361945;
+			public const int design_menu_item_action_area_stub = 2131361945;
 			
 			// aapt resource value: 0x7f0a0098
-			public const int design_menu_item_action_area_stub = 2131361944;
+			public const int design_menu_item_text = 2131361944;
 			
 			// aapt resource value: 0x7f0a0097
-			public const int design_menu_item_text = 2131361943;
-			
-			// aapt resource value: 0x7f0a0096
-			public const int design_navigation_view = 2131361942;
+			public const int design_navigation_view = 2131361943;
 			
 			// aapt resource value: 0x7f0a0020
 			public const int disableHome = 2131361824;
@@ -5375,8 +5627,8 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0030
 			public const int end = 2131361840;
 			
-			// aapt resource value: 0x7f0a00c9
-			public const int end_padder = 2131361993;
+			// aapt resource value: 0x7f0a00cd
+			public const int end_padder = 2131361997;
 			
 			// aapt resource value: 0x7f0a003f
 			public const int enterAlways = 2131361855;
@@ -5405,11 +5657,11 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0054
 			public const int @fixed = 2131361876;
 			
-			// aapt resource value: 0x7f0a009b
-			public const int flyoutcontent_appbar = 2131361947;
-			
 			// aapt resource value: 0x7f0a009c
-			public const int flyoutcontent_recycler = 2131361948;
+			public const int flyoutcontent_appbar = 2131361948;
+			
+			// aapt resource value: 0x7f0a009d
+			public const int flyoutcontent_recycler = 2131361949;
 			
 			// aapt resource value: 0x7f0a0058
 			public const int forever = 2131361880;
@@ -5426,8 +5678,8 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0062
 			public const int icon = 2131361890;
 			
-			// aapt resource value: 0x7f0a00c8
-			public const int icon_group = 2131361992;
+			// aapt resource value: 0x7f0a00cc
+			public const int icon_group = 2131361996;
 			
 			// aapt resource value: 0x7f0a003a
 			public const int ifRoom = 2131361850;
@@ -5435,8 +5687,11 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a005f
 			public const int image = 2131361887;
 			
-			// aapt resource value: 0x7f0a00c4
-			public const int info = 2131361988;
+			// aapt resource value: 0x7f0a00c8
+			public const int info = 2131361992;
+			
+			// aapt resource value: 0x7f0a009e
+			public const int isVisible = 2131361950;
 			
 			// aapt resource value: 0x7f0a0059
 			public const int italic = 2131361881;
@@ -5444,8 +5699,8 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0000
 			public const int item_touch_helper_previous_elevation = 2131361792;
 			
-			// aapt resource value: 0x7f0a008e
-			public const int largeLabel = 2131361934;
+			// aapt resource value: 0x7f0a008f
+			public const int largeLabel = 2131361935;
 			
 			// aapt resource value: 0x7f0a0049
 			public const int left = 2131361865;
@@ -5462,113 +5717,125 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0061
 			public const int list_item = 2131361889;
 			
-			// aapt resource value: 0x7f0a00ca
-			public const int main_appbar = 2131361994;
+			// aapt resource value: 0x7f0a00ce
+			public const int main_appbar = 2131361998;
 			
-			// aapt resource value: 0x7f0a00cd
-			public const int main_scrollview = 2131361997;
+			// aapt resource value: 0x7f0a00d1
+			public const int main_scrollview = 2131362001;
 			
-			// aapt resource value: 0x7f0a00cc
-			public const int main_tablayout = 2131361996;
+			// aapt resource value: 0x7f0a00d0
+			public const int main_tablayout = 2131362000;
 			
-			// aapt resource value: 0x7f0a00cb
-			public const int main_toolbar = 2131361995;
+			// aapt resource value: 0x7f0a00cf
+			public const int main_toolbar = 2131361999;
+			
+			// aapt resource value: 0x7f0a00e2
+			public const int masked = 2131362018;
 			
 			// aapt resource value: 0x7f0a00d5
-			public const int masked = 2131362005;
+			public const int maximumTextView = 2131362005;
 			
-			// aapt resource value: 0x7f0a00bd
-			public const int media_actions = 2131361981;
+			// aapt resource value: 0x7f0a00c1
+			public const int media_actions = 2131361985;
 			
-			// aapt resource value: 0x7f0a00d3
-			public const int message = 2131362003;
+			// aapt resource value: 0x7f0a00e0
+			public const int message = 2131362016;
 			
 			// aapt resource value: 0x7f0a0031
 			public const int middle = 2131361841;
 			
+			// aapt resource value: 0x7f0a00d4
+			public const int middleTextView = 2131362004;
+			
 			// aapt resource value: 0x7f0a0053
 			public const int mini = 2131361875;
 			
-			// aapt resource value: 0x7f0a00a9
-			public const int mr_art = 2131361961;
-			
-			// aapt resource value: 0x7f0a009e
-			public const int mr_chooser_list = 2131361950;
-			
-			// aapt resource value: 0x7f0a00a1
-			public const int mr_chooser_route_desc = 2131361953;
-			
-			// aapt resource value: 0x7f0a009f
-			public const int mr_chooser_route_icon = 2131361951;
-			
-			// aapt resource value: 0x7f0a00a0
-			public const int mr_chooser_route_name = 2131361952;
-			
-			// aapt resource value: 0x7f0a009d
-			public const int mr_chooser_title = 2131361949;
-			
-			// aapt resource value: 0x7f0a00a6
-			public const int mr_close = 2131361958;
-			
-			// aapt resource value: 0x7f0a00ac
-			public const int mr_control_divider = 2131361964;
-			
-			// aapt resource value: 0x7f0a00b2
-			public const int mr_control_playback_ctrl = 2131361970;
-			
-			// aapt resource value: 0x7f0a00b5
-			public const int mr_control_subtitle = 2131361973;
-			
-			// aapt resource value: 0x7f0a00b4
-			public const int mr_control_title = 2131361972;
-			
-			// aapt resource value: 0x7f0a00b3
-			public const int mr_control_title_container = 2131361971;
-			
-			// aapt resource value: 0x7f0a00a7
-			public const int mr_custom_control = 2131361959;
-			
-			// aapt resource value: 0x7f0a00a8
-			public const int mr_default_control = 2131361960;
-			
-			// aapt resource value: 0x7f0a00a3
-			public const int mr_dialog_area = 2131361955;
-			
-			// aapt resource value: 0x7f0a00a2
-			public const int mr_expandable_area = 2131361954;
-			
-			// aapt resource value: 0x7f0a00b6
-			public const int mr_group_expand_collapse = 2131361974;
-			
-			// aapt resource value: 0x7f0a00aa
-			public const int mr_media_main_control = 2131361962;
-			
-			// aapt resource value: 0x7f0a00a5
-			public const int mr_name = 2131361957;
-			
-			// aapt resource value: 0x7f0a00ab
-			public const int mr_playback_control = 2131361963;
-			
-			// aapt resource value: 0x7f0a00a4
-			public const int mr_title_bar = 2131361956;
+			// aapt resource value: 0x7f0a00d3
+			public const int minimumTextView = 2131362003;
 			
 			// aapt resource value: 0x7f0a00ad
-			public const int mr_volume_control = 2131361965;
+			public const int mr_art = 2131361965;
 			
-			// aapt resource value: 0x7f0a00ae
-			public const int mr_volume_group_list = 2131361966;
+			// aapt resource value: 0x7f0a00a2
+			public const int mr_chooser_list = 2131361954;
+			
+			// aapt resource value: 0x7f0a00a5
+			public const int mr_chooser_route_desc = 2131361957;
+			
+			// aapt resource value: 0x7f0a00a3
+			public const int mr_chooser_route_icon = 2131361955;
+			
+			// aapt resource value: 0x7f0a00a4
+			public const int mr_chooser_route_name = 2131361956;
+			
+			// aapt resource value: 0x7f0a00a1
+			public const int mr_chooser_title = 2131361953;
+			
+			// aapt resource value: 0x7f0a00aa
+			public const int mr_close = 2131361962;
 			
 			// aapt resource value: 0x7f0a00b0
-			public const int mr_volume_item_icon = 2131361968;
+			public const int mr_control_divider = 2131361968;
+			
+			// aapt resource value: 0x7f0a00b6
+			public const int mr_control_playback_ctrl = 2131361974;
+			
+			// aapt resource value: 0x7f0a00b9
+			public const int mr_control_subtitle = 2131361977;
+			
+			// aapt resource value: 0x7f0a00b8
+			public const int mr_control_title = 2131361976;
+			
+			// aapt resource value: 0x7f0a00b7
+			public const int mr_control_title_container = 2131361975;
+			
+			// aapt resource value: 0x7f0a00ab
+			public const int mr_custom_control = 2131361963;
+			
+			// aapt resource value: 0x7f0a00ac
+			public const int mr_default_control = 2131361964;
+			
+			// aapt resource value: 0x7f0a00a7
+			public const int mr_dialog_area = 2131361959;
+			
+			// aapt resource value: 0x7f0a00a6
+			public const int mr_expandable_area = 2131361958;
+			
+			// aapt resource value: 0x7f0a00ba
+			public const int mr_group_expand_collapse = 2131361978;
+			
+			// aapt resource value: 0x7f0a00ae
+			public const int mr_media_main_control = 2131361966;
+			
+			// aapt resource value: 0x7f0a00a9
+			public const int mr_name = 2131361961;
+			
+			// aapt resource value: 0x7f0a00af
+			public const int mr_playback_control = 2131361967;
+			
+			// aapt resource value: 0x7f0a00a8
+			public const int mr_title_bar = 2131361960;
 			
 			// aapt resource value: 0x7f0a00b1
-			public const int mr_volume_slider = 2131361969;
+			public const int mr_volume_control = 2131361969;
+			
+			// aapt resource value: 0x7f0a00b2
+			public const int mr_volume_group_list = 2131361970;
+			
+			// aapt resource value: 0x7f0a00b4
+			public const int mr_volume_item_icon = 2131361972;
+			
+			// aapt resource value: 0x7f0a00b5
+			public const int mr_volume_slider = 2131361973;
 			
 			// aapt resource value: 0x7f0a0028
 			public const int multiply = 2131361832;
 			
-			// aapt resource value: 0x7f0a0095
-			public const int navigation_header_container = 2131361941;
+			// aapt resource value: 0x7f0a00a0
+			public const int name = 2131361952;
+			
+			// aapt resource value: 0x7f0a0096
+			public const int navigation_header_container = 2131361942;
 			
 			// aapt resource value: 0x7f0a003b
 			public const int never = 2131361851;
@@ -5579,14 +5846,14 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a001e
 			public const int normal = 2131361822;
 			
-			// aapt resource value: 0x7f0a00c6
-			public const int notification_background = 2131361990;
+			// aapt resource value: 0x7f0a00ca
+			public const int notification_background = 2131361994;
 			
-			// aapt resource value: 0x7f0a00c0
-			public const int notification_main_column = 2131361984;
+			// aapt resource value: 0x7f0a00c4
+			public const int notification_main_column = 2131361988;
 			
-			// aapt resource value: 0x7f0a00bf
-			public const int notification_main_column_container = 2131361983;
+			// aapt resource value: 0x7f0a00c3
+			public const int notification_main_column_container = 2131361987;
 			
 			// aapt resource value: 0x7f0a004c
 			public const int parallax = 2131361868;
@@ -5600,6 +5867,9 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a004d
 			public const int pin = 2131361869;
 			
+			// aapt resource value: 0x7f0a009f
+			public const int pointMarker = 2131361951;
+			
 			// aapt resource value: 0x7f0a0006
 			public const int progress_circular = 2131361798;
 			
@@ -5609,14 +5879,20 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0075
 			public const int radio = 2131361909;
 			
+			// aapt resource value: 0x7f0a00d8
+			public const int renderableSeriesArea = 2131362008;
+			
 			// aapt resource value: 0x7f0a004a
 			public const int right = 2131361866;
 			
-			// aapt resource value: 0x7f0a00c5
-			public const int right_icon = 2131361989;
+			// aapt resource value: 0x7f0a00c9
+			public const int right_icon = 2131361993;
 			
-			// aapt resource value: 0x7f0a00c1
-			public const int right_side = 2131361985;
+			// aapt resource value: 0x7f0a00c5
+			public const int right_side = 2131361989;
+			
+			// aapt resource value: 0x7f0a008b
+			public const int rotateLayout = 2131361931;
 			
 			// aapt resource value: 0x7f0a000c
 			public const int save_image_matrix = 2131361804;
@@ -5678,14 +5954,14 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a008a
 			public const int select_dialog_listview = 2131361930;
 			
-			// aapt resource value: 0x7f0a00ce
-			public const int shellcontent_appbar = 2131361998;
+			// aapt resource value: 0x7f0a00db
+			public const int shellcontent_appbar = 2131362011;
 			
-			// aapt resource value: 0x7f0a00d0
-			public const int shellcontent_scrollview = 2131362000;
+			// aapt resource value: 0x7f0a00dd
+			public const int shellcontent_scrollview = 2131362013;
 			
-			// aapt resource value: 0x7f0a00cf
-			public const int shellcontent_toolbar = 2131361999;
+			// aapt resource value: 0x7f0a00dc
+			public const int shellcontent_toolbar = 2131362012;
 			
 			// aapt resource value: 0x7f0a0074
 			public const int shortcut = 2131361908;
@@ -5699,17 +5975,17 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0025
 			public const int showTitle = 2131361829;
 			
-			// aapt resource value: 0x7f0a00d1
-			public const int sliding_tabs = 2131362001;
+			// aapt resource value: 0x7f0a00de
+			public const int sliding_tabs = 2131362014;
 			
-			// aapt resource value: 0x7f0a008d
-			public const int smallLabel = 2131361933;
+			// aapt resource value: 0x7f0a008e
+			public const int smallLabel = 2131361934;
+			
+			// aapt resource value: 0x7f0a0095
+			public const int snackbar_action = 2131361941;
 			
 			// aapt resource value: 0x7f0a0094
-			public const int snackbar_action = 2131361940;
-			
-			// aapt resource value: 0x7f0a0093
-			public const int snackbar_text = 2131361939;
+			public const int snackbar_text = 2131361940;
 			
 			// aapt resource value: 0x7f0a0043
 			public const int snap = 2131361859;
@@ -5732,8 +6008,8 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a004b
 			public const int start = 2131361867;
 			
-			// aapt resource value: 0x7f0a00bc
-			public const int status_bar_latest_event_content = 2131361980;
+			// aapt resource value: 0x7f0a00c0
+			public const int status_bar_latest_event_content = 2131361984;
 			
 			// aapt resource value: 0x7f0a0076
 			public const int submenuarrow = 2131361910;
@@ -5759,8 +6035,8 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0069
 			public const int textSpacerNoTitle = 2131361897;
 			
-			// aapt resource value: 0x7f0a009a
-			public const int text_input_password_toggle = 2131361946;
+			// aapt resource value: 0x7f0a009b
+			public const int text_input_password_toggle = 2131361947;
 			
 			// aapt resource value: 0x7f0a0014
 			public const int textinput_counter = 2131361812;
@@ -5768,8 +6044,8 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0015
 			public const int textinput_error = 2131361813;
 			
-			// aapt resource value: 0x7f0a00c2
-			public const int time = 2131361986;
+			// aapt resource value: 0x7f0a00c6
+			public const int time = 2131361990;
 			
 			// aapt resource value: 0x7f0a001c
 			public const int title = 2131361820;
@@ -5780,8 +6056,8 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a006f
 			public const int title_template = 2131361903;
 			
-			// aapt resource value: 0x7f0a00d2
-			public const int toolbar = 2131362002;
+			// aapt resource value: 0x7f0a00df
+			public const int toolbar = 2131362015;
 			
 			// aapt resource value: 0x7f0a003e
 			public const int top = 2131361854;
@@ -5789,8 +6065,8 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a006e
 			public const int topPanel = 2131361902;
 			
-			// aapt resource value: 0x7f0a0091
-			public const int touch_outside = 2131361937;
+			// aapt resource value: 0x7f0a0092
+			public const int touch_outside = 2131361938;
 			
 			// aapt resource value: 0x7f0a000f
 			public const int transition_current_scene = 2131361807;
@@ -5819,11 +6095,11 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0016
 			public const int view_offset_helper = 2131361814;
 			
-			// aapt resource value: 0x7f0a00d4
-			public const int visible = 2131362004;
+			// aapt resource value: 0x7f0a00e1
+			public const int visible = 2131362017;
 			
-			// aapt resource value: 0x7f0a00af
-			public const int volume_item_container = 2131361967;
+			// aapt resource value: 0x7f0a00b3
+			public const int volume_item_container = 2131361971;
 			
 			// aapt resource value: 0x7f0a003c
 			public const int withText = 2131361852;
@@ -5994,142 +6270,172 @@ namespace Nickprovs.Albatross.Droid
 			public const int abc_select_dialog_material = 2130968601;
 			
 			// aapt resource value: 0x7f04001a
-			public const int BottomTabLayout = 2130968602;
+			public const int axis_marker_annotation_layout = 2130968602;
 			
 			// aapt resource value: 0x7f04001b
-			public const int design_bottom_navigation_item = 2130968603;
+			public const int BottomTabLayout = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int design_bottom_sheet_dialog = 2130968604;
+			public const int design_bottom_navigation_item = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int design_layout_snackbar = 2130968605;
+			public const int design_bottom_sheet_dialog = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
-			public const int design_layout_snackbar_include = 2130968606;
+			public const int design_layout_snackbar = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int design_layout_tab_icon = 2130968607;
+			public const int design_layout_snackbar_include = 2130968607;
 			
 			// aapt resource value: 0x7f040020
-			public const int design_layout_tab_text = 2130968608;
+			public const int design_layout_tab_icon = 2130968608;
 			
 			// aapt resource value: 0x7f040021
-			public const int design_menu_item_action_area = 2130968609;
+			public const int design_layout_tab_text = 2130968609;
 			
 			// aapt resource value: 0x7f040022
-			public const int design_navigation_item = 2130968610;
+			public const int design_menu_item_action_area = 2130968610;
 			
 			// aapt resource value: 0x7f040023
-			public const int design_navigation_item_header = 2130968611;
+			public const int design_navigation_item = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int design_navigation_item_separator = 2130968612;
+			public const int design_navigation_item_header = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int design_navigation_item_subheader = 2130968613;
+			public const int design_navigation_item_separator = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int design_navigation_menu = 2130968614;
+			public const int design_navigation_item_subheader = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int design_navigation_menu_item = 2130968615;
+			public const int design_navigation_menu = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int design_text_input_password_icon = 2130968616;
+			public const int design_navigation_menu_item = 2130968616;
 			
 			// aapt resource value: 0x7f040029
-			public const int FlyoutContent = 2130968617;
+			public const int design_text_input_password_icon = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int mr_chooser_dialog = 2130968618;
+			public const int FlyoutContent = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int mr_chooser_list_item = 2130968619;
+			public const int horizontal_legend_placeholder_layout = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int mr_controller_material_dialog_b = 2130968620;
+			public const int legend_item = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int mr_controller_volume_item = 2130968621;
+			public const int mr_chooser_dialog = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int mr_playback_control = 2130968622;
+			public const int mr_chooser_list_item = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int mr_volume_control = 2130968623;
+			public const int mr_controller_material_dialog_b = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_action = 2130968624;
+			public const int mr_controller_volume_item = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_action_tombstone = 2130968625;
+			public const int mr_playback_control = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_media_action = 2130968626;
+			public const int mr_volume_control = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_media_cancel_action = 2130968627;
+			public const int notification_action = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_template_big_media = 2130968628;
+			public const int notification_action_tombstone = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_big_media_custom = 2130968629;
+			public const int notification_media_action = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_big_media_narrow = 2130968630;
+			public const int notification_media_cancel_action = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int notification_template_big_media_narrow_custom = 2130968631;
+			public const int notification_template_big_media = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int notification_template_custom_big = 2130968632;
+			public const int notification_template_big_media_custom = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int notification_template_icon_group = 2130968633;
+			public const int notification_template_big_media_narrow = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int notification_template_lines_media = 2130968634;
+			public const int notification_template_big_media_narrow_custom = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int notification_template_media = 2130968635;
+			public const int notification_template_custom_big = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int notification_template_media_custom = 2130968636;
+			public const int notification_template_icon_group = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int notification_template_part_chronometer = 2130968637;
+			public const int notification_template_lines_media = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int notification_template_part_time = 2130968638;
+			public const int notification_template_media = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int RootLayout = 2130968639;
+			public const int notification_template_media_custom = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int select_dialog_item_material = 2130968640;
+			public const int notification_template_part_chronometer = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int select_dialog_multichoice_material = 2130968641;
+			public const int notification_template_part_time = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int select_dialog_singlechoice_material = 2130968642;
+			public const int RootLayout = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int ShellContent = 2130968643;
+			public const int scichart_default_cursor_modifier_tooltip_container = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int support_simple_spinner_dropdown_item = 2130968644;
+			public const int scichart_default_tooltip_modifier_tooltip_container = 2130968644;
 			
 			// aapt resource value: 0x7f040045
-			public const int Tabbar = 2130968645;
+			public const int scichart_heatmap_colour_map_horizontal_layout = 2130968645;
 			
 			// aapt resource value: 0x7f040046
-			public const int Toolbar = 2130968646;
+			public const int scichart_heatmap_colour_map_vertical_layout = 2130968646;
 			
 			// aapt resource value: 0x7f040047
-			public const int tooltip = 2130968647;
+			public const int scihart_surface_layout = 2130968647;
+			
+			// aapt resource value: 0x7f040048
+			public const int select_dialog_item_material = 2130968648;
+			
+			// aapt resource value: 0x7f040049
+			public const int select_dialog_multichoice_material = 2130968649;
+			
+			// aapt resource value: 0x7f04004a
+			public const int select_dialog_singlechoice_material = 2130968650;
+			
+			// aapt resource value: 0x7f04004b
+			public const int ShellContent = 2130968651;
+			
+			// aapt resource value: 0x7f04004c
+			public const int support_simple_spinner_dropdown_item = 2130968652;
+			
+			// aapt resource value: 0x7f04004d
+			public const int Tabbar = 2130968653;
+			
+			// aapt resource value: 0x7f04004e
+			public const int text_annotation_layout = 2130968654;
+			
+			// aapt resource value: 0x7f04004f
+			public const int Toolbar = 2130968655;
+			
+			// aapt resource value: 0x7f040050
+			public const int tooltip = 2130968656;
+			
+			// aapt resource value: 0x7f040051
+			public const int vertical_legend_placeholder_layout = 2130968657;
 			
 			static Layout()
 			{
@@ -6377,8 +6683,8 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0d016e
 			public const int Animation_Design_BottomSheetDialog = 2131558766;
 			
-			// aapt resource value: 0x7f0d0192
-			public const int AppCompatDialogStyle = 2131558802;
+			// aapt resource value: 0x7f0d019b
+			public const int AppCompatDialogStyle = 2131558811;
 			
 			// aapt resource value: 0x7f0d00a9
 			public const int Base_AlertDialog_AppCompat = 2131558569;
@@ -6881,14 +7187,14 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0d000e
 			public const int CardView_Light = 2131558414;
 			
-			// aapt resource value: 0x7f0d018f
-			public const int MainTheme = 2131558799;
+			// aapt resource value: 0x7f0d0198
+			public const int MainTheme = 2131558808;
 			
-			// aapt resource value: 0x7f0d0190
-			public const int MainTheme_Base = 2131558800;
+			// aapt resource value: 0x7f0d0199
+			public const int MainTheme_Base = 2131558809;
 			
-			// aapt resource value: 0x7f0d0191
-			public const int MainTheme_Splash = 2131558801;
+			// aapt resource value: 0x7f0d019a
+			public const int MainTheme_Splash = 2131558810;
 			
 			// aapt resource value: 0x7f0d002d
 			public const int Platform_AppCompat = 2131558445;
@@ -6973,6 +7279,33 @@ namespace Nickprovs.Albatross.Droid
 			
 			// aapt resource value: 0x7f0d0047
 			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131558471;
+			
+			// aapt resource value: 0x7f0d018f
+			public const int SciChart_BaseStyle = 2131558799;
+			
+			// aapt resource value: 0x7f0d0190
+			public const int SciChart_BlackSteel = 2131558800;
+			
+			// aapt resource value: 0x7f0d0191
+			public const int SciChart_Bright_Spark = 2131558801;
+			
+			// aapt resource value: 0x7f0d0192
+			public const int SciChart_ChromeStyle = 2131558802;
+			
+			// aapt resource value: 0x7f0d0193
+			public const int SciChart_ElectricStyle = 2131558803;
+			
+			// aapt resource value: 0x7f0d0194
+			public const int SciChart_ExpressionDarkStyle = 2131558804;
+			
+			// aapt resource value: 0x7f0d0195
+			public const int SciChart_ExpressionLightStyle = 2131558805;
+			
+			// aapt resource value: 0x7f0d0196
+			public const int SciChart_OscilloscopeStyle = 2131558806;
+			
+			// aapt resource value: 0x7f0d0197
+			public const int SciChart_SciChartv4DarkStyle = 2131558807;
 			
 			// aapt resource value: 0x7f0d00d6
 			public const int TextAppearance_AppCompat = 2131558614;
@@ -9169,6 +9502,18 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 5
 			public const int RecyclerView_stackFromEnd = 5;
 			
+			public static int[] SciChartHeatmapColourMap = new int[] {
+					16842948};
+			
+			// aapt resource value: 0
+			public const int SciChartHeatmapColourMap_android_orientation = 0;
+			
+			public static int[] SciChartLegend = new int[] {
+					16842948};
+			
+			// aapt resource value: 0
+			public const int SciChartLegend_android_orientation = 0;
+			
 			public static int[] ScrimInsetsFrameLayout = new int[] {
 					2130772297};
 			
@@ -9544,6 +9889,192 @@ namespace Nickprovs.Albatross.Droid
 			
 			// aapt resource value: 15
 			public const int TextInputLayout_passwordToggleTintMode = 15;
+			
+			public static int[] ThemeProvider = new int[] {
+					2130772339,
+					2130772340,
+					2130772341,
+					2130772342,
+					2130772343,
+					2130772344,
+					2130772345,
+					2130772346,
+					2130772347,
+					2130772348,
+					2130772349,
+					2130772350,
+					2130772351,
+					2130772352,
+					2130772353,
+					2130772354,
+					2130772355,
+					2130772356,
+					2130772357,
+					2130772358,
+					2130772359,
+					2130772360,
+					2130772361,
+					2130772362,
+					2130772363,
+					2130772364,
+					2130772365,
+					2130772366,
+					2130772367,
+					2130772368,
+					2130772369,
+					2130772370,
+					2130772371,
+					2130772372,
+					2130772373,
+					2130772374,
+					2130772375,
+					2130772376,
+					2130772377,
+					2130772378,
+					2130772379,
+					2130772380,
+					2130772381,
+					2130772382,
+					2130772383,
+					2130772384};
+			
+			// aapt resource value: 13
+			public const int ThemeProvider_axisBandsColor = 13;
+			
+			// aapt resource value: 22
+			public const int ThemeProvider_axisTooltipBackground = 22;
+			
+			// aapt resource value: 20
+			public const int ThemeProvider_axisTooltipTextColor = 20;
+			
+			// aapt resource value: 21
+			public const int ThemeProvider_axisTooltipTextSize = 21;
+			
+			// aapt resource value: 36
+			public const int ThemeProvider_bandFillDownColor = 36;
+			
+			// aapt resource value: 35
+			public const int ThemeProvider_bandFillUpColor = 35;
+			
+			// aapt resource value: 34
+			public const int ThemeProvider_bandStrokeDownColor = 34;
+			
+			// aapt resource value: 33
+			public const int ThemeProvider_bandStrokeUpColor = 33;
+			
+			// aapt resource value: 32
+			public const int ThemeProvider_candleStickFillDownColor = 32;
+			
+			// aapt resource value: 31
+			public const int ThemeProvider_candleStickFillUpColor = 31;
+			
+			// aapt resource value: 30
+			public const int ThemeProvider_candleStickStrokeDownColor = 30;
+			
+			// aapt resource value: 29
+			public const int ThemeProvider_candleStickStrokeUpColor = 29;
+			
+			// aapt resource value: 28
+			public const int ThemeProvider_columnFillColor = 28;
+			
+			// aapt resource value: 27
+			public const int ThemeProvider_columnLineColor = 27;
+			
+			// aapt resource value: 17
+			public const int ThemeProvider_cursorLineColor = 17;
+			
+			// aapt resource value: 43
+			public const int ThemeProvider_defaultAnnotationGripsBackgroundColor = 43;
+			
+			// aapt resource value: 42
+			public const int ThemeProvider_defaultAnnotationGripsStrokeColor = 42;
+			
+			// aapt resource value: 45
+			public const int ThemeProvider_defaultPieSegmentTitleTextColor = 45;
+			
+			// aapt resource value: 44
+			public const int ThemeProvider_defaultPieSegmentTitleTextSize = 44;
+			
+			// aapt resource value: 6
+			public const int ThemeProvider_defaultTextColor = 6;
+			
+			// aapt resource value: 5
+			public const int ThemeProvider_defaultTextSize = 5;
+			
+			// aapt resource value: 23
+			public const int ThemeProvider_labelBackground = 23;
+			
+			// aapt resource value: 4
+			public const int ThemeProvider_legendBackground = 4;
+			
+			// aapt resource value: 37
+			public const int ThemeProvider_lineAnnotationLineColor = 37;
+			
+			// aapt resource value: 38
+			public const int ThemeProvider_lineAnnotationLineThickness = 38;
+			
+			// aapt resource value: 26
+			public const int ThemeProvider_lineSeriesColor = 26;
+			
+			// aapt resource value: 11
+			public const int ThemeProvider_majorGridLinesColor = 11;
+			
+			// aapt resource value: 15
+			public const int ThemeProvider_majorTickLinesLength = 15;
+			
+			// aapt resource value: 12
+			public const int ThemeProvider_minorGridLinesColor = 12;
+			
+			// aapt resource value: 14
+			public const int ThemeProvider_minorTickLinesLength = 14;
+			
+			// aapt resource value: 25
+			public const int ThemeProvider_mountainAreaColor = 25;
+			
+			// aapt resource value: 24
+			public const int ThemeProvider_mountainLineColor = 24;
+			
+			// aapt resource value: 2
+			public const int ThemeProvider_renderableSeriesAreaBorderColor = 2;
+			
+			// aapt resource value: 1
+			public const int ThemeProvider_renderableSeriesAreaFillColor = 1;
+			
+			// aapt resource value: 3
+			public const int ThemeProvider_renderableSeriesAreaStrokeThickness = 3;
+			
+			// aapt resource value: 16
+			public const int ThemeProvider_rolloverLineColor = 16;
+			
+			// aapt resource value: 19
+			public const int ThemeProvider_rubberBandFillColor = 19;
+			
+			// aapt resource value: 18
+			public const int ThemeProvider_rubberBandStrokeColor = 18;
+			
+			// aapt resource value: 0
+			public const int ThemeProvider_sciChartBackground = 0;
+			
+			// aapt resource value: 40
+			public const int ThemeProvider_textAnnotationBackgroundColor = 40;
+			
+			// aapt resource value: 39
+			public const int ThemeProvider_textAnnotationTextColor = 39;
+			
+			// aapt resource value: 41
+			public const int ThemeProvider_textAnnotationTextSize = 41;
+			
+			// aapt resource value: 10
+			public const int ThemeProvider_tickTextColor = 10;
+			
+			// aapt resource value: 7
+			public const int ThemeProvider_tickTextSize = 7;
+			
+			// aapt resource value: 9
+			public const int ThemeProvider_tickTextTypeFace = 9;
+			
+			// aapt resource value: 8
+			public const int ThemeProvider_titleTextSize = 8;
 			
 			public static int[] Toolbar = new int[] {
 					16842927,
