@@ -125,7 +125,7 @@
                                     </Grid>
 
                                     <!--Unit-->
-                                    <Slider x:Name="InitialEccentricitySlider" Maximum="0.9" Minimum="0.001" Value="{Binding CurrentSimulatorInput.InitialEccentricity}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
+                                    <Slider x:Name="InitialEccentricitySlider" Maximum="0.9" Minimum="0" Value="{Binding CurrentSimulatorInput.InitialEccentricity}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                 </StackLayout>
 
                             </Grid>

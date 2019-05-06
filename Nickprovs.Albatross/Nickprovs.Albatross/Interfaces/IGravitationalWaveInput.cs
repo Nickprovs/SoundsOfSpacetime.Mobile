@@ -17,6 +17,8 @@ namespace Nickprovs.Albatross.Interfaces
 
         double InitialEccentricity { get; set; }
 
+        double InitialEccentricityNonZero { get;  }
+
         double DetectorAngleLittleTheta { get; set; }
 
         double DetectorAngleBigTheta { get; set; }

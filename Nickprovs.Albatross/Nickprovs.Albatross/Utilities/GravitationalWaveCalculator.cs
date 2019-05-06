@@ -13,7 +13,7 @@ namespace Nickprovs.Albatross.Utilities
         {
             double m1Sun = input.SolarMass1;
             double m2Sun = input.SolarMass2;
-            double initEccentricity = input.InitialEccentricity;
+            double initEccentricity = input.InitialEccentricityNonZero;
             double fgw0circ = 30;
             double initFrequency = fgw0circ / Math.Pow((Math.Pow(initEccentricity, 2f) + 1), 4f);
             double initPomega = 0.3;

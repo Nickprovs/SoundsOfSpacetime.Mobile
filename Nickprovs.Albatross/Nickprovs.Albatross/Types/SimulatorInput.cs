@@ -61,6 +61,17 @@ namespace Nickprovs.Albatross.Types
             set { this.SetProperty(ref this._initialEccentricity, value); }
         }
 
+        public double InitialEccentricityNonZero
+        {
+            get
+            {
+                if (this._initialEccentricity < 0.001)
+                    return 0.001;
+                else
+                    return this._initialEccentricity;
+            }
+        }
+
         public double DetectorAngleLittleTheta
         {
             get { return this._detectorAngleLittleTheta; }
