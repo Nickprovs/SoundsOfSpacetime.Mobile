@@ -42,6 +42,11 @@ namespace Nickprovs.Albatross.ViewModels
         /// </summary>
         private IPlotService _plotService;
 
+        /// <summary>
+        /// The file system path service
+        /// </summary>
+        private IFileSystemPathService _fileSystemPathService;
+
         private IGravitationalWaveCalculator _gravitationalWaveCalculator;
 
         #endregion
@@ -109,6 +114,7 @@ namespace Nickprovs.Albatross.ViewModels
             this.BindableDeviceInfo = bindableDeviceInfo;
             this._gravitationalWaveCalculator = gravitationalWaveCalculator;
             this._plotService = DependencyService.Resolve<IPlotService>();
+            this._fileSystemPathService = DependencyService.Resolve<IFileSystemPathService>();
 
             //Set the title for the page.
             this.Title = "Simulator";
@@ -145,7 +151,11 @@ namespace Nickprovs.Albatross.ViewModels
             //Create a .wav file based on the wave
             //TODO: Enumerate somewhere before this to eliminate multiple enumeration
             var soundFile = new Wav(data.Wave.Select(point => point.Y).ToArray(), data.Wave.Select(point => point.X).LastOrDefault());
-            var filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "tone.wav");
+
+
+        //TODO: Save to local app private data instead.
+            var folderPath = this._fileSystemPathService.GetDownloadsPath();
+            var filePath = Path.Combine(folderPath, "tone.wav");
             soundFile.SaveToFile(filePath);
             await CrossMediaManager.Current.Play(filePath);
 

@@ -36,9 +36,10 @@ namespace Nickprovs.Albatross.Types.Audio.Wav
         public Wav(double[] dataPoints, double duration, double maxAmplitude = 32760)
         {
             //Initialize the structure
-            Header = new WavHeader();
-            Format = new WavFormatChunk();
-            Data = new WavDataChunk();
+            this.Header = new WavHeader();
+            this.Format = new WavFormatChunk();
+            this.Data = new WavDataChunk();
+            this.MaxAmplitude = maxAmplitude;
 
             //Unsigned Values as these things can't be negative.
             uint unsignedTotalNumSamples = 0;
@@ -61,8 +62,13 @@ namespace Nickprovs.Albatross.Types.Audio.Wav
             for (uint i = 0; i < this.Data.shortArray.Length - 1; i++)
             {
                 //Assign a point for each channel.
-                for (int channel = 0; channel < this.Format.wChannels; channel++)             
-                    this.Data.shortArray[i + channel] = Convert.ToInt16(this.MaxAmplitude * dataPoints[(int)i]);            
+                for (int channel = 0; channel < this.Format.wChannels; channel++)
+                {
+                    var dataPointAtLocation = dataPoints[(int)i];
+                    var result = this.MaxAmplitude * dataPointAtLocation;
+                    var resultShort = Convert.ToInt16(result);
+                    this.Data.shortArray[i + channel] = resultShort;
+                }
             }
 
             //Calculate the data chunk size in bites.

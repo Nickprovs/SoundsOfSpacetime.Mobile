@@ -145,7 +145,10 @@ namespace Nickprovs.Albatross.Utilities
             }
             while (!canStop(eccentricity, initEccentricity, bigMass, initFrequency, nMAX));
 
-            return new GravitationalWaveData(waveSeries, orbitSeries);
+            for (int i = 0; i < waveSeries.Count; i++)           
+                waveSeries[i].Y = waveSeries[i].Y / largestH; //Normalize data for Max -1 and 1 on y axis
+
+                return new GravitationalWaveData(waveSeries, orbitSeries);
         }
 
         public IEnumerable<IPoint> GenerateOrbitSeries(IEnumerable<IPoint> waveSeries)
