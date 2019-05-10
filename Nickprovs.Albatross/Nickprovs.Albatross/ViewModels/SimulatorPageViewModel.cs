@@ -1,8 +1,13 @@
 ﻿using Expandable;
+using MediaManager;
 using Nickprovs.Albatross.Interfaces;
 using Nickprovs.Albatross.Types;
+using Nickprovs.Albatross.Types.Audio.Wav;
 using Prism.Commands;
 using Prism.Navigation;
+using System;
+using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -131,8 +136,18 @@ namespace Nickprovs.Albatross.ViewModels
         /// </summary>
         private async void OnSimulateWave()
         {
+            //Asynchronously calculate the event based on user data.
             var data = await Task.Run(() => this._gravitationalWaveCalculator.GenerateGravitationalWaveData(CurrentSimulatorInput));
+
+            //Plot the wave
             this._plotService.PlotNew(data.Wave);
+
+            //Create a .wav file based on the wave
+            //TODO: Enumerate somewhere before this to eliminate multiple enumeration
+            var soundFile = new Wav(data.Wave.Select(point => point.Y).ToArray(), data.Wave.Select(point => point.X).LastOrDefault());
+            var filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "tone.wav");
+            soundFile.SaveToFile(filePath);
+            await CrossMediaManager.Current.Play(filePath);
 
             //Cache this last simulator input          
             this.PreviousSimulatorInput = this.CurrentSimulatorInput;
@@ -145,8 +160,11 @@ namespace Nickprovs.Albatross.ViewModels
         /// This will simulate a binary's orbit based on current input
         /// </summary>
         private async void OnSimulateOrbit()
-        {
+        {            
+            //Asynchronously calculate the event based on user data.
             var data = await Task.Run(()=> this._gravitationalWaveCalculator.GenerateGravitationalWaveData(CurrentSimulatorInput));
+
+            //Plot the orbit
             this._plotService.PlotNew(data.Orbit);
 
             //Cache this last simulator input          

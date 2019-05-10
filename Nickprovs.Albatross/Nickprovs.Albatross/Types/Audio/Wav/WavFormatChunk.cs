@@ -2,32 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Nickprovs.Albatross.Audio
+namespace Nickprovs.Albatross.Types.Audio.Wav
 {
-    /// <summary>
-    /// Wraps the header portion of a WAVE file.
-    /// </summary>
-    public class WaveHeader
-    {
-        public string sGroupID; // RIFF
-        public uint dwFileLength; // total file length minus 8, which is taken up by RIFF
-        public string sRiffType; // always WAVE
-
-        /// <summary>
-        /// Initializes a WaveHeader object with the default values.
-        /// </summary>
-        public WaveHeader()
-        {
-            dwFileLength = 0;
-            sGroupID = "RIFF";
-            sRiffType = "WAVE";
-        }
-    }
-
     /// <summary>
     /// Wraps the Format chunk of a wave file.
     /// </summary>
-    public class WaveFormatChunk
+    public class WavFormatChunk
     {
         public string sChunkID;         // Four bytes: "fmt "
         public uint dwChunkSize;        // Length of header in bytes
@@ -44,7 +24,7 @@ namespace Nickprovs.Albatross.Audio
         /// Channels: Stereo
         /// Bit depth: 16-bit
         /// </summary>
-        public WaveFormatChunk()
+        public WavFormatChunk()
         {
             sChunkID = "fmt ";
             dwChunkSize = 16;
@@ -54,26 +34,6 @@ namespace Nickprovs.Albatross.Audio
             wBitsPerSample = 16;
             wBlockAlign = (ushort)(wChannels * (wBitsPerSample / 8));
             dwAvgBytesPerSec = dwSamplesPerSec * wBlockAlign;
-        }
-    }
-
-    /// <summary>
-    /// Wraps the Data chunk of a wave file.
-    /// </summary>
-    public class WaveDataChunk
-    {
-        public string sChunkID;     // "data"
-        public uint dwChunkSize;    // Length of header in bytes
-        public short[] shortArray;  // 8-bit audio
-
-        /// <summary>
-        /// Initializes a new data chunk with default values.
-        /// </summary>
-        public WaveDataChunk()
-        {
-            shortArray = new short[0];
-            dwChunkSize = 0;
-            sChunkID = "data";
         }
     }
 }
