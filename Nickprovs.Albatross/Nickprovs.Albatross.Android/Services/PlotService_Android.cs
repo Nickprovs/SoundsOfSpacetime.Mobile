@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Timers;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -56,13 +56,41 @@ namespace Nickprovs.Albatross.Droid.Services
         /// </summary>
         NumericAxis _yAxis;
 
+        /// <summary>
+        /// The animation timer
+        /// </summary>
+        private Timer _animationTimer;
+
+        /// <summary>
+        /// The animation delay time when performing animations
+        /// </summary>
+        private readonly double _animationDelayTime;
+
         #endregion
 
-        #region Methods
+        #region Contructors and Destructors
 
+        /// <summary>
+        /// Sets the necessary lifetime data
+        /// </summary>
+        public PlotService_Android()
+        {
+            //This timer will handle all of the waiting between point appendages to give the appearance of animation.
+            this._animationTimer = new Timer();
+
+            //SciChart Advises appending points in batches of 10-100 for performance. We'll go with the upper bound.
+            this._animationDelayTime = 100;
+        }
 
         #endregion
 
+        #region Public Methods
+
+        /// <summary>
+        /// Takes in a Xamarin Forms ContentView and adds the plot surface as a child to that view.
+        /// TODO: Rename this function to something more appropriate and have it just return the ToView(). Consumer does necessary work.
+        /// </summary>
+        /// <param name="plotContainer"></param>
         public void Render(ContentView plotContainer)
         {
             //Create the surface
@@ -94,7 +122,8 @@ namespace Nickprovs.Albatross.Droid.Services
                 DrawMinorGridLines = false,
                 DrawMajorGridLines = false,
                 DrawMajorBands = false,
-                GrowBy = new SciChart.Data.Model.DoubleRange(0.1d, 0.1d) };
+                GrowBy = new SciChart.Data.Model.DoubleRange(0.1d, 0.1d)
+            };
 
             this._yAxis.SetAxisTitleMargins(20, 0, 0, 0);
 
@@ -119,18 +148,79 @@ namespace Nickprovs.Albatross.Droid.Services
             }
 
             //Setting the configured native plot as a child of our cross-platform view.
-            plotContainer.Content = this._plottingSurface.ToView();           
+            plotContainer.Content = this._plottingSurface.ToView();
         }
 
-        public void PlotNew(IEnumerable<IPoint> dataSeries)
+        /// <summary>
+        /// Plots all data points at once
+        /// </summary>
+        /// <param name="dataSeries"></param>
+        public void Plot(IEnumerable<IPoint> dataSeries)
         {
-            this._xAxis.GrowBy = new SciChart.Data.Model.DoubleRange(0.1d, 0.1d);
-            this._yAxis.AxisTitle = "h(t)";
-            this._xAxis.AxisTitle = "time [s]";
-            this._series.Clear();
+            this.StopIfAnimating();
+            this.Clear();
+
             this._series.Append(dataSeries.Select(p => p.X), dataSeries.Select(p => p.Y));
             this._plottingSurface.ZoomExtents();
         }
 
+        /// <summary>
+        /// Plots data points over a desired time span. Speed will vary based on device capability.
+        /// </summary>
+        /// <param name="dataSeries"></param>
+        /// <param name="desiredTimeInMillis"></param>
+        public void PlotAnimated(IEnumerable<IPoint> dataSeries, double desiredTimeInMillis)
+        {
+            this.StopIfAnimating();
+            this.Clear();
+
+            var dataSeriesEnumerated = dataSeries.ToList();
+            double dataBatchSize = dataSeries.Count() / (desiredTimeInMillis / this._animationDelayTime);
+
+            //Do the plotting
+
+
+            this._plottingSurface.ZoomExtents();
+        }
+
+        /// <summary>
+        /// Clears the plot
+        /// </summary>
+        public void Clear()
+        {
+            this._series.Clear();
+        }
+
+        /// <summary>
+        /// Sets the X-Axis Title
+        /// </summary>
+        /// <param name="xAxistTitle"></param>
+        public void SetXAxisTitle(string xAxistTitle)
+        {
+            this._xAxis.AxisTitle = xAxistTitle;
+        }
+
+        /// <summary>
+        /// Sets the Y-Axis Title
+        /// </summary>
+        /// <param name="yAxisTitle"></param>
+        public void SetYAxisTitle(string yAxisTitle)
+        {
+            this._yAxis.AxisTitle = yAxisTitle;
+        }
+
+        #endregion
+
+        #region Non-Public Methods
+
+        /// <summary>
+        /// Stops the current animation timer
+        /// </summary>
+        private void StopIfAnimating()
+        {
+            this._animationTimer.Stop();
+        }
+
+        #endregion
     }
 }

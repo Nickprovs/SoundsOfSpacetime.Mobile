@@ -37,14 +37,14 @@ namespace Nickprovs.Albatross.Droid
 
             //Init SciChart Licensing
             SciChart.Charting.Visuals.SciChartSurface.SetRuntimeLicenseKey(@"<LicenseContract>
-              <Customer>provost.nikolai@gmail.com</Customer>
-              <OrderId>Trial</OrderId>
-              <LicenseCount>1</LicenseCount>
-              <IsTrialLicense>true</IsTrialLicense>
-              <SupportExpires>05/12/2019 00:00:00</SupportExpires>
-              <ProductCode>SC-ANDROID-2D-ENTERPRISE-SRC</ProductCode>
-              <KeyCode>58584212ac996f6d1b3f9137aedcd12c041194c58666a4b800f5673b028d61657aded3c45533780579c1b0fdb21b3b1a1e52ee5959451e22cb0190ccaa140dccddace7ee6769692b52523459ed6001302a7eac12dc9c16f46b82d88bea97b5b2498c5999b893882435911d5a9fd7ce278e526f1440bee07e35bb4dc208c0834b99e88da1fb42c3afb94dc0fe49f72d4abfd488fcf2b3b96fcb05d5de6f952e5ea2b76ca8d3a6b3a0fe19c3eeef8a7bd139df</KeyCode>
-              </LicenseContract>");
+             <Customer>Montclair State University</Customer>
+             <OrderId>EDUCATIONAL - USE - 0046</OrderId>
+             <LicenseCount>1</LicenseCount>
+             <IsTrialLicense>false</IsTrialLicense>
+             <SupportExpires>12/13/2018 00:00:00</SupportExpires>
+             <ProductCode>SC-IOS-ANDROID-2D-PRO</ProductCode>
+             <KeyCode>d7b9c5debf3e0bd0e76443892ed0cb87f73f99654fd71d4a104106e4dd822130dfc0abdc365c644a2de4152a063ff540532b426126d9f32e7fed6c46ece72801b9e68c2539da3769954c83d927f8e333093fc321e6754bfdb7e48fbf8f2c1290264568b9787d96caa569f7e5c9975272f0fd5d5b76bb0219ae0b98146f94225a0c5aca1214aa19fab4be4736f368856c951bc5241969f29ecd3efd8d4dfb19d7dc832d54ede76a2c105c213c1288db42321425ea777c4c7228ac80d2</KeyCode>
+             </LicenseContract>");
 
             if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.WriteExternalStorage) != (int)Permission.Granted)
             {
