@@ -95,11 +95,10 @@ namespace Nickprovs.Albatross.Droid.Services
         #region Public Methods
 
         /// <summary>
-        /// Takes in a Xamarin Forms ContentView and adds the plot surface as a child to that view.
-        /// TODO: Rename this function to something more appropriate and have it just return the ToView(). Consumer does necessary work.
+        /// Renders the plot and returns it as a Forms View
         /// </summary>
         /// <param name="plotContainer"></param>
-        public void Render(ContentView plotContainer)
+        public Xamarin.Forms.View Render()
         {
             //Create the surface
             this._plottingSurface = new SciChartSurface(Android.App.Application.Context);
@@ -155,8 +154,8 @@ namespace Nickprovs.Albatross.Droid.Services
                 };
             }
 
-            //Setting the configured native plot as a child of our cross-platform view.
-            plotContainer.Content = this._plottingSurface.ToView();
+            //Returns the native plot as a Forms View
+            return this._plottingSurface.ToView();
         }
 
         /// <summary>

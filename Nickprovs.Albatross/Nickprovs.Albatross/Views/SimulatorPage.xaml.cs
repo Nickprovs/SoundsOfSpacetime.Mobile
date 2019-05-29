@@ -15,7 +15,7 @@ namespace Nickprovs.Albatross.Views
         {
             InitializeComponent();
             var nativePlotService = DependencyService.Resolve<IPlotService>();
-            nativePlotService.Render(this.PlotContainer);
+            this.PlotContainer.Content = nativePlotService.Render();
         }
 
         private async void ExpandableView_StatusChanged(object sender, Expandable.StatusChangedEventArgs e)
