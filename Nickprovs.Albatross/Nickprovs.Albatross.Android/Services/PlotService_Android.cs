@@ -12,6 +12,7 @@ using Android.Widget;
 using Nickprovs.Albatross.Droid.Services;
 using Nickprovs.Albatross.Droid.Utilities;
 using Nickprovs.Albatross.Interfaces;
+using Nickprovs.Albatross.Types;
 using SciChart.Charting.Model;
 using SciChart.Charting.Model.DataSeries;
 using SciChart.Charting.Modifiers;
@@ -59,12 +60,17 @@ namespace Nickprovs.Albatross.Droid.Services
         /// <summary>
         /// The animation timer
         /// </summary>
-        private Timer _animationTimer;
+        private PlotAnimationTimer _plotAnimationTimer;
 
         /// <summary>
         /// The animation delay time when performing animations
         /// </summary>
         private readonly double _animationDelayTime;
+
+        /// <summary>
+        /// AnimationLock
+        /// </summary>
+        private readonly object _plotAnimationLock;
 
         #endregion
 
@@ -75,11 +81,13 @@ namespace Nickprovs.Albatross.Droid.Services
         /// </summary>
         public PlotService_Android()
         {
-            //This timer will handle all of the waiting between point appendages to give the appearance of animation.
-            this._animationTimer = new Timer();
-
-            //SciChart Advises appending points in batches of 10-100 for performance. We'll go with the upper bound.
+            //We're going to append some number of points and then wait the delay time to give the animation effect
             this._animationDelayTime = 100;
+
+            //This timer will handle all of the waiting between point appendages to give the appearance of animation.
+            this._plotAnimationTimer = new PlotAnimationTimer { Interval = this._animationDelayTime };
+            this._plotAnimationTimer.Elapsed += OnPlotTimerElapsed;
+            this._plotAnimationLock = new object();
         }
 
         #endregion
@@ -175,10 +183,12 @@ namespace Nickprovs.Albatross.Droid.Services
             this.Clear();
 
             var dataSeriesEnumerated = dataSeries.ToList();
-            double dataBatchSize = dataSeries.Count() / (desiredTimeInMillis / this._animationDelayTime);
+            int dataBatchSize = (int) (dataSeries.Count() / (desiredTimeInMillis / this._animationDelayTime));
 
-            //Do the plotting
-
+            //Create a cache for the animated plot as we'll be plotting a few points and then waiting for some time to give the animated effect.
+            PlotAnimationCache plotAnimationCache = new PlotAnimationCache(dataSeriesEnumerated, dataBatchSize);
+            this._plotAnimationTimer.Cache = plotAnimationCache;
+            this._plotAnimationTimer.Start();
 
             this._plottingSurface.ZoomExtents();
         }
@@ -214,11 +224,47 @@ namespace Nickprovs.Albatross.Droid.Services
         #region Non-Public Methods
 
         /// <summary>
+        /// Fascilitates calls necessary to draw the next batch of points.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnPlotTimerElapsed(object sender, ElapsedEventArgs e)
+        {
+            this.DrawNextBatchOfPoints();
+        }
+
+        /// <summary>
+        /// Draws the next batch of points
+        /// </summary>
+        private void DrawNextBatchOfPoints()
+        {
+            lock(this._plotAnimationLock)
+            {
+                //If the data necessary for drawing the next batch of points isn't valid... return
+                if (this._plotAnimationTimer.Cache == null || this._plotAnimationTimer.Cache?.DataSeries == null || this._plotAnimationTimer.Cache?.BatchSize <= 0)
+                    return;
+
+                //Get and append the next batch of points
+                var nextBatchOfPoints = this._plotAnimationTimer.Cache.DataSeries.GetRange(this._plotAnimationTimer.Cache.Offset, this._plotAnimationTimer.Cache.BatchSize).ToList();
+                this._series.Append(nextBatchOfPoints.Select(point => point.X), nextBatchOfPoints.Select(point => point.Y));
+                this._plottingSurface.ZoomExtents();
+                this._plotAnimationTimer.Cache.Offset = this._plotAnimationTimer.Cache.Offset + this._plotAnimationTimer.Cache.BatchSize;
+
+                if (this._plotAnimationTimer.Cache.Offset >= this._plotAnimationTimer.Cache.DataSeries.Count)
+                {
+                    this._plotAnimationTimer.Stop();
+                    return;
+                }
+            }
+
+        }
+
+        /// <summary>
         /// Stops the current animation timer
         /// </summary>
         private void StopIfAnimating()
         {
-            this._animationTimer.Stop();
+            this._plotAnimationTimer.Stop();
         }
 
         #endregion

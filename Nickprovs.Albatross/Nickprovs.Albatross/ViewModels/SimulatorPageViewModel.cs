@@ -146,7 +146,7 @@ namespace Nickprovs.Albatross.ViewModels
             var data = await Task.Run(() => this._gravitationalWaveCalculator.GenerateGravitationalWaveData(CurrentSimulatorInput));
 
             //Plot the wave
-            this._plotService.Plot(data.Wave);
+            this._plotService.PlotAnimated(data.Wave, data.Wave.Select(point => point.X).LastOrDefault() * 1000);
 
             //Create a .wav file based on the wave
             //TODO: Enumerate somewhere before this to eliminate multiple enumeration
@@ -175,7 +175,7 @@ namespace Nickprovs.Albatross.ViewModels
             var data = await Task.Run(()=> this._gravitationalWaveCalculator.GenerateGravitationalWaveData(CurrentSimulatorInput));
 
             //Plot the orbit
-            this._plotService.Plot(data.Orbit);
+            this._plotService.PlotAnimated(data.Orbit, data.Wave.Select(point => point.X).LastOrDefault() * 1000);
 
             //Cache this last simulator input          
             this.PreviousSimulatorInput = this.CurrentSimulatorInput;
