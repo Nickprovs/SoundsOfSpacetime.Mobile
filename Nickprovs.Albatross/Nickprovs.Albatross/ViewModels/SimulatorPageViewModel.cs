@@ -145,19 +145,21 @@ namespace Nickprovs.Albatross.ViewModels
             //Asynchronously calculate the event based on user data.
             var data = await Task.Run(() => this._gravitationalWaveCalculator.GenerateGravitationalWaveData(CurrentSimulatorInput));
 
-            //Plot the wave
-            this._plotService.PlotAnimated(data.Wave, data.Wave.Select(point => point.X).LastOrDefault() * 1000);
-
             //Create a .wav file based on the wave
             //TODO: Enumerate somewhere before this to eliminate multiple enumeration
             var soundFile = new Wav(data.Wave.Select(point => point.Y).ToArray(), data.Wave.Select(point => point.X).LastOrDefault());
 
+            //TODO: Save to local app private data instead.
+            //if (CrossMediaManager.Current.IsPlaying())
+            //    await CrossMediaManager.Current.Stop();
 
-        //TODO: Save to local app private data instead.
             var folderPath = this._fileSystemPathService.GetDownloadsPath();
             var filePath = Path.Combine(folderPath, "tone.wav");
             soundFile.SaveToFile(filePath);
             await CrossMediaManager.Current.Play(filePath);
+
+            //Plot the wave
+            this._plotService.PlotAnimated(data.Wave, data.Wave.Select(point => point.X).LastOrDefault() * 1000);
 
             //Cache this last simulator input          
             this.PreviousSimulatorInput = this.CurrentSimulatorInput;
