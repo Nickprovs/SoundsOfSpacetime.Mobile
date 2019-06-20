@@ -82,7 +82,7 @@ namespace Nickprovs.Albatross.Droid.Services
         public PlotService_Android()
         {
             //We're going to append some number of points and then wait the delay time to give the animation effect
-            this._animationDelayTime = 100;
+            this._animationDelayTime = 50;
 
             //This timer will handle all of the waiting between point appendages to give the appearance of animation.
             this._plotAnimationTimer = new PlotAnimationTimer { Interval = this._animationDelayTime };
