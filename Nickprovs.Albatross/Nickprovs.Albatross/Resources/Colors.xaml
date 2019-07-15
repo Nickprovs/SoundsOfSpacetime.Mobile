@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <!--#region Foreground Colors-->
-    <Color x:Key="F1">#006fb8</Color>
+    <Color x:Key="F1">#27a2f2</Color>
     <Color x:Key="F2">#4a8fbc</Color>
     <Color x:Key="F3">#c9cad1</Color>
     <Color x:Key="F4">#edeef3</Color>
@@ -16,7 +16,7 @@
     
     <!--#region Background Colors-->
     <Color x:Key="B1">#050a11</Color>
-    <Color x:Key="B2">#0d1520</Color>
+    <Color x:Key="B2">#142130</Color>
     <Color x:Key="B3">#282c31</Color>
     <Color x:Key="B4">#0f1e33</Color>
     <Color x:Key="B5">#182d4a</Color>
