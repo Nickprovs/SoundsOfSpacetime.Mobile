@@ -176,7 +176,15 @@ namespace Nickprovs.Albatross.ViewModels
             //Asynchronously calculate the event based on user data.
             var data = await Task.Run(()=> this._gravitationalWaveCalculator.GenerateGravitationalWaveData(CurrentSimulatorInput));
 
-            //Plot the orbit
+            var soundFile = new Wav(data.Wave.Select(point => point.Y).ToArray(), data.Wave.Select(point => point.X).LastOrDefault());
+
+
+            var folderPath = this._fileSystemPathService.GetDownloadsPath();
+            var filePath = Path.Combine(folderPath, "tone.wav");
+            soundFile.SaveToFile(filePath);
+            await CrossMediaManager.Current.Play(filePath);
+
+            //Plot the orbit... Take the last x in the wave series with respect to the total orbit points (done in case we don't display full orbit for performance reasons)
             this._plotService.PlotAnimated(data.Orbit, data.Wave.Select(point => point.X).Take(data.Orbit.Count()).LastOrDefault() * 1000);
 
             //Cache this last simulator input          
@@ -184,6 +192,11 @@ namespace Nickprovs.Albatross.ViewModels
 
             //Create a copy of this last simulator input so previous / current simulator inputs are different objects.
             this.CurrentSimulatorInput = this.CurrentSimulatorInput.DeepCopy();
+        }
+
+        private async Task PlaySoundFile()
+        {
+
         }
 
         /// <summary>

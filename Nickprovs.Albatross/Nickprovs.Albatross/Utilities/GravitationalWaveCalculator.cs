@@ -112,13 +112,13 @@ namespace Nickprovs.Albatross.Utilities
                 phiOrb = velocity + pomega;
                 p_M = (p0_M * Math.Pow(eccentricity, (12 / 19f)) * Math.Pow((121 * Math.Pow(eccentricity, 2) + 304), (870 / 2299f))) / C0;
                 r_M = p_M / (1 + eccentricity * Math.Cos(velocity));
-                if (countForOrbit < 25000)
-                {
-                    x_M = r_M * Math.Cos(phiOrb);
-                    y_M = r_M * Math.Sin(phiOrb);
-                    orbitSeries.Add(new Point(x_M, y_M));
-                    countForOrbit++;
-                }
+
+                //Orbit stuff block this section into an if-counter check if you want to limit orbit points for performance reasons
+                x_M = r_M * Math.Cos(phiOrb);
+                y_M = r_M * Math.Sin(phiOrb);
+                orbitSeries.Add(new Point(x_M, y_M));
+                countForOrbit++;
+                
                 G1 = (-1 * ((2 + 3 * eccentricity * Math.Cos(velocity) + Math.Pow(eccentricity, 2) * Math.Cos(2 * velocity)) / (p_M)));
                 G2 = (((1 + eccentricity * Math.Cos(velocity)) * eccentricity * Math.Sin(velocity)) / p_M);
                 G3 = (eccentricity * (eccentricity + Math.Cos(velocity))) / p_M;
