@@ -36,6 +36,8 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Animation.abc_slide_in_top = global::Nickprovs.Albatross.Droid.Resource.Animation.abc_slide_in_top;
 			global::MediaManager.Resource.Animation.abc_slide_out_bottom = global::Nickprovs.Albatross.Droid.Resource.Animation.abc_slide_out_bottom;
 			global::MediaManager.Resource.Animation.abc_slide_out_top = global::Nickprovs.Albatross.Droid.Resource.Animation.abc_slide_out_top;
+			global::MediaManager.Resource.Animation.abc_tooltip_enter = global::Nickprovs.Albatross.Droid.Resource.Animation.abc_tooltip_enter;
+			global::MediaManager.Resource.Animation.abc_tooltip_exit = global::Nickprovs.Albatross.Droid.Resource.Animation.abc_tooltip_exit;
 			global::MediaManager.Resource.Attribute.actionBarDivider = global::Nickprovs.Albatross.Droid.Resource.Attribute.actionBarDivider;
 			global::MediaManager.Resource.Attribute.actionBarItemBackground = global::Nickprovs.Albatross.Droid.Resource.Attribute.actionBarItemBackground;
 			global::MediaManager.Resource.Attribute.actionBarPopupTheme = global::Nickprovs.Albatross.Droid.Resource.Attribute.actionBarPopupTheme;
@@ -103,6 +105,7 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Attribute.buttonBarPositiveButtonStyle = global::Nickprovs.Albatross.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
 			global::MediaManager.Resource.Attribute.buttonBarStyle = global::Nickprovs.Albatross.Droid.Resource.Attribute.buttonBarStyle;
 			global::MediaManager.Resource.Attribute.buttonGravity = global::Nickprovs.Albatross.Droid.Resource.Attribute.buttonGravity;
+			global::MediaManager.Resource.Attribute.buttonIconDimen = global::Nickprovs.Albatross.Droid.Resource.Attribute.buttonIconDimen;
 			global::MediaManager.Resource.Attribute.buttonPanelSideLayout = global::Nickprovs.Albatross.Droid.Resource.Attribute.buttonPanelSideLayout;
 			global::MediaManager.Resource.Attribute.buttonStyle = global::Nickprovs.Albatross.Droid.Resource.Attribute.buttonStyle;
 			global::MediaManager.Resource.Attribute.buttonStyleSmall = global::Nickprovs.Albatross.Droid.Resource.Attribute.buttonStyleSmall;
@@ -135,9 +138,11 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Attribute.contentInsetStartWithNavigation = global::Nickprovs.Albatross.Droid.Resource.Attribute.contentInsetStartWithNavigation;
 			global::MediaManager.Resource.Attribute.controlBackground = global::Nickprovs.Albatross.Droid.Resource.Attribute.controlBackground;
 			global::MediaManager.Resource.Attribute.controller_layout_id = global::Nickprovs.Albatross.Droid.Resource.Attribute.controller_layout_id;
+			global::MediaManager.Resource.Attribute.coordinatorLayoutStyle = global::Nickprovs.Albatross.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::MediaManager.Resource.Attribute.customNavigationLayout = global::Nickprovs.Albatross.Droid.Resource.Attribute.customNavigationLayout;
 			global::MediaManager.Resource.Attribute.defaultQueryHint = global::Nickprovs.Albatross.Droid.Resource.Attribute.defaultQueryHint;
 			global::MediaManager.Resource.Attribute.default_artwork = global::Nickprovs.Albatross.Droid.Resource.Attribute.default_artwork;
+			global::MediaManager.Resource.Attribute.dialogCornerRadius = global::Nickprovs.Albatross.Droid.Resource.Attribute.dialogCornerRadius;
 			global::MediaManager.Resource.Attribute.dialogPreferredPadding = global::Nickprovs.Albatross.Droid.Resource.Attribute.dialogPreferredPadding;
 			global::MediaManager.Resource.Attribute.dialogTheme = global::Nickprovs.Albatross.Droid.Resource.Attribute.dialogTheme;
 			global::MediaManager.Resource.Attribute.displayOptions = global::Nickprovs.Albatross.Droid.Resource.Attribute.displayOptions;
@@ -155,6 +160,7 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Attribute.elevation = global::Nickprovs.Albatross.Droid.Resource.Attribute.elevation;
 			global::MediaManager.Resource.Attribute.expandActivityOverflowButtonDrawable = global::Nickprovs.Albatross.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
 			global::MediaManager.Resource.Attribute.fastforward_increment = global::Nickprovs.Albatross.Droid.Resource.Attribute.fastforward_increment;
+			global::MediaManager.Resource.Attribute.firstBaselineToTopHeight = global::Nickprovs.Albatross.Droid.Resource.Attribute.firstBaselineToTopHeight;
 			global::MediaManager.Resource.Attribute.font = global::Nickprovs.Albatross.Droid.Resource.Attribute.font;
 			global::MediaManager.Resource.Attribute.fontFamily = global::Nickprovs.Albatross.Droid.Resource.Attribute.fontFamily;
 			global::MediaManager.Resource.Attribute.fontProviderAuthority = global::Nickprovs.Albatross.Droid.Resource.Attribute.fontProviderAuthority;
@@ -164,6 +170,7 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Attribute.fontProviderPackage = global::Nickprovs.Albatross.Droid.Resource.Attribute.fontProviderPackage;
 			global::MediaManager.Resource.Attribute.fontProviderQuery = global::Nickprovs.Albatross.Droid.Resource.Attribute.fontProviderQuery;
 			global::MediaManager.Resource.Attribute.fontStyle = global::Nickprovs.Albatross.Droid.Resource.Attribute.fontStyle;
+			global::MediaManager.Resource.Attribute.fontVariationSettings = global::Nickprovs.Albatross.Droid.Resource.Attribute.fontVariationSettings;
 			global::MediaManager.Resource.Attribute.fontWeight = global::Nickprovs.Albatross.Droid.Resource.Attribute.fontWeight;
 			global::MediaManager.Resource.Attribute.gapBetweenBars = global::Nickprovs.Albatross.Droid.Resource.Attribute.gapBetweenBars;
 			global::MediaManager.Resource.Attribute.goIcon = global::Nickprovs.Albatross.Droid.Resource.Attribute.goIcon;
@@ -183,7 +190,16 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Attribute.isLightTheme = global::Nickprovs.Albatross.Droid.Resource.Attribute.isLightTheme;
 			global::MediaManager.Resource.Attribute.itemPadding = global::Nickprovs.Albatross.Droid.Resource.Attribute.itemPadding;
 			global::MediaManager.Resource.Attribute.keep_content_on_player_reset = global::Nickprovs.Albatross.Droid.Resource.Attribute.keep_content_on_player_reset;
+			global::MediaManager.Resource.Attribute.keylines = global::Nickprovs.Albatross.Droid.Resource.Attribute.keylines;
+			global::MediaManager.Resource.Attribute.lastBaselineToBottomHeight = global::Nickprovs.Albatross.Droid.Resource.Attribute.lastBaselineToBottomHeight;
 			global::MediaManager.Resource.Attribute.layout = global::Nickprovs.Albatross.Droid.Resource.Attribute.layout;
+			global::MediaManager.Resource.Attribute.layout_anchor = global::Nickprovs.Albatross.Droid.Resource.Attribute.layout_anchor;
+			global::MediaManager.Resource.Attribute.layout_anchorGravity = global::Nickprovs.Albatross.Droid.Resource.Attribute.layout_anchorGravity;
+			global::MediaManager.Resource.Attribute.layout_behavior = global::Nickprovs.Albatross.Droid.Resource.Attribute.layout_behavior;
+			global::MediaManager.Resource.Attribute.layout_dodgeInsetEdges = global::Nickprovs.Albatross.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::MediaManager.Resource.Attribute.layout_insetEdge = global::Nickprovs.Albatross.Droid.Resource.Attribute.layout_insetEdge;
+			global::MediaManager.Resource.Attribute.layout_keyline = global::Nickprovs.Albatross.Droid.Resource.Attribute.layout_keyline;
+			global::MediaManager.Resource.Attribute.lineHeight = global::Nickprovs.Albatross.Droid.Resource.Attribute.lineHeight;
 			global::MediaManager.Resource.Attribute.listChoiceBackgroundIndicator = global::Nickprovs.Albatross.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
 			global::MediaManager.Resource.Attribute.listDividerAlertDialog = global::Nickprovs.Albatross.Droid.Resource.Attribute.listDividerAlertDialog;
 			global::MediaManager.Resource.Attribute.listItemLayout = global::Nickprovs.Albatross.Droid.Resource.Attribute.listItemLayout;
@@ -256,6 +272,7 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Attribute.splitTrack = global::Nickprovs.Albatross.Droid.Resource.Attribute.splitTrack;
 			global::MediaManager.Resource.Attribute.srcCompat = global::Nickprovs.Albatross.Droid.Resource.Attribute.srcCompat;
 			global::MediaManager.Resource.Attribute.state_above_anchor = global::Nickprovs.Albatross.Droid.Resource.Attribute.state_above_anchor;
+			global::MediaManager.Resource.Attribute.statusBarBackground = global::Nickprovs.Albatross.Droid.Resource.Attribute.statusBarBackground;
 			global::MediaManager.Resource.Attribute.subMenuArrow = global::Nickprovs.Albatross.Droid.Resource.Attribute.subMenuArrow;
 			global::MediaManager.Resource.Attribute.submitBackground = global::Nickprovs.Albatross.Droid.Resource.Attribute.submitBackground;
 			global::MediaManager.Resource.Attribute.subtitle = global::Nickprovs.Albatross.Droid.Resource.Attribute.subtitle;
@@ -308,9 +325,11 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Attribute.track = global::Nickprovs.Albatross.Droid.Resource.Attribute.track;
 			global::MediaManager.Resource.Attribute.trackTint = global::Nickprovs.Albatross.Droid.Resource.Attribute.trackTint;
 			global::MediaManager.Resource.Attribute.trackTintMode = global::Nickprovs.Albatross.Droid.Resource.Attribute.trackTintMode;
+			global::MediaManager.Resource.Attribute.ttcIndex = global::Nickprovs.Albatross.Droid.Resource.Attribute.ttcIndex;
 			global::MediaManager.Resource.Attribute.unplayed_color = global::Nickprovs.Albatross.Droid.Resource.Attribute.unplayed_color;
 			global::MediaManager.Resource.Attribute.use_artwork = global::Nickprovs.Albatross.Droid.Resource.Attribute.use_artwork;
 			global::MediaManager.Resource.Attribute.use_controller = global::Nickprovs.Albatross.Droid.Resource.Attribute.use_controller;
+			global::MediaManager.Resource.Attribute.viewInflaterClass = global::Nickprovs.Albatross.Droid.Resource.Attribute.viewInflaterClass;
 			global::MediaManager.Resource.Attribute.voiceIcon = global::Nickprovs.Albatross.Droid.Resource.Attribute.voiceIcon;
 			global::MediaManager.Resource.Attribute.windowActionBar = global::Nickprovs.Albatross.Droid.Resource.Attribute.windowActionBar;
 			global::MediaManager.Resource.Attribute.windowActionBarOverlay = global::Nickprovs.Albatross.Droid.Resource.Attribute.windowActionBarOverlay;
@@ -367,6 +386,8 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Color.dim_foreground_disabled_material_light = global::Nickprovs.Albatross.Droid.Resource.Color.dim_foreground_disabled_material_light;
 			global::MediaManager.Resource.Color.dim_foreground_material_dark = global::Nickprovs.Albatross.Droid.Resource.Color.dim_foreground_material_dark;
 			global::MediaManager.Resource.Color.dim_foreground_material_light = global::Nickprovs.Albatross.Droid.Resource.Color.dim_foreground_material_light;
+			global::MediaManager.Resource.Color.error_color_material_dark = global::Nickprovs.Albatross.Droid.Resource.Color.error_color_material_dark;
+			global::MediaManager.Resource.Color.error_color_material_light = global::Nickprovs.Albatross.Droid.Resource.Color.error_color_material_light;
 			global::MediaManager.Resource.Color.exo_edit_mode_background_color = global::Nickprovs.Albatross.Droid.Resource.Color.exo_edit_mode_background_color;
 			global::MediaManager.Resource.Color.exo_error_message_background_color = global::Nickprovs.Albatross.Droid.Resource.Color.exo_error_message_background_color;
 			global::MediaManager.Resource.Color.foreground_material_dark = global::Nickprovs.Albatross.Droid.Resource.Color.foreground_material_dark;
@@ -427,6 +448,7 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Dimension.abc_action_button_min_width_material = global::Nickprovs.Albatross.Droid.Resource.Dimension.abc_action_button_min_width_material;
 			global::MediaManager.Resource.Dimension.abc_action_button_min_width_overflow_material = global::Nickprovs.Albatross.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
 			global::MediaManager.Resource.Dimension.abc_alert_dialog_button_bar_height = global::Nickprovs.Albatross.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::MediaManager.Resource.Dimension.abc_alert_dialog_button_dimen = global::Nickprovs.Albatross.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
 			global::MediaManager.Resource.Dimension.abc_button_inset_horizontal_material = global::Nickprovs.Albatross.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
 			global::MediaManager.Resource.Dimension.abc_button_inset_vertical_material = global::Nickprovs.Albatross.Droid.Resource.Dimension.abc_button_inset_vertical_material;
 			global::MediaManager.Resource.Dimension.abc_button_padding_horizontal_material = global::Nickprovs.Albatross.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
@@ -436,6 +458,7 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Dimension.abc_control_corner_material = global::Nickprovs.Albatross.Droid.Resource.Dimension.abc_control_corner_material;
 			global::MediaManager.Resource.Dimension.abc_control_inset_material = global::Nickprovs.Albatross.Droid.Resource.Dimension.abc_control_inset_material;
 			global::MediaManager.Resource.Dimension.abc_control_padding_material = global::Nickprovs.Albatross.Droid.Resource.Dimension.abc_control_padding_material;
+			global::MediaManager.Resource.Dimension.abc_dialog_corner_radius_material = global::Nickprovs.Albatross.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
 			global::MediaManager.Resource.Dimension.abc_dialog_fixed_height_major = global::Nickprovs.Albatross.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
 			global::MediaManager.Resource.Dimension.abc_dialog_fixed_height_minor = global::Nickprovs.Albatross.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
 			global::MediaManager.Resource.Dimension.abc_dialog_fixed_width_major = global::Nickprovs.Albatross.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
@@ -488,6 +511,8 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Dimension.compat_button_padding_horizontal_material = global::Nickprovs.Albatross.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
 			global::MediaManager.Resource.Dimension.compat_button_padding_vertical_material = global::Nickprovs.Albatross.Droid.Resource.Dimension.compat_button_padding_vertical_material;
 			global::MediaManager.Resource.Dimension.compat_control_corner_material = global::Nickprovs.Albatross.Droid.Resource.Dimension.compat_control_corner_material;
+			global::MediaManager.Resource.Dimension.compat_notification_large_icon_max_height = global::Nickprovs.Albatross.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::MediaManager.Resource.Dimension.compat_notification_large_icon_max_width = global::Nickprovs.Albatross.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
 			global::MediaManager.Resource.Dimension.disabled_alpha_material_dark = global::Nickprovs.Albatross.Droid.Resource.Dimension.disabled_alpha_material_dark;
 			global::MediaManager.Resource.Dimension.disabled_alpha_material_light = global::Nickprovs.Albatross.Droid.Resource.Dimension.disabled_alpha_material_light;
 			global::MediaManager.Resource.Dimension.exo_media_button_height = global::Nickprovs.Albatross.Droid.Resource.Dimension.exo_media_button_height;
@@ -514,6 +539,10 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Dimension.notification_subtext_size = global::Nickprovs.Albatross.Droid.Resource.Dimension.notification_subtext_size;
 			global::MediaManager.Resource.Dimension.notification_top_pad = global::Nickprovs.Albatross.Droid.Resource.Dimension.notification_top_pad;
 			global::MediaManager.Resource.Dimension.notification_top_pad_large_text = global::Nickprovs.Albatross.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::MediaManager.Resource.Dimension.subtitle_corner_radius = global::Nickprovs.Albatross.Droid.Resource.Dimension.subtitle_corner_radius;
+			global::MediaManager.Resource.Dimension.subtitle_outline_width = global::Nickprovs.Albatross.Droid.Resource.Dimension.subtitle_outline_width;
+			global::MediaManager.Resource.Dimension.subtitle_shadow_offset = global::Nickprovs.Albatross.Droid.Resource.Dimension.subtitle_shadow_offset;
+			global::MediaManager.Resource.Dimension.subtitle_shadow_radius = global::Nickprovs.Albatross.Droid.Resource.Dimension.subtitle_shadow_radius;
 			global::MediaManager.Resource.Dimension.tooltip_corner_radius = global::Nickprovs.Albatross.Droid.Resource.Dimension.tooltip_corner_radius;
 			global::MediaManager.Resource.Dimension.tooltip_horizontal_padding = global::Nickprovs.Albatross.Droid.Resource.Dimension.tooltip_horizontal_padding;
 			global::MediaManager.Resource.Dimension.tooltip_margin = global::Nickprovs.Albatross.Droid.Resource.Dimension.tooltip_margin;
@@ -562,6 +591,7 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Drawable.abc_ic_voice_search_api_material = global::Nickprovs.Albatross.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
 			global::MediaManager.Resource.Drawable.abc_item_background_holo_dark = global::Nickprovs.Albatross.Droid.Resource.Drawable.abc_item_background_holo_dark;
 			global::MediaManager.Resource.Drawable.abc_item_background_holo_light = global::Nickprovs.Albatross.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::MediaManager.Resource.Drawable.abc_list_divider_material = global::Nickprovs.Albatross.Droid.Resource.Drawable.abc_list_divider_material;
 			global::MediaManager.Resource.Drawable.abc_list_divider_mtrl_alpha = global::Nickprovs.Albatross.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
 			global::MediaManager.Resource.Drawable.abc_list_focused_holo = global::Nickprovs.Albatross.Droid.Resource.Drawable.abc_list_focused_holo;
 			global::MediaManager.Resource.Drawable.abc_list_longpressed_holo = global::Nickprovs.Albatross.Droid.Resource.Drawable.abc_list_longpressed_holo;
@@ -686,9 +716,15 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Id.bottom = global::Nickprovs.Albatross.Droid.Resource.Id.bottom;
 			global::MediaManager.Resource.Id.buttonPanel = global::Nickprovs.Albatross.Droid.Resource.Id.buttonPanel;
 			global::MediaManager.Resource.Id.cancel_action = global::Nickprovs.Albatross.Droid.Resource.Id.cancel_action;
+			global::MediaManager.Resource.Id.center = global::Nickprovs.Albatross.Droid.Resource.Id.center;
+			global::MediaManager.Resource.Id.center_horizontal = global::Nickprovs.Albatross.Droid.Resource.Id.center_horizontal;
+			global::MediaManager.Resource.Id.center_vertical = global::Nickprovs.Albatross.Droid.Resource.Id.center_vertical;
 			global::MediaManager.Resource.Id.checkbox = global::Nickprovs.Albatross.Droid.Resource.Id.checkbox;
 			global::MediaManager.Resource.Id.chronometer = global::Nickprovs.Albatross.Droid.Resource.Id.chronometer;
+			global::MediaManager.Resource.Id.clip_horizontal = global::Nickprovs.Albatross.Droid.Resource.Id.clip_horizontal;
+			global::MediaManager.Resource.Id.clip_vertical = global::Nickprovs.Albatross.Droid.Resource.Id.clip_vertical;
 			global::MediaManager.Resource.Id.collapseActionView = global::Nickprovs.Albatross.Droid.Resource.Id.collapseActionView;
+			global::MediaManager.Resource.Id.content = global::Nickprovs.Albatross.Droid.Resource.Id.content;
 			global::MediaManager.Resource.Id.contentPanel = global::Nickprovs.Albatross.Droid.Resource.Id.contentPanel;
 			global::MediaManager.Resource.Id.custom = global::Nickprovs.Albatross.Droid.Resource.Id.custom;
 			global::MediaManager.Resource.Id.customPanel = global::Nickprovs.Albatross.Droid.Resource.Id.customPanel;
@@ -698,6 +734,7 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Id.edit_query = global::Nickprovs.Albatross.Droid.Resource.Id.edit_query;
 			global::MediaManager.Resource.Id.end = global::Nickprovs.Albatross.Droid.Resource.Id.end;
 			global::MediaManager.Resource.Id.end_padder = global::Nickprovs.Albatross.Droid.Resource.Id.end_padder;
+			global::MediaManager.Resource.Id.exo_ad_overlay = global::Nickprovs.Albatross.Droid.Resource.Id.exo_ad_overlay;
 			global::MediaManager.Resource.Id.exo_artwork = global::Nickprovs.Albatross.Droid.Resource.Id.exo_artwork;
 			global::MediaManager.Resource.Id.exo_buffering = global::Nickprovs.Albatross.Droid.Resource.Id.exo_buffering;
 			global::MediaManager.Resource.Id.exo_content_frame = global::Nickprovs.Albatross.Droid.Resource.Id.exo_content_frame;
@@ -722,10 +759,13 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Id.expand_activities_button = global::Nickprovs.Albatross.Droid.Resource.Id.expand_activities_button;
 			global::MediaManager.Resource.Id.expanded_menu = global::Nickprovs.Albatross.Droid.Resource.Id.expanded_menu;
 			global::MediaManager.Resource.Id.fill = global::Nickprovs.Albatross.Droid.Resource.Id.fill;
+			global::MediaManager.Resource.Id.fill_horizontal = global::Nickprovs.Albatross.Droid.Resource.Id.fill_horizontal;
+			global::MediaManager.Resource.Id.fill_vertical = global::Nickprovs.Albatross.Droid.Resource.Id.fill_vertical;
 			global::MediaManager.Resource.Id.fit = global::Nickprovs.Albatross.Droid.Resource.Id.fit;
 			global::MediaManager.Resource.Id.fixed_height = global::Nickprovs.Albatross.Droid.Resource.Id.fixed_height;
 			global::MediaManager.Resource.Id.fixed_width = global::Nickprovs.Albatross.Droid.Resource.Id.fixed_width;
 			global::MediaManager.Resource.Id.forever = global::Nickprovs.Albatross.Droid.Resource.Id.forever;
+			global::MediaManager.Resource.Id.group_divider = global::Nickprovs.Albatross.Droid.Resource.Id.group_divider;
 			global::MediaManager.Resource.Id.home = global::Nickprovs.Albatross.Droid.Resource.Id.home;
 			global::MediaManager.Resource.Id.homeAsUp = global::Nickprovs.Albatross.Droid.Resource.Id.homeAsUp;
 			global::MediaManager.Resource.Id.icon = global::Nickprovs.Albatross.Droid.Resource.Id.icon;
@@ -734,6 +774,7 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Id.image = global::Nickprovs.Albatross.Droid.Resource.Id.image;
 			global::MediaManager.Resource.Id.info = global::Nickprovs.Albatross.Droid.Resource.Id.info;
 			global::MediaManager.Resource.Id.italic = global::Nickprovs.Albatross.Droid.Resource.Id.italic;
+			global::MediaManager.Resource.Id.left = global::Nickprovs.Albatross.Droid.Resource.Id.left;
 			global::MediaManager.Resource.Id.line1 = global::Nickprovs.Albatross.Droid.Resource.Id.line1;
 			global::MediaManager.Resource.Id.line3 = global::Nickprovs.Albatross.Droid.Resource.Id.line3;
 			global::MediaManager.Resource.Id.listMode = global::Nickprovs.Albatross.Droid.Resource.Id.listMode;
@@ -753,6 +794,7 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Id.progress_circular = global::Nickprovs.Albatross.Droid.Resource.Id.progress_circular;
 			global::MediaManager.Resource.Id.progress_horizontal = global::Nickprovs.Albatross.Droid.Resource.Id.progress_horizontal;
 			global::MediaManager.Resource.Id.radio = global::Nickprovs.Albatross.Droid.Resource.Id.radio;
+			global::MediaManager.Resource.Id.right = global::Nickprovs.Albatross.Droid.Resource.Id.right;
 			global::MediaManager.Resource.Id.right_icon = global::Nickprovs.Albatross.Droid.Resource.Id.right_icon;
 			global::MediaManager.Resource.Id.right_side = global::Nickprovs.Albatross.Droid.Resource.Id.right_side;
 			global::MediaManager.Resource.Id.screen = global::Nickprovs.Albatross.Droid.Resource.Id.screen;
@@ -775,16 +817,20 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Id.showHome = global::Nickprovs.Albatross.Droid.Resource.Id.showHome;
 			global::MediaManager.Resource.Id.showTitle = global::Nickprovs.Albatross.Droid.Resource.Id.showTitle;
 			global::MediaManager.Resource.Id.spacer = global::Nickprovs.Albatross.Droid.Resource.Id.spacer;
+			global::MediaManager.Resource.Id.spherical_view = global::Nickprovs.Albatross.Droid.Resource.Id.spherical_view;
 			global::MediaManager.Resource.Id.split_action_bar = global::Nickprovs.Albatross.Droid.Resource.Id.split_action_bar;
 			global::MediaManager.Resource.Id.src_atop = global::Nickprovs.Albatross.Droid.Resource.Id.src_atop;
 			global::MediaManager.Resource.Id.src_in = global::Nickprovs.Albatross.Droid.Resource.Id.src_in;
 			global::MediaManager.Resource.Id.src_over = global::Nickprovs.Albatross.Droid.Resource.Id.src_over;
+			global::MediaManager.Resource.Id.start = global::Nickprovs.Albatross.Droid.Resource.Id.start;
 			global::MediaManager.Resource.Id.status_bar_latest_event_content = global::Nickprovs.Albatross.Droid.Resource.Id.status_bar_latest_event_content;
 			global::MediaManager.Resource.Id.submenuarrow = global::Nickprovs.Albatross.Droid.Resource.Id.submenuarrow;
 			global::MediaManager.Resource.Id.submit_area = global::Nickprovs.Albatross.Droid.Resource.Id.submit_area;
 			global::MediaManager.Resource.Id.surface_view = global::Nickprovs.Albatross.Droid.Resource.Id.surface_view;
 			global::MediaManager.Resource.Id.tabMode = global::Nickprovs.Albatross.Droid.Resource.Id.tabMode;
 			global::MediaManager.Resource.Id.tag_transition_group = global::Nickprovs.Albatross.Droid.Resource.Id.tag_transition_group;
+			global::MediaManager.Resource.Id.tag_unhandled_key_event_manager = global::Nickprovs.Albatross.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::MediaManager.Resource.Id.tag_unhandled_key_listeners = global::Nickprovs.Albatross.Droid.Resource.Id.tag_unhandled_key_listeners;
 			global::MediaManager.Resource.Id.text = global::Nickprovs.Albatross.Droid.Resource.Id.text;
 			global::MediaManager.Resource.Id.text2 = global::Nickprovs.Albatross.Droid.Resource.Id.text2;
 			global::MediaManager.Resource.Id.textSpacerNoButtons = global::Nickprovs.Albatross.Droid.Resource.Id.textSpacerNoButtons;
@@ -799,6 +845,7 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Id.uniform = global::Nickprovs.Albatross.Droid.Resource.Id.uniform;
 			global::MediaManager.Resource.Id.up = global::Nickprovs.Albatross.Droid.Resource.Id.up;
 			global::MediaManager.Resource.Id.useLogo = global::Nickprovs.Albatross.Droid.Resource.Id.useLogo;
+			global::MediaManager.Resource.Id.when_playing = global::Nickprovs.Albatross.Droid.Resource.Id.when_playing;
 			global::MediaManager.Resource.Id.withText = global::Nickprovs.Albatross.Droid.Resource.Id.withText;
 			global::MediaManager.Resource.Id.wrap_content = global::Nickprovs.Albatross.Droid.Resource.Id.wrap_content;
 			global::MediaManager.Resource.Id.zoom = global::Nickprovs.Albatross.Droid.Resource.Id.zoom;
@@ -818,6 +865,7 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Layout.abc_alert_dialog_button_bar_material = global::Nickprovs.Albatross.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
 			global::MediaManager.Resource.Layout.abc_alert_dialog_material = global::Nickprovs.Albatross.Droid.Resource.Layout.abc_alert_dialog_material;
 			global::MediaManager.Resource.Layout.abc_alert_dialog_title_material = global::Nickprovs.Albatross.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::MediaManager.Resource.Layout.abc_cascading_menu_item_layout = global::Nickprovs.Albatross.Droid.Resource.Layout.abc_cascading_menu_item_layout;
 			global::MediaManager.Resource.Layout.abc_dialog_title_material = global::Nickprovs.Albatross.Droid.Resource.Layout.abc_dialog_title_material;
 			global::MediaManager.Resource.Layout.abc_expanded_menu_layout = global::Nickprovs.Albatross.Droid.Resource.Layout.abc_expanded_menu_layout;
 			global::MediaManager.Resource.Layout.abc_list_menu_item_checkbox = global::Nickprovs.Albatross.Droid.Resource.Layout.abc_list_menu_item_checkbox;
@@ -833,6 +881,7 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Layout.abc_search_dropdown_item_icons_2line = global::Nickprovs.Albatross.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
 			global::MediaManager.Resource.Layout.abc_search_view = global::Nickprovs.Albatross.Droid.Resource.Layout.abc_search_view;
 			global::MediaManager.Resource.Layout.abc_select_dialog_material = global::Nickprovs.Albatross.Droid.Resource.Layout.abc_select_dialog_material;
+			global::MediaManager.Resource.Layout.abc_tooltip = global::Nickprovs.Albatross.Droid.Resource.Layout.abc_tooltip;
 			global::MediaManager.Resource.Layout.exo_list_divider = global::Nickprovs.Albatross.Droid.Resource.Layout.exo_list_divider;
 			global::MediaManager.Resource.Layout.exo_playback_control_view = global::Nickprovs.Albatross.Droid.Resource.Layout.exo_playback_control_view;
 			global::MediaManager.Resource.Layout.exo_player_control_view = global::Nickprovs.Albatross.Droid.Resource.Layout.exo_player_control_view;
@@ -878,6 +927,16 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.String.abc_font_family_menu_material = global::Nickprovs.Albatross.Droid.Resource.String.abc_font_family_menu_material;
 			global::MediaManager.Resource.String.abc_font_family_subhead_material = global::Nickprovs.Albatross.Droid.Resource.String.abc_font_family_subhead_material;
 			global::MediaManager.Resource.String.abc_font_family_title_material = global::Nickprovs.Albatross.Droid.Resource.String.abc_font_family_title_material;
+			global::MediaManager.Resource.String.abc_menu_alt_shortcut_label = global::Nickprovs.Albatross.Droid.Resource.String.abc_menu_alt_shortcut_label;
+			global::MediaManager.Resource.String.abc_menu_ctrl_shortcut_label = global::Nickprovs.Albatross.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::MediaManager.Resource.String.abc_menu_delete_shortcut_label = global::Nickprovs.Albatross.Droid.Resource.String.abc_menu_delete_shortcut_label;
+			global::MediaManager.Resource.String.abc_menu_enter_shortcut_label = global::Nickprovs.Albatross.Droid.Resource.String.abc_menu_enter_shortcut_label;
+			global::MediaManager.Resource.String.abc_menu_function_shortcut_label = global::Nickprovs.Albatross.Droid.Resource.String.abc_menu_function_shortcut_label;
+			global::MediaManager.Resource.String.abc_menu_meta_shortcut_label = global::Nickprovs.Albatross.Droid.Resource.String.abc_menu_meta_shortcut_label;
+			global::MediaManager.Resource.String.abc_menu_shift_shortcut_label = global::Nickprovs.Albatross.Droid.Resource.String.abc_menu_shift_shortcut_label;
+			global::MediaManager.Resource.String.abc_menu_space_shortcut_label = global::Nickprovs.Albatross.Droid.Resource.String.abc_menu_space_shortcut_label;
+			global::MediaManager.Resource.String.abc_menu_sym_shortcut_label = global::Nickprovs.Albatross.Droid.Resource.String.abc_menu_sym_shortcut_label;
+			global::MediaManager.Resource.String.abc_prepend_shortcut_label = global::Nickprovs.Albatross.Droid.Resource.String.abc_prepend_shortcut_label;
 			global::MediaManager.Resource.String.abc_search_hint = global::Nickprovs.Albatross.Droid.Resource.String.abc_search_hint;
 			global::MediaManager.Resource.String.abc_searchview_description_clear = global::Nickprovs.Albatross.Droid.Resource.String.abc_searchview_description_clear;
 			global::MediaManager.Resource.String.abc_searchview_description_query = global::Nickprovs.Albatross.Droid.Resource.String.abc_searchview_description_query;
@@ -887,7 +946,6 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.String.abc_shareactionprovider_share_with = global::Nickprovs.Albatross.Droid.Resource.String.abc_shareactionprovider_share_with;
 			global::MediaManager.Resource.String.abc_shareactionprovider_share_with_application = global::Nickprovs.Albatross.Droid.Resource.String.abc_shareactionprovider_share_with_application;
 			global::MediaManager.Resource.String.abc_toolbar_collapse_description = global::Nickprovs.Albatross.Droid.Resource.String.abc_toolbar_collapse_description;
-			global::MediaManager.Resource.String.download_notification_channel_name = global::Nickprovs.Albatross.Droid.Resource.String.download_notification_channel_name;
 			global::MediaManager.Resource.String.exo_controls_fastforward_description = global::Nickprovs.Albatross.Droid.Resource.String.exo_controls_fastforward_description;
 			global::MediaManager.Resource.String.exo_controls_fullscreen_description = global::Nickprovs.Albatross.Droid.Resource.String.exo_controls_fullscreen_description;
 			global::MediaManager.Resource.String.exo_controls_next_description = global::Nickprovs.Albatross.Droid.Resource.String.exo_controls_next_description;
@@ -1018,6 +1076,8 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Style.Base_V26_Theme_AppCompat = global::Nickprovs.Albatross.Droid.Resource.Style.Base_V26_Theme_AppCompat;
 			global::MediaManager.Resource.Style.Base_V26_Theme_AppCompat_Light = global::Nickprovs.Albatross.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
 			global::MediaManager.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::Nickprovs.Albatross.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::MediaManager.Resource.Style.Base_V28_Theme_AppCompat = global::Nickprovs.Albatross.Droid.Resource.Style.Base_V28_Theme_AppCompat;
+			global::MediaManager.Resource.Style.Base_V28_Theme_AppCompat_Light = global::Nickprovs.Albatross.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
 			global::MediaManager.Resource.Style.Base_V7_Theme_AppCompat = global::Nickprovs.Albatross.Droid.Resource.Style.Base_V7_Theme_AppCompat;
 			global::MediaManager.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::Nickprovs.Albatross.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
 			global::MediaManager.Resource.Style.Base_V7_Theme_AppCompat_Light = global::Nickprovs.Albatross.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
@@ -1106,7 +1166,10 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::Nickprovs.Albatross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
 			global::MediaManager.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::Nickprovs.Albatross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
 			global::MediaManager.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::Nickprovs.Albatross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::MediaManager.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::Nickprovs.Albatross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::MediaManager.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::Nickprovs.Albatross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
 			global::MediaManager.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::Nickprovs.Albatross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::MediaManager.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::Nickprovs.Albatross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
 			global::MediaManager.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::Nickprovs.Albatross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
 			global::MediaManager.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::Nickprovs.Albatross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
 			global::MediaManager.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::Nickprovs.Albatross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
@@ -1278,6 +1341,7 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::Nickprovs.Albatross.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
 			global::MediaManager.Resource.Style.Widget_Compat_NotificationActionContainer = global::Nickprovs.Albatross.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
 			global::MediaManager.Resource.Style.Widget_Compat_NotificationActionText = global::Nickprovs.Albatross.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::MediaManager.Resource.Style.Widget_Support_CoordinatorLayout = global::Nickprovs.Albatross.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
 			global::MediaManager.Resource.Styleable.ActionBar = global::Nickprovs.Albatross.Droid.Resource.Styleable.ActionBar;
 			global::MediaManager.Resource.Styleable.ActionBar_background = global::Nickprovs.Albatross.Droid.Resource.Styleable.ActionBar_background;
 			global::MediaManager.Resource.Styleable.ActionBar_backgroundSplit = global::Nickprovs.Albatross.Droid.Resource.Styleable.ActionBar_backgroundSplit;
@@ -1325,12 +1389,28 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Styleable.ActivityChooserView_initialActivityCount = global::Nickprovs.Albatross.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
 			global::MediaManager.Resource.Styleable.AlertDialog = global::Nickprovs.Albatross.Droid.Resource.Styleable.AlertDialog;
 			global::MediaManager.Resource.Styleable.AlertDialog_android_layout = global::Nickprovs.Albatross.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::MediaManager.Resource.Styleable.AlertDialog_buttonIconDimen = global::Nickprovs.Albatross.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
 			global::MediaManager.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::Nickprovs.Albatross.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
 			global::MediaManager.Resource.Styleable.AlertDialog_listItemLayout = global::Nickprovs.Albatross.Droid.Resource.Styleable.AlertDialog_listItemLayout;
 			global::MediaManager.Resource.Styleable.AlertDialog_listLayout = global::Nickprovs.Albatross.Droid.Resource.Styleable.AlertDialog_listLayout;
 			global::MediaManager.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::Nickprovs.Albatross.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
 			global::MediaManager.Resource.Styleable.AlertDialog_showTitle = global::Nickprovs.Albatross.Droid.Resource.Styleable.AlertDialog_showTitle;
 			global::MediaManager.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::Nickprovs.Albatross.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::MediaManager.Resource.Styleable.AnimatedStateListDrawableCompat = global::Nickprovs.Albatross.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::MediaManager.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::Nickprovs.Albatross.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::MediaManager.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::Nickprovs.Albatross.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::MediaManager.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::Nickprovs.Albatross.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::MediaManager.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::Nickprovs.Albatross.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::MediaManager.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::Nickprovs.Albatross.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::MediaManager.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::Nickprovs.Albatross.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::MediaManager.Resource.Styleable.AnimatedStateListDrawableItem = global::Nickprovs.Albatross.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::MediaManager.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::Nickprovs.Albatross.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::MediaManager.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::Nickprovs.Albatross.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::MediaManager.Resource.Styleable.AnimatedStateListDrawableTransition = global::Nickprovs.Albatross.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::MediaManager.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::Nickprovs.Albatross.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::MediaManager.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::Nickprovs.Albatross.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::MediaManager.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::Nickprovs.Albatross.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::MediaManager.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::Nickprovs.Albatross.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
 			global::MediaManager.Resource.Styleable.AppCompatImageView = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatImageView;
 			global::MediaManager.Resource.Styleable.AppCompatImageView_android_src = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatImageView_android_src;
 			global::MediaManager.Resource.Styleable.AppCompatImageView_srcCompat = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
@@ -1356,7 +1436,10 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
 			global::MediaManager.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
 			global::MediaManager.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::MediaManager.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
 			global::MediaManager.Resource.Styleable.AppCompatTextView_fontFamily = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::MediaManager.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::MediaManager.Resource.Styleable.AppCompatTextView_lineHeight = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
 			global::MediaManager.Resource.Styleable.AppCompatTextView_textAllCaps = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
 			global::MediaManager.Resource.Styleable.AppCompatTheme = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTheme;
 			global::MediaManager.Resource.Styleable.AppCompatTheme_actionBarDivider = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
@@ -1418,6 +1501,7 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
 			global::MediaManager.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
 			global::MediaManager.Resource.Styleable.AppCompatTheme_controlBackground = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::MediaManager.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
 			global::MediaManager.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
 			global::MediaManager.Resource.Styleable.AppCompatTheme_dialogTheme = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
 			global::MediaManager.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
@@ -1468,6 +1552,7 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Styleable.AppCompatTheme_toolbarStyle = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
 			global::MediaManager.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
 			global::MediaManager.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::MediaManager.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
 			global::MediaManager.Resource.Styleable.AppCompatTheme_windowActionBar = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
 			global::MediaManager.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
 			global::MediaManager.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::Nickprovs.Albatross.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
@@ -1490,6 +1575,17 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Styleable.CompoundButton_android_button = global::Nickprovs.Albatross.Droid.Resource.Styleable.CompoundButton_android_button;
 			global::MediaManager.Resource.Styleable.CompoundButton_buttonTint = global::Nickprovs.Albatross.Droid.Resource.Styleable.CompoundButton_buttonTint;
 			global::MediaManager.Resource.Styleable.CompoundButton_buttonTintMode = global::Nickprovs.Albatross.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::MediaManager.Resource.Styleable.CoordinatorLayout = global::Nickprovs.Albatross.Droid.Resource.Styleable.CoordinatorLayout;
+			global::MediaManager.Resource.Styleable.CoordinatorLayout_keylines = global::Nickprovs.Albatross.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::MediaManager.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::Nickprovs.Albatross.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::MediaManager.Resource.Styleable.CoordinatorLayout_Layout = global::Nickprovs.Albatross.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::MediaManager.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::Nickprovs.Albatross.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::MediaManager.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::Nickprovs.Albatross.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::MediaManager.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::Nickprovs.Albatross.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::MediaManager.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::Nickprovs.Albatross.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::MediaManager.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::Nickprovs.Albatross.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::MediaManager.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::Nickprovs.Albatross.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::MediaManager.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::Nickprovs.Albatross.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
 			global::MediaManager.Resource.Styleable.DefaultTimeBar = global::Nickprovs.Albatross.Droid.Resource.Styleable.DefaultTimeBar;
 			global::MediaManager.Resource.Styleable.DefaultTimeBar_ad_marker_color = global::Nickprovs.Albatross.Droid.Resource.Styleable.DefaultTimeBar_ad_marker_color;
 			global::MediaManager.Resource.Styleable.DefaultTimeBar_ad_marker_width = global::Nickprovs.Albatross.Droid.Resource.Styleable.DefaultTimeBar_ad_marker_width;
@@ -1523,10 +1619,30 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Styleable.FontFamilyFont = global::Nickprovs.Albatross.Droid.Resource.Styleable.FontFamilyFont;
 			global::MediaManager.Resource.Styleable.FontFamilyFont_android_font = global::Nickprovs.Albatross.Droid.Resource.Styleable.FontFamilyFont_android_font;
 			global::MediaManager.Resource.Styleable.FontFamilyFont_android_fontStyle = global::Nickprovs.Albatross.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::MediaManager.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::Nickprovs.Albatross.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
 			global::MediaManager.Resource.Styleable.FontFamilyFont_android_fontWeight = global::Nickprovs.Albatross.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::MediaManager.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::Nickprovs.Albatross.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
 			global::MediaManager.Resource.Styleable.FontFamilyFont_font = global::Nickprovs.Albatross.Droid.Resource.Styleable.FontFamilyFont_font;
 			global::MediaManager.Resource.Styleable.FontFamilyFont_fontStyle = global::Nickprovs.Albatross.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::MediaManager.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::Nickprovs.Albatross.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
 			global::MediaManager.Resource.Styleable.FontFamilyFont_fontWeight = global::Nickprovs.Albatross.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::MediaManager.Resource.Styleable.FontFamilyFont_ttcIndex = global::Nickprovs.Albatross.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::MediaManager.Resource.Styleable.GradientColor = global::Nickprovs.Albatross.Droid.Resource.Styleable.GradientColor;
+			global::MediaManager.Resource.Styleable.GradientColor_android_centerColor = global::Nickprovs.Albatross.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::MediaManager.Resource.Styleable.GradientColor_android_centerX = global::Nickprovs.Albatross.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::MediaManager.Resource.Styleable.GradientColor_android_centerY = global::Nickprovs.Albatross.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::MediaManager.Resource.Styleable.GradientColor_android_endColor = global::Nickprovs.Albatross.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::MediaManager.Resource.Styleable.GradientColor_android_endX = global::Nickprovs.Albatross.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::MediaManager.Resource.Styleable.GradientColor_android_endY = global::Nickprovs.Albatross.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::MediaManager.Resource.Styleable.GradientColor_android_gradientRadius = global::Nickprovs.Albatross.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::MediaManager.Resource.Styleable.GradientColor_android_startColor = global::Nickprovs.Albatross.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::MediaManager.Resource.Styleable.GradientColor_android_startX = global::Nickprovs.Albatross.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::MediaManager.Resource.Styleable.GradientColor_android_startY = global::Nickprovs.Albatross.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::MediaManager.Resource.Styleable.GradientColor_android_tileMode = global::Nickprovs.Albatross.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::MediaManager.Resource.Styleable.GradientColor_android_type = global::Nickprovs.Albatross.Droid.Resource.Styleable.GradientColor_android_type;
+			global::MediaManager.Resource.Styleable.GradientColorItem = global::Nickprovs.Albatross.Droid.Resource.Styleable.GradientColorItem;
+			global::MediaManager.Resource.Styleable.GradientColorItem_android_color = global::Nickprovs.Albatross.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::MediaManager.Resource.Styleable.GradientColorItem_android_offset = global::Nickprovs.Albatross.Droid.Resource.Styleable.GradientColorItem_android_offset;
 			global::MediaManager.Resource.Styleable.LinearLayoutCompat = global::Nickprovs.Albatross.Droid.Resource.Styleable.LinearLayoutCompat;
 			global::MediaManager.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::Nickprovs.Albatross.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
 			global::MediaManager.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::Nickprovs.Albatross.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
@@ -1645,6 +1761,15 @@ namespace Nickprovs.Albatross.Droid
 			global::MediaManager.Resource.Styleable.Spinner_android_popupBackground = global::Nickprovs.Albatross.Droid.Resource.Styleable.Spinner_android_popupBackground;
 			global::MediaManager.Resource.Styleable.Spinner_android_prompt = global::Nickprovs.Albatross.Droid.Resource.Styleable.Spinner_android_prompt;
 			global::MediaManager.Resource.Styleable.Spinner_popupTheme = global::Nickprovs.Albatross.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::MediaManager.Resource.Styleable.StateListDrawable = global::Nickprovs.Albatross.Droid.Resource.Styleable.StateListDrawable;
+			global::MediaManager.Resource.Styleable.StateListDrawable_android_constantSize = global::Nickprovs.Albatross.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::MediaManager.Resource.Styleable.StateListDrawable_android_dither = global::Nickprovs.Albatross.Droid.Resource.Styleable.StateListDrawable_android_dither;
+			global::MediaManager.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::Nickprovs.Albatross.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::MediaManager.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::Nickprovs.Albatross.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::MediaManager.Resource.Styleable.StateListDrawable_android_variablePadding = global::Nickprovs.Albatross.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::MediaManager.Resource.Styleable.StateListDrawable_android_visible = global::Nickprovs.Albatross.Droid.Resource.Styleable.StateListDrawable_android_visible;
+			global::MediaManager.Resource.Styleable.StateListDrawableItem = global::Nickprovs.Albatross.Droid.Resource.Styleable.StateListDrawableItem;
+			global::MediaManager.Resource.Styleable.StateListDrawableItem_android_drawable = global::Nickprovs.Albatross.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
 			global::MediaManager.Resource.Styleable.SwitchCompat = global::Nickprovs.Albatross.Droid.Resource.Styleable.SwitchCompat;
 			global::MediaManager.Resource.Styleable.SwitchCompat_android_textOff = global::Nickprovs.Albatross.Droid.Resource.Styleable.SwitchCompat_android_textOff;
 			global::MediaManager.Resource.Styleable.SwitchCompat_android_textOn = global::Nickprovs.Albatross.Droid.Resource.Styleable.SwitchCompat_android_textOn;
@@ -8662,59 +8787,59 @@ namespace Nickprovs.Albatross.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0a004d
-			public const int ALT = 2131361869;
-			
 			// aapt resource value: 0x7f0a004e
-			public const int CTRL = 2131361870;
+			public const int ALT = 2131361870;
 			
 			// aapt resource value: 0x7f0a004f
-			public const int FUNCTION = 2131361871;
+			public const int CTRL = 2131361871;
 			
 			// aapt resource value: 0x7f0a0050
-			public const int META = 2131361872;
+			public const int FUNCTION = 2131361872;
 			
 			// aapt resource value: 0x7f0a0051
-			public const int SHIFT = 2131361873;
+			public const int META = 2131361873;
 			
 			// aapt resource value: 0x7f0a0052
-			public const int SYM = 2131361874;
+			public const int SHIFT = 2131361874;
 			
-			// aapt resource value: 0x7f0a0104
-			public const int action0 = 2131362052;
+			// aapt resource value: 0x7f0a0053
+			public const int SYM = 2131361875;
 			
-			// aapt resource value: 0x7f0a00a8
-			public const int action_bar = 2131361960;
+			// aapt resource value: 0x7f0a0107
+			public const int action0 = 2131362055;
+			
+			// aapt resource value: 0x7f0a00ab
+			public const int action_bar = 2131361963;
 			
 			// aapt resource value: 0x7f0a0001
 			public const int action_bar_activity_content = 2131361793;
 			
-			// aapt resource value: 0x7f0a00a7
-			public const int action_bar_container = 2131361959;
+			// aapt resource value: 0x7f0a00aa
+			public const int action_bar_container = 2131361962;
 			
-			// aapt resource value: 0x7f0a00a3
-			public const int action_bar_root = 2131361955;
+			// aapt resource value: 0x7f0a00a6
+			public const int action_bar_root = 2131361958;
 			
 			// aapt resource value: 0x7f0a0002
 			public const int action_bar_spinner = 2131361794;
 			
-			// aapt resource value: 0x7f0a0085
-			public const int action_bar_subtitle = 2131361925;
+			// aapt resource value: 0x7f0a0088
+			public const int action_bar_subtitle = 2131361928;
 			
-			// aapt resource value: 0x7f0a0084
-			public const int action_bar_title = 2131361924;
+			// aapt resource value: 0x7f0a0087
+			public const int action_bar_title = 2131361927;
 			
-			// aapt resource value: 0x7f0a0101
-			public const int action_container = 2131362049;
+			// aapt resource value: 0x7f0a0104
+			public const int action_container = 2131362052;
 			
-			// aapt resource value: 0x7f0a00a9
-			public const int action_context_bar = 2131361961;
+			// aapt resource value: 0x7f0a00ac
+			public const int action_context_bar = 2131361964;
 			
-			// aapt resource value: 0x7f0a0108
-			public const int action_divider = 2131362056;
+			// aapt resource value: 0x7f0a010b
+			public const int action_divider = 2131362059;
 			
-			// aapt resource value: 0x7f0a0102
-			public const int action_image = 2131362050;
+			// aapt resource value: 0x7f0a0105
+			public const int action_image = 2131362053;
 			
 			// aapt resource value: 0x7f0a0003
 			public const int action_menu_divider = 2131361795;
@@ -8722,323 +8847,326 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0004
 			public const int action_menu_presenter = 2131361796;
 			
-			// aapt resource value: 0x7f0a00a5
-			public const int action_mode_bar = 2131361957;
+			// aapt resource value: 0x7f0a00a8
+			public const int action_mode_bar = 2131361960;
 			
-			// aapt resource value: 0x7f0a00a4
-			public const int action_mode_bar_stub = 2131361956;
+			// aapt resource value: 0x7f0a00a7
+			public const int action_mode_bar_stub = 2131361959;
 			
-			// aapt resource value: 0x7f0a0086
-			public const int action_mode_close_button = 2131361926;
+			// aapt resource value: 0x7f0a0089
+			public const int action_mode_close_button = 2131361929;
 			
-			// aapt resource value: 0x7f0a0103
-			public const int action_text = 2131362051;
+			// aapt resource value: 0x7f0a0106
+			public const int action_text = 2131362054;
 			
-			// aapt resource value: 0x7f0a0111
-			public const int actions = 2131362065;
-			
-			// aapt resource value: 0x7f0a0087
-			public const int activity_chooser_view_content = 2131361927;
-			
-			// aapt resource value: 0x7f0a0042
-			public const int add = 2131361858;
-			
-			// aapt resource value: 0x7f0a0120
-			public const int adornerLayer = 2131362080;
-			
-			// aapt resource value: 0x7f0a009a
-			public const int alertTitle = 2131361946;
-			
-			// aapt resource value: 0x7f0a0078
-			public const int all = 2131361912;
-			
-			// aapt resource value: 0x7f0a0053
-			public const int always = 2131361875;
-			
-			// aapt resource value: 0x7f0a011c
-			public const int annotationSurface = 2131362076;
-			
-			// aapt resource value: 0x7f0a0079
-			public const int async = 2131361913;
-			
-			// aapt resource value: 0x7f0a0061
-			public const int auto = 2131361889;
-			
-			// aapt resource value: 0x7f0a011f
-			public const int axisModifierSurfaceArea = 2131362079;
-			
-			// aapt resource value: 0x7f0a004a
-			public const int beginning = 2131361866;
-			
-			// aapt resource value: 0x7f0a007a
-			public const int blocking = 2131361914;
-			
-			// aapt resource value: 0x7f0a0058
-			public const int bottom = 2131361880;
-			
-			// aapt resource value: 0x7f0a00b9
-			public const int bottomtab_navarea = 2131361977;
-			
-			// aapt resource value: 0x7f0a00ba
-			public const int bottomtab_tabbar = 2131361978;
-			
-			// aapt resource value: 0x7f0a00bc
-			public const int browser_actions_header_text = 2131361980;
-			
-			// aapt resource value: 0x7f0a00be
-			public const int browser_actions_menu_item_icon = 2131361982;
-			
-			// aapt resource value: 0x7f0a00bf
-			public const int browser_actions_menu_item_text = 2131361983;
-			
-			// aapt resource value: 0x7f0a00bd
-			public const int browser_actions_menu_items = 2131361981;
-			
-			// aapt resource value: 0x7f0a00bb
-			public const int browser_actions_menu_view = 2131361979;
-			
-			// aapt resource value: 0x7f0a008d
-			public const int buttonPanel = 2131361933;
-			
-			// aapt resource value: 0x7f0a0105
-			public const int cancel_action = 2131362053;
-			
-			// aapt resource value: 0x7f0a0060
-			public const int center = 2131361888;
-			
-			// aapt resource value: 0x7f0a0065
-			public const int center_horizontal = 2131361893;
-			
-			// aapt resource value: 0x7f0a0066
-			public const int center_vertical = 2131361894;
-			
-			// aapt resource value: 0x7f0a011d
-			public const int chartModifierSurface = 2131362077;
-			
-			// aapt resource value: 0x7f0a00a1
-			public const int checkbox = 2131361953;
-			
-			// aapt resource value: 0x7f0a010d
-			public const int chronometer = 2131362061;
-			
-			// aapt resource value: 0x7f0a0075
-			public const int clip_horizontal = 2131361909;
-			
-			// aapt resource value: 0x7f0a0076
-			public const int clip_vertical = 2131361910;
-			
-			// aapt resource value: 0x7f0a0054
-			public const int collapseActionView = 2131361876;
-			
-			// aapt resource value: 0x7f0a0118
-			public const int colorMapView = 2131362072;
-			
-			// aapt resource value: 0x7f0a00c2
-			public const int container = 2131361986;
-			
-			// aapt resource value: 0x7f0a009d
-			public const int content = 2131361949;
-			
-			// aapt resource value: 0x7f0a0090
-			public const int contentPanel = 2131361936;
-			
-			// aapt resource value: 0x7f0a00c3
-			public const int coordinator = 2131361987;
-			
-			// aapt resource value: 0x7f0a0097
-			public const int custom = 2131361943;
-			
-			// aapt resource value: 0x7f0a0096
-			public const int customPanel = 2131361942;
-			
-			// aapt resource value: 0x7f0a00a6
-			public const int decor_content_parent = 2131361958;
+			// aapt resource value: 0x7f0a0114
+			public const int actions = 2131362068;
 			
 			// aapt resource value: 0x7f0a008a
-			public const int default_activity_button = 2131361930;
+			public const int activity_chooser_view_content = 2131361930;
 			
-			// aapt resource value: 0x7f0a00c5
-			public const int design_bottom_sheet = 2131361989;
+			// aapt resource value: 0x7f0a0043
+			public const int add = 2131361859;
 			
-			// aapt resource value: 0x7f0a00ca
-			public const int design_menu_item_action_area = 2131361994;
+			// aapt resource value: 0x7f0a0123
+			public const int adornerLayer = 2131362083;
 			
-			// aapt resource value: 0x7f0a00c9
-			public const int design_menu_item_action_area_stub = 2131361993;
+			// aapt resource value: 0x7f0a009d
+			public const int alertTitle = 2131361949;
 			
-			// aapt resource value: 0x7f0a00c8
-			public const int design_menu_item_text = 2131361992;
+			// aapt resource value: 0x7f0a0079
+			public const int all = 2131361913;
 			
-			// aapt resource value: 0x7f0a00c7
-			public const int design_navigation_view = 2131361991;
+			// aapt resource value: 0x7f0a0054
+			public const int always = 2131361876;
 			
-			// aapt resource value: 0x7f0a003b
-			public const int disableHome = 2131361851;
+			// aapt resource value: 0x7f0a011f
+			public const int annotationSurface = 2131362079;
 			
-			// aapt resource value: 0x7f0a00aa
-			public const int edit_query = 2131361962;
+			// aapt resource value: 0x7f0a007a
+			public const int async = 2131361914;
+			
+			// aapt resource value: 0x7f0a0062
+			public const int auto = 2131361890;
+			
+			// aapt resource value: 0x7f0a0122
+			public const int axisModifierSurfaceArea = 2131362082;
 			
 			// aapt resource value: 0x7f0a004b
-			public const int end = 2131361867;
-			
-			// aapt resource value: 0x7f0a0113
-			public const int end_padder = 2131362067;
-			
-			// aapt resource value: 0x7f0a005a
-			public const int enterAlways = 2131361882;
-			
-			// aapt resource value: 0x7f0a005b
-			public const int enterAlwaysCollapsed = 2131361883;
-			
-			// aapt resource value: 0x7f0a005c
-			public const int exitUntilCollapsed = 2131361884;
-			
-			// aapt resource value: 0x7f0a0024
-			public const int exo_artwork = 2131361828;
-			
-			// aapt resource value: 0x7f0a0025
-			public const int exo_buffering = 2131361829;
-			
-			// aapt resource value: 0x7f0a0026
-			public const int exo_content_frame = 2131361830;
-			
-			// aapt resource value: 0x7f0a0027
-			public const int exo_controller = 2131361831;
-			
-			// aapt resource value: 0x7f0a0028
-			public const int exo_controller_placeholder = 2131361832;
-			
-			// aapt resource value: 0x7f0a0029
-			public const int exo_duration = 2131361833;
-			
-			// aapt resource value: 0x7f0a002a
-			public const int exo_error_message = 2131361834;
-			
-			// aapt resource value: 0x7f0a002b
-			public const int exo_ffwd = 2131361835;
-			
-			// aapt resource value: 0x7f0a002c
-			public const int exo_next = 2131361836;
-			
-			// aapt resource value: 0x7f0a002d
-			public const int exo_overlay = 2131361837;
-			
-			// aapt resource value: 0x7f0a002e
-			public const int exo_pause = 2131361838;
-			
-			// aapt resource value: 0x7f0a002f
-			public const int exo_play = 2131361839;
-			
-			// aapt resource value: 0x7f0a0030
-			public const int exo_position = 2131361840;
-			
-			// aapt resource value: 0x7f0a0031
-			public const int exo_prev = 2131361841;
-			
-			// aapt resource value: 0x7f0a0032
-			public const int exo_progress = 2131361842;
-			
-			// aapt resource value: 0x7f0a0033
-			public const int exo_repeat_toggle = 2131361843;
-			
-			// aapt resource value: 0x7f0a0034
-			public const int exo_rew = 2131361844;
-			
-			// aapt resource value: 0x7f0a0035
-			public const int exo_shuffle = 2131361845;
-			
-			// aapt resource value: 0x7f0a0036
-			public const int exo_shutter = 2131361846;
-			
-			// aapt resource value: 0x7f0a0037
-			public const int exo_subtitles = 2131361847;
-			
-			// aapt resource value: 0x7f0a00cc
-			public const int exo_track_selection_view = 2131361996;
-			
-			// aapt resource value: 0x7f0a0088
-			public const int expand_activities_button = 2131361928;
-			
-			// aapt resource value: 0x7f0a00a0
-			public const int expanded_menu = 2131361952;
-			
-			// aapt resource value: 0x7f0a0072
-			public const int fill = 2131361906;
-			
-			// aapt resource value: 0x7f0a0077
-			public const int fill_horizontal = 2131361911;
-			
-			// aapt resource value: 0x7f0a0067
-			public const int fill_vertical = 2131361895;
-			
-			// aapt resource value: 0x7f0a0073
-			public const int filled = 2131361907;
-			
-			// aapt resource value: 0x7f0a007e
-			public const int fit = 2131361918;
-			
-			// aapt resource value: 0x7f0a0070
-			public const int @fixed = 2131361904;
-			
-			// aapt resource value: 0x7f0a007f
-			public const int fixed_height = 2131361919;
-			
-			// aapt resource value: 0x7f0a0080
-			public const int fixed_width = 2131361920;
-			
-			// aapt resource value: 0x7f0a00cd
-			public const int flyoutcontent_appbar = 2131361997;
-			
-			// aapt resource value: 0x7f0a00ce
-			public const int flyoutcontent_recycler = 2131361998;
+			public const int beginning = 2131361867;
 			
 			// aapt resource value: 0x7f0a007b
-			public const int forever = 2131361915;
+			public const int blocking = 2131361915;
+			
+			// aapt resource value: 0x7f0a0059
+			public const int bottom = 2131361881;
+			
+			// aapt resource value: 0x7f0a00bc
+			public const int bottomtab_navarea = 2131361980;
+			
+			// aapt resource value: 0x7f0a00bd
+			public const int bottomtab_tabbar = 2131361981;
+			
+			// aapt resource value: 0x7f0a00bf
+			public const int browser_actions_header_text = 2131361983;
+			
+			// aapt resource value: 0x7f0a00c1
+			public const int browser_actions_menu_item_icon = 2131361985;
+			
+			// aapt resource value: 0x7f0a00c2
+			public const int browser_actions_menu_item_text = 2131361986;
+			
+			// aapt resource value: 0x7f0a00c0
+			public const int browser_actions_menu_items = 2131361984;
+			
+			// aapt resource value: 0x7f0a00be
+			public const int browser_actions_menu_view = 2131361982;
+			
+			// aapt resource value: 0x7f0a0090
+			public const int buttonPanel = 2131361936;
+			
+			// aapt resource value: 0x7f0a0108
+			public const int cancel_action = 2131362056;
+			
+			// aapt resource value: 0x7f0a0061
+			public const int center = 2131361889;
+			
+			// aapt resource value: 0x7f0a0066
+			public const int center_horizontal = 2131361894;
+			
+			// aapt resource value: 0x7f0a0067
+			public const int center_vertical = 2131361895;
+			
+			// aapt resource value: 0x7f0a0120
+			public const int chartModifierSurface = 2131362080;
+			
+			// aapt resource value: 0x7f0a00a4
+			public const int checkbox = 2131361956;
+			
+			// aapt resource value: 0x7f0a0110
+			public const int chronometer = 2131362064;
+			
+			// aapt resource value: 0x7f0a0076
+			public const int clip_horizontal = 2131361910;
+			
+			// aapt resource value: 0x7f0a0077
+			public const int clip_vertical = 2131361911;
+			
+			// aapt resource value: 0x7f0a0055
+			public const int collapseActionView = 2131361877;
+			
+			// aapt resource value: 0x7f0a011b
+			public const int colorMapView = 2131362075;
+			
+			// aapt resource value: 0x7f0a00c5
+			public const int container = 2131361989;
+			
+			// aapt resource value: 0x7f0a00a0
+			public const int content = 2131361952;
+			
+			// aapt resource value: 0x7f0a0093
+			public const int contentPanel = 2131361939;
+			
+			// aapt resource value: 0x7f0a00c6
+			public const int coordinator = 2131361990;
+			
+			// aapt resource value: 0x7f0a009a
+			public const int custom = 2131361946;
+			
+			// aapt resource value: 0x7f0a0099
+			public const int customPanel = 2131361945;
+			
+			// aapt resource value: 0x7f0a00a9
+			public const int decor_content_parent = 2131361961;
+			
+			// aapt resource value: 0x7f0a008d
+			public const int default_activity_button = 2131361933;
+			
+			// aapt resource value: 0x7f0a00c8
+			public const int design_bottom_sheet = 2131361992;
+			
+			// aapt resource value: 0x7f0a00cd
+			public const int design_menu_item_action_area = 2131361997;
+			
+			// aapt resource value: 0x7f0a00cc
+			public const int design_menu_item_action_area_stub = 2131361996;
+			
+			// aapt resource value: 0x7f0a00cb
+			public const int design_menu_item_text = 2131361995;
+			
+			// aapt resource value: 0x7f0a00ca
+			public const int design_navigation_view = 2131361994;
+			
+			// aapt resource value: 0x7f0a003c
+			public const int disableHome = 2131361852;
+			
+			// aapt resource value: 0x7f0a00ad
+			public const int edit_query = 2131361965;
+			
+			// aapt resource value: 0x7f0a004c
+			public const int end = 2131361868;
+			
+			// aapt resource value: 0x7f0a0116
+			public const int end_padder = 2131362070;
+			
+			// aapt resource value: 0x7f0a005b
+			public const int enterAlways = 2131361883;
+			
+			// aapt resource value: 0x7f0a005c
+			public const int enterAlwaysCollapsed = 2131361884;
+			
+			// aapt resource value: 0x7f0a005d
+			public const int exitUntilCollapsed = 2131361885;
+			
+			// aapt resource value: 0x7f0a0024
+			public const int exo_ad_overlay = 2131361828;
+			
+			// aapt resource value: 0x7f0a0025
+			public const int exo_artwork = 2131361829;
+			
+			// aapt resource value: 0x7f0a0026
+			public const int exo_buffering = 2131361830;
+			
+			// aapt resource value: 0x7f0a0027
+			public const int exo_content_frame = 2131361831;
+			
+			// aapt resource value: 0x7f0a0028
+			public const int exo_controller = 2131361832;
+			
+			// aapt resource value: 0x7f0a0029
+			public const int exo_controller_placeholder = 2131361833;
+			
+			// aapt resource value: 0x7f0a002a
+			public const int exo_duration = 2131361834;
+			
+			// aapt resource value: 0x7f0a002b
+			public const int exo_error_message = 2131361835;
+			
+			// aapt resource value: 0x7f0a002c
+			public const int exo_ffwd = 2131361836;
+			
+			// aapt resource value: 0x7f0a002d
+			public const int exo_next = 2131361837;
+			
+			// aapt resource value: 0x7f0a002e
+			public const int exo_overlay = 2131361838;
+			
+			// aapt resource value: 0x7f0a002f
+			public const int exo_pause = 2131361839;
+			
+			// aapt resource value: 0x7f0a0030
+			public const int exo_play = 2131361840;
+			
+			// aapt resource value: 0x7f0a0031
+			public const int exo_position = 2131361841;
+			
+			// aapt resource value: 0x7f0a0032
+			public const int exo_prev = 2131361842;
+			
+			// aapt resource value: 0x7f0a0033
+			public const int exo_progress = 2131361843;
+			
+			// aapt resource value: 0x7f0a0034
+			public const int exo_repeat_toggle = 2131361844;
+			
+			// aapt resource value: 0x7f0a0035
+			public const int exo_rew = 2131361845;
+			
+			// aapt resource value: 0x7f0a0036
+			public const int exo_shuffle = 2131361846;
+			
+			// aapt resource value: 0x7f0a0037
+			public const int exo_shutter = 2131361847;
+			
+			// aapt resource value: 0x7f0a0038
+			public const int exo_subtitles = 2131361848;
+			
+			// aapt resource value: 0x7f0a00cf
+			public const int exo_track_selection_view = 2131361999;
+			
+			// aapt resource value: 0x7f0a008b
+			public const int expand_activities_button = 2131361931;
+			
+			// aapt resource value: 0x7f0a00a3
+			public const int expanded_menu = 2131361955;
+			
+			// aapt resource value: 0x7f0a0073
+			public const int fill = 2131361907;
+			
+			// aapt resource value: 0x7f0a0078
+			public const int fill_horizontal = 2131361912;
+			
+			// aapt resource value: 0x7f0a0068
+			public const int fill_vertical = 2131361896;
+			
+			// aapt resource value: 0x7f0a0074
+			public const int filled = 2131361908;
+			
+			// aapt resource value: 0x7f0a007f
+			public const int fit = 2131361919;
+			
+			// aapt resource value: 0x7f0a0071
+			public const int @fixed = 2131361905;
+			
+			// aapt resource value: 0x7f0a0080
+			public const int fixed_height = 2131361920;
+			
+			// aapt resource value: 0x7f0a0081
+			public const int fixed_width = 2131361921;
+			
+			// aapt resource value: 0x7f0a00d0
+			public const int flyoutcontent_appbar = 2131362000;
+			
+			// aapt resource value: 0x7f0a00d1
+			public const int flyoutcontent_recycler = 2131362001;
+			
+			// aapt resource value: 0x7f0a007c
+			public const int forever = 2131361916;
 			
 			// aapt resource value: 0x7f0a000a
 			public const int ghost_view = 2131361802;
 			
-			// aapt resource value: 0x7f0a009c
-			public const int group_divider = 2131361948;
+			// aapt resource value: 0x7f0a009f
+			public const int group_divider = 2131361951;
 			
 			// aapt resource value: 0x7f0a0005
 			public const int home = 2131361797;
 			
-			// aapt resource value: 0x7f0a003c
-			public const int homeAsUp = 2131361852;
+			// aapt resource value: 0x7f0a003d
+			public const int homeAsUp = 2131361853;
+			
+			// aapt resource value: 0x7f0a008f
+			public const int icon = 2131361935;
+			
+			// aapt resource value: 0x7f0a0115
+			public const int icon_group = 2131362069;
+			
+			// aapt resource value: 0x7f0a0056
+			public const int ifRoom = 2131361878;
 			
 			// aapt resource value: 0x7f0a008c
-			public const int icon = 2131361932;
+			public const int image = 2131361932;
 			
-			// aapt resource value: 0x7f0a0112
-			public const int icon_group = 2131362066;
+			// aapt resource value: 0x7f0a0111
+			public const int info = 2131362065;
 			
-			// aapt resource value: 0x7f0a0055
-			public const int ifRoom = 2131361877;
+			// aapt resource value: 0x7f0a00d2
+			public const int isVisible = 2131362002;
 			
-			// aapt resource value: 0x7f0a0089
-			public const int image = 2131361929;
-			
-			// aapt resource value: 0x7f0a010e
-			public const int info = 2131362062;
-			
-			// aapt resource value: 0x7f0a00cf
-			public const int isVisible = 2131361999;
-			
-			// aapt resource value: 0x7f0a007c
-			public const int italic = 2131361916;
+			// aapt resource value: 0x7f0a007d
+			public const int italic = 2131361917;
 			
 			// aapt resource value: 0x7f0a0000
 			public const int item_touch_helper_previous_elevation = 2131361792;
 			
-			// aapt resource value: 0x7f0a0062
-			public const int labeled = 2131361890;
+			// aapt resource value: 0x7f0a0063
+			public const int labeled = 2131361891;
 			
-			// aapt resource value: 0x7f0a00c1
-			public const int largeLabel = 2131361985;
+			// aapt resource value: 0x7f0a00c4
+			public const int largeLabel = 2131361988;
 			
-			// aapt resource value: 0x7f0a0068
-			public const int left = 2131361896;
+			// aapt resource value: 0x7f0a0069
+			public const int left = 2131361897;
 			
 			// aapt resource value: 0x7f0a001c
 			public const int line1 = 2131361820;
@@ -9046,185 +9174,185 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a001d
 			public const int line3 = 2131361821;
 			
-			// aapt resource value: 0x7f0a0038
-			public const int listMode = 2131361848;
+			// aapt resource value: 0x7f0a0039
+			public const int listMode = 2131361849;
 			
-			// aapt resource value: 0x7f0a008b
-			public const int list_item = 2131361931;
-			
-			// aapt resource value: 0x7f0a0114
-			public const int main_appbar = 2131362068;
+			// aapt resource value: 0x7f0a008e
+			public const int list_item = 2131361934;
 			
 			// aapt resource value: 0x7f0a0117
-			public const int main_scrollview = 2131362071;
-			
-			// aapt resource value: 0x7f0a0116
-			public const int main_tablayout = 2131362070;
-			
-			// aapt resource value: 0x7f0a0115
-			public const int main_toolbar = 2131362069;
-			
-			// aapt resource value: 0x7f0a0127
-			public const int masked = 2131362087;
-			
-			// aapt resource value: 0x7f0a011b
-			public const int maximumTextView = 2131362075;
-			
-			// aapt resource value: 0x7f0a0107
-			public const int media_actions = 2131362055;
-			
-			// aapt resource value: 0x7f0a00b7
-			public const int message = 2131361975;
-			
-			// aapt resource value: 0x7f0a004c
-			public const int middle = 2131361868;
+			public const int main_appbar = 2131362071;
 			
 			// aapt resource value: 0x7f0a011a
-			public const int middleTextView = 2131362074;
-			
-			// aapt resource value: 0x7f0a006d
-			public const int mini = 2131361901;
+			public const int main_scrollview = 2131362074;
 			
 			// aapt resource value: 0x7f0a0119
-			public const int minimumTextView = 2131362073;
+			public const int main_tablayout = 2131362073;
 			
-			// aapt resource value: 0x7f0a00ee
-			public const int mr_art = 2131362030;
+			// aapt resource value: 0x7f0a0118
+			public const int main_toolbar = 2131362072;
 			
-			// aapt resource value: 0x7f0a00df
-			public const int mr_cast_checkbox = 2131362015;
+			// aapt resource value: 0x7f0a012a
+			public const int masked = 2131362090;
 			
-			// aapt resource value: 0x7f0a00d8
-			public const int mr_cast_close_button = 2131362008;
+			// aapt resource value: 0x7f0a011e
+			public const int maximumTextView = 2131362078;
 			
-			// aapt resource value: 0x7f0a00d3
-			public const int mr_cast_group_icon = 2131362003;
+			// aapt resource value: 0x7f0a010a
+			public const int media_actions = 2131362058;
 			
-			// aapt resource value: 0x7f0a00d4
-			public const int mr_cast_group_name = 2131362004;
+			// aapt resource value: 0x7f0a00ba
+			public const int message = 2131361978;
 			
-			// aapt resource value: 0x7f0a00d2
-			public const int mr_cast_list = 2131362002;
+			// aapt resource value: 0x7f0a004d
+			public const int middle = 2131361869;
 			
-			// aapt resource value: 0x7f0a00d7
-			public const int mr_cast_meta = 2131362007;
+			// aapt resource value: 0x7f0a011d
+			public const int middleTextView = 2131362077;
 			
-			// aapt resource value: 0x7f0a00d9
-			public const int mr_cast_meta_art = 2131362009;
+			// aapt resource value: 0x7f0a006e
+			public const int mini = 2131361902;
 			
-			// aapt resource value: 0x7f0a00db
-			public const int mr_cast_meta_subtitle = 2131362011;
-			
-			// aapt resource value: 0x7f0a00da
-			public const int mr_cast_meta_title = 2131362010;
-			
-			// aapt resource value: 0x7f0a00dd
-			public const int mr_cast_route_icon = 2131362013;
-			
-			// aapt resource value: 0x7f0a00de
-			public const int mr_cast_route_name = 2131362014;
-			
-			// aapt resource value: 0x7f0a00dc
-			public const int mr_cast_stop_button = 2131362012;
-			
-			// aapt resource value: 0x7f0a00e0
-			public const int mr_cast_volume_layout = 2131362016;
-			
-			// aapt resource value: 0x7f0a00e1
-			public const int mr_cast_volume_slider = 2131362017;
-			
-			// aapt resource value: 0x7f0a00e3
-			public const int mr_chooser_list = 2131362019;
-			
-			// aapt resource value: 0x7f0a00e6
-			public const int mr_chooser_route_desc = 2131362022;
-			
-			// aapt resource value: 0x7f0a00e4
-			public const int mr_chooser_route_icon = 2131362020;
-			
-			// aapt resource value: 0x7f0a00e5
-			public const int mr_chooser_route_name = 2131362021;
-			
-			// aapt resource value: 0x7f0a00e2
-			public const int mr_chooser_title = 2131362018;
-			
-			// aapt resource value: 0x7f0a00eb
-			public const int mr_close = 2131362027;
+			// aapt resource value: 0x7f0a011c
+			public const int minimumTextView = 2131362076;
 			
 			// aapt resource value: 0x7f0a00f1
-			public const int mr_control_divider = 2131362033;
+			public const int mr_art = 2131362033;
 			
-			// aapt resource value: 0x7f0a00fc
-			public const int mr_control_playback_ctrl = 2131362044;
+			// aapt resource value: 0x7f0a00e2
+			public const int mr_cast_checkbox = 2131362018;
 			
-			// aapt resource value: 0x7f0a00ff
-			public const int mr_control_subtitle = 2131362047;
-			
-			// aapt resource value: 0x7f0a00fe
-			public const int mr_control_title = 2131362046;
-			
-			// aapt resource value: 0x7f0a00fd
-			public const int mr_control_title_container = 2131362045;
-			
-			// aapt resource value: 0x7f0a00ec
-			public const int mr_custom_control = 2131362028;
-			
-			// aapt resource value: 0x7f0a00ed
-			public const int mr_default_control = 2131362029;
-			
-			// aapt resource value: 0x7f0a00e8
-			public const int mr_dialog_area = 2131362024;
-			
-			// aapt resource value: 0x7f0a00f7
-			public const int mr_dialog_header_name = 2131362039;
-			
-			// aapt resource value: 0x7f0a00e7
-			public const int mr_expandable_area = 2131362023;
-			
-			// aapt resource value: 0x7f0a0100
-			public const int mr_group_expand_collapse = 2131362048;
-			
-			// aapt resource value: 0x7f0a00d5
-			public const int mr_group_volume_route_name = 2131362005;
+			// aapt resource value: 0x7f0a00db
+			public const int mr_cast_close_button = 2131362011;
 			
 			// aapt resource value: 0x7f0a00d6
-			public const int mr_group_volume_slider = 2131362006;
+			public const int mr_cast_group_icon = 2131362006;
 			
-			// aapt resource value: 0x7f0a00ef
-			public const int mr_media_main_control = 2131362031;
+			// aapt resource value: 0x7f0a00d7
+			public const int mr_cast_group_name = 2131362007;
 			
-			// aapt resource value: 0x7f0a00ea
-			public const int mr_name = 2131362026;
+			// aapt resource value: 0x7f0a00d5
+			public const int mr_cast_list = 2131362005;
 			
-			// aapt resource value: 0x7f0a00f8
-			public const int mr_picker_close_button = 2131362040;
+			// aapt resource value: 0x7f0a00da
+			public const int mr_cast_meta = 2131362010;
 			
-			// aapt resource value: 0x7f0a00f9
-			public const int mr_picker_list = 2131362041;
+			// aapt resource value: 0x7f0a00dc
+			public const int mr_cast_meta_art = 2131362012;
 			
-			// aapt resource value: 0x7f0a00fa
-			public const int mr_picker_route_icon = 2131362042;
+			// aapt resource value: 0x7f0a00de
+			public const int mr_cast_meta_subtitle = 2131362014;
 			
-			// aapt resource value: 0x7f0a00fb
-			public const int mr_picker_route_name = 2131362043;
+			// aapt resource value: 0x7f0a00dd
+			public const int mr_cast_meta_title = 2131362013;
 			
-			// aapt resource value: 0x7f0a00f0
-			public const int mr_playback_control = 2131362032;
+			// aapt resource value: 0x7f0a00e0
+			public const int mr_cast_route_icon = 2131362016;
+			
+			// aapt resource value: 0x7f0a00e1
+			public const int mr_cast_route_name = 2131362017;
+			
+			// aapt resource value: 0x7f0a00df
+			public const int mr_cast_stop_button = 2131362015;
+			
+			// aapt resource value: 0x7f0a00e3
+			public const int mr_cast_volume_layout = 2131362019;
+			
+			// aapt resource value: 0x7f0a00e4
+			public const int mr_cast_volume_slider = 2131362020;
+			
+			// aapt resource value: 0x7f0a00e6
+			public const int mr_chooser_list = 2131362022;
 			
 			// aapt resource value: 0x7f0a00e9
-			public const int mr_title_bar = 2131362025;
+			public const int mr_chooser_route_desc = 2131362025;
+			
+			// aapt resource value: 0x7f0a00e7
+			public const int mr_chooser_route_icon = 2131362023;
+			
+			// aapt resource value: 0x7f0a00e8
+			public const int mr_chooser_route_name = 2131362024;
+			
+			// aapt resource value: 0x7f0a00e5
+			public const int mr_chooser_title = 2131362021;
+			
+			// aapt resource value: 0x7f0a00ee
+			public const int mr_close = 2131362030;
+			
+			// aapt resource value: 0x7f0a00f4
+			public const int mr_control_divider = 2131362036;
+			
+			// aapt resource value: 0x7f0a00ff
+			public const int mr_control_playback_ctrl = 2131362047;
+			
+			// aapt resource value: 0x7f0a0102
+			public const int mr_control_subtitle = 2131362050;
+			
+			// aapt resource value: 0x7f0a0101
+			public const int mr_control_title = 2131362049;
+			
+			// aapt resource value: 0x7f0a0100
+			public const int mr_control_title_container = 2131362048;
+			
+			// aapt resource value: 0x7f0a00ef
+			public const int mr_custom_control = 2131362031;
+			
+			// aapt resource value: 0x7f0a00f0
+			public const int mr_default_control = 2131362032;
+			
+			// aapt resource value: 0x7f0a00eb
+			public const int mr_dialog_area = 2131362027;
+			
+			// aapt resource value: 0x7f0a00fa
+			public const int mr_dialog_header_name = 2131362042;
+			
+			// aapt resource value: 0x7f0a00ea
+			public const int mr_expandable_area = 2131362026;
+			
+			// aapt resource value: 0x7f0a0103
+			public const int mr_group_expand_collapse = 2131362051;
+			
+			// aapt resource value: 0x7f0a00d8
+			public const int mr_group_volume_route_name = 2131362008;
+			
+			// aapt resource value: 0x7f0a00d9
+			public const int mr_group_volume_slider = 2131362009;
 			
 			// aapt resource value: 0x7f0a00f2
-			public const int mr_volume_control = 2131362034;
+			public const int mr_media_main_control = 2131362034;
+			
+			// aapt resource value: 0x7f0a00ed
+			public const int mr_name = 2131362029;
+			
+			// aapt resource value: 0x7f0a00fb
+			public const int mr_picker_close_button = 2131362043;
+			
+			// aapt resource value: 0x7f0a00fc
+			public const int mr_picker_list = 2131362044;
+			
+			// aapt resource value: 0x7f0a00fd
+			public const int mr_picker_route_icon = 2131362045;
+			
+			// aapt resource value: 0x7f0a00fe
+			public const int mr_picker_route_name = 2131362046;
 			
 			// aapt resource value: 0x7f0a00f3
-			public const int mr_volume_group_list = 2131362035;
+			public const int mr_playback_control = 2131362035;
+			
+			// aapt resource value: 0x7f0a00ec
+			public const int mr_title_bar = 2131362028;
 			
 			// aapt resource value: 0x7f0a00f5
-			public const int mr_volume_item_icon = 2131362037;
+			public const int mr_volume_control = 2131362037;
 			
 			// aapt resource value: 0x7f0a00f6
-			public const int mr_volume_slider = 2131362038;
+			public const int mr_volume_group_list = 2131362038;
+			
+			// aapt resource value: 0x7f0a00f8
+			public const int mr_volume_item_icon = 2131362040;
+			
+			// aapt resource value: 0x7f0a00f9
+			public const int mr_volume_slider = 2131362041;
 			
 			// aapt resource value: 0x7f0a0014
 			public const int mtrl_child_content_container = 2131361812;
@@ -9232,53 +9360,53 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0015
 			public const int mtrl_internal_children_alpha_tag = 2131361813;
 			
-			// aapt resource value: 0x7f0a0043
-			public const int multiply = 2131361859;
+			// aapt resource value: 0x7f0a0044
+			public const int multiply = 2131361860;
 			
-			// aapt resource value: 0x7f0a00d1
-			public const int name = 2131362001;
+			// aapt resource value: 0x7f0a00d4
+			public const int name = 2131362004;
 			
-			// aapt resource value: 0x7f0a00c6
-			public const int navigation_header_container = 2131361990;
+			// aapt resource value: 0x7f0a00c9
+			public const int navigation_header_container = 2131361993;
 			
-			// aapt resource value: 0x7f0a0056
-			public const int never = 2131361878;
+			// aapt resource value: 0x7f0a0057
+			public const int never = 2131361879;
 			
-			// aapt resource value: 0x7f0a003d
-			public const int none = 2131361853;
+			// aapt resource value: 0x7f0a003e
+			public const int none = 2131361854;
 			
-			// aapt resource value: 0x7f0a0039
-			public const int normal = 2131361849;
+			// aapt resource value: 0x7f0a003a
+			public const int normal = 2131361850;
 			
-			// aapt resource value: 0x7f0a0110
-			public const int notification_background = 2131362064;
+			// aapt resource value: 0x7f0a0113
+			public const int notification_background = 2131362067;
 			
-			// aapt resource value: 0x7f0a010a
-			public const int notification_main_column = 2131362058;
+			// aapt resource value: 0x7f0a010d
+			public const int notification_main_column = 2131362061;
 			
-			// aapt resource value: 0x7f0a0109
-			public const int notification_main_column_container = 2131362057;
+			// aapt resource value: 0x7f0a010c
+			public const int notification_main_column_container = 2131362060;
 			
-			// aapt resource value: 0x7f0a007d
-			public const int one = 2131361917;
+			// aapt resource value: 0x7f0a007e
+			public const int one = 2131361918;
 			
-			// aapt resource value: 0x7f0a0074
-			public const int outline = 2131361908;
+			// aapt resource value: 0x7f0a0075
+			public const int outline = 2131361909;
 			
-			// aapt resource value: 0x7f0a006b
-			public const int parallax = 2131361899;
+			// aapt resource value: 0x7f0a006c
+			public const int parallax = 2131361900;
 			
-			// aapt resource value: 0x7f0a008f
-			public const int parentPanel = 2131361935;
+			// aapt resource value: 0x7f0a0092
+			public const int parentPanel = 2131361938;
 			
 			// aapt resource value: 0x7f0a000b
 			public const int parent_matrix = 2131361803;
 			
-			// aapt resource value: 0x7f0a006c
-			public const int pin = 2131361900;
+			// aapt resource value: 0x7f0a006d
+			public const int pin = 2131361901;
 			
-			// aapt resource value: 0x7f0a00d0
-			public const int pointMarker = 2131362000;
+			// aapt resource value: 0x7f0a00d3
+			public const int pointMarker = 2131362003;
 			
 			// aapt resource value: 0x7f0a0006
 			public const int progress_circular = 2131361798;
@@ -9286,23 +9414,23 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0007
 			public const int progress_horizontal = 2131361799;
 			
-			// aapt resource value: 0x7f0a00a2
-			public const int radio = 2131361954;
+			// aapt resource value: 0x7f0a00a5
+			public const int radio = 2131361957;
 			
-			// aapt resource value: 0x7f0a011e
-			public const int renderableSeriesArea = 2131362078;
+			// aapt resource value: 0x7f0a0121
+			public const int renderableSeriesArea = 2131362081;
 			
-			// aapt resource value: 0x7f0a0069
-			public const int right = 2131361897;
+			// aapt resource value: 0x7f0a006a
+			public const int right = 2131361898;
 			
-			// aapt resource value: 0x7f0a010f
-			public const int right_icon = 2131362063;
+			// aapt resource value: 0x7f0a0112
+			public const int right_icon = 2131362066;
 			
-			// aapt resource value: 0x7f0a010b
-			public const int right_side = 2131362059;
+			// aapt resource value: 0x7f0a010e
+			public const int right_side = 2131362062;
 			
-			// aapt resource value: 0x7f0a00b8
-			public const int rotateLayout = 2131361976;
+			// aapt resource value: 0x7f0a00bb
+			public const int rotateLayout = 2131361979;
 			
 			// aapt resource value: 0x7f0a000c
 			public const int save_image_matrix = 2131361804;
@@ -9313,86 +9441,86 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a000e
 			public const int save_scale_type = 2131361806;
 			
-			// aapt resource value: 0x7f0a0044
-			public const int screen = 2131361860;
+			// aapt resource value: 0x7f0a0045
+			public const int screen = 2131361861;
 			
-			// aapt resource value: 0x7f0a005d
-			public const int scroll = 2131361885;
+			// aapt resource value: 0x7f0a005e
+			public const int scroll = 2131361886;
+			
+			// aapt resource value: 0x7f0a0098
+			public const int scrollIndicatorDown = 2131361944;
+			
+			// aapt resource value: 0x7f0a0094
+			public const int scrollIndicatorUp = 2131361940;
 			
 			// aapt resource value: 0x7f0a0095
-			public const int scrollIndicatorDown = 2131361941;
+			public const int scrollView = 2131361941;
 			
-			// aapt resource value: 0x7f0a0091
-			public const int scrollIndicatorUp = 2131361937;
-			
-			// aapt resource value: 0x7f0a0092
-			public const int scrollView = 2131361938;
-			
-			// aapt resource value: 0x7f0a0071
-			public const int scrollable = 2131361905;
-			
-			// aapt resource value: 0x7f0a00ac
-			public const int search_badge = 2131361964;
-			
-			// aapt resource value: 0x7f0a00ab
-			public const int search_bar = 2131361963;
-			
-			// aapt resource value: 0x7f0a00ad
-			public const int search_button = 2131361965;
-			
-			// aapt resource value: 0x7f0a00b2
-			public const int search_close_btn = 2131361970;
-			
-			// aapt resource value: 0x7f0a00ae
-			public const int search_edit_frame = 2131361966;
-			
-			// aapt resource value: 0x7f0a00b4
-			public const int search_go_btn = 2131361972;
+			// aapt resource value: 0x7f0a0072
+			public const int scrollable = 2131361906;
 			
 			// aapt resource value: 0x7f0a00af
-			public const int search_mag_icon = 2131361967;
+			public const int search_badge = 2131361967;
+			
+			// aapt resource value: 0x7f0a00ae
+			public const int search_bar = 2131361966;
 			
 			// aapt resource value: 0x7f0a00b0
-			public const int search_plate = 2131361968;
-			
-			// aapt resource value: 0x7f0a00b1
-			public const int search_src_text = 2131361969;
+			public const int search_button = 2131361968;
 			
 			// aapt resource value: 0x7f0a00b5
-			public const int search_voice_btn = 2131361973;
+			public const int search_close_btn = 2131361973;
 			
-			// aapt resource value: 0x7f0a00b6
-			public const int select_dialog_listview = 2131361974;
+			// aapt resource value: 0x7f0a00b1
+			public const int search_edit_frame = 2131361969;
 			
-			// aapt resource value: 0x7f0a0063
-			public const int selected = 2131361891;
+			// aapt resource value: 0x7f0a00b7
+			public const int search_go_btn = 2131361975;
 			
-			// aapt resource value: 0x7f0a0121
-			public const int shellcontent_appbar = 2131362081;
+			// aapt resource value: 0x7f0a00b2
+			public const int search_mag_icon = 2131361970;
 			
-			// aapt resource value: 0x7f0a0123
-			public const int shellcontent_scrollview = 2131362083;
+			// aapt resource value: 0x7f0a00b3
+			public const int search_plate = 2131361971;
 			
-			// aapt resource value: 0x7f0a0122
-			public const int shellcontent_toolbar = 2131362082;
+			// aapt resource value: 0x7f0a00b4
+			public const int search_src_text = 2131361972;
 			
-			// aapt resource value: 0x7f0a009e
-			public const int shortcut = 2131361950;
+			// aapt resource value: 0x7f0a00b8
+			public const int search_voice_btn = 2131361976;
 			
-			// aapt resource value: 0x7f0a003e
-			public const int showCustom = 2131361854;
+			// aapt resource value: 0x7f0a00b9
+			public const int select_dialog_listview = 2131361977;
 			
-			// aapt resource value: 0x7f0a003f
-			public const int showHome = 2131361855;
-			
-			// aapt resource value: 0x7f0a0040
-			public const int showTitle = 2131361856;
+			// aapt resource value: 0x7f0a0064
+			public const int selected = 2131361892;
 			
 			// aapt resource value: 0x7f0a0124
-			public const int sliding_tabs = 2131362084;
+			public const int shellcontent_appbar = 2131362084;
 			
-			// aapt resource value: 0x7f0a00c0
-			public const int smallLabel = 2131361984;
+			// aapt resource value: 0x7f0a0126
+			public const int shellcontent_scrollview = 2131362086;
+			
+			// aapt resource value: 0x7f0a0125
+			public const int shellcontent_toolbar = 2131362085;
+			
+			// aapt resource value: 0x7f0a00a1
+			public const int shortcut = 2131361953;
+			
+			// aapt resource value: 0x7f0a003f
+			public const int showCustom = 2131361855;
+			
+			// aapt resource value: 0x7f0a0040
+			public const int showHome = 2131361856;
+			
+			// aapt resource value: 0x7f0a0041
+			public const int showTitle = 2131361857;
+			
+			// aapt resource value: 0x7f0a0127
+			public const int sliding_tabs = 2131362087;
+			
+			// aapt resource value: 0x7f0a00c3
+			public const int smallLabel = 2131361987;
 			
 			// aapt resource value: 0x7f0a0016
 			public const int snackbar_action = 2131361814;
@@ -9400,47 +9528,50 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0017
 			public const int snackbar_text = 2131361815;
 			
-			// aapt resource value: 0x7f0a005e
-			public const int snap = 2131361886;
-			
 			// aapt resource value: 0x7f0a005f
-			public const int snapMargins = 2131361887;
+			public const int snap = 2131361887;
 			
-			// aapt resource value: 0x7f0a008e
-			public const int spacer = 2131361934;
+			// aapt resource value: 0x7f0a0060
+			public const int snapMargins = 2131361888;
+			
+			// aapt resource value: 0x7f0a0091
+			public const int spacer = 2131361937;
+			
+			// aapt resource value: 0x7f0a0083
+			public const int spherical_view = 2131361923;
 			
 			// aapt resource value: 0x7f0a0008
 			public const int split_action_bar = 2131361800;
 			
-			// aapt resource value: 0x7f0a0045
-			public const int src_atop = 2131361861;
-			
 			// aapt resource value: 0x7f0a0046
-			public const int src_in = 2131361862;
+			public const int src_atop = 2131361862;
 			
 			// aapt resource value: 0x7f0a0047
-			public const int src_over = 2131361863;
+			public const int src_in = 2131361863;
 			
-			// aapt resource value: 0x7f0a006a
-			public const int start = 2131361898;
+			// aapt resource value: 0x7f0a0048
+			public const int src_over = 2131361864;
 			
-			// aapt resource value: 0x7f0a0106
-			public const int status_bar_latest_event_content = 2131362054;
+			// aapt resource value: 0x7f0a006b
+			public const int start = 2131361899;
 			
-			// aapt resource value: 0x7f0a006f
-			public const int stretch = 2131361903;
+			// aapt resource value: 0x7f0a0109
+			public const int status_bar_latest_event_content = 2131362057;
 			
-			// aapt resource value: 0x7f0a009f
-			public const int submenuarrow = 2131361951;
+			// aapt resource value: 0x7f0a0070
+			public const int stretch = 2131361904;
 			
-			// aapt resource value: 0x7f0a00b3
-			public const int submit_area = 2131361971;
+			// aapt resource value: 0x7f0a00a2
+			public const int submenuarrow = 2131361954;
 			
-			// aapt resource value: 0x7f0a0082
-			public const int surface_view = 2131361922;
+			// aapt resource value: 0x7f0a00b6
+			public const int submit_area = 2131361974;
 			
-			// aapt resource value: 0x7f0a003a
-			public const int tabMode = 2131361850;
+			// aapt resource value: 0x7f0a0084
+			public const int surface_view = 2131361924;
+			
+			// aapt resource value: 0x7f0a003b
+			public const int tabMode = 2131361851;
 			
 			// aapt resource value: 0x7f0a001e
 			public const int tag_transition_group = 2131361822;
@@ -9457,17 +9588,17 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0022
 			public const int text2 = 2131361826;
 			
-			// aapt resource value: 0x7f0a0094
-			public const int textSpacerNoButtons = 2131361940;
+			// aapt resource value: 0x7f0a0097
+			public const int textSpacerNoButtons = 2131361943;
 			
-			// aapt resource value: 0x7f0a0093
-			public const int textSpacerNoTitle = 2131361939;
+			// aapt resource value: 0x7f0a0096
+			public const int textSpacerNoTitle = 2131361942;
 			
-			// aapt resource value: 0x7f0a006e
-			public const int textStart = 2131361902;
+			// aapt resource value: 0x7f0a006f
+			public const int textStart = 2131361903;
 			
-			// aapt resource value: 0x7f0a00cb
-			public const int text_input_password_toggle = 2131361995;
+			// aapt resource value: 0x7f0a00ce
+			public const int text_input_password_toggle = 2131361998;
 			
 			// aapt resource value: 0x7f0a0018
 			public const int textinput_counter = 2131361816;
@@ -9478,32 +9609,32 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a001a
 			public const int textinput_helper_text = 2131361818;
 			
-			// aapt resource value: 0x7f0a0083
-			public const int texture_view = 2131361923;
+			// aapt resource value: 0x7f0a0085
+			public const int texture_view = 2131361925;
 			
-			// aapt resource value: 0x7f0a010c
-			public const int time = 2131362060;
+			// aapt resource value: 0x7f0a010f
+			public const int time = 2131362063;
 			
 			// aapt resource value: 0x7f0a0023
 			public const int title = 2131361827;
 			
+			// aapt resource value: 0x7f0a009e
+			public const int titleDividerNoCustom = 2131361950;
+			
+			// aapt resource value: 0x7f0a009c
+			public const int title_template = 2131361948;
+			
+			// aapt resource value: 0x7f0a0128
+			public const int toolbar = 2131362088;
+			
+			// aapt resource value: 0x7f0a005a
+			public const int top = 2131361882;
+			
 			// aapt resource value: 0x7f0a009b
-			public const int titleDividerNoCustom = 2131361947;
+			public const int topPanel = 2131361947;
 			
-			// aapt resource value: 0x7f0a0099
-			public const int title_template = 2131361945;
-			
-			// aapt resource value: 0x7f0a0125
-			public const int toolbar = 2131362085;
-			
-			// aapt resource value: 0x7f0a0059
-			public const int top = 2131361881;
-			
-			// aapt resource value: 0x7f0a0098
-			public const int topPanel = 2131361944;
-			
-			// aapt resource value: 0x7f0a00c4
-			public const int touch_outside = 2131361988;
+			// aapt resource value: 0x7f0a00c7
+			public const int touch_outside = 2131361991;
 			
 			// aapt resource value: 0x7f0a000f
 			public const int transition_current_scene = 2131361807;
@@ -9520,35 +9651,38 @@ namespace Nickprovs.Albatross.Droid
 			// aapt resource value: 0x7f0a0013
 			public const int transition_transform = 2131361811;
 			
-			// aapt resource value: 0x7f0a0048
-			public const int uniform = 2131361864;
+			// aapt resource value: 0x7f0a0049
+			public const int uniform = 2131361865;
 			
-			// aapt resource value: 0x7f0a0064
-			public const int unlabeled = 2131361892;
+			// aapt resource value: 0x7f0a0065
+			public const int unlabeled = 2131361893;
 			
 			// aapt resource value: 0x7f0a0009
 			public const int up = 2131361801;
 			
-			// aapt resource value: 0x7f0a0041
-			public const int useLogo = 2131361857;
+			// aapt resource value: 0x7f0a0042
+			public const int useLogo = 2131361858;
 			
 			// aapt resource value: 0x7f0a001b
 			public const int view_offset_helper = 2131361819;
 			
-			// aapt resource value: 0x7f0a0126
-			public const int visible = 2131362086;
+			// aapt resource value: 0x7f0a0129
+			public const int visible = 2131362089;
 			
-			// aapt resource value: 0x7f0a00f4
-			public const int volume_item_container = 2131362036;
+			// aapt resource value: 0x7f0a00f7
+			public const int volume_item_container = 2131362039;
 			
-			// aapt resource value: 0x7f0a0057
-			public const int withText = 2131361879;
+			// aapt resource value: 0x7f0a0086
+			public const int when_playing = 2131361926;
 			
-			// aapt resource value: 0x7f0a0049
-			public const int wrap_content = 2131361865;
+			// aapt resource value: 0x7f0a0058
+			public const int withText = 2131361880;
 			
-			// aapt resource value: 0x7f0a0081
-			public const int zoom = 2131361921;
+			// aapt resource value: 0x7f0a004a
+			public const int wrap_content = 2131361866;
+			
+			// aapt resource value: 0x7f0a0082
+			public const int zoom = 2131361922;
 			
 			static Id()
 			{
@@ -10132,112 +10266,109 @@ namespace Nickprovs.Albatross.Droid
 			public const int character_counter_pattern = 2131427395;
 			
 			// aapt resource value: 0x7f0b004e
-			public const int download_notification_channel_name = 2131427406;
+			public const int exo_controls_fastforward_description = 2131427406;
 			
 			// aapt resource value: 0x7f0b004f
-			public const int exo_controls_fastforward_description = 2131427407;
+			public const int exo_controls_fullscreen_description = 2131427407;
 			
 			// aapt resource value: 0x7f0b0050
-			public const int exo_controls_fullscreen_description = 2131427408;
+			public const int exo_controls_next_description = 2131427408;
 			
 			// aapt resource value: 0x7f0b0051
-			public const int exo_controls_next_description = 2131427409;
+			public const int exo_controls_pause_description = 2131427409;
 			
 			// aapt resource value: 0x7f0b0052
-			public const int exo_controls_pause_description = 2131427410;
+			public const int exo_controls_play_description = 2131427410;
 			
 			// aapt resource value: 0x7f0b0053
-			public const int exo_controls_play_description = 2131427411;
+			public const int exo_controls_previous_description = 2131427411;
 			
 			// aapt resource value: 0x7f0b0054
-			public const int exo_controls_previous_description = 2131427412;
+			public const int exo_controls_repeat_all_description = 2131427412;
 			
 			// aapt resource value: 0x7f0b0055
-			public const int exo_controls_repeat_all_description = 2131427413;
+			public const int exo_controls_repeat_off_description = 2131427413;
 			
 			// aapt resource value: 0x7f0b0056
-			public const int exo_controls_repeat_off_description = 2131427414;
+			public const int exo_controls_repeat_one_description = 2131427414;
 			
 			// aapt resource value: 0x7f0b0057
-			public const int exo_controls_repeat_one_description = 2131427415;
+			public const int exo_controls_rewind_description = 2131427415;
 			
 			// aapt resource value: 0x7f0b0058
-			public const int exo_controls_rewind_description = 2131427416;
+			public const int exo_controls_shuffle_description = 2131427416;
 			
 			// aapt resource value: 0x7f0b0059
-			public const int exo_controls_shuffle_description = 2131427417;
+			public const int exo_controls_stop_description = 2131427417;
 			
 			// aapt resource value: 0x7f0b005a
-			public const int exo_controls_stop_description = 2131427418;
+			public const int exo_download_completed = 2131427418;
 			
 			// aapt resource value: 0x7f0b005b
-			public const int exo_download_completed = 2131427419;
+			public const int exo_download_description = 2131427419;
 			
 			// aapt resource value: 0x7f0b005c
-			public const int exo_download_description = 2131427420;
+			public const int exo_download_downloading = 2131427420;
 			
 			// aapt resource value: 0x7f0b005d
-			public const int exo_download_downloading = 2131427421;
+			public const int exo_download_failed = 2131427421;
 			
 			// aapt resource value: 0x7f0b005e
-			public const int exo_download_failed = 2131427422;
+			public const int exo_download_notification_channel_name = 2131427422;
 			
 			// aapt resource value: 0x7f0b005f
-			public const int exo_download_notification_channel_name = 2131427423;
+			public const int exo_download_removing = 2131427423;
 			
 			// aapt resource value: 0x7f0b0060
-			public const int exo_download_removing = 2131427424;
-			
-			// aapt resource value: 0x7f0b0061
-			public const int exo_item_list = 2131427425;
-			
-			// aapt resource value: 0x7f0b006f
-			public const int exo_media_action_repeat_all_description = 2131427439;
-			
-			// aapt resource value: 0x7f0b0070
-			public const int exo_media_action_repeat_off_description = 2131427440;
-			
-			// aapt resource value: 0x7f0b0071
-			public const int exo_media_action_repeat_one_description = 2131427441;
-			
-			// aapt resource value: 0x7f0b0062
-			public const int exo_track_bitrate = 2131427426;
-			
-			// aapt resource value: 0x7f0b0063
-			public const int exo_track_mono = 2131427427;
-			
-			// aapt resource value: 0x7f0b0064
-			public const int exo_track_resolution = 2131427428;
-			
-			// aapt resource value: 0x7f0b0065
-			public const int exo_track_selection_auto = 2131427429;
-			
-			// aapt resource value: 0x7f0b0066
-			public const int exo_track_selection_none = 2131427430;
-			
-			// aapt resource value: 0x7f0b0067
-			public const int exo_track_selection_title_audio = 2131427431;
-			
-			// aapt resource value: 0x7f0b0068
-			public const int exo_track_selection_title_text = 2131427432;
-			
-			// aapt resource value: 0x7f0b0069
-			public const int exo_track_selection_title_video = 2131427433;
-			
-			// aapt resource value: 0x7f0b006a
-			public const int exo_track_stereo = 2131427434;
-			
-			// aapt resource value: 0x7f0b006b
-			public const int exo_track_surround = 2131427435;
-			
-			// aapt resource value: 0x7f0b006c
-			public const int exo_track_surround_5_point_1 = 2131427436;
-			
-			// aapt resource value: 0x7f0b006d
-			public const int exo_track_surround_7_point_1 = 2131427437;
+			public const int exo_item_list = 2131427424;
 			
 			// aapt resource value: 0x7f0b006e
-			public const int exo_track_unknown = 2131427438;
+			public const int exo_media_action_repeat_all_description = 2131427438;
+			
+			// aapt resource value: 0x7f0b006f
+			public const int exo_media_action_repeat_off_description = 2131427439;
+			
+			// aapt resource value: 0x7f0b0070
+			public const int exo_media_action_repeat_one_description = 2131427440;
+			
+			// aapt resource value: 0x7f0b0061
+			public const int exo_track_bitrate = 2131427425;
+			
+			// aapt resource value: 0x7f0b0062
+			public const int exo_track_mono = 2131427426;
+			
+			// aapt resource value: 0x7f0b0063
+			public const int exo_track_resolution = 2131427427;
+			
+			// aapt resource value: 0x7f0b0064
+			public const int exo_track_selection_auto = 2131427428;
+			
+			// aapt resource value: 0x7f0b0065
+			public const int exo_track_selection_none = 2131427429;
+			
+			// aapt resource value: 0x7f0b0066
+			public const int exo_track_selection_title_audio = 2131427430;
+			
+			// aapt resource value: 0x7f0b0067
+			public const int exo_track_selection_title_text = 2131427431;
+			
+			// aapt resource value: 0x7f0b0068
+			public const int exo_track_selection_title_video = 2131427432;
+			
+			// aapt resource value: 0x7f0b0069
+			public const int exo_track_stereo = 2131427433;
+			
+			// aapt resource value: 0x7f0b006a
+			public const int exo_track_surround = 2131427434;
+			
+			// aapt resource value: 0x7f0b006b
+			public const int exo_track_surround_5_point_1 = 2131427435;
+			
+			// aapt resource value: 0x7f0b006c
+			public const int exo_track_surround_7_point_1 = 2131427436;
+			
+			// aapt resource value: 0x7f0b006d
+			public const int exo_track_unknown = 2131427437;
 			
 			// aapt resource value: 0x7f0b0044
 			public const int fab_transformation_scrim_behavior = 2131427396;
