@@ -59,6 +59,9 @@ namespace Nickprovs.Albatross.Droid
             //Init Cross Media Manager (For GW Sound Files)
             CrossMediaManager.Current.Init();
 
+            //Init Oxyplot
+            OxyPlot.Xamarin.Forms.Platform.Android.PlotViewRenderer.Init();
+
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }

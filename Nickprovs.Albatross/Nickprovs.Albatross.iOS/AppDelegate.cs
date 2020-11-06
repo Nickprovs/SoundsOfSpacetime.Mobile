@@ -40,6 +40,10 @@ namespace Nickprovs.Albatross.iOS
             //Init Cross Media Manager (For GW Sound Files)
             CrossMediaManager.Current.Init();
 
+            //Init Oxyplot
+            OxyPlot.Xamarin.Forms.Platform.iOS.PlotViewRenderer.Init();
+
+
             return base.FinishedLaunching(app, options);
         }
     }
