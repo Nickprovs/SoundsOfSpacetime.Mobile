@@ -24,6 +24,7 @@ using SciChart.Charting.Visuals.Axes;
 using SciChart.Charting.Visuals.PointMarkers;
 using SciChart.Charting.Visuals.RenderableSeries;
 using SciChart.Drawing.Common;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Debug = System.Diagnostics.Debug;
@@ -59,6 +60,8 @@ namespace Nickprovs.Albatross.Droid.Services
         /// AnimationLock
         /// </summary>
         private readonly object _plotAnimationLock;
+
+        private LineSeries _series;
 
         #endregion
 
@@ -145,14 +148,26 @@ namespace Nickprovs.Albatross.Droid.Services
             ////Returns the native plot as a Forms View
             //return this._plottingSurface.ToView();
 
+            this._series = new LineSeries
+            {
+                StrokeThickness = 1,
+                LineStyle = LineStyle.Solid,
+                MarkerStroke = OxyColors.ForestGreen,
+                MarkerType = MarkerType.None,
+            };
+
+
             this._plottingModel = new PlotModel { Title = "Hello, Forms!" };
             this._plottingSurface = new PlotView
             {
                 Model = this._plottingModel,
                 VerticalOptions = LayoutOptions.Fill,
                 HorizontalOptions = LayoutOptions.Fill,
-                BackgroundColor = Color.Red
+                BackgroundColor = Color.Red,
             };
+
+            this._plottingModel.Series.Add(this._series);
+            this._plottingSurface.Model = this._plottingModel;
             return this._plottingSurface;
     }
 
@@ -176,35 +191,19 @@ namespace Nickprovs.Albatross.Droid.Services
         /// <param name="desiredTimeInMillis"></param>
         public void PlotAnimated(IEnumerable<IPoint> dataSeries, double desiredTimeInMillis)
         {
-            //this.StopIfAnimating();
-            //this.Clear();
+            this.StopIfAnimating();
+            this.Clear();
 
-            //var dataSeriesEnumerated = dataSeries.ToList();
-            //int dataBatchSize = (int) (dataSeries.Count() / (desiredTimeInMillis / this._animationDelayTime));
+            var dataSeriesEnumerated = dataSeries.ToList();
+            int dataBatchSize = (int)(dataSeries.Count() / (desiredTimeInMillis / this._animationDelayTime));
 
-            ////Create a cache for the animated plot as we'll be plotting a few points and then waiting for some time to give the animated effect.
-            //PlotAnimationCache plotAnimationCache = new PlotAnimationCache(dataSeriesEnumerated, dataBatchSize);
-            //this._plotAnimationTimer.Cache = plotAnimationCache;
-            //this._plotAnimationTimer.Start();
+            //Create a cache for the animated plot as we'll be plotting a few points and then waiting for some time to give the animated effect.
+            PlotAnimationCache plotAnimationCache = new PlotAnimationCache(dataSeriesEnumerated, dataBatchSize);
+            this._plotAnimationTimer.Cache = plotAnimationCache;
+            this._plotAnimationTimer.Start();
 
-            //this._plottingSurface.ZoomExtents();
 
-            var s1 = new LineSeries
-            {
-                StrokeThickness = 1,
-                LineStyle = LineStyle.Solid,
-                MarkerStroke = OxyColors.ForestGreen,
-                MarkerType = MarkerType.None,
-            };
 
-            foreach (var pt in dataSeries)
-            {
-                s1.Points.Add(new DataPoint(pt.X, -pt.Y));
-            }
-
-            this._plottingModel = new PlotModel { Title = "Hello, Forms!" };
-            this._plottingModel.Series.Add(s1);
-            this._plottingSurface.Model = this._plottingModel;
         }
 
         /// <summary>
@@ -212,7 +211,11 @@ namespace Nickprovs.Albatross.Droid.Services
         /// </summary>
         public void Clear()
         {
-            //this._series.Clear();
+            MainThread.BeginInvokeOnMainThread(() =>
+            {
+                this._series.Points.Clear();
+                this._plottingModel.InvalidatePlot(true);
+            });
         }
 
         /// <summary>
@@ -252,24 +255,29 @@ namespace Nickprovs.Albatross.Droid.Services
         /// </summary>
         private void DrawNextBatchOfPoints()
         {
-            //lock(this._plotAnimationLock)
-            //{
-            //    //If the data necessary for drawing the next batch of points isn't valid... return
-            //    if (this._plotAnimationTimer.Cache == null || this._plotAnimationTimer.Cache?.DataSeries == null || this._plotAnimationTimer.Cache?.BatchSize <= 0)
-            //        return;
+            lock(this._plotAnimationLock)
+            {
+                //If the data necessary for drawing the next batch of points isn't valid... return
+                if (this._plotAnimationTimer.Cache == null || this._plotAnimationTimer.Cache?.DataSeries == null || this._plotAnimationTimer.Cache?.BatchSize <= 0)
+                    return;
 
-            //    //Get and append the next batch of points
-            //    var nextBatchOfPoints = this._plotAnimationTimer.Cache.DataSeries.GetRange(this._plotAnimationTimer.Cache.Offset, this._plotAnimationTimer.Cache.BatchSize).ToList();
-            //    this._series.Append(nextBatchOfPoints.Select(point => point.X), nextBatchOfPoints.Select(point => point.Y));
-            //    this._plottingSurface.ZoomExtents();
-            //    this._plotAnimationTimer.Cache.Offset = this._plotAnimationTimer.Cache.Offset + this._plotAnimationTimer.Cache.BatchSize;
+                //Get and append the next batch of points
+                var nextBatchOfPoints = this._plotAnimationTimer.Cache.DataSeries.GetRange(this._plotAnimationTimer.Cache.Offset, this._plotAnimationTimer.Cache.BatchSize).ToList();
 
-            //    if (this._plotAnimationTimer.Cache.Offset >= this._plotAnimationTimer.Cache.DataSeries.Count)
-            //    {
-            //        this._plotAnimationTimer.Stop();
-            //        return;
-            //    }
-            //}
+                MainThread.BeginInvokeOnMainThread(() =>
+                {
+                    this._series.Points.AddRange(nextBatchOfPoints.Select(point => new DataPoint(point.X, point.Y)));
+                    this._plottingModel.InvalidatePlot(true);
+                });
+                
+                this._plotAnimationTimer.Cache.Offset = this._plotAnimationTimer.Cache.Offset + this._plotAnimationTimer.Cache.BatchSize;
+
+                if (this._plotAnimationTimer.Cache.Offset >= this._plotAnimationTimer.Cache.DataSeries.Count)
+                {
+                    this._plotAnimationTimer.Stop();
+                    return;
+                }
+            }
 
         }
 
@@ -278,7 +286,10 @@ namespace Nickprovs.Albatross.Droid.Services
         /// </summary>
         private void StopIfAnimating()
         {
-            this._plotAnimationTimer.Stop();
+            lock (this._plotAnimationLock)
+            {
+                this._plotAnimationTimer.Stop();
+            }
         }
 
         #endregion
