@@ -148,6 +148,7 @@ namespace Nickprovs.Albatross.Droid.Services
             ////Returns the native plot as a Forms View
             //return this._plottingSurface.ToView();
 
+
             this._series = new LineSeries
             {
                 StrokeThickness = 1,
@@ -191,6 +192,9 @@ namespace Nickprovs.Albatross.Droid.Services
         /// <param name="desiredTimeInMillis"></param>
         public void PlotAnimated(IEnumerable<IPoint> dataSeries, double desiredTimeInMillis)
         {
+            var test = Xamarin.Forms.Application.Current.Resources;
+
+
             this.StopIfAnimating();
             this.Clear();
 
