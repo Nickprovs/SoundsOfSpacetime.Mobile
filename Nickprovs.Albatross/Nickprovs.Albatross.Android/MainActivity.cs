@@ -10,10 +10,11 @@ using Prism;
 using Prism.Ioc;
 using Nickprovs.Albatross.Interfaces;
 using Nickprovs.Albatross.Droid.Services;
-using MediaManager;
 using Android.Support.V4.Content;
 using Android;
 using Android.Support.V4.App;
+using MediaManager;
+using Xamarin.Essentials;
 
 namespace Nickprovs.Albatross.Droid
 {
@@ -28,32 +29,25 @@ namespace Nickprovs.Albatross.Droid
             containerRegistry.RegisterSingleton<IFileSystemPathService, FileSystemPathService_Android>();
         }
 
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override async void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState); // add this line to your code, it may also be called: bundle
 
-            //Init SciChart Licensing
-            SciChart.Charting.Visuals.SciChartSurface.SetRuntimeLicenseKey(@"<LicenseContract>
-             <Customer>Montclair State University</Customer>
-             <OrderId>EDUCATIONAL - USE - 0046</OrderId>
-             <LicenseCount>1</LicenseCount>
-             <IsTrialLicense>false</IsTrialLicense>
-             <SupportExpires>12/13/2018 00:00:00</SupportExpires>
-             <ProductCode>SC-IOS-ANDROID-2D-PRO</ProductCode>
-             <KeyCode>d7b9c5debf3e0bd0e76443892ed0cb87f73f99654fd71d4a104106e4dd822130dfc0abdc365c644a2de4152a063ff540532b426126d9f32e7fed6c46ece72801b9e68c2539da3769954c83d927f8e333093fc321e6754bfdb7e48fbf8f2c1290264568b9787d96caa569f7e5c9975272f0fd5d5b76bb0219ae0b98146f94225a0c5aca1214aa19fab4be4736f368856c951bc5241969f29ecd3efd8d4dfb19d7dc832d54ede76a2c105c213c1288db42321425ea777c4c7228ac80d2</KeyCode>
-             </LicenseContract>");
+            var readPermisson = await Permissions.CheckStatusAsync<Permissions.StorageRead>();
+            var writePermission = await Permissions.CheckStatusAsync<Permissions.StorageWrite>();
 
-            if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.WriteExternalStorage) != (int)Permission.Granted)
+
+            if (readPermisson != PermissionStatus.Granted)
             {
-                ActivityCompat.RequestPermissions(this, new string[] { Manifest.Permission.WriteExternalStorage }, 0);
+                await Permissions.RequestAsync<Permissions.StorageRead>();
             }
-
-            if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.ReadExternalStorage) != (int)Permission.Granted)
+            if (writePermission != PermissionStatus.Granted)
             {
-                ActivityCompat.RequestPermissions(this, new string[] { Manifest.Permission.ReadExternalStorage }, 0);
+                await Permissions.RequestAsync<Permissions.StorageWrite>();
             }
 
             //Init Cross Media Manager (For GW Sound Files)

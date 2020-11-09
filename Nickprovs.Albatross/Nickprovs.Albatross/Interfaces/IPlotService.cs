@@ -10,6 +10,7 @@ namespace Nickprovs.Albatross.Interfaces
     {
         View Render();
 
+
         void Plot(IEnumerable<IPoint> dataSeries);
 
         void PlotAnimated(IEnumerable<IPoint> dataSeries, double desiredTimeInMillis);
@@ -19,5 +20,7 @@ namespace Nickprovs.Albatross.Interfaces
         void SetXAxisTitle(string xAxistTitle);
 
         void SetYAxisTitle(string yAxisTitle);
+
+        void SetTitle(string title);
     }
 }

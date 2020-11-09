@@ -1,33 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Timers;
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Nickprovs.Albatross.Droid.Services;
-using Nickprovs.Albatross.Droid.Utilities;
 using Nickprovs.Albatross.Interfaces;
 using Nickprovs.Albatross.Types;
 using OxyPlot;
 using OxyPlot.Series;
 using OxyPlot.Xamarin.Forms;
-using SciChart.Charting.Model;
-using SciChart.Charting.Model.DataSeries;
-using SciChart.Charting.Modifiers;
-using SciChart.Charting.Visuals;
-using SciChart.Charting.Visuals.Axes;
-using SciChart.Charting.Visuals.PointMarkers;
-using SciChart.Charting.Visuals.RenderableSeries;
-using SciChart.Drawing.Common;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Platform.Android;
-using Debug = System.Diagnostics.Debug;
 
 [assembly: Dependency(typeof(PlotService_Android))]
 namespace Nickprovs.Albatross.Droid.Services
@@ -62,6 +43,11 @@ namespace Nickprovs.Albatross.Droid.Services
         private readonly object _plotAnimationLock;
 
         private LineSeries _series;
+
+        private OxyPlot.Axes.LinearAxis _xAxis;
+
+        private OxyPlot.Axes.LinearAxis _yAxis;
+
 
         #endregion
 
@@ -149,22 +135,47 @@ namespace Nickprovs.Albatross.Droid.Services
             //return this._plottingSurface.ToView();
 
 
+            Application.Current.Resources.TryGetValue("B2", out var b2ColorObj);
+            var b2ColorHex = ((Xamarin.Forms.Color)b2ColorObj).ToHex();
+            var oxyB2Color = OxyColor.Parse(b2ColorHex);
+
+            Application.Current.Resources.TryGetValue("F7", out var f7ColorObj);
+            var f7ColorHex = ((Xamarin.Forms.Color)f7ColorObj).ToHex();
+            var oxyF7Color = OxyColor.Parse(f7ColorHex);
+
+            Application.Current.Resources.TryGetValue("F1", out var f1ColorObj);
+            var f1ColorHex = ((Xamarin.Forms.Color)f1ColorObj).ToHex();
+            var oxyF1Color = OxyColor.Parse(f1ColorHex);
+
             this._series = new LineSeries
             {
                 StrokeThickness = 1,
                 LineStyle = LineStyle.Solid,
-                MarkerStroke = OxyColors.ForestGreen,
+                Color = oxyF7Color,
                 MarkerType = MarkerType.None,
+                Background = oxyB2Color,
             };
 
 
-            this._plottingModel = new PlotModel { Title = "Hello, Forms!" };
+            this._plottingModel = new PlotModel 
+            { 
+                Title = "Hello, Forms!",
+                LegendTextColor = oxyF1Color, 
+                LegendTitleColor = oxyF1Color, 
+                TextColor = oxyF1Color, 
+                TitleColor = oxyF1Color
+            };
+            this._xAxis = new OxyPlot.Axes.LinearAxis { Position = OxyPlot.Axes.AxisPosition.Bottom, Title = "t (sec)" };
+            this._yAxis = new OxyPlot.Axes.LinearAxis { Position = OxyPlot.Axes.AxisPosition.Left, Title = "h(t)" };
+            this._plottingModel.Axes.Add(this._xAxis);
+            this._plottingModel.Axes.Add(this._yAxis);
+
             this._plottingSurface = new PlotView
             {
                 Model = this._plottingModel,
                 VerticalOptions = LayoutOptions.Fill,
                 HorizontalOptions = LayoutOptions.Fill,
-                BackgroundColor = Color.Red,
+                BackgroundColor = Color.FromHex(b2ColorHex),
             };
 
             this._plottingModel.Series.Add(this._series);
@@ -192,11 +203,12 @@ namespace Nickprovs.Albatross.Droid.Services
         /// <param name="desiredTimeInMillis"></param>
         public void PlotAnimated(IEnumerable<IPoint> dataSeries, double desiredTimeInMillis)
         {
-            var test = Xamarin.Forms.Application.Current.Resources;
+           
 
 
             this.StopIfAnimating();
             this.Clear();
+            this._plottingModel.ResetAllAxes();
 
             var dataSeriesEnumerated = dataSeries.ToList();
             int dataBatchSize = (int)(dataSeries.Count() / (desiredTimeInMillis / this._animationDelayTime));
@@ -228,7 +240,7 @@ namespace Nickprovs.Albatross.Droid.Services
         /// <param name="xAxistTitle"></param>
         public void SetXAxisTitle(string xAxistTitle)
         {
-            //this._xAxis.AxisTitle = xAxistTitle;
+            this._xAxis.Title = xAxistTitle;
         }
 
         /// <summary>
@@ -237,7 +249,16 @@ namespace Nickprovs.Albatross.Droid.Services
         /// <param name="yAxisTitle"></param>
         public void SetYAxisTitle(string yAxisTitle)
         {
-            //this._yAxis.AxisTitle = yAxisTitle;
+            this._yAxis.Title = yAxisTitle;
+        }
+
+        /// <summary>
+        /// Sets the title of the graph
+        /// </summary>
+        /// <param name="title"></param>
+        public void SetTitle(string title)
+        {
+            this._plottingModel.Title = title;
         }
 
         #endregion

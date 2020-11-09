@@ -1,4 +1,5 @@
-﻿using Nickprovs.Albatross.Interfaces;
+﻿using MediaManager;
+using Nickprovs.Albatross.Interfaces;
 using Nickprovs.Albatross.Utilities;
 using Nickprovs.Albatross.Views;
 using Prism;
@@ -13,13 +14,18 @@ namespace Nickprovs.Albatross
 {
     public partial class App : PrismApplication
     {
-        public App(IPlatformInitializer initializer = null) : base(initializer) { }
+        public App(IPlatformInitializer initializer = null) : base(initializer)
+        {
+            CrossMediaManager.Current.Init();
+
+        }
 
         /// <summary>
         /// Handle when your app starts
         /// </summary>
         protected override void OnStart()
         {
+
         }
 
         /// <summary>

@@ -50,7 +50,7 @@
                        LineBreakMode="WordWrap"/>
 
                     <Label 
-                       Text="Graph Display: SciChart"
+                       Text="Graph Display: OxyPlot"
                        HorizontalTextAlignment="Center"
                        Margin="15,15,15,0"
                        LineBreakMode="WordWrap"/>

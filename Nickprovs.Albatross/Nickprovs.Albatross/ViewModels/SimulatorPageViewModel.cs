@@ -159,6 +159,9 @@ namespace Nickprovs.Albatross.ViewModels
             await CrossMediaManager.Current.Play(filePath);
 
             //Plot the wave
+            this._plotService.SetXAxisTitle("t (sec)");
+            this._plotService.SetYAxisTitle("h(t)");
+            this._plotService.SetTitle("Wave");
             this._plotService.PlotAnimated(data.Wave, data.Wave.Select(point => point.X).LastOrDefault() * 1000);
 
             //Cache this last simulator input          
@@ -185,6 +188,9 @@ namespace Nickprovs.Albatross.ViewModels
             await CrossMediaManager.Current.Play(filePath);
 
             //Plot the orbit... Take the last x in the wave series with respect to the total orbit points (done in case we don't display full orbit for performance reasons)
+            this._plotService.SetXAxisTitle("x");
+            this._plotService.SetYAxisTitle("y");
+            this._plotService.SetTitle("Orbit");
             this._plotService.PlotAnimated(data.Orbit, data.Wave.Select(point => point.X).Take(data.Orbit.Count()).LastOrDefault() * 1000);
 
             //Cache this last simulator input          
