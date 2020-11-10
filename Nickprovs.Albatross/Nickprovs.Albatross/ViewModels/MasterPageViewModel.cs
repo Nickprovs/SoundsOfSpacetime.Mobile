@@ -128,9 +128,8 @@ namespace Nickprovs.Albatross.ViewModels
         {
             this._directorAnimationTimer.Stop();
 
-            var animationValues = Enum.GetValues(typeof(DirectorAnimationType));
-            var animation = (DirectorAnimationType) animationValues.GetValue(new Random().Next(animationValues.Length));
-            await this.PerformAnimationFromEnum(animation);
+
+            await this.PerformAnimationFromEnum(this.GetRandomAnimation());
 
             Random random = new Random();
             int maxMilli = 7000;
@@ -139,6 +138,13 @@ namespace Nickprovs.Albatross.ViewModels
 
             this._directorAnimationTimer.Start();
 
+        }
+
+        private DirectorAnimationType GetRandomAnimation()
+        {
+            var animationValues = Enum.GetValues(typeof(DirectorAnimationType));
+            var animation = (DirectorAnimationType)animationValues.GetValue(new Random().Next(animationValues.Length));
+            return animation;
         }
 
         private async Task PerformAnimationFromEnum(DirectorAnimationType animationType)
@@ -174,14 +180,7 @@ namespace Nickprovs.Albatross.ViewModels
 
         private async void OnIconTapped()
         {
-            //await this.BlinkSlow();
-            //await this.Half();
-            //await this.BlinkTwiceFast();
-            //await this.Happy();
-            //await this.Squint();
-            //await this.Wink();
-            //await this.Ugh();
-            //await this.Anger();
+            await this.PerformAnimationFromEnum(this.GetRandomAnimation());
         }
 
         #region Animations

@@ -2,6 +2,7 @@
 using Prism.Commands;
 using Prism.Navigation;
 using System;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Nickprovs.Albatross.ViewModels
@@ -31,9 +32,9 @@ namespace Nickprovs.Albatross.ViewModels
 
         #region Private Methods
 
-        private void OnLearnMore()
+        private async void OnLearnMore()
         {
-            Device.OpenUri(new Uri("https://www.soundsofspacetime.org/"));
+            await Launcher.OpenAsync(new Uri("https://www.soundsofspacetime.org/"));
         }
 
         #endregion

@@ -153,10 +153,7 @@ namespace Nickprovs.Albatross.ViewModels
             //if (CrossMediaManager.Current.IsPlaying())
             //    await CrossMediaManager.Current.Stop();
 
-            var folderPath = this._fileSystemPathService.GetDownloadsPath();
-            var filePath = Path.Combine(folderPath, "tone.wav");
-            soundFile.SaveToFile(filePath);
-            await CrossMediaManager.Current.Play(filePath);
+            await this.PlaySoundFile(soundFile);
 
             //Plot the wave
             this._plotService.SetXAxisTitle("t (sec)");
@@ -180,12 +177,7 @@ namespace Nickprovs.Albatross.ViewModels
             var data = await Task.Run(()=> this._gravitationalWaveCalculator.GenerateGravitationalWaveData(CurrentSimulatorInput));
 
             var soundFile = new Wav(data.Wave.Select(point => point.Y).ToArray(), data.Wave.Select(point => point.X).LastOrDefault());
-
-
-            var folderPath = this._fileSystemPathService.GetDownloadsPath();
-            var filePath = Path.Combine(folderPath, "tone.wav");
-            soundFile.SaveToFile(filePath);
-            await CrossMediaManager.Current.Play(filePath);
+            await this.PlaySoundFile(soundFile);
 
             //Plot the orbit... Take the last x in the wave series with respect to the total orbit points (done in case we don't display full orbit for performance reasons)
             this._plotService.SetXAxisTitle("x");
@@ -200,9 +192,12 @@ namespace Nickprovs.Albatross.ViewModels
             this.CurrentSimulatorInput = this.CurrentSimulatorInput.DeepCopy();
         }
 
-        private async Task PlaySoundFile()
+        private async Task PlaySoundFile(Wav wav)
         {
-
+            var folderPath = this._fileSystemPathService.GetDownloadsPath();
+            var filePath = Path.Combine(folderPath, "tone.wav");
+            wav.SaveToFile(filePath);
+            await CrossMediaManager.Current.Play(filePath);
         }
 
         /// <summary>
@@ -235,5 +230,4 @@ namespace Nickprovs.Albatross.ViewModels
 
         #endregion
     }
-
 }

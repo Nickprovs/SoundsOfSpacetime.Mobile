@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Nickprovs.Albatross.ViewModels
@@ -40,7 +41,7 @@ namespace Nickprovs.Albatross.ViewModels
             this.SendDeveloperEmail();
         }
 
-        private void SendDeveloperEmail()
+        private async void SendDeveloperEmail()
         {
             string shareurl = String.Empty;
             String messageBody = "Replace this text with a comment or issue you wish to bring to the developer's attention.";
@@ -57,7 +58,8 @@ namespace Nickprovs.Albatross.ViewModels
                 //for Android it is not necessary to code nor is it necessary to assign a destination email
                 shareurl = "mailto:soundsofspacetime@gmail.com?subject=" + messageTitle + "&body=" + messageBody;
             }
-            Device.OpenUri(new Uri(shareurl));
+
+            await Launcher.OpenAsync(new Uri(shareurl));
         }
 
         #endregion

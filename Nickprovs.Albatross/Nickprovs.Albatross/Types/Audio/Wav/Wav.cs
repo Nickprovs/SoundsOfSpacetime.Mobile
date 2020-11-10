@@ -51,7 +51,7 @@ namespace Nickprovs.Albatross.Types.Audio.Wav
             }
             catch(OverflowException e)
             {
-                Debug.WriteLine($"Error converting int to uint in Wav Class");
+                Debug.WriteLine($"Error converting int to uint in Wav Class: {e}");
             }
 
             //Popuplate are parts with some necessary info

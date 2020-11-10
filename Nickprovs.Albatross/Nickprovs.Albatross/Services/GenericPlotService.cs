@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Timers;
-using Nickprovs.Albatross.Droid.Services;
 using Nickprovs.Albatross.Interfaces;
+using Nickprovs.Albatross.Services;
 using Nickprovs.Albatross.Types;
 using OxyPlot;
 using OxyPlot.Series;
@@ -10,10 +10,10 @@ using OxyPlot.Xamarin.Forms;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(PlotService_Android))]
-namespace Nickprovs.Albatross.Droid.Services
+[assembly: Dependency(typeof(GenericPlotService))]
+namespace Nickprovs.Albatross.Services
 {
-    public class PlotService_Android : IPlotService
+    public class GenericPlotService : IPlotService
     {
         #region Fields
 
@@ -56,7 +56,7 @@ namespace Nickprovs.Albatross.Droid.Services
         /// <summary>
         /// Sets the necessary lifetime data
         /// </summary>
-        public PlotService_Android()
+        public GenericPlotService()
         {
             //We're going to append some number of points and then wait the delay time to give the animation effect
             this._animationDelayTime = 50;
@@ -157,16 +157,15 @@ namespace Nickprovs.Albatross.Droid.Services
             };
 
 
-            this._plottingModel = new PlotModel 
-            { 
-                Title = "Hello, Forms!",
-                LegendTextColor = oxyF1Color, 
-                LegendTitleColor = oxyF1Color, 
-                TextColor = oxyF1Color, 
+            this._plottingModel = new PlotModel
+            {
+                LegendTextColor = oxyF1Color,
+                LegendTitleColor = oxyF1Color,
+                TextColor = oxyF1Color,
                 TitleColor = oxyF1Color
             };
-            this._xAxis = new OxyPlot.Axes.LinearAxis { Position = OxyPlot.Axes.AxisPosition.Bottom, Title = "t (sec)" };
-            this._yAxis = new OxyPlot.Axes.LinearAxis { Position = OxyPlot.Axes.AxisPosition.Left, Title = "h(t)" };
+            this._xAxis = new OxyPlot.Axes.LinearAxis { Position = OxyPlot.Axes.AxisPosition.Bottom };
+            this._yAxis = new OxyPlot.Axes.LinearAxis { Position = OxyPlot.Axes.AxisPosition.Left };
             this._plottingModel.Axes.Add(this._xAxis);
             this._plottingModel.Axes.Add(this._yAxis);
 
@@ -181,7 +180,7 @@ namespace Nickprovs.Albatross.Droid.Services
             this._plottingModel.Series.Add(this._series);
             this._plottingSurface.Model = this._plottingModel;
             return this._plottingSurface;
-    }
+        }
 
         /// <summary>
         /// Plots all data points at once
@@ -203,7 +202,7 @@ namespace Nickprovs.Albatross.Droid.Services
         /// <param name="desiredTimeInMillis"></param>
         public void PlotAnimated(IEnumerable<IPoint> dataSeries, double desiredTimeInMillis)
         {
-           
+
 
 
             this.StopIfAnimating();
@@ -280,7 +279,7 @@ namespace Nickprovs.Albatross.Droid.Services
         /// </summary>
         private void DrawNextBatchOfPoints()
         {
-            lock(this._plotAnimationLock)
+            lock (this._plotAnimationLock)
             {
                 //If the data necessary for drawing the next batch of points isn't valid... return
                 if (this._plotAnimationTimer.Cache == null || this._plotAnimationTimer.Cache?.DataSeries == null || this._plotAnimationTimer.Cache?.BatchSize <= 0)
@@ -294,7 +293,7 @@ namespace Nickprovs.Albatross.Droid.Services
                     this._series.Points.AddRange(nextBatchOfPoints.Select(point => new DataPoint(point.X, point.Y)));
                     this._plottingModel.InvalidatePlot(true);
                 });
-                
+
                 this._plotAnimationTimer.Cache.Offset = this._plotAnimationTimer.Cache.Offset + this._plotAnimationTimer.Cache.BatchSize;
 
                 if (this._plotAnimationTimer.Cache.Offset >= this._plotAnimationTimer.Cache.DataSeries.Count)

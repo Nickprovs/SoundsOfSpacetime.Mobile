@@ -1,20 +1,14 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
 using Android.Views;
-using Android.Widget;
 using Android.OS;
 using Prism;
 using Prism.Ioc;
 using Nickprovs.Albatross.Interfaces;
 using Nickprovs.Albatross.Droid.Services;
-using Android.Support.V4.Content;
-using Android;
-using Android.Support.V4.App;
 using MediaManager;
 using Xamarin.Essentials;
+using Nickprovs.Albatross.Services;
 
 namespace Nickprovs.Albatross.Droid
 {
@@ -25,7 +19,7 @@ namespace Nickprovs.Albatross.Droid
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingleton<IPlotService, PlotService_Android>();
+            containerRegistry.RegisterSingleton<IPlotService, GenericPlotService>();
             containerRegistry.RegisterSingleton<IFileSystemPathService, FileSystemPathService_Android>();
         }
 
