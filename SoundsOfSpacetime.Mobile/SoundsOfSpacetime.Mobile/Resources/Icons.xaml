@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!--Units of Measurement-->
+    <x:String x:Key="solar_mass">SoundsOfSpacetime.Mobile.Resources.Icons.solar_mass.svg</x:String>
+    
+    <!--Mathematical Symbols-->
+    <x:String x:Key="pi">SoundsOfSpacetime.Mobile.Resources.Icons.pi.svg</x:String>
+    <x:String x:Key="lowercase_theta">SoundsOfSpacetime.Mobile.Resources.Icons.lowercase_theta.svg</x:String>
+    <x:String x:Key="uppercase_theta">SoundsOfSpacetime.Mobile.Resources.Icons.uppercase_theta.svg</x:String>
+    <x:String x:Key="lowercase_phi">SoundsOfSpacetime.Mobile.Resources.Icons.lowercase_phi.svg</x:String>
+    <x:String x:Key="uppercase_phi">SoundsOfSpacetime.Mobile.Resources.Icons.uppercase_phi.svg</x:String>
+    <x:String x:Key="psi">SoundsOfSpacetime.Mobile.Resources.Icons.psi.svg</x:String>
+
+    <!--Main Icon-->
+    <x:String x:Key="director_main">SoundsOfSpacetime.Mobile.Resources.Icons.director_main.svg</x:String>
+
+    <!--Common UI Symbols-->
+    <x:String x:Key="chevron_left">SoundsOfSpacetime.Mobile.Resources.Icons.chevron_left.svg</x:String>
+    <x:String x:Key="chevron_up">SoundsOfSpacetime.Mobile.Resources.Icons.chevron_up.svg</x:String>
+    <x:String x:Key="chevron_right">SoundsOfSpacetime.Mobile.Resources.Icons.chevron_right.svg</x:String>
+    <x:String x:Key="chevron_down">SoundsOfSpacetime.Mobile.Resources.Icons.chevron_down.svg</x:String>
+
+    <!--Animation Start-->
+
+    <!--Winking-->
+    <x:String x:Key="director_winking1">SoundsOfSpacetime.Mobile.Resources.Icons.director_winking1.svg</x:String>
+    <x:String x:Key="director_winking2">SoundsOfSpacetime.Mobile.Resources.Icons.director_winking2.svg</x:String>
+    <x:String x:Key="director_winking3">SoundsOfSpacetime.Mobile.Resources.Icons.director_winking3.svg</x:String>
+    <x:String x:Key="director_winking4">SoundsOfSpacetime.Mobile.Resources.Icons.director_winking4.svg</x:String>
+    <x:String x:Key="director_winking5">SoundsOfSpacetime.Mobile.Resources.Icons.director_winking5.svg</x:String>
+    <x:String x:Key="director_winking6">SoundsOfSpacetime.Mobile.Resources.Icons.director_winking6.svg</x:String>
+    <x:String x:Key="director_winking7">SoundsOfSpacetime.Mobile.Resources.Icons.director_winking7.svg</x:String>
+    <x:String x:Key="director_winked">SoundsOfSpacetime.Mobile.Resources.Icons.director_winked.svg</x:String>
+
+    <!--Blinking-->
+    <x:String x:Key="director_blinking1">SoundsOfSpacetime.Mobile.Resources.Icons.director_blinking1.svg</x:String>
+    <x:String x:Key="director_blinking2">SoundsOfSpacetime.Mobile.Resources.Icons.director_blinking2.svg</x:String>
+    <x:String x:Key="director_blinking3">SoundsOfSpacetime.Mobile.Resources.Icons.director_blinking3.svg</x:String>
+    <x:String x:Key="director_blinking4">SoundsOfSpacetime.Mobile.Resources.Icons.director_blinking4.svg</x:String>
+    <x:String x:Key="director_blinking5">SoundsOfSpacetime.Mobile.Resources.Icons.director_blinking5.svg</x:String>
+    <x:String x:Key="director_blinking6">SoundsOfSpacetime.Mobile.Resources.Icons.director_blinking6.svg</x:String>
+    <x:String x:Key="director_blinking7">SoundsOfSpacetime.Mobile.Resources.Icons.director_blinking7.svg</x:String>
+    <x:String x:Key="director_blinked">SoundsOfSpacetime.Mobile.Resources.Icons.director_blinked.svg</x:String>
+
+    <!--Blinking-->
+    <x:String x:Key="director_ughing1">SoundsOfSpacetime.Mobile.Resources.Icons.director_ughing1.svg</x:String>
+    <x:String x:Key="director_ughing2">SoundsOfSpacetime.Mobile.Resources.Icons.director_ughing2.svg</x:String>
+    <x:String x:Key="director_ughing3">SoundsOfSpacetime.Mobile.Resources.Icons.director_ughing3.svg</x:String>
+    <x:String x:Key="director_ughed">SoundsOfSpacetime.Mobile.Resources.Icons.director_ughed.svg</x:String>
+
+    <!--Squinting-->
+    <x:String x:Key="director_squinting1">SoundsOfSpacetime.Mobile.Resources.Icons.director_squinting1.svg</x:String>
+    <x:String x:Key="director_squinting2">SoundsOfSpacetime.Mobile.Resources.Icons.director_squinting2.svg</x:String>
+    <x:String x:Key="director_squinting3">SoundsOfSpacetime.Mobile.Resources.Icons.director_squinting3.svg</x:String>
+    <x:String x:Key="director_squinted">SoundsOfSpacetime.Mobile.Resources.Icons.director_squinted.svg</x:String>
+
+    <!--Angering-->
+    <x:String x:Key="director_angering1">SoundsOfSpacetime.Mobile.Resources.Icons.director_angering1.svg</x:String>
+    <x:String x:Key="director_angering2">SoundsOfSpacetime.Mobile.Resources.Icons.director_angering2.svg</x:String>
+    <x:String x:Key="director_angering3">SoundsOfSpacetime.Mobile.Resources.Icons.director_angering3.svg</x:String>
+    <x:String x:Key="director_angered">SoundsOfSpacetime.Mobile.Resources.Icons.director_angered.svg</x:String>
+
+    <!--Halfing-->
+    <x:String x:Key="director_halfing1">SoundsOfSpacetime.Mobile.Resources.Icons.director_halfing1.svg</x:String>
+    <x:String x:Key="director_halfing2">SoundsOfSpacetime.Mobile.Resources.Icons.director_halfing2.svg</x:String>
+    <x:String x:Key="director_halfing3">SoundsOfSpacetime.Mobile.Resources.Icons.director_halfing3.svg</x:String>
+    <x:String x:Key="director_halfed">SoundsOfSpacetime.Mobile.Resources.Icons.director_halfed.svg</x:String>
+
+    <!--Happying-->
+    <x:String x:Key="director_happying1">SoundsOfSpacetime.Mobile.Resources.Icons.director_happying1.svg</x:String>
+    <x:String x:Key="director_happying2">SoundsOfSpacetime.Mobile.Resources.Icons.director_happying2.svg</x:String>
+    <x:String x:Key="director_happying3">SoundsOfSpacetime.Mobile.Resources.Icons.director_happying3.svg</x:String>
+    <x:String x:Key="director_happying4">SoundsOfSpacetime.Mobile.Resources.Icons.director_happying4.svg</x:String>
+    <x:String x:Key="director_happy">SoundsOfSpacetime.Mobile.Resources.Icons.director_happy.svg</x:String>
+
+    <!--Animation End-->
+    
+</ResourceDictionary>
