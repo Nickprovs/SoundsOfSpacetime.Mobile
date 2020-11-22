@@ -19,8 +19,7 @@ namespace SoundsOfSpacetime.Mobile.Droid
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingleton<IPlotService, GenericPlotService>();
-            containerRegistry.RegisterSingleton<IFileSystemPathService, FileSystemPathService_Android>();
+
         }
 
         protected override async void OnCreate(Bundle savedInstanceState)

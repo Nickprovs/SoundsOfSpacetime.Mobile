@@ -10,7 +10,6 @@ namespace SoundsOfSpacetime.Mobile.Interfaces
     {
         View Render();
 
-
         void Plot(IEnumerable<IPoint> dataSeries);
 
         void PlotAnimated(IEnumerable<IPoint> dataSeries, double desiredTimeInMillis);

@@ -8,13 +8,14 @@ using Prism.Unity;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SoundsOfSpacetime.Mobile.Services;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace SoundsOfSpacetime.Mobile
 {
     public partial class App : PrismApplication
     {
-        public App(IPlatformInitializer initializer = null) : base(initializer)
+        public App(IPlatformInitializer initializer = null) : base(initializer, setFormsDependencyResolver: true)
         {
             CrossMediaManager.Current.Init();
 
@@ -56,6 +57,9 @@ namespace SoundsOfSpacetime.Mobile
             containerRegistry.RegisterSingleton<IDeviceContext, DeviceContext>();
             containerRegistry.RegisterSingleton<IBindableDeviceInfo, BindableDeviceInfo>();
             containerRegistry.RegisterSingleton<IBindableVersionInfo, BindableVersionInfo>();
+
+            containerRegistry.RegisterSingleton<IPlotService, GenericPlotService>();
+            containerRegistry.RegisterSingleton<IFileSystemPathService, GenericFileSystemPathService>();
         }
 
         protected override async void OnInitialized()

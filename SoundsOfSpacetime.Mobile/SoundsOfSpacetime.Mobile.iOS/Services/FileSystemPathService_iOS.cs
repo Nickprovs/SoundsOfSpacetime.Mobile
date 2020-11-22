@@ -1,12 +1,16 @@
-﻿using System.IO;
-using SoundsOfSpacetime.Mobile.Droid.Services;
-using SoundsOfSpacetime.Mobile.Interfaces;
-using Xamarin.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
 
-[assembly: Dependency(typeof(FileSystemPathService_Android))]
-namespace SoundsOfSpacetime.Mobile.Droid.Services
+using Foundation;
+using SoundsOfSpacetime.Mobile.Interfaces;
+using UIKit;
+
+namespace SoundsOfSpacetime.Mobile.iOS.Services
 {
-    public class FileSystemPathService_Android : IFileSystemPathService
+    public class FileSystemPathService_iOS : IFileSystemPathService
     {
         public string GetDownloadsPath()
         {
