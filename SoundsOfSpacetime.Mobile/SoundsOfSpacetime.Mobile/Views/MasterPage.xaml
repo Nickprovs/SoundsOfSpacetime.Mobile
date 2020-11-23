@@ -8,6 +8,7 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Name="masterPage"             
              x:Class="SoundsOfSpacetime.Mobile.Views.MasterPage" 
+             xmlns:utilities="clr-namespace:SoundsOfSpacetime.Mobile.Utilities"
              IsPresented="{Binding IsMenuVisible, Mode=TwoWay}"
              Title="{Binding Title}">
     <MasterDetailPage.Behaviors>
@@ -16,7 +17,10 @@
     </MasterDetailPage.Behaviors>
     <MasterDetailPage.Master>
         <!-- Hamburger Menu Secret Sauce... Add an Icon!!!! Make sure it's in your resources for your Platform Project -->
-        <NavigationPage  Title="Required Foo" Icon="hamburger.png">
+        <NavigationPage  
+            Title="Required Foo" 
+            IconImageSource="{utilities:ImageResource SoundsOfSpacetime.Mobile.Resources.Images.hamburger.png}" 
+            Icon="{utilities:ImageResource SoundsOfSpacetime.Mobile.Resources.Images.hamburger.png}">
             <x:Arguments>
                 <ContentPage Title="Menu" BackgroundColor="{DynamicResource B2}">
                     <Grid>
@@ -34,7 +38,7 @@
                         <ScrollView Grid.Row="1" Grid.Column="1">
                             <StackLayout>
                                 <Button 
-                                    Text="Simulator"                    
+                                    Text="Simulator"      
                                     Command="{Binding NavigateCommand}" 
                                     CommandParameter="Navigation/Simulator"
                                     BackgroundColor="{DynamicResource B5}"

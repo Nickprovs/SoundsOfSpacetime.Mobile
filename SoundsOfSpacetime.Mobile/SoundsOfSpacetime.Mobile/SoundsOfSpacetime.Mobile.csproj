@@ -64,6 +64,19 @@
     <None Remove="Resources\Icons\solar_mass.svg" />
     <None Remove="Resources\Icons\uppercase_phi.svg" />
     <None Remove="Resources\Icons\uppercase_theta.svg" />
+    <None Remove="Resources\Images\bluespiral.png" />
+    <None Remove="Resources\Images\bulletpoint.png" />
+    <None Remove="Resources\Images\dancingduo.png" />
+    <None Remove="Resources\Images\hamburger.png" />
+    <None Remove="Resources\Images\handforddetector.png" />
+    <None Remove="Resources\Images\headphonesin.png" />
+    <None Remove="Resources\Images\headphonesout.png" />
+    <None Remove="Resources\Images\icon.png" />
+    <None Remove="Resources\Images\livingstondetector.png" />
+    <None Remove="Resources\Images\load.png" />
+    <None Remove="Resources\Images\power.png" />
+    <None Remove="Resources\Images\real.png" />
+    <None Remove="Resources\Images\splash.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -125,6 +138,17 @@
     <EmbeddedResource Include="Resources\Icons\lowercase_phi.svg" />
     <EmbeddedResource Include="Resources\Icons\lowercase_theta.svg" />
     <EmbeddedResource Include="Resources\Icons\solar_mass.svg" />
+    <EmbeddedResource Include="Resources\Images\bluespiral.png" />
+    <EmbeddedResource Include="Resources\Images\bulletpoint.png" />
+    <EmbeddedResource Include="Resources\Images\dancingduo.png" />
+    <EmbeddedResource Include="Resources\Images\hamburger.png" />
+    <EmbeddedResource Include="Resources\Images\handforddetector.png" />
+    <EmbeddedResource Include="Resources\Images\headphonesin.png" />
+    <EmbeddedResource Include="Resources\Images\headphonesout.png" />
+    <EmbeddedResource Include="Resources\Images\icon.png" />
+    <EmbeddedResource Include="Resources\Images\livingstondetector.png" />
+    <EmbeddedResource Include="Resources\Images\real.png" />
+    <EmbeddedResource Include="Resources\Images\splash.png" />
   </ItemGroup>
 
   <ItemGroup>

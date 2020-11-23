@@ -13,18 +13,19 @@
                         <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="Icon-60.png" translatesAutoresizingMaskIntoConstraints="NO" id="23">
-                                <rect key="frame" x="270" y="270" width="60" height="60"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="268" translatesAutoresizingMaskIntoConstraints="NO" image="splash.png" misplaced="YES" layoutMarginsFollowReadableWidth="YES">
+                                <rect key="frame" x="157" y="324" width="100" height="89"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="23" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" priority="1" id="39"/>
-                            <constraint firstItem="23" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" priority="1" id="41"/>
+                            <constraint id="270" firstItem="268" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY"/>
+                            <constraint id="271" firstItem="268" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX"/>
+                            <constraint id="904" firstItem="268" firstAttribute="leading" secondItem="yd7-JS-zBw" secondAttribute="leadingMargin" constant="25" placeholder="YES"/>
+                            <constraint id="905" firstAttribute="trailingMargin" secondItem="268" secondAttribute="trailing" constant="25"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -34,6 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon-60.png" width="180" height="180"/>
+        <image name="splash.png" width="700" height="700"/>
     </resources>
 </document>
