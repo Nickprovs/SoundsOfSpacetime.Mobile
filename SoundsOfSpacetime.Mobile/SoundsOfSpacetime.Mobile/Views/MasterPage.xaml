@@ -19,6 +19,7 @@
         <!-- Hamburger Menu Secret Sauce... Add an Icon!!!! Make sure it's in your resources for your Platform Project -->
         <NavigationPage  
             Title="Required Foo" 
+            BarTextColor="White"
             IconImageSource="{utilities:ImageResource SoundsOfSpacetime.Mobile.Resources.Images.hamburger.png}" 
             Icon="{utilities:ImageResource SoundsOfSpacetime.Mobile.Resources.Images.hamburger.png}">
             <x:Arguments>

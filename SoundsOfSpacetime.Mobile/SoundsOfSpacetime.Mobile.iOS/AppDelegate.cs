@@ -9,6 +9,8 @@ using Prism.Ioc;
 using SoundsOfSpacetime.Mobile.Interfaces;
 using SoundsOfSpacetime.Mobile.iOS.Services;
 using SoundsOfSpacetime.Mobile.Services;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
 
 namespace SoundsOfSpacetime.Mobile.iOS
 {
@@ -34,6 +36,8 @@ namespace SoundsOfSpacetime.Mobile.iOS
 
             //Init Cross Media Manager (For GW Sound Files)
             CrossMediaManager.Current.Init();
+
+
 
             LoadApplication(new App());
             return base.FinishedLaunching(app, options);
