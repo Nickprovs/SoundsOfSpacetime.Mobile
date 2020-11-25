@@ -9,6 +9,9 @@ using SoundsOfSpacetime.Mobile.Droid.Services;
 using MediaManager;
 using Xamarin.Essentials;
 using SoundsOfSpacetime.Mobile.Services;
+using System.Threading.Tasks;
+using Xamarin.Forms;
+using System;
 
 namespace SoundsOfSpacetime.Mobile.Droid
 {
@@ -22,17 +25,32 @@ namespace SoundsOfSpacetime.Mobile.Droid
 
         }
 
-        protected override async void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
-            base.OnCreate(savedInstanceState);
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState); // add this line to your code, it may also be called: bundle
+            //Init Cross Media Manager (For GW Sound Files)            
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            OxyPlot.Xamarin.Forms.Platform.Android.PlotViewRenderer.Init();
+            CrossMediaManager.Current.Init();
 
+            //Basic Init
+            base.OnCreate(savedInstanceState);
+            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            LoadApplication(new App());
+
+            //Once we've loaded in... let's set our theme  back to the main theme.
+            base.SetTheme(Resource.Style.MainTheme);
+
+            //These permissions may not be necessary... And you should ask them at feature exec (and deny if not granted)... not here
+            Device.InvokeOnMainThreadAsync(this.RequestPermissions);
+        }
+
+        private async Task RequestPermissions()
+        {
             var readPermisson = await Permissions.CheckStatusAsync<Permissions.StorageRead>();
             var writePermission = await Permissions.CheckStatusAsync<Permissions.StorageWrite>();
-
 
             if (readPermisson != PermissionStatus.Granted)
             {
@@ -42,24 +60,6 @@ namespace SoundsOfSpacetime.Mobile.Droid
             {
                 await Permissions.RequestAsync<Permissions.StorageWrite>();
             }
-
-            //Init Cross Media Manager (For GW Sound Files)
-            CrossMediaManager.Current.Init();
-
-            //Init Oxyplot
-            OxyPlot.Xamarin.Forms.Platform.Android.PlotViewRenderer.Init();
-
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
-        }
-        
-        public override void OnCreate(Bundle savedInstanceState, PersistableBundle persistentState)
-        {
-            //Once we've loaded in... let's set our theme back to the main theme.
-            base.Window.RequestFeature(WindowFeatures.ActionBar);
-            base.SetTheme(Resource.Style.MainTheme);
-
-            base.OnCreate(savedInstanceState, persistentState);
         }
     }
 }
