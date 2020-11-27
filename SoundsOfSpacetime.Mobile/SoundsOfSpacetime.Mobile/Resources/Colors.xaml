@@ -12,12 +12,13 @@
     <Color x:Key="F5">#b11826</Color>
     <Color x:Key="F6">#1a8c2d</Color>
     <Color x:Key="F7">#ff1980</Color>
+    <Color x:Key="F8">#000000</Color>
     <!--#endregion-->
     
     <!--#region Background Colors-->
     <Color x:Key="B1">#050a11</Color>
     <Color x:Key="B2">#142130</Color>
-    <Color x:Key="B3">#282c31</Color>
+    <Color x:Key="B3">#FFFFFF</Color>
     <Color x:Key="B4">#0f1e33</Color>
     <Color x:Key="B5">#182d4a</Color>
     <Color x:Key="B6">#303e52</Color>
