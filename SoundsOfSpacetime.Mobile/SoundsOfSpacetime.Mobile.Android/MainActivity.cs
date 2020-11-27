@@ -16,7 +16,7 @@ using System;
 namespace SoundsOfSpacetime.Mobile.Droid
 {
     //We'll set the main style to the splash here, and once we've created... we'll set it back to the MainTheme
-    [Activity(Label = "SoundsOfSpacetime.Mobile", Icon = "@mipmap/icon", Theme = "@style/MainTheme.Splash", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "SoundsOfSpacetime.Mobile", Icon = "@mipmap/icon", Theme = "@style/MainTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IPlatformInitializer
     {
 
@@ -30,18 +30,15 @@ namespace SoundsOfSpacetime.Mobile.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
-            //Init Cross Media Manager (For GW Sound Files)            
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            //Init Third Party Modules
             OxyPlot.Xamarin.Forms.Platform.Android.PlotViewRenderer.Init();
             CrossMediaManager.Current.Init();
 
             //Basic Init
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
-
-            //Once we've loaded in... let's set our theme  back to the main theme.
-            base.SetTheme(Resource.Style.MainTheme);
 
             //These permissions may not be necessary... And you should ask them at feature exec (and deny if not granted)... not here
             Device.InvokeOnMainThreadAsync(this.RequestPermissions);
