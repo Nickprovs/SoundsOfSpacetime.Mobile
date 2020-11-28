@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.SoundsOfSpacetime.Mobile" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30" />
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.BLUETOOTH" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-	<application android:label="SoundsOfSpacetime.Mobile.Android" android:icon="@mipmap/icon"></application>
+	<application android:label="SoundsOfSpacetime.Mobile.Android" android:icon="@mipmap/icon">
+    <service android:name=".services.HeadsetMonitoringService" android:enabled="true" android:exported="false">
+      <intent-filter>
+        <action android:name="initialiseHeadsetService" />
+      </intent-filter>
+    </service>
+  </application>
+
 </manifest>

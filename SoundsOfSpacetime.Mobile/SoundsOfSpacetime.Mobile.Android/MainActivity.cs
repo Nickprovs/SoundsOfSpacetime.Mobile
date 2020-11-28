@@ -1,6 +1,5 @@
 ﻿using Android.App;
 using Android.Content.PM;
-using Android.Views;
 using Android.OS;
 using Prism;
 using Prism.Ioc;
@@ -8,10 +7,10 @@ using SoundsOfSpacetime.Mobile.Interfaces;
 using SoundsOfSpacetime.Mobile.Droid.Services;
 using MediaManager;
 using Xamarin.Essentials;
-using SoundsOfSpacetime.Mobile.Services;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using System;
+using SoundsOfSpacetime.Mobile.Droid.Services.AudioDeviceMonitoring;
+using Android.Content;
 
 namespace SoundsOfSpacetime.Mobile.Droid
 {
@@ -22,7 +21,7 @@ namespace SoundsOfSpacetime.Mobile.Droid
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.RegisterSingleton<IAudioDeviceMonitor, AudioDeviceMonitor_Android>();
         }
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -38,10 +37,16 @@ namespace SoundsOfSpacetime.Mobile.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+            LoadApplication(new App(this));
 
             //These permissions may not be necessary... And you should ask them at feature exec (and deny if not granted)... not here
             Device.InvokeOnMainThreadAsync(this.RequestPermissions);
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+            StartService(new Intent(this, typeof(HeadsetMonitoringService)));
         }
 
         private async Task RequestPermissions()

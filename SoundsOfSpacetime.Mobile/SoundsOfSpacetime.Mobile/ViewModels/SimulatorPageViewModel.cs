@@ -47,7 +47,15 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
         /// </summary>
         private IFileSystemPathService _fileSystemPathService;
 
+        /// <summary>
+        /// The gravitational wave calculator
+        /// </summary>
         private IGravitationalWaveCalculator _gravitationalWaveCalculator;
+
+        /// <summary>
+        /// The audio device monitor
+        /// </summary>
+        private IAudioDeviceMonitor _audioDeviceMonitor;
 
         #endregion
 
@@ -108,13 +116,14 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
 
         #region Constructors and Destructors
 
-        public SimulatorPageViewModel(INavigationService navigationService, IBindableDeviceInfo bindableDeviceInfo, IGravitationalWaveCalculator gravitationalWaveCalculator) : base(navigationService)
+        public SimulatorPageViewModel(INavigationService navigationService, IBindableDeviceInfo bindableDeviceInfo, IGravitationalWaveCalculator gravitationalWaveCalculator, IAudioDeviceMonitor audioDeviceMonitor) : base(navigationService)
         {
             //Dependency Injection
             this.BindableDeviceInfo = bindableDeviceInfo;
             this._gravitationalWaveCalculator = gravitationalWaveCalculator;
             this._plotService = DependencyService.Resolve<IPlotService>();
             this._fileSystemPathService = DependencyService.Resolve<IFileSystemPathService>();
+            this._audioDeviceMonitor = audioDeviceMonitor;
 
             //Set the title for the page.
             this.Title = "Simulator";
