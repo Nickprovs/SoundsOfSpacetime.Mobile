@@ -52,11 +52,6 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
         /// </summary>
         private IGravitationalWaveCalculator _gravitationalWaveCalculator;
 
-        /// <summary>
-        /// The audio device monitor
-        /// </summary>
-        private IAudioDeviceMonitor _audioDeviceMonitor;
-
         #endregion
 
         #region Properties
@@ -87,6 +82,11 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
             get { return this._previousSimulatorInput; }
             set { this.SetProperty(ref _previousSimulatorInput, value); }
         }
+
+        /// <summary>
+        /// The audio device monitor
+        /// </summary>
+        public IAudioDeviceMonitor AudioDeviceMonitor { get; }
 
         /// <summary>
         /// The path to the icon we want to be displayed on the view.
@@ -123,7 +123,7 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
             this._gravitationalWaveCalculator = gravitationalWaveCalculator;
             this._plotService = DependencyService.Resolve<IPlotService>();
             this._fileSystemPathService = DependencyService.Resolve<IFileSystemPathService>();
-            this._audioDeviceMonitor = audioDeviceMonitor;
+            this.AudioDeviceMonitor = audioDeviceMonitor;
 
             //Set the title for the page.
             this.Title = "Simulator";

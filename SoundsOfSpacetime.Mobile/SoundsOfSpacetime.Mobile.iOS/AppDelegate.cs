@@ -37,15 +37,13 @@ namespace SoundsOfSpacetime.Mobile.iOS
             //Init Cross Media Manager (For GW Sound Files)
             CrossMediaManager.Current.Init();
 
-
-
-            LoadApplication(new App());
+            LoadApplication(new App(this));
             return base.FinishedLaunching(app, options);
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.RegisterSingleton<IAudioDeviceMonitor, AudioDeviceMonitor_iOS>();
         }
     }
 }

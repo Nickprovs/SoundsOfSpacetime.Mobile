@@ -57,6 +57,8 @@
     <None Remove="Resources\Icons\director_winking5.svg" />
     <None Remove="Resources\Icons\director_winking6.svg" />
     <None Remove="Resources\Icons\director_winking7.svg" />
+    <None Remove="Resources\Icons\headphones_in.svg" />
+    <None Remove="Resources\Icons\headphones_out.svg" />
     <None Remove="Resources\Icons\lowercase_phi.svg" />
     <None Remove="Resources\Icons\lowercase_theta.svg" />
     <None Remove="Resources\Icons\pi.svg" />
@@ -83,6 +85,8 @@
     <EmbeddedResource Include="Resources\Icons\chevron_down.svg" />
     <EmbeddedResource Include="Resources\Icons\chevron_left.svg" />
     <EmbeddedResource Include="Resources\Icons\chevron_up.svg" />
+    <EmbeddedResource Include="Resources\Icons\headphones_in.svg" />
+    <EmbeddedResource Include="Resources\Icons\headphones_out.svg" />
     <EmbeddedResource Include="Resources\Icons\pi.svg" />
     <EmbeddedResource Include="Resources\Icons\psi.svg" />
     <EmbeddedResource Include="Resources\Icons\uppercase_phi.svg" />

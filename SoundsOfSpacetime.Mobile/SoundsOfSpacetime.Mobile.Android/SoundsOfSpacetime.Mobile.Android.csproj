@@ -115,7 +115,6 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AudioDeviceMonitoring\AudioDeviceMonitor_Android.cs" />
-    <Compile Include="Services\AudioDeviceMonitoring\HeadphoneStatusChangedEventArgs.cs" />
     <Compile Include="Services\AudioDeviceMonitoring\HeadsetMonitoringService.cs" />
     <Compile Include="Services\AudioDeviceMonitoring\HeadsetStateBroadcastReceiver.cs" />
     <Compile Include="Services\FileSystemPathService_Android.cs" />

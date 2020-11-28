@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using SoundsOfSpacetime.Mobile.Events.Args;
+using System;
+using System.ComponentModel;
 
 namespace SoundsOfSpacetime.Mobile.Interfaces
 {
-    public interface IAudioDeviceMonitor
+    public interface IAudioDeviceMonitor : INotifyPropertyChanged
     {
         bool HeadphonesInUse { get; }
 
-        event EventHandler HeadphonesInUseChanged;
+        event EventHandler<HeadphoneStatusChangedEventArgs> HeadphonesInUseChanged;
     }
 }

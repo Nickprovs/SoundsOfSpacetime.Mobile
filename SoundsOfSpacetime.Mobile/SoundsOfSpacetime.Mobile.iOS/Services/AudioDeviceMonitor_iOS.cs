@@ -1,17 +1,11 @@
-﻿using System;
-using System.ComponentModel;
-using Android.Content;
-using Android.Media;
-using AndroidX.Media;
-using SoundsOfSpacetime.Mobile.Events.Args;
+﻿using SoundsOfSpacetime.Mobile.Events.Args;
 using SoundsOfSpacetime.Mobile.Interfaces;
-using Xamarin.Forms;
+using System;
+using System.ComponentModel;
 
-namespace SoundsOfSpacetime.Mobile.Droid.Services.AudioDeviceMonitoring
+namespace SoundsOfSpacetime.Mobile.iOS.Services
 {
-    [BroadcastReceiver(Enabled = true, Exported = false)]
-
-    public class AudioDeviceMonitor_Android :  IAudioDeviceMonitor
+    public class AudioDeviceMonitor_iOS : IAudioDeviceMonitor
     {
         #region Fields
 
@@ -21,20 +15,20 @@ namespace SoundsOfSpacetime.Mobile.Droid.Services.AudioDeviceMonitoring
 
         #region Properties
 
-        public bool HeadphonesInUse 
-        { 
-            private set 
-            { 
-                if(this._headphonesInUse != value)
+        public bool HeadphonesInUse
+        {
+            private set
+            {
+                if (this._headphonesInUse != value)
                 {
                     this._headphonesInUse = value;
                     this.OnPropertyChanged(nameof(this.HeadphonesInUse));
                 }
             }
-            get 
-            { 
-                return this._headphonesInUse; 
-            } 
+            get
+            {
+                return this._headphonesInUse;
+            }
         }
 
 
@@ -50,9 +44,8 @@ namespace SoundsOfSpacetime.Mobile.Droid.Services.AudioDeviceMonitoring
 
         #region Constructors and Destructors
 
-        public AudioDeviceMonitor_Android()
+        public AudioDeviceMonitor_iOS()
         {
-            MessagingCenter.Subscribe<SoundsOfSpacetime.Mobile.App, Boolean>((SoundsOfSpacetime.Mobile.App) Application.Current, "Headset", OnHeadphoneConnectedStatusChanged);
         }
 
         #endregion

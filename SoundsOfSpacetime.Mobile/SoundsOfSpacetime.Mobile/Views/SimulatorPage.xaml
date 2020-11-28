@@ -6,6 +6,7 @@
              xmlns:converters="clr-namespace:SoundsOfSpacetime.Mobile.Converters"
              xmlns:expandable="clr-namespace:Expandable;assembly=ExpandableView"
              xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             xmlns:utilities="clr-namespace:SoundsOfSpacetime.Mobile.Utilities"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="SoundsOfSpacetime.Mobile.Views.SimulatorPage"             
              x:Name="simulatorPage"
@@ -53,18 +54,36 @@
                                 </Grid.ColumnDefinitions>
 
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="2*"/>
-                                    <RowDefinition Height="6*"/>
-                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition Height="25*"/>
+                                    <RowDefinition Height="55*"/>
+                                    <RowDefinition Height="20*"/>
                                 </Grid.RowDefinitions>
 
                                 <Button Command="{Binding SimulateWaveCommand}" Grid.Row="1" Grid.Column="0" Text="Wave" BackgroundColor="{DynamicResource B5}" BorderColor="{DynamicResource B6}" TextColor="{DynamicResource F1}"/>
                                 <Button Command="{Binding SimulateOrbitCommand}" Grid.Row="1" Grid.Column="1" Text="Orbit" BackgroundColor="{DynamicResource B5}" BorderColor="{DynamicResource B6}" TextColor="{DynamicResource F1}"/>
-                                
-                                <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="2">
+
+                                <Grid Grid.Row="1" Grid.Column="2">
+                                    <controls:Icon 
+                                        HorizontalOptions="Center" 
+                                        VerticalOptions="Center"
+                                        Stroke="{DynamicResource F1}">
+                                        <controls:Icon.Style>
+                                            <Style TargetType="{x:Type controls:Icon}">
+                                                <Setter Property="ResourceId" Value="{DynamicResource headphones_in}"/>
+                                                <Style.Triggers>
+                                                    <DataTrigger TargetType="{x:Type controls:Icon}" Binding="{Binding AudioDeviceMonitor.HeadphonesInUse}" Value="False">
+                                                        <Setter Property="ResourceId" Value="{DynamicResource headphones_out}"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </controls:Icon.Style>
+                                    </controls:Icon>
+                                </Grid>
+
+                                <!--<StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="2">
                                     <Label BindingContext="{x:Reference PeriastronPrecessionLabel}" HeightRequest="{Binding Height}" HorizontalOptions="Center" Text="Inspiral" TextColor="{DynamicResource F1}"/>
                                     <Switch IsToggled="{Binding CurrentSimulatorInput.Inspiral, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="Center" OnColor="{DynamicResource F7}"/>
-                                </StackLayout>
+                                </StackLayout>-->
 
                                 <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="3">
                                     <Label x:Name="PeriastronPrecessionLabel" HorizontalOptions="Center" Text="Peri. Prec." TextColor="{DynamicResource F1}"/>
