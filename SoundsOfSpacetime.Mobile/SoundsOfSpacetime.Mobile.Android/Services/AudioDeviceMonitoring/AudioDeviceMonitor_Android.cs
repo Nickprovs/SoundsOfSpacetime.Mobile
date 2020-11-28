@@ -43,15 +43,18 @@ namespace SoundsOfSpacetime.Mobile.Droid.Services.AudioDeviceMonitoring
 
         public AudioDeviceMonitor_Android()
         {
-            var test = AudioManager.ActionHeadsetPlug;
+            Xamarin.Forms.MessagingCenter.Subscribe<SoundsOfSpacetime.Mobile.App, Boolean>((SoundsOfSpacetime.Mobile.App)Xamarin.Forms.Application.Current, "Headset", OnHeadphoneConnectedStatusChanged);
         }
 
         #endregion
 
         #region Non Public Methods
 
-
-
+        private void OnHeadphoneConnectedStatusChanged(App app, bool connected)
+        {
+            this.HeadphonesInUse = connected;
+            this.HeadphonesInUseChanged?.Invoke(this, new HeadphoneStatusChangedEventArgs(connected));
+        }
 
         #endregion
 

@@ -17,6 +17,13 @@ namespace SoundsOfSpacetime.Mobile.Droid.Services.AudioDeviceMonitoring
     {
         HeadsetStateBroadcastReceiver headsetStateReceiver;
 
+        #region Fields
+
+
+        #endregion
+
+        #region Public Methods
+
         public override void OnCreate()
         {
 
@@ -45,5 +52,7 @@ namespace SoundsOfSpacetime.Mobile.Droid.Services.AudioDeviceMonitoring
         {
             return null;
         }
+
+        #endregion
     }
 }

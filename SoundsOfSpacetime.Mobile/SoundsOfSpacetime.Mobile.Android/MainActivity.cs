@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using SoundsOfSpacetime.Mobile.Droid.Services.AudioDeviceMonitoring;
 using Android.Content;
+using static Android.App.ActivityManager;
 
 namespace SoundsOfSpacetime.Mobile.Droid
 {
@@ -18,11 +19,16 @@ namespace SoundsOfSpacetime.Mobile.Droid
     [Activity(Label = "SoundsOfSpacetime.Mobile", Icon = "@mipmap/icon", Theme = "@style/MainTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IPlatformInitializer
     {
+        #region Public Methods
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<IAudioDeviceMonitor, AudioDeviceMonitor_Android>();
         }
+
+        #endregion
+
+        #region Non Public Methods
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -46,7 +52,10 @@ namespace SoundsOfSpacetime.Mobile.Droid
         protected override void OnResume()
         {
             base.OnResume();
-            StartService(new Intent(this, typeof(HeadsetMonitoringService)));
+
+            //In situations like debugging... app can be in background but resume can be called
+            if(!this.IsAppInBackground())
+                StartService(new Intent(this, typeof(HeadsetMonitoringService)));
         }
 
         private async Task RequestPermissions()
@@ -63,5 +72,17 @@ namespace SoundsOfSpacetime.Mobile.Droid
                 await Permissions.RequestAsync<Permissions.StorageWrite>();
             }
         }
+        private bool IsAppInBackground()
+        {
+            bool isInBackground;
+
+            var myProcess = new RunningAppProcessInfo();
+            ActivityManager.GetMyMemoryState(myProcess);
+            isInBackground = myProcess.Importance != Android.App.Importance.Foreground;
+
+            return isInBackground;
+        }
+        #endregion
+
     }
 }
