@@ -1,7 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
+using Android.Bluetooth;
 using Android.Content;
 using Android.Media;
+using Android.OS;
 using AndroidX.Media;
 using SoundsOfSpacetime.Mobile.Events.Args;
 using SoundsOfSpacetime.Mobile.Interfaces;
@@ -60,14 +62,45 @@ namespace SoundsOfSpacetime.Mobile.Droid.Services.AudioDeviceMonitoring
         #region Non Public Methods
 
         private void OnHeadphoneConnectedStatusChanged(App app, bool connected)
-        {
-            this.HeadphonesInUse = connected;
-            this.HeadphonesInUseChanged?.Invoke(this, new HeadphoneStatusChangedEventArgs(connected));
+        { 
+            //The or is necessary because we often receive headset changed messages on startup that are not accurate. Although further messages are.
+            //IsHeadsetOn appears to always be accurate.
+            this.HeadphonesInUse = connected || this.IsHeadsetOn();
+            this.HeadphonesInUseChanged?.Invoke(this, new HeadphoneStatusChangedEventArgs(this.HeadphonesInUse));
         }
 
         protected virtual void OnPropertyChanged(string propertyName)
         {
             this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private bool IsHeadsetOn()
+        {
+            AudioManager am = (AudioManager)Android.App.Application.Context.GetSystemService(Context.AudioService);
+
+            if (am == null)
+                return false;
+
+            if (Build.VERSION.SdkInt < Android.OS.BuildVersionCodes.M)
+            {
+                return am.WiredHeadsetOn || am.BluetoothScoOn || am.BluetoothA2dpOn;
+            }
+            else
+            {
+                AudioDeviceInfo[] devices = am.GetDevices(GetDevicesTargets.Outputs);
+
+                foreach (var device in devices)
+                {
+                    if (device.Type == AudioDeviceType.WiredHeadset
+                            || device.Type == AudioDeviceType.WiredHeadphones
+                            || device.Type == AudioDeviceType.BluetoothSco
+                            || device.Type == AudioDeviceType.BluetoothA2dp)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
 
         #endregion

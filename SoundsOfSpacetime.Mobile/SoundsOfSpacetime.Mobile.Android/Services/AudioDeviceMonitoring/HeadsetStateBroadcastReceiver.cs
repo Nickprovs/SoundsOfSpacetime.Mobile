@@ -17,7 +17,7 @@ namespace SoundsOfSpacetime.Mobile.Droid.Services.AudioDeviceMonitoring
 
     public class HeadsetStateBroadcastReceiver : BroadcastReceiver
     {
-        public readonly static String[] HEADPHONE_ACTIONS = { Intent.ActionHeadsetPlug,"android.bluetooth.headset.action.STATE_CHANGED",
+        public readonly static String[] HEADPHONE_ACTIONS = { Intent.ActionHeadsetPlug, "android.bluetooth.headset.action.STATE_CHANGED",
         "android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED"};
 
 
