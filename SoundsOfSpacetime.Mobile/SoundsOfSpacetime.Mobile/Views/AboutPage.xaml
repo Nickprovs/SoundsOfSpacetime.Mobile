@@ -28,7 +28,7 @@
                         FontAttributes="Bold" />
 
                     <Label
-                        Text="Gravitational Waves (GWs) are ripples in the fabric of spacetime produced by colliding black holes neutron stars, supernovae, and other astrophysical phenomena. The strongest sources are expected to be pairs of orbiting compact objects: black holes, neutron stars, or white dwarfs in a close binary."
+                        Text="Gravitational Waves (GWs) are ripples in the fabric of spacetime produced by colliding black holes, neutron stars, supernovae, and other astrophysical phenomena. The strongest sources are expected to be pairs of orbiting compact objects: black holes, neutron stars, or white dwarfs in a close binary."
                         TextColor="{DynamicResource F8}"
                         Margin="15,20,15,0"
                         LineBreakMode="WordWrap" />
@@ -66,7 +66,7 @@
                         FontAttributes="Bold" />
 
                     <Label
-                        Text="Gravitational Waves are not sound. But many of their properties are like sound waves. Our purpose is to explore the physics of gravitational waves via an analogy to audible sounds. GWs easily propagate through most materials--just like sound. Therefore, it is useful to convert gravitational-wave signals to sound waves."
+                        Text="Gravitational Waves are not sound. But many of their properties are like sound waves. Our purpose is to explore the physics of gravitational waves via an analogy to audible sounds. GWs easily propagate through most materials -- just like sound. Therefore, it is useful to convert GW signals to sound waves."
                         TextColor="{DynamicResource F8}"
                         Margin="15,20,15,0"
                         LineBreakMode="WordWrap" />
@@ -81,7 +81,7 @@
                         FontAttributes="Bold" />
 
                     <Label
-                        Text="To simulate gravitational waves, click on the menu in the top left and select the simulator. Play around with the options available to you to explore different phenomena. When you're ready, hit the generate button. A graph of the wave will be produced and the sound will play. You can hit the button again to replay the sound without regenerating the wave. Experience some of the different sounds produced by Gravitational Waves!"
+                        Text="To simulate gravitational waves, click on the menu in the top left and select the simulator. Play around with the options available to you to explore different phenomena. When you're ready, you can plot the wave or the orbit of the binary. A graph of the wave will be produced and the sound will play. You can hit the button again to replay the sound without regenerating the wave. Experience some of the different sounds produced by Gravitational Waves!"
                         TextColor="{DynamicResource F8}"
                         Margin="15,20,15,15"
                         LineBreakMode="WordWrap" />
