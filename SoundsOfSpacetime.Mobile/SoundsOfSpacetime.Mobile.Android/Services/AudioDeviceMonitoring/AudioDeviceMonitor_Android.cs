@@ -53,7 +53,12 @@ namespace SoundsOfSpacetime.Mobile.Droid.Services.AudioDeviceMonitoring
         #region Constructors and Destructors
 
         public AudioDeviceMonitor_Android()
-        {
+        {  
+            //Initial State
+            this.HeadphonesInUse = this.IsHeadsetOn();
+            this.HeadphonesInUseChanged?.Invoke(this, new HeadphoneStatusChangedEventArgs(this.HeadphonesInUse));
+
+            //Changes in headset status
             MessagingCenter.Subscribe<SoundsOfSpacetime.Mobile.App, Boolean>((SoundsOfSpacetime.Mobile.App) Application.Current, "Headset", OnHeadphoneConnectedStatusChanged);
         }
 
