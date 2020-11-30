@@ -44,6 +44,7 @@ namespace SoundsOfSpacetime.Mobile.iOS
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<IAudioDeviceMonitor, AudioDeviceMonitor_iOS>();
+            containerRegistry.RegisterSingleton<IAlertService, AlertService_iOS>();
         }
     }
 }
