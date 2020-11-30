@@ -52,6 +52,11 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
         /// </summary>
         private IGravitationalWaveCalculator _gravitationalWaveCalculator;
 
+        /// <summary>
+        /// The alert service
+        /// </summary>
+        private readonly IAlertService _alertService;
+
         #endregion
 
         #region Properties
@@ -116,14 +121,18 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
 
         #region Constructors and Destructors
 
-        public SimulatorPageViewModel(INavigationService navigationService, IBindableDeviceInfo bindableDeviceInfo, IGravitationalWaveCalculator gravitationalWaveCalculator, IAudioDeviceMonitor audioDeviceMonitor) : base(navigationService)
+        public SimulatorPageViewModel(INavigationService navigationService, IBindableDeviceInfo bindableDeviceInfo, IGravitationalWaveCalculator gravitationalWaveCalculator, IAudioDeviceMonitor audioDeviceMonitor, IAlertService alertService) : base(navigationService)
         {
             //Dependency Injection
             this.BindableDeviceInfo = bindableDeviceInfo;
             this._gravitationalWaveCalculator = gravitationalWaveCalculator;
             this._plotService = DependencyService.Resolve<IPlotService>();
             this._fileSystemPathService = DependencyService.Resolve<IFileSystemPathService>();
+            this._alertService = alertService;
+
             this.AudioDeviceMonitor = audioDeviceMonitor;
+
+            this.AudioDeviceMonitor.HeadphonesInUseChanged += this.OnHeadphonesInUseChanged;
 
             //Set the title for the page.
             this.Title = "Simulator";
@@ -140,17 +149,24 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
             this.SimulateWaveCommand = new DelegateCommand(this.OnSimulateWave);
             this.SimulateOrbitCommand = new DelegateCommand(this.OnSimulateOrbit);
             this.MoreOptionsExpansionStatusChangedCommand = new DelegateCommand<object>(this.OnMoreOptionsExpansionStatusChanged);
+
         }
 
         #endregion
 
         #region Private Methods
 
+        private void OnHeadphonesInUseChanged(object sender, Events.Args.HeadphoneStatusChangedEventArgs e)
+        {
+            this._alertService.ShowAlert("Headphones are recommended.", TimeSpan.FromSeconds(5));
+        }
+
         /// <summary>
         /// This will simulate a binary's gravitational wave based on current input
         /// </summary>
         private async void OnSimulateWave()
         {
+
             //Asynchronously calculate the event based on user data.
             var data = await Task.Run(() => this._gravitationalWaveCalculator.GenerateGravitationalWaveData(CurrentSimulatorInput));
 

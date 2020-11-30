@@ -24,6 +24,7 @@ namespace SoundsOfSpacetime.Mobile.Droid
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<IAudioDeviceMonitor, AudioDeviceMonitor_Android>();
+            containerRegistry.RegisterSingleton<IAlertService, AlertService_Android>();
         }
 
         #endregion
@@ -44,6 +45,8 @@ namespace SoundsOfSpacetime.Mobile.Droid
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App(this));
+
+            
 
             //These permissions may not be necessary... And you should ask them at feature exec (and deny if not granted)... not here
             Device.InvokeOnMainThreadAsync(this.RequestPermissions);
