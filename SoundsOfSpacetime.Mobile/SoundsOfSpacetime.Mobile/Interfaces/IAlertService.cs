@@ -6,6 +6,6 @@ namespace SoundsOfSpacetime.Mobile.Interfaces
 {
     public interface IAlertService
     {
-        void ShowAlert(string message, TimeSpan timespan);
+        void ShowAlert(string message, TimeSpan timespan, bool gestureDismissable = true);
     }
 }

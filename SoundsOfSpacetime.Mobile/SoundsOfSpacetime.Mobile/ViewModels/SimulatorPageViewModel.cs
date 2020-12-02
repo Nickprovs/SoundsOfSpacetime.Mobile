@@ -166,6 +166,7 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
         /// </summary>
         private async void OnSimulateWave()
         {
+            this._alertService.ShowAlert("Headphones are recommended.", TimeSpan.FromSeconds(5));
 
             //Asynchronously calculate the event based on user data.
             var data = await Task.Run(() => this._gravitationalWaveCalculator.GenerateGravitationalWaveData(CurrentSimulatorInput));

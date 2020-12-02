@@ -17,12 +17,18 @@ namespace SoundsOfSpacetime.Mobile.Droid.Services
 {
     public class AlertService_Android : IAlertService
     {
-        public void ShowAlert(string message, TimeSpan timespan)
+        public void ShowAlert(string message, TimeSpan timespan, bool gestureDismissable)
         {
             var snackBar = Snackbar.Make(Platform.CurrentActivity.FindViewById(Android.Resource.Id.Content), message, (int)timespan.TotalMilliseconds);
-            snackBar.SetAction("DISMISS", (view) => {
-                snackBar.Dismiss();
-            });
+            
+            //If consumer wants a gesture dismissable alert
+            if (gestureDismissable)
+            {
+                snackBar.SetAction("DISMISS", (view) => {
+                    snackBar.Dismiss();
+                });
+            }
+           
             snackBar.Show();
         }
     }
