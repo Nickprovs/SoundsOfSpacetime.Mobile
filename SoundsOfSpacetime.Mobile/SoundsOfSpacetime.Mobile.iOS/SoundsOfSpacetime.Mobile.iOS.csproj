@@ -102,6 +102,7 @@
     <Compile Include="Services\AlertService_iOS.cs" />
     <Compile Include="Services\AudioDeviceMonitor_iOS.cs" />
     <Compile Include="Services\FileSystemPathService_iOS.cs" />
+    <Compile Include="Services\SciChartService_iOS.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
