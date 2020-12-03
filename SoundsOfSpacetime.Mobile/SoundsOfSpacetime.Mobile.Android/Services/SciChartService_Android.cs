@@ -1,31 +1,52 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Timers;
+using Nickprovs.Albatross.Droid.Services;
+using SciChart.Charting.Model;
+using SciChart.Charting.Model.DataSeries;
+using SciChart.Charting.Modifiers;
+using SciChart.Charting.Visuals;
+using SciChart.Charting.Visuals.Axes;
+using SciChart.Charting.Visuals.PointMarkers;
+using SciChart.Charting.Visuals.RenderableSeries;
+using SciChart.Drawing.Common;
+using SoundsOfSpacetime.Mobile.Droid.Utilities;
 using SoundsOfSpacetime.Mobile.Interfaces;
-using SoundsOfSpacetime.Mobile.Services;
 using SoundsOfSpacetime.Mobile.Types;
-using OxyPlot;
-using OxyPlot.Series;
-using OxyPlot.Xamarin.Forms;
-using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
 
-[assembly: Dependency(typeof(GenericPlotService))]
-namespace SoundsOfSpacetime.Mobile.Services
+[assembly: Dependency(typeof(SciChartService_Android))]
+namespace Nickprovs.Albatross.Droid.Services
 {
-    public class GenericPlotService : IPlotService
+    public class SciChartService_Android : IPlotService
     {
         #region Fields
 
         /// <summary>
         /// The plotting surface
         /// </summary>
-        private PlotView _plottingSurface;
+        private SciChartSurface _plottingSurface;
 
         /// <summary>
-        /// The plotting model
+        /// The data driving series drawn on the plotting surface
         /// </summary>
-        private PlotModel _plottingModel;
+        private XyDataSeries<double, double> _series;
+
+        /// <summary>
+        ///The view drawing the data series   
+        /// </summary>
+        private FastLineRenderableSeries _renderableSeries;
+
+        /// <summary>
+        /// The x-axis
+        /// </summary>
+        NumericAxis _xAxis;
+
+        /// <summary>
+        /// The y-axis
+        /// </summary>
+        NumericAxis _yAxis;
 
         /// <summary>
         /// The animation timer
@@ -42,13 +63,6 @@ namespace SoundsOfSpacetime.Mobile.Services
         /// </summary>
         private readonly object _plotAnimationLock;
 
-        private LineSeries _series;
-
-        private OxyPlot.Axes.LinearAxis _xAxis;
-
-        private OxyPlot.Axes.LinearAxis _yAxis;
-
-
         #endregion
 
         #region Contructors and Destructors
@@ -56,7 +70,7 @@ namespace SoundsOfSpacetime.Mobile.Services
         /// <summary>
         /// Sets the necessary lifetime data
         /// </summary>
-        public GenericPlotService()
+        public SciChartService_Android()
         {
             //We're going to append some number of points and then wait the delay time to give the animation effect
             this._animationDelayTime = 50;
@@ -77,51 +91,62 @@ namespace SoundsOfSpacetime.Mobile.Services
         /// <param name="plotContainer"></param>
         public Xamarin.Forms.View Render()
         {
-            Application.Current.Resources.TryGetValue("B2", out var b2ColorObj);
-            var b2ColorHex = ((Xamarin.Forms.Color)b2ColorObj).ToHex();
-            var oxyB2Color = OxyColor.Parse(b2ColorHex);
+            //Create the surface
+            this._plottingSurface = new SciChartSurface(Android.App.Application.Context);
 
-            Application.Current.Resources.TryGetValue("F7", out var f7ColorObj);
-            var f7ColorHex = ((Xamarin.Forms.Color)f7ColorObj).ToHex();
-            var oxyF7Color = OxyColor.Parse(f7ColorHex);
+            //Create the series
+            this._series = new XyDataSeries<double, double>();
+            this._series.AcceptsUnsortedData = true;
 
-            Application.Current.Resources.TryGetValue("F1", out var f1ColorObj);
-            var f1ColorHex = ((Xamarin.Forms.Color)f1ColorObj).ToHex();
-            var oxyF1Color = OxyColor.Parse(f1ColorHex);
-
-            this._series = new LineSeries
+            //Creating the axes
+            //AxisTitle = "time [s]",
+            this._xAxis = new NumericAxis(Android.App.Application.Context)
             {
-                StrokeThickness = 1,
-                LineStyle = LineStyle.Solid,
-                Color = oxyF7Color,
-                MarkerType = MarkerType.None,
-                Background = oxyB2Color,
+                AxisTitlePlacement = AxisTitlePlacement.Bottom,
+                DrawMinorGridLines = false,
+                DrawMajorGridLines = false,
+                DrawMajorBands = false,
+                GrowBy = new SciChart.Data.Model.DoubleRange(0.1d, 0.1d)
             };
 
+            this._xAxis.SetAxisTitleMargins(0, 0, 0, 20);
 
-            this._plottingModel = new PlotModel
+            //AxisTitle = "h(t)",
+            this._yAxis = new NumericAxis(Android.App.Application.Context)
             {
-                LegendTextColor = oxyF1Color,
-                LegendTitleColor = oxyF1Color,
-                TextColor = oxyF1Color,
-                TitleColor = oxyF1Color
-            };
-            this._xAxis = new OxyPlot.Axes.LinearAxis { Position = OxyPlot.Axes.AxisPosition.Bottom };
-            this._yAxis = new OxyPlot.Axes.LinearAxis { Position = OxyPlot.Axes.AxisPosition.Left };
-            this._plottingModel.Axes.Add(this._xAxis);
-            this._plottingModel.Axes.Add(this._yAxis);
-
-            this._plottingSurface = new PlotView
-            {
-                Model = this._plottingModel,
-                VerticalOptions = LayoutOptions.Fill,
-                HorizontalOptions = LayoutOptions.Fill,
-                BackgroundColor = Color.FromHex(b2ColorHex),
+                AxisAlignment = AxisAlignment.Left,
+                AxisTitlePlacement = AxisTitlePlacement.Left,
+                AxisTitleOrientation = AxisTitleOrientation.VerticalFlipped,
+                DrawMinorGridLines = false,
+                DrawMajorGridLines = false,
+                DrawMajorBands = false,
+                GrowBy = new SciChart.Data.Model.DoubleRange(0.1d, 0.1d)
             };
 
-            this._plottingModel.Series.Add(this._series);
-            this._plottingSurface.Model = this._plottingModel;
-            return this._plottingSurface;
+            this._yAxis.SetAxisTitleMargins(20, 0, 0, 0);
+
+            //The Renderable Series
+            this._renderableSeries = new FastLineRenderableSeries { DataSeries = this._series, StrokeStyle = new SolidPenStyle(0xFF279B27, 2f) };
+            EllipsePointMarker pointMarker = new EllipsePointMarker { StrokeStyle = new SolidPenStyle(Android.Graphics.Color.PaleVioletRed, 0.5f), FillStyle = new SolidBrushStyle(0xFFFFA300) };
+            pointMarker.SetSize(6.ToDip(Android.App.Application.Context), 6.ToDip(Android.App.Application.Context));
+            this._renderableSeries.StrokeStyle = new SolidPenStyle(Android.Graphics.Color.Rgb(255, 64, 129), 2f);
+
+            //Adding this stuff to the surface
+            using (this._plottingSurface.SuspendUpdates())
+            {
+                this._plottingSurface.XAxes.Add(this._xAxis);
+                this._plottingSurface.YAxes.Add(this._yAxis);
+                this._plottingSurface.RenderableSeries.Add(this._renderableSeries);
+                this._plottingSurface.ChartModifiers = new ChartModifierCollection
+                {
+                    new ZoomPanModifier(),
+                    new PinchZoomModifier(),
+                    new ZoomExtentsModifier(),
+                };
+            }
+
+            //Returns the native plot as a Forms View
+            return this._plottingSurface.ToView();
         }
 
         /// <summary>
@@ -130,11 +155,11 @@ namespace SoundsOfSpacetime.Mobile.Services
         /// <param name="dataSeries"></param>
         public void Plot(IEnumerable<IPoint> dataSeries)
         {
-            //this.StopIfAnimating();
-            //this.Clear();
+            this.StopIfAnimating();
+            this.Clear();
 
-            //this._series.Append(dataSeries.Select(p => p.X), dataSeries.Select(p => p.Y));
-            //this._plottingSurface.ZoomExtents();
+            this._series.Append(dataSeries.Select(p => p.X), dataSeries.Select(p => p.Y));
+            this._plottingSurface.ZoomExtents();
         }
 
         /// <summary>
@@ -144,12 +169,8 @@ namespace SoundsOfSpacetime.Mobile.Services
         /// <param name="desiredTimeInMillis"></param>
         public void PlotAnimated(IEnumerable<IPoint> dataSeries, double desiredTimeInMillis)
         {
-
-
-
             this.StopIfAnimating();
             this.Clear();
-            this._plottingModel.ResetAllAxes();
 
             var dataSeriesEnumerated = dataSeries.ToList();
             int dataBatchSize = (int)(dataSeries.Count() / (desiredTimeInMillis / this._animationDelayTime));
@@ -159,8 +180,7 @@ namespace SoundsOfSpacetime.Mobile.Services
             this._plotAnimationTimer.Cache = plotAnimationCache;
             this._plotAnimationTimer.Start();
 
-
-
+            this._plottingSurface.ZoomExtents();
         }
 
         /// <summary>
@@ -168,11 +188,7 @@ namespace SoundsOfSpacetime.Mobile.Services
         /// </summary>
         public void Clear()
         {
-            MainThread.BeginInvokeOnMainThread(() =>
-            {
-                this._series.Points.Clear();
-                this._plottingModel.InvalidatePlot(true);
-            });
+            this._series.Clear();
         }
 
         /// <summary>
@@ -181,7 +197,7 @@ namespace SoundsOfSpacetime.Mobile.Services
         /// <param name="xAxistTitle"></param>
         public void SetXAxisTitle(string xAxistTitle)
         {
-            this._xAxis.Title = xAxistTitle;
+            this._xAxis.AxisTitle = xAxistTitle;
         }
 
         /// <summary>
@@ -190,16 +206,12 @@ namespace SoundsOfSpacetime.Mobile.Services
         /// <param name="yAxisTitle"></param>
         public void SetYAxisTitle(string yAxisTitle)
         {
-            this._yAxis.Title = yAxisTitle;
+            this._yAxis.AxisTitle = yAxisTitle;
         }
 
-        /// <summary>
-        /// Sets the title of the graph
-        /// </summary>
-        /// <param name="title"></param>
         public void SetTitle(string title)
         {
-            this._plottingModel.Title = title;
+            //this._plottingSurface.Annotations.
         }
 
         #endregion
@@ -229,13 +241,8 @@ namespace SoundsOfSpacetime.Mobile.Services
 
                 //Get and append the next batch of points
                 var nextBatchOfPoints = this._plotAnimationTimer.Cache.DataSeries.GetRange(this._plotAnimationTimer.Cache.Offset, this._plotAnimationTimer.Cache.BatchSize).ToList();
-
-                MainThread.BeginInvokeOnMainThread(() =>
-                {
-                    this._series.Points.AddRange(nextBatchOfPoints.Select(point => new DataPoint(point.X, point.Y)));
-                    this._plottingModel.InvalidatePlot(true);
-                });
-
+                this._series.Append(nextBatchOfPoints.Select(point => point.X), nextBatchOfPoints.Select(point => point.Y));
+                this._plottingSurface.ZoomExtents();
                 this._plotAnimationTimer.Cache.Offset = this._plotAnimationTimer.Cache.Offset + this._plotAnimationTimer.Cache.BatchSize;
 
                 if (this._plotAnimationTimer.Cache.Offset >= this._plotAnimationTimer.Cache.DataSeries.Count)
@@ -252,10 +259,7 @@ namespace SoundsOfSpacetime.Mobile.Services
         /// </summary>
         private void StopIfAnimating()
         {
-            lock (this._plotAnimationLock)
-            {
-                this._plotAnimationTimer.Stop();
-            }
+            this._plotAnimationTimer.Stop();
         }
 
         #endregion

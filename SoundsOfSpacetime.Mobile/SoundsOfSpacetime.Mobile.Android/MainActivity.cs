@@ -12,6 +12,8 @@ using Xamarin.Forms;
 using SoundsOfSpacetime.Mobile.Droid.Services.AudioDeviceMonitoring;
 using Android.Content;
 using static Android.App.ActivityManager;
+using SoundsOfSpacetime.Mobile.Secrets;
+using Nickprovs.Albatross.Droid.Services;
 
 namespace SoundsOfSpacetime.Mobile.Droid
 {
@@ -25,6 +27,7 @@ namespace SoundsOfSpacetime.Mobile.Droid
         {
             containerRegistry.RegisterSingleton<IAudioDeviceMonitor, AudioDeviceMonitor_Android>();
             containerRegistry.RegisterSingleton<IAlertService, AlertService_Android>();
+            containerRegistry.RegisterSingleton<IPlotService, SciChartService_Android>();
         }
 
         #endregion
@@ -39,14 +42,13 @@ namespace SoundsOfSpacetime.Mobile.Droid
             //Init Third Party Modules
             OxyPlot.Xamarin.Forms.Platform.Android.PlotViewRenderer.Init();
             CrossMediaManager.Current.Init();
+            SciChart.Charting.Visuals.SciChartSurface.SetRuntimeLicenseKey(ApiKeys.SciChart);
 
             //Basic Init
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App(this));
-
-            
 
             //These permissions may not be necessary... And you should ask them at feature exec (and deny if not granted)... not here
             Device.InvokeOnMainThreadAsync(this.RequestPermissions);

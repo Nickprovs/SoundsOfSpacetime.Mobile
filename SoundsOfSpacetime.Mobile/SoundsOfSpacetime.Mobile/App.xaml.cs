@@ -58,7 +58,6 @@ namespace SoundsOfSpacetime.Mobile
             containerRegistry.RegisterSingleton<IBindableDeviceInfo, BindableDeviceInfo>();
             containerRegistry.RegisterSingleton<IBindableVersionInfo, BindableVersionInfo>();
 
-            containerRegistry.RegisterSingleton<IPlotService, GenericPlotService>();
             containerRegistry.RegisterSingleton<IFileSystemPathService, GenericFileSystemPathService>();
         }
 

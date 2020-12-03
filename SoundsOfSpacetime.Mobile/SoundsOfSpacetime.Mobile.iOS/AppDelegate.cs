@@ -11,6 +11,7 @@ using SoundsOfSpacetime.Mobile.iOS.Services;
 using SoundsOfSpacetime.Mobile.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
+using SoundsOfSpacetime.Mobile.Secrets;
 
 namespace SoundsOfSpacetime.Mobile.iOS
 {
@@ -31,7 +32,8 @@ namespace SoundsOfSpacetime.Mobile.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            //Init Oxyplot
+            //Init Third Party Modules
+            SciChart.iOS.Charting.SCIChartSurface.SetRuntimeLicenseKey(ApiKeys.SciChart);
             OxyPlot.Xamarin.Forms.Platform.iOS.PlotViewRenderer.Init();
 
             //Init Cross Media Manager (For GW Sound Files)
@@ -45,6 +47,7 @@ namespace SoundsOfSpacetime.Mobile.iOS
         {
             containerRegistry.RegisterSingleton<IAudioDeviceMonitor, AudioDeviceMonitor_iOS>();
             containerRegistry.RegisterSingleton<IAlertService, AlertService_iOS>();
+            containerRegistry.RegisterSingleton<IPlotService, OxyPlotService>();
         }
     }
 }
