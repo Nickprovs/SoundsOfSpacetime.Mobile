@@ -18,6 +18,11 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
         #region Fields
 
         /// <summary>
+        /// Determines if the page is busy doing some async work
+        /// </summary>
+        private bool _isBusy;
+
+        /// <summary>
         /// General information about the device we're running on.
         /// </summary>
         private IBindableDeviceInfo _bindableDeviceInfo;
@@ -60,6 +65,15 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
         #endregion
 
         #region Properties
+        /// <summary>
+        /// Determines if the page is busy doing some async work
+        /// </summary>
+        /// 
+        public bool IsBusy
+        {
+            get { return this._isBusy; }
+            set { this.SetProperty(ref _isBusy, value); }
+        }
 
         /// <summary>
         /// General information about the device we're running on.
@@ -117,6 +131,12 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
         /// </summary>
         public DelegateCommand SimulateOrbitCommand { get; }
 
+        /// <summary>
+        /// Tells the user about headphones relevant to the app
+        /// </summary>
+        public DelegateCommand HeadphoneInfoCommand { get; }
+
+
         #endregion
 
         #region Constructors and Destructors
@@ -148,6 +168,7 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
             //Command Wiring
             this.SimulateWaveCommand = new DelegateCommand(this.OnSimulateWave);
             this.SimulateOrbitCommand = new DelegateCommand(this.OnSimulateOrbit);
+            this.HeadphoneInfoCommand = new DelegateCommand(this.OnHeadphoneInfo);
             this.MoreOptionsExpansionStatusChangedCommand = new DelegateCommand<object>(this.OnMoreOptionsExpansionStatusChanged);
 
         }
@@ -156,9 +177,18 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
 
         #region Private Methods
 
+        private void OnHeadphoneInfo()
+        {
+            var headphonesNotOnMessage = "Headphones: Off. We recommend using some to get the best experience.";
+            var headphonesOnMessage = "Headphones: On. Awesome! You'll be able to hear the wave much better.";
+            var headphoneMessage = this.AudioDeviceMonitor.HeadphonesInUse ? headphonesOnMessage : headphonesNotOnMessage;
+            this._alertService.ShowAlert(headphoneMessage, TimeSpan.FromSeconds(7));
+        }
+
         private void OnHeadphonesInUseChanged(object sender, Events.Args.HeadphoneStatusChangedEventArgs e)
         {
-            this._alertService.ShowAlert("Headphones are recommended.", TimeSpan.FromSeconds(5));
+            if(!e.Connected)
+                this._alertService.ShowAlert("Headphones are recommended.", TimeSpan.FromSeconds(3));
         }
 
         /// <summary>
@@ -166,19 +196,13 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
         /// </summary>
         private async void OnSimulateWave()
         {
-            this._alertService.ShowAlert("Headphones are recommended.", TimeSpan.FromSeconds(5));
-
             //Asynchronously calculate the event based on user data.
+            this.IsBusy = true;
             var data = await Task.Run(() => this._gravitationalWaveCalculator.GenerateGravitationalWaveData(CurrentSimulatorInput));
+            this.IsBusy = false;
 
-            //Create a .wav file based on the wave
-            //TODO: Enumerate somewhere before this to eliminate multiple enumeration
+            //Create and play a .wav file based on the points
             var soundFile = new Wav(data.Wave.Select(point => point.Y).ToArray(), data.Wave.Select(point => point.X).LastOrDefault());
-
-            //TODO: Save to local app private data instead.
-            //if (CrossMediaManager.Current.IsPlaying())
-            //    await CrossMediaManager.Current.Stop();
-
             await this.PlaySoundFile(soundFile);
 
             //Plot the wave
@@ -192,16 +216,20 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
 
             //Create a copy of this last simulator input so previous / current simulator inputs are different objects.
             this.CurrentSimulatorInput = this.CurrentSimulatorInput.DeepCopy();
+
         }
 
         /// <summary>
         /// This will simulate a binary's orbit based on current input
         /// </summary>
         private async void OnSimulateOrbit()
-        {            
+        {
             //Asynchronously calculate the event based on user data.
+            this.IsBusy = true;
             var data = await Task.Run(()=> this._gravitationalWaveCalculator.GenerateGravitationalWaveData(CurrentSimulatorInput));
+            this.IsBusy = false;
 
+            //Create and play a .wav file based on the points
             var soundFile = new Wav(data.Wave.Select(point => point.Y).ToArray(), data.Wave.Select(point => point.X).LastOrDefault());
             await this.PlaySoundFile(soundFile);
 
@@ -216,10 +244,14 @@ namespace SoundsOfSpacetime.Mobile.ViewModels
 
             //Create a copy of this last simulator input so previous / current simulator inputs are different objects.
             this.CurrentSimulatorInput = this.CurrentSimulatorInput.DeepCopy();
+
         }
 
         private async Task PlaySoundFile(Wav wav)
         {
+            if(!this.AudioDeviceMonitor.HeadphonesInUse)
+                this._alertService.ShowAlert("Headphones are recommended.", TimeSpan.FromSeconds(3));
+
             var folderPath = this._fileSystemPathService.GetDownloadsPath();
             var filePath = Path.Combine(folderPath, "tone.wav");
             wav.SaveToFile(filePath);

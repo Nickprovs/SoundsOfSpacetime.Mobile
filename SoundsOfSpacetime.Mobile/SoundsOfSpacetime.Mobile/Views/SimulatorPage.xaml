@@ -19,13 +19,10 @@
     <ContentPage.Content>
 
         <Grid >
-            
             <Grid.RowDefinitions>
                 <RowDefinition Height="50*"/>
                 <RowDefinition Height="50*"/>
             </Grid.RowDefinitions>
-
-
             <Grid x:Name="TopHalf" Grid.Row="0">
                 <ScrollView BackgroundColor="{DynamicResource B2}" x:Name="TopHalfScrollViewer">
                     <StackLayout Orientation="Vertical">
@@ -67,6 +64,9 @@
                                         HorizontalOptions="Center" 
                                         VerticalOptions="Center"
                                         Stroke="{DynamicResource F1}">
+                                        <controls:Icon.GestureRecognizers>
+                                            <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding HeadphoneInfoCommand}"/>
+                                        </controls:Icon.GestureRecognizers>
                                         <controls:Icon.Style>
                                             <Style TargetType="{x:Type controls:Icon}">
                                                 <Setter Property="ResourceId" Value="{DynamicResource headphones_in}"/>
@@ -112,7 +112,7 @@
                                         <controls:Icon HorizontalOptions="End" VerticalOptions="Center" HeightRequest="{Binding Path=FontSize, Source={x:Reference Mass1Label}}" ResourceId= "{DynamicResource solar_mass}" Stroke="{DynamicResource F1}"/>
                                     </Grid>
 
-                                    <!--Unit-->                                
+                                    <!--Unit-->
                                     <Slider x:Name="Mass1Slider" Maximum="20" Minimum="3" Value="{Binding CurrentSimulatorInput.SolarMass1}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                 </StackLayout>
 
@@ -154,7 +154,7 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
-                            
+
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="2*"/>
                                 <ColumnDefinition Width="96*"/>
@@ -287,9 +287,8 @@
 
                 </ScrollView>
             </Grid>
-
-
             <ContentView x:Name="PlotContainer" Grid.Row="1"/>
+            <ActivityIndicator Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" Color="{DynamicResource F7}" IsRunning="{Binding IsBusy}"/>
 
         </Grid>
 
