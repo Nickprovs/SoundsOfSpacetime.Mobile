@@ -57,6 +57,11 @@ namespace SoundsOfSpacetime.Mobile.iOS.Services
         /// </summary>
         private readonly object _plotAnimationLock;
 
+        /// <summary>
+        /// The Plot title as a forms label
+        /// </summary>
+        private Xamarin.Forms.Label _title;
+
         #endregion
 
         #region Constructors and Destructors
@@ -111,7 +116,11 @@ namespace SoundsOfSpacetime.Mobile.iOS.Services
 
         public View Render()
         {
+            Xamarin.Forms.Application.Current.Resources.TryGetValue("B7", out var backgroundColorObj);
+            var backgroundColor = ((Xamarin.Forms.Color)backgroundColorObj);
+
             this._plottingSurface = new SCIChartSurface();
+            this._plottingSurface.BackgroundColor = backgroundColor.ToUIColor();
             this._plottingSurface.TranslatesAutoresizingMaskIntoConstraints = true;
             this._series = new XyDataSeries<double, double>();
             this._series.AcceptUnsortedData = true;
@@ -139,11 +148,27 @@ namespace SoundsOfSpacetime.Mobile.iOS.Services
                 };
             }
 
-            return this._plottingSurface.ToView();
+            //Returns the native plot as a Forms View
+            Xamarin.Forms.Grid plotGrid = new Grid { BackgroundColor = Xamarin.Forms.Color.FromHex(backgroundColor.ToHex()) };
+            var row0 = new RowDefinition { Height = GridLength.Auto };
+            var row1 = new RowDefinition { Height = new GridLength(1, GridUnitType.Star) };
+            plotGrid.RowDefinitions.Add(row0);
+            plotGrid.RowDefinitions.Add(row1);
+
+            this._title = new Xamarin.Forms.Label { Text = "Plot", TextColor = Xamarin.Forms.Color.White, FontSize = 16, Margin = new Thickness(0, 10, 0, 0), HorizontalOptions = LayoutOptions.Center };
+            plotGrid.Children.Add(this._title);
+            this._title.SetValue(Grid.RowProperty, 0);
+
+            var formsPlotView = this._plottingSurface.ToView();
+            plotGrid.Children.Add(formsPlotView);
+            formsPlotView.SetValue(Grid.RowProperty, 1);
+
+            return plotGrid;
         }
 
         public void SetTitle(string title)
         {
+            this._title.Text = title;
         }
 
         public void SetXAxisTitle(string xAxistTitle)

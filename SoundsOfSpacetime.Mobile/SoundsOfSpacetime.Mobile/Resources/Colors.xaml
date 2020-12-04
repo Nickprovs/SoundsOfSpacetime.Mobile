@@ -22,6 +22,7 @@
     <Color x:Key="B4">#0f1e33</Color>
     <Color x:Key="B5">#182d4a</Color>
     <Color x:Key="B6">#303e52</Color>
+    <Color x:Key="B7">#1c1c1e</Color>
     <!--#endregion-->
     
 </ResourceDictionary>

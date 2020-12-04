@@ -63,6 +63,11 @@ namespace Nickprovs.Albatross.Droid.Services
         /// </summary>
         private readonly object _plotAnimationLock;
 
+        /// <summary>
+        /// The Plot title as a forms label
+        /// </summary>
+        private Xamarin.Forms.Label _title;
+
         #endregion
 
         #region Contructors and Destructors
@@ -91,8 +96,12 @@ namespace Nickprovs.Albatross.Droid.Services
         /// <param name="plotContainer"></param>
         public Xamarin.Forms.View Render()
         {
+            Application.Current.Resources.TryGetValue("B7", out var backgroundColorObj);
+            var backgroundColorHex = ((Xamarin.Forms.Color)backgroundColorObj).ToHex();
+
             //Create the surface
             this._plottingSurface = new SciChartSurface(Android.App.Application.Context);
+            this._plottingSurface.SetBackgroundColor(Android.Graphics.Color.ParseColor(backgroundColorHex));
 
             //Create the series
             this._series = new XyDataSeries<double, double>();
@@ -146,7 +155,21 @@ namespace Nickprovs.Albatross.Droid.Services
             }
 
             //Returns the native plot as a Forms View
-            return this._plottingSurface.ToView();
+            Xamarin.Forms.Grid plotGrid = new Grid { BackgroundColor = Xamarin.Forms.Color.FromHex(backgroundColorHex) };
+            var row0 = new RowDefinition { Height = GridLength.Auto };
+            var row1 = new RowDefinition { Height = new GridLength(1, GridUnitType.Star) };
+            plotGrid.RowDefinitions.Add(row0);
+            plotGrid.RowDefinitions.Add(row1);
+
+            this._title = new Xamarin.Forms.Label { Text = "Plot", FontSize = 16, TextColor = Xamarin.Forms.Color.White, Margin = new Thickness(0,10,0,0), HorizontalOptions = LayoutOptions.Center};
+            plotGrid.Children.Add(this._title);
+            this._title.SetValue(Grid.RowProperty, 0);
+
+            var formsPlotView = this._plottingSurface.ToView();
+            plotGrid.Children.Add(formsPlotView);
+            formsPlotView.SetValue(Grid.RowProperty, 1);
+
+            return plotGrid;
         }
 
         /// <summary>
@@ -211,7 +234,7 @@ namespace Nickprovs.Albatross.Droid.Services
 
         public void SetTitle(string title)
         {
-            //this._plottingSurface.Annotations.
+            this._title.Text = title;
         }
 
         #endregion
