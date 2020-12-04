@@ -198,6 +198,7 @@
 
   <ItemGroup>
     <Folder Include="OSLO\ODE\" />
+    <Folder Include="Secrets\" />
   </ItemGroup>
 
   <ItemGroup>
