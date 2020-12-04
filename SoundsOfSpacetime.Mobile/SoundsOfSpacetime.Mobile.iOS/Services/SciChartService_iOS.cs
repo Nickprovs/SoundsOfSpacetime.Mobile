@@ -111,71 +111,18 @@ namespace SoundsOfSpacetime.Mobile.iOS.Services
 
         public View Render()
         {
-            ////Create the surface
-            //this._plottingSurface = new SCIChartSurface();
-            //this._plottingSurface.BackgroundColor = UIColor.Black;
-
-            ////Create the series
-            //this._series = new XyDataSeries<double, double>();
-            //this._series.AcceptUnsortedData = true;
-
-            ////Creating the axes
-            //this._xAxis = new SCINumericAxis()
-            //{
-            //    Style = new SCIAxisStyle()
-            //    {
-            //        DrawMinorGridLines = false,
-            //        DrawMajorGridLines = false,
-            //        DrawMajorBands = false,
-            //    },
-            //    GrowBy = new SCIDoubleRange(0.1d, 0.1d)
-            //};
-
-            //this._yAxis = new SCINumericAxis()
-            //{
-            //    Style = new SCIAxisStyle()
-            //    {
-            //        DrawMinorGridLines = false,
-            //        DrawMajorGridLines = false,
-            //        DrawMajorBands = false,
-            //    },
-            //    GrowBy = new SCIDoubleRange(0.1d, 0.1d)
-            //};
-
-            ////The Renderable Series
-            //this._renderableSeries = new SCIFastLineRenderableSeries { DataSeries = this._series, StrokeStyle = new SCISolidPenStyle(0xFF279B27, 2f) };
-            //var pointMarker = new SCIEllipsePointMarker { StrokeStyle = new SCISolidPenStyle(UIColor.Red, 0.5f), FillStyle = new SCISolidBrushStyle(0xFFFFA300) };
-            //this._renderableSeries.StrokeStyle = new SCISolidPenStyle(new UIColor(new nfloat(255/255), new nfloat(64/255), new nfloat(129/255), new nfloat(255/255)), 2f);
-
-            ////Adding this stuff to the surface
-            //using (this._plottingSurface.SuspendUpdates())
-            //{
-            //    this._plottingSurface.XAxes.Add(this._xAxis);
-            //    this._plottingSurface.YAxes.Add(this._yAxis);
-            //    this._plottingSurface.RenderableSeries.Add(this._renderableSeries);
-            //    this._plottingSurface.ChartModifiers = new SCIChartModifierCollection
-            //    {
-            //        new SCIZoomPanModifier(),
-            //        new SCIPinchZoomModifier(),
-            //        new SCIZoomExtentsModifier(),
-            //    };
-            //}
-
-            ////Returns the native plot as a Forms View
-            //return this._plottingSurface.ToView();
             this._plottingSurface = new SCIChartSurface();
             this._plottingSurface.TranslatesAutoresizingMaskIntoConstraints = true;
             this._series = new XyDataSeries<double, double>();
-            var dataseries2 = new SCIXyyDataSeries();
             this._series.AcceptUnsortedData = true;
 
             var xAxisTitleStyle = new SCITextFormattingStyle { AlignmentHorizontal = SCILabelAlignmentHorizontalMode.Center };
             var xAxisStyle = new SCIAxisStyle { DrawMajorGridLines = false, DrawMinorGridLines = false, DrawMajorBands = false, AxisTitleLabelStyle = xAxisTitleStyle };
-            this._xAxis = new SCINumericAxis { AxisTitle = "Time", Style = xAxisStyle };
+            this._xAxis = new SCINumericAxis { AxisTitle = "Time", Style = xAxisStyle, GrowBy = new SCIDoubleRange(0.1d, 0.1d) };
 
             var yAxisTitleStyle = new SCITextFormattingStyle { AlignmentVertical = SCILabelAlignmentVerticalMode.Center };
             var yAxisStyle = new SCIAxisStyle { DrawMajorGridLines = false, DrawMinorGridLines = false, DrawMajorBands = false, AxisTitleLabelStyle = yAxisTitleStyle };
-            this._yAxis = new SCINumericAxis { AxisTitle = "H(T)", Style = yAxisStyle };
+            this._yAxis = new SCINumericAxis { AxisTitle = "H(T)", Style = yAxisStyle, GrowBy = new SCIDoubleRange(0.1d, 0.1d) };
 
             this._renderableSeries = new SCIFastLineRenderableSeries { DataSeries = this._series, StrokeStyle = new SCISolidPenStyle(0xFF279B27, 2f) };
             this._renderableSeries.StrokeStyle = new SCISolidPenStyle(UIColor.FromRGB(255, 64, 129), 2f);
@@ -193,9 +140,6 @@ namespace SoundsOfSpacetime.Mobile.iOS.Services
             }
 
             return this._plottingSurface.ToView();
-            //bottomLayout.Children.Add(Surface.ToView(),
-            //widthConstraint: Constraint.RelativeToParent(parent => parent.Width),
-            //heightConstraint: Constraint.RelativeToParent(parent => parent.Height));
         }
 
         public void SetTitle(string title)
