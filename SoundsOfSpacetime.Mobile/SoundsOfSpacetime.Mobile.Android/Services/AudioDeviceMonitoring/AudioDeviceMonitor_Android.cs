@@ -5,6 +5,7 @@ using Android.Content;
 using Android.Media;
 using Android.OS;
 using AndroidX.Media;
+using SoundsOfSpacetime.Mobile.Droid.Utilities;
 using SoundsOfSpacetime.Mobile.Events.Args;
 using SoundsOfSpacetime.Mobile.Interfaces;
 using Xamarin.Forms;
@@ -55,7 +56,7 @@ namespace SoundsOfSpacetime.Mobile.Droid.Services.AudioDeviceMonitoring
         public AudioDeviceMonitor_Android()
         {  
             //Initial State
-            this.HeadphonesInUse = this.IsHeadsetOn();
+            this.HeadphonesInUse = AudioDeviceUtilities.IsHeadsetOn();
             this.HeadphonesInUseChanged?.Invoke(this, new HeadphoneStatusChangedEventArgs(this.HeadphonesInUse));
 
             //Changes in headset status
@@ -70,7 +71,7 @@ namespace SoundsOfSpacetime.Mobile.Droid.Services.AudioDeviceMonitoring
         { 
             //The or is necessary because we often receive headset changed messages on startup that are not accurate. Although further messages are.
             //IsHeadsetOn appears to always be accurate.
-            this.HeadphonesInUse = connected || this.IsHeadsetOn();
+            this.HeadphonesInUse = connected || AudioDeviceUtilities.IsHeadsetOn();
             this.HeadphonesInUseChanged?.Invoke(this, new HeadphoneStatusChangedEventArgs(this.HeadphonesInUse));
         }
 
@@ -79,34 +80,7 @@ namespace SoundsOfSpacetime.Mobile.Droid.Services.AudioDeviceMonitoring
             this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private bool IsHeadsetOn()
-        {
-            AudioManager am = (AudioManager)Android.App.Application.Context.GetSystemService(Context.AudioService);
 
-            if (am == null)
-                return false;
-
-            if (Build.VERSION.SdkInt < Android.OS.BuildVersionCodes.M)
-            {
-                return am.WiredHeadsetOn || am.BluetoothScoOn || am.BluetoothA2dpOn;
-            }
-            else
-            {
-                AudioDeviceInfo[] devices = am.GetDevices(GetDevicesTargets.Outputs);
-
-                foreach (var device in devices)
-                {
-                    if (device.Type == AudioDeviceType.WiredHeadset
-                            || device.Type == AudioDeviceType.WiredHeadphones
-                            || device.Type == AudioDeviceType.BluetoothSco
-                            || device.Type == AudioDeviceType.BluetoothA2dp)
-                    {
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }
 
         #endregion
     }

@@ -124,6 +124,7 @@
     <Compile Include="Services\FileSystemPathService_Android.cs" />
     <Compile Include="Services\SciChartService_Android.cs" />
     <Compile Include="SplashActivity.cs" />
+    <Compile Include="Utilities\AudioDeviceUtilities.cs" />
     <Compile Include="Utilities\NumericExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
