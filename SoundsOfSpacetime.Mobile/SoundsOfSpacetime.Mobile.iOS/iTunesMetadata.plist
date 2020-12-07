@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>artistName</key>
+    <string>Sounds of Spacetime</string>
+    <key>bundleDisplayName</key>
+    <string>Sounds of Spacetime</string>
+    <key>bundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>bundleVersion</key>
+    <string>1.0.0</string>
+    <key>fileExtension</key>
+    <string>.app</string>
+    <key>gameCenterEnabled</key>
+    <false/>
+    <key>gameCenterEverEnabled</key>
+    <false/>
+    <key>genre</key>
+    <string>Education</string>
+    <key>genreId</key>
+    <integer>6017</integer>
+    <key>itemName</key>
+    <string>Sounds of Spacetime</string>
+    <key>kind</key>
+    <string>software</string>
+    <key>playlistArtistName</key>
+    <string>Sounds of Spacetime</string>
+    <key>playlistName</key>
+    <string>Sounds of Spacetime</string>
+    <key>releaseDate</key>
+    <string>2020-12-06T00:00:00Z</string>
+    <key>s</key>
+    <integer>143441</integer>
+    <key>softwareIconNeedsShine</key>
+    <false/>
+    <key>softwareSupportedDeviceIds</key>
+    <array>
+        <integer>9</integer>
+        <integer>4</integer>
+    </array>
+    <key>softwareVersionBundleId</key>
+    <string>org.soundsofspacetime.mobile</string>
+    <key>versionRestrictions</key>
+    <integer>16843008</integer>
+</dict>
+</plist>
