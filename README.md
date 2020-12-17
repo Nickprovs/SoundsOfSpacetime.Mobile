@@ -77,12 +77,6 @@ containerRegistry.RegisterSingleton<IPlotService, OxyPlotService>();
 The reason for this is that I use SciChart in production because it's much faster than OxyPlot - but it's propietary and requires a key.
 However, you can still pull and run the app if you swap out the plotting service.
 
-<!--
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See [License](LICENSE.md) for more information.
--->
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
