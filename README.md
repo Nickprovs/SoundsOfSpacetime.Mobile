@@ -43,8 +43,8 @@ This app allows users to experience customized Gravitational Waves caused by coa
 Sounds of Spacetime is built with Xamarin Forms. As such, it is a cross-platform mobile app. Any platform specific logic routes to native code through an interface.
 
 
-[![Product Name Screen Shot][product-screenshot]](/_meta/sample_simulator_1_android.jpg)
-[![Product Name Screen Shot][product-screenshot]](/_meta/sample_simulator_1_ios.jpg)
+[![Product Name Screen Shot][sample_simulator_1_android]](/_meta/sample_simulator_1_android.jpg)
+[![Product Name Screen Shot][sample_simulator_1_ios]](/_meta/sample_simulator_1_ios.jpg)
 ### Built With
 
 - Xamarin Forms
@@ -91,4 +91,6 @@ Distributed under the MIT License. See [License](LICENSE.md) for more informatio
 [license-url]: https://github.com/nickprovs/ballpit/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/nickprovs
-[product-screenshot]: _meta/sample.jpg
+[sample_simulator_1_android]: /_meta/sample_simulator_1_android.jpg
+[sample_simulator_1_ios]: /_meta/sample_simulator_1_ios.jpg
+
