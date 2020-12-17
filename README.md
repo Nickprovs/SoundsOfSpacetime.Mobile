@@ -66,7 +66,7 @@ git clone https://github.com/Nickprovs/SoundsOfSpacetime.Mobile.git
 3. Replace SciChart plotting implementation with OxyPlot implementation in AppDelegate.cs (iOS) and MainActivity (Android).
 
 ```sh
-//From one of these (depending no platform)
+//From one of these (depending on platform)
 containerRegistry.RegisterSingleton<IPlotService, SciChartService_iOS>();
 containerRegistry.RegisterSingleton<IPlotService, SciChartService_Android>();
 
@@ -77,11 +77,12 @@ containerRegistry.RegisterSingleton<IPlotService, OxyPlotService>();
 The reason for this is that I use SciChart in production because it's much faster than OxyPlot - but it's propietary and requires a key.
 However, you can still pull and run the app if you swap out the plotting service.
 
+<!--
 <!-- LICENSE -->
-
 ## License
 
 Distributed under the MIT License. See [License](LICENSE.md) for more information.
+-->
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
