@@ -13,7 +13,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Nickprovs/SoundsOfSpacetime.Mobile">
-    <img src="_meta/logo.png" alt="Logo" width="256" height="256">
+    <img src="_meta/images/logo.png" alt="Logo" width="256" height="256">
   </a>
 
   <h3 align="center">Sounds of Spacetime - Mobile</h3>
@@ -43,8 +43,8 @@ This app allows users to experience customized Gravitational Waves caused by coa
 Sounds of Spacetime is built with Xamarin Forms. As such, it is a cross-platform mobile app. Any platform specific logic routes to native code through an interface.
 
 
-[![Product Name Screen Shot][product-screenshot]](/_meta/sample_simulator_1_android.jpg)
-[![Product Name Screen Shot][product-screenshot]](/_meta/sample_simulator_1_ios.jpg)
+[![Product Name Screen Shot][sample_simulator_1_android]](/_meta/images/sample_simulator_1_android.jpg)
+[![Product Name Screen Shot][sample_simulator_1_ios]](/_meta/images/sample_simulator_1_ios.jpg)
 ### Built With
 
 - Xamarin Forms
@@ -66,7 +66,7 @@ git clone https://github.com/Nickprovs/SoundsOfSpacetime.Mobile.git
 3. Replace SciChart plotting implementation with OxyPlot implementation in AppDelegate.cs (iOS) and MainActivity (Android).
 
 ```sh
-//From one of these (depending no platform)
+//From one of these (depending on platform)
 containerRegistry.RegisterSingleton<IPlotService, SciChartService_iOS>();
 containerRegistry.RegisterSingleton<IPlotService, SciChartService_Android>();
 
@@ -77,11 +77,6 @@ containerRegistry.RegisterSingleton<IPlotService, OxyPlotService>();
 The reason for this is that I use SciChart in production because it's much faster than OxyPlot - but it's propietary and requires a key.
 However, you can still pull and run the app if you swap out the plotting service.
 
-<!-- LICENSE -->
-
-## License
-
-Distributed under the MIT License. See [License](LICENSE.md) for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -90,4 +85,6 @@ Distributed under the MIT License. See [License](LICENSE.md) for more informatio
 [license-url]: https://github.com/nickprovs/ballpit/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/nickprovs
-[product-screenshot]: _meta/sample.jpg
+[sample_simulator_1_android]: /_meta/images/sample_simulator_1_android.jpg
+[sample_simulator_1_ios]: /_meta/images/sample_simulator_1_ios.jpg
+
