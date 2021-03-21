@@ -13,7 +13,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Nickprovs/SoundsOfSpacetime.Mobile">
-    <img src="_meta/logo.png" alt="Logo" width="256" height="256">
+    <img src="_meta/images/logo.png" alt="Logo" width="256" height="256">
   </a>
 
   <h3 align="center">Sounds of Spacetime - Mobile</h3>
@@ -43,8 +43,8 @@ This app allows users to experience customized Gravitational Waves caused by coa
 Sounds of Spacetime is built with Xamarin Forms. As such, it is a cross-platform mobile app. Any platform specific logic routes to native code through an interface.
 
 
-[![Product Name Screen Shot][sample_simulator_1_android]](/_meta/sample_simulator_1_android.jpg)
-[![Product Name Screen Shot][sample_simulator_1_ios]](/_meta/sample_simulator_1_ios.jpg)
+[![Product Name Screen Shot][sample_simulator_1_android]](/_meta/images/sample_simulator_1_android.jpg)
+[![Product Name Screen Shot][sample_simulator_1_ios]](/_meta/images/sample_simulator_1_ios.jpg)
 ### Built With
 
 - Xamarin Forms
@@ -85,6 +85,6 @@ However, you can still pull and run the app if you swap out the plotting service
 [license-url]: https://github.com/nickprovs/ballpit/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/nickprovs
-[sample_simulator_1_android]: /_meta/sample_simulator_1_android.jpg
-[sample_simulator_1_ios]: /_meta/sample_simulator_1_ios.jpg
+[sample_simulator_1_android]: /_meta/images/sample_simulator_1_android.jpg
+[sample_simulator_1_ios]: /_meta/images/sample_simulator_1_ios.jpg
 
