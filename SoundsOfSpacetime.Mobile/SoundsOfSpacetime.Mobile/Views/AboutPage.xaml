@@ -19,7 +19,7 @@
                         Aspect="AspectFill" />
 
                     <Label
-                        Text="What Are Gravitational Waves?"
+                        Text="What Are Gravitational Waves??"
                         TextColor="{DynamicResource F8}"
                         Margin="0,15,0,0"
                         LineBreakMode="WordWrap"
