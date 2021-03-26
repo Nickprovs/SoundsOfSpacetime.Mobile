@@ -34,7 +34,7 @@
                         LineBreakMode="WordWrap" />
 
                     <Label
-                        Text="When were Gravitational Waves first observed?"
+                        Text="When were Gravitational Waves first observed??"
                         TextColor="{DynamicResource F8}"
                         Margin="0,20,0,0"
                         LineBreakMode="WordWrap"
