@@ -123,15 +123,27 @@ namespace SoundsOfSpacetime.Mobile.iOS.Services
             this._plottingSurface.BackgroundColor = backgroundColor.ToUIColor();
             this._plottingSurface.TranslatesAutoresizingMaskIntoConstraints = true;
             this._series = new XyDataSeries<double, double>();
-            this._series.AcceptUnsortedData = true;
+            this._series.AcceptsUnsortedData = true;
 
-            var xAxisTitleStyle = new SCITextFormattingStyle { AlignmentHorizontal = SCILabelAlignmentHorizontalMode.Center };
-            var xAxisStyle = new SCIAxisStyle { DrawMajorGridLines = false, DrawMinorGridLines = false, DrawMajorBands = false, AxisTitleLabelStyle = xAxisTitleStyle };
-            this._xAxis = new SCINumericAxis { AxisTitle = "Time", Style = xAxisStyle, GrowBy = new SCIDoubleRange(0.1d, 0.1d) };
+            this._xAxis = new SCINumericAxis 
+            {
+                AxisTitleAlignment = SCIAlignment.Center,
+                AxisTitle = "Time", 
+                GrowBy = new SCIDoubleRange(0.1d, 0.1d), 
+                DrawMajorGridLines = false,
+                DrawMinorGridLines = false,
+                DrawMajorBands = false, 
+            };
 
-            var yAxisTitleStyle = new SCITextFormattingStyle { AlignmentVertical = SCILabelAlignmentVerticalMode.Center };
-            var yAxisStyle = new SCIAxisStyle { DrawMajorGridLines = false, DrawMinorGridLines = false, DrawMajorBands = false, AxisTitleLabelStyle = yAxisTitleStyle };
-            this._yAxis = new SCINumericAxis { AxisTitle = "H(T)", Style = yAxisStyle, GrowBy = new SCIDoubleRange(0.1d, 0.1d) };
+            this._yAxis = new SCINumericAxis 
+            {
+                AxisTitle = "H(T)",
+                AxisTitleAlignment = SCIAlignment.Center,
+                GrowBy = new SCIDoubleRange(0.1d, 0.1d),
+                DrawMajorGridLines = false,
+                DrawMinorGridLines = false,
+                DrawMajorBands = false,
+            };
 
             this._renderableSeries = new SCIFastLineRenderableSeries { DataSeries = this._series, StrokeStyle = new SCISolidPenStyle(0xFF279B27, 2f) };
             this._renderableSeries.StrokeStyle = new SCISolidPenStyle(UIColor.FromRGB(255, 64, 129), 2f);

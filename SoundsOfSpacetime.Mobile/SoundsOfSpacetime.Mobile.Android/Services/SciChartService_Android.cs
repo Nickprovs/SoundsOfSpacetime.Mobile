@@ -136,9 +136,9 @@ namespace Nickprovs.Albatross.Droid.Services
 
             //The Renderable Series
             this._renderableSeries = new FastLineRenderableSeries { DataSeries = this._series, StrokeStyle = new SolidPenStyle(0xFF279B27, 2f) };
-            EllipsePointMarker pointMarker = new EllipsePointMarker { StrokeStyle = new SolidPenStyle(Android.Graphics.Color.PaleVioletRed, 0.5f), FillStyle = new SolidBrushStyle(0xFFFFA300) };
+            EllipsePointMarker pointMarker = new EllipsePointMarker { StrokeStyle = new SolidPenStyle(System.Drawing.Color.PaleVioletRed, 0.5f), FillStyle = new SolidBrushStyle(0xFFFFA300) };
             pointMarker.SetSize(6.ToDip(Android.App.Application.Context), 6.ToDip(Android.App.Application.Context));
-            this._renderableSeries.StrokeStyle = new SolidPenStyle(Android.Graphics.Color.Rgb(255, 64, 129), 2f);
+            this._renderableSeries.StrokeStyle = new SolidPenStyle(System.Drawing.Color.FromArgb(255, 64, 129), 2f);
 
             //Adding this stuff to the surface
             using (this._plottingSurface.SuspendUpdates())

@@ -56,8 +56,8 @@
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignProvision>VS: WildCard Development</CodesignProvision>
-<MtouchLink>None</MtouchLink>
-<BuildIpa>true</BuildIpa>
+    <MtouchLink>None</MtouchLink>
+    <BuildIpa>true</BuildIpa>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -198,7 +198,7 @@
       <Version>8.0.0.1909</Version>
     </PackageReference>
     <PackageReference Include="SciChart.iOS">
-      <Version>2.2.1.839</Version>
+      <Version>4.2.0.5023</Version>
     </PackageReference>
     <PackageReference Include="SkiaSharp.Extended">
       <Version>1.60.0</Version>

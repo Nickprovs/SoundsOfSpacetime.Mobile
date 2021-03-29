@@ -88,7 +88,7 @@
       <Version>8.0.0.1909</Version>
     </PackageReference>
     <PackageReference Include="SciChart.Android">
-      <Version>2.2.0.788</Version>
+      <Version>4.2.0.4468</Version>
     </PackageReference>
     <PackageReference Include="SkiaSharp.Extended">
       <Version>1.60.0</Version>
