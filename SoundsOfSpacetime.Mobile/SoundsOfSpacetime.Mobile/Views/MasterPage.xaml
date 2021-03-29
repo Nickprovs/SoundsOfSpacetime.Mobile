@@ -46,6 +46,13 @@
                                     BorderColor="{DynamicResource B6}"
                                     TextColor="{DynamicResource F1}"/>
                                 <Button 
+                                    Text="Detections" 
+                                    Command="{Binding NavigateCommand}" 
+                                    CommandParameter="Navigation/Detections" 
+                                    BackgroundColor="{DynamicResource B5}"
+                                    BorderColor="{DynamicResource B6}"
+                                    TextColor="{DynamicResource F1}"/>
+                                <Button 
                                     Text="About" 
                                     Command="{Binding NavigateCommand}" 
                                     CommandParameter="Navigation/About" 

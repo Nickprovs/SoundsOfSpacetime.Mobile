@@ -52,6 +52,7 @@ namespace SoundsOfSpacetime.Mobile
             containerRegistry.RegisterForNavigation<AboutPage>("About");
             containerRegistry.RegisterForNavigation<CreditsPage>("Credits");
             containerRegistry.RegisterForNavigation<SimulatorPage>("Simulator");
+            containerRegistry.RegisterForNavigation<DetectionsPage>("Detections");
 
             containerRegistry.RegisterSingleton<IGravitationalWaveCalculator, GravitationalWaveCalculator>();
             containerRegistry.RegisterSingleton<IDeviceContext, DeviceContext>();

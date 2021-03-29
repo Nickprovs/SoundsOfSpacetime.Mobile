@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.489
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundsOfSpacetime.Mobile.Android", "SoundsOfSpacetime.Mobile\SoundsOfSpacetime.Mobile.Android\SoundsOfSpacetime.Mobile.Android.csproj", "{85209B56-4659-408C-A4B5-35C7CFE7D8F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundsOfSpacetime.Mobile.iOS", "SoundsOfSpacetime.Mobile\SoundsOfSpacetime.Mobile.iOS\SoundsOfSpacetime.Mobile.iOS.csproj", "{E2AA22B3-8CC1-49EF-A2F6-192D694410D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundsOfSpacetime.Mobile", "SoundsOfSpacetime.Mobile\SoundsOfSpacetime.Mobile\SoundsOfSpacetime.Mobile.csproj", "{431A9983-9C22-42F9-BD9C-D1314654CC17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoundsOfSpacetime.Mobile", "SoundsOfSpacetime.Mobile\SoundsOfSpacetime.Mobile\SoundsOfSpacetime.Mobile.csproj", "{431A9983-9C22-42F9-BD9C-D1314654CC17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GravitationalWaveEventsClientApi", "GravitationalWaveEventsClientApi\GravitationalWaveEventsClientApi.csproj", "{7B8D97B0-C9A1-401F-AC01-C53963C13730}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -133,6 +135,30 @@ Global
 		{431A9983-9C22-42F9-BD9C-D1314654CC17}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{431A9983-9C22-42F9-BD9C-D1314654CC17}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{431A9983-9C22-42F9-BD9C-D1314654CC17}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Ad-Hoc|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Ad-Hoc|Any CPU.Build.0 = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Ad-Hoc|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.AppStore|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.AppStore|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Release|iPhone.Build.0 = Release|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{7B8D97B0-C9A1-401F-AC01-C53963C13730}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

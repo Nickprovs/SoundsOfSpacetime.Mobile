@@ -113,7 +113,7 @@
                                     </Grid>
 
                                     <!--Unit-->
-                                    <Slider x:Name="Mass1Slider" Maximum="20" Minimum="3" Value="{Binding CurrentSimulatorInput.SolarMass1}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
+                                    <Slider x:Name="Mass1Slider" Maximum="20" Minimum="1" Value="{Binding CurrentSimulatorInput.SolarMass1}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                 </StackLayout>
 
                                 <!--Mass 2-->
@@ -128,7 +128,7 @@
                                     </Grid>
 
                                     <!--Unit-->
-                                    <Slider x:Name="Mass2Slider" Maximum="20" Minimum="3" Value="{Binding CurrentSimulatorInput.SolarMass2}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
+                                    <Slider x:Name="Mass2Slider" Maximum="20" Minimum="1" Value="{Binding CurrentSimulatorInput.SolarMass2}" ThumbColor="{DynamicResource F7}" MaximumTrackColor="{DynamicResource F3}" MinimumTrackColor="{DynamicResource F7}"/>
                                 </StackLayout>
 
                                 <!--Initial Eccentricity-->
